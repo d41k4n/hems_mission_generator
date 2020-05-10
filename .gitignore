@@ -1,0 +1,27 @@
+plugins/FlyWithLua/*
+!plugins/FlyWithLua/Scripts
+plugins/FlyWithLua/Scripts/*
+!plugins/FlyWithLua/Scripts/Hoist.lua
+plugins/HSL/*
+!plugins/HSL/HSL.ini
+plugins/missionx/*
+!plugins/missionx/templates
+plugins/missionx/templates/*
+!plugins/missionx/templates/Rega*
+scenery/missionx/*
+!scenery/missionx/random
+scenery/missionx/random/*
+!scenery/missionx/random/Winch.bas
+aircraft/*
+!aircraft/_slingload_objects
+!aircraft/H145 T2 Rescue Version XP11 V3.1
+aircraft/_slingload_objects/*
+!aircraft/_slingload_objects/sar_patient_operator_stretcher.obj
+!aircraft/_slingload_objects/sar_patient_operator_stretcher_*.obj
+!aircraft/_slingload_objects/Pilot.png
+aircraft/H145 T2 Rescue Version XP11 V3.1/*
+!aircraft/H145 T2 Rescue Version XP11 V3.1/*.acf
+!aircraft/H145 T2 Rescue Version XP11 V3.1/HSLAircraft.ini
+!aircraft/H145 T2 Rescue Version XP11 V3.1/VRconfigHotspots.txt
+missionx_location_generator/.idea/workspace.xml
+missionx_location_generator/venv/
