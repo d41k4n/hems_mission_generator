@@ -198,9 +198,7 @@ Hints:
 		</leg>
 	</medevac_hospital_set>
 
-
 	<!-- Patient extraction: Special leg directives -->
-
 	<leg_1_tasks_winch_ops>
 		<task name="task_1_open_door" depends_on_task="" base_on_trigger="trig_1_open_door" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
 		<task name="task_1_deploy_crew" depends_on_task="task_1_open_door" base_on_trigger="trig_1_deploy_crew" base_on_script="" eval_success_for_n_sec="10" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
@@ -420,10 +418,10 @@ Hints:
 	<!-- Patient boarding: Special leg directives -->
 	<leg_1_tasks_patient_boarding>
 		<task name="task_1_doors_open" depends_on_task="" base_on_trigger="trig_1_doors_open" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="yes" />
-		<task name="task_1_crew_off" depends_on_task="task_1_doors_open" base_on_trigger="trig_1_crew_off" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="no" />
-		<task name="task_1_patient_on" depends_on_task="task_1_crew_off" base_on_trigger="trig_1_patient_on" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
-		<task name="task_1_crew_on" depends_on_task="task_1_patient_on" base_on_trigger="trig_1_crew_on" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
-		<task name="task_1_doors_closed" depends_on_task="task_1_crew_on" base_on_trigger="trig_1_doors_closed" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_1_crew_off" depends_on_task="task_1_doors_open" base_on_trigger="trig_1_crew_off" base_on_script="" eval_success_for_n_sec="30" mandatory="true" force_evaluation="no" />
+		<task name="task_1_patient_on" depends_on_task="task_1_crew_off" base_on_trigger="trig_1_patient_on" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
+		<task name="task_1_crew_on" depends_on_task="task_1_patient_on" base_on_trigger="trig_1_crew_on" base_on_script="" eval_success_for_n_sec="60" mandatory="true" force_evaluation="no" />
+		<task name="task_1_doors_closed" depends_on_task="task_1_crew_on" base_on_trigger="trig_1_doors_closed" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
 	</leg_1_tasks_patient_boarding>
 
 	<leg_1_triggers_patient_boarding>
@@ -482,27 +480,27 @@ Hints:
 	<leg_1_msgs_patient_boarding>
 		<message name="msg_1_doors_open" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Doors open - standby for crew unboarding.]]>
+				<![CDATA[Good landing. Shut down engines and standby for crew unboarding.]]>
 			</mix >
 		</message>
 		<message name="msg_1_crew_off" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Crew unboarded - standby for boarding patient.]]>
+				<![CDATA[Crew is off - expect patient boarding in 2 minutes.]]>
 			</mix >
 		</message>
 		<message name="msg_1_patient_on" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Patient on board - standby for crew boarding.]]>
+				<![CDATA[Patient on board and stable - standby for crew boarding.]]>
 			</mix >
 		</message>
 		<message name="msg_1_crew_on" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Crew on board - standby for closing doors.]]>
+				<![CDATA[Crew boarding complete. Cleared for engine startup. Outside check in progress.]]>
 			</mix >
 		</message>
 		<message name="msg_1_doors_closed" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Doors closed - ready for takeoff.]]>
+				<![CDATA[Outside check complete - cleared for takeoff.]]>
 			</mix >
 		</message>
 	</leg_1_msgs_patient_boarding>
@@ -510,10 +508,10 @@ Hints:
 	<!-- Patient dropoff: Special leg directives -->
 	<leg_2_tasks_dropoff>
 		<task name="task_2_doors_open" depends_on_task="" base_on_trigger="trig_2_doors_open" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="yes" />
-		<task name="task_2_crew_off" depends_on_task="task_2_doors_open" base_on_trigger="trig_2_crew_off" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="no" />
-		<task name="task_2_patient_off" depends_on_task="task_2_crew_off" base_on_trigger="trig_2_patient_off" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
-		<task name="task_2_crew_on" depends_on_task="task_2_patient_off" base_on_trigger="trig_2_crew_on" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
-		<task name="task_2_doors_closed" depends_on_task="task_2_crew_on" base_on_trigger="trig_2_doors_closed" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_2_crew_off" depends_on_task="task_2_doors_open" base_on_trigger="trig_2_crew_off" base_on_script="" eval_success_for_n_sec="30" mandatory="true" force_evaluation="no" />
+		<task name="task_2_patient_off" depends_on_task="task_2_crew_off" base_on_trigger="trig_2_patient_off" base_on_script="" eval_success_for_n_sec="60" mandatory="true" force_evaluation="no" />
+		<task name="task_2_crew_on" depends_on_task="task_2_patient_off" base_on_trigger="trig_2_crew_on" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
+		<task name="task_2_doors_closed" depends_on_task="task_2_crew_on" base_on_trigger="trig_2_doors_closed" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
 	</leg_2_tasks_dropoff>
 
 	<leg_2_triggers_dropoff>
@@ -572,31 +570,31 @@ Hints:
 	<leg_2_msgs_dropoff>
 		<message name="msg_2_doors_open" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Doors open - standby for crew unboarding.]]>
+				<![CDATA[Good landing. Shut down engines and standby for crew unboarding.]]>
 			</mix >
 		</message>
 		<message name="msg_2_crew_off" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Crew unboarded - standby for unloading patient.]]>
+				<![CDATA[Crew is off. Unloading patient.]]>
 			</mix >
 		</message>
 		<message name="msg_2_patient_off" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Patient unloaded - standby for crew boarding.]]>
+				<![CDATA[Patient is off. Handover in progress - expect crew back in 2 minutes.]]>
 			</mix >
 		</message>
 		<message name="msg_2_crew_on" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Crew on board - standby for closing doors.]]>
+				<![CDATA[Crew boarding complete. Cleared for engine startup. Outside check in progress.]]>
 			</mix >
 		</message>
 		<message name="msg_2_doors_closed" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Doors closed - ready for takeoff.]]>
+				<![CDATA[Outside check complete - cleared for takeoff.]]>
 			</mix >
 		</message>
 	</leg_2_msgs_dropoff>
-
+		
 	<xpdata>
 		<dataref name="agl" key="sim/flightmodel/position/y_agl"/>
 		<dataref name="hoist_ground_contact" key="hoist/ground_contact"/>
