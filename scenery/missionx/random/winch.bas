@@ -63,8 +63,8 @@ def func_rotor_stopped_1()
     print "Error: ", mxError;
   elseif main_rotor_speed < 0.5 then 
     fn_set_trigger_property("trig_1_crew_off", "script_conditions_met_b", "true");
-  elseif main_rotor_speed > 0.5 then 
-	fn_send_text_message ("Shut down engines!", "main_rotor_stopped_check", true);
+  'elseif main_rotor_speed > 0.5 then 
+  '  fn_send_text_message ("Shut down engines!", "main_rotor_stopped_check", true);
   endif
 enddef
 
@@ -76,8 +76,8 @@ def func_rotor_stopped_2()
     print "Error: ", mxError;
   elseif main_rotor_speed < 0.5 then 
     fn_set_trigger_property("trig_2_crew_off", "script_conditions_met_b", "true");
-  elseif main_rotor_speed > 0.5 then 
-	fn_send_text_message ("Shut down engines!", "main_rotor_stopped_check", true);
+  'elseif main_rotor_speed > 0.5 then 
+  '  fn_send_text_message ("Shut down engines!", "main_rotor_stopped_check", true);
   endif
 enddef
 
