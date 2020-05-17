@@ -2,6 +2,9 @@ plugins/FlyWithLua/*
 !plugins/FlyWithLua/Scripts
 plugins/FlyWithLua/Scripts/*
 !plugins/FlyWithLua/Scripts/Hoist.lua
+!plugins/FlyWithLua/Modules
+plugins/FlyWithLua/Modules/*
+!plugins/FlyWithLua/Modules/tween.lua
 plugins/HSL/*
 !plugins/HSL/HSL.ini
 plugins/missionx/*
