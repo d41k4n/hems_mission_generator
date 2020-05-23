@@ -500,8 +500,8 @@ Hints:
 	<!-- Patient boarding: Special leg directives -->
 	<leg_1_tasks_patient_boarding>
 		<task name="task_1_doors_open" depends_on_task="" base_on_trigger="trig_1_doors_open" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="yes" />
-		<task name="task_1_crew_off" depends_on_task="task_1_doors_open" base_on_trigger="trig_1_crew_off" base_on_script="" eval_success_for_n_sec="30" mandatory="true" force_evaluation="no" />
-		<task name="task_1_patient_on" depends_on_task="task_1_crew_off" base_on_trigger="trig_1_patient_on" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
+		<task name="task_1_crew_off" depends_on_task="task_1_doors_open" base_on_trigger="trig_1_crew_off" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_1_patient_on" depends_on_task="task_1_crew_off" base_on_trigger="trig_1_patient_on" base_on_script="" eval_success_for_n_sec="180" mandatory="true" force_evaluation="no" />
 		<task name="task_1_crew_on" depends_on_task="task_1_patient_on" base_on_trigger="trig_1_crew_on" base_on_script="" eval_success_for_n_sec="60" mandatory="true" force_evaluation="no" />
 		<task name="task_1_doors_closed" depends_on_task="task_1_crew_on" base_on_trigger="trig_1_doors_closed" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
 	</leg_1_tasks_patient_boarding>
@@ -567,7 +567,7 @@ Hints:
 		</message>
 		<message name="msg_1_crew_off" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Crew is off - expect patient boarding in 2 minutes.]]>
+				<![CDATA[Crew is off - expect patient boarding in 3 minutes.]]>
 			</mix >
 		</message>
 		<message name="msg_1_patient_on" is_mxpad="yes" >
@@ -590,9 +590,9 @@ Hints:
 	<!-- Patient dropoff: Special leg directives -->
 	<leg_2_tasks_dropoff>
 		<task name="task_2_doors_open" depends_on_task="" base_on_trigger="trig_2_doors_open" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="yes" />
-		<task name="task_2_crew_off" depends_on_task="task_2_doors_open" base_on_trigger="trig_2_crew_off" base_on_script="" eval_success_for_n_sec="30" mandatory="true" force_evaluation="no" />
+		<task name="task_2_crew_off" depends_on_task="task_2_doors_open" base_on_trigger="trig_2_crew_off" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
 		<task name="task_2_patient_off" depends_on_task="task_2_crew_off" base_on_trigger="trig_2_patient_off" base_on_script="" eval_success_for_n_sec="60" mandatory="true" force_evaluation="no" />
-		<task name="task_2_crew_on" depends_on_task="task_2_patient_off" base_on_trigger="trig_2_crew_on" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
+		<task name="task_2_crew_on" depends_on_task="task_2_patient_off" base_on_trigger="trig_2_crew_on" base_on_script="" eval_success_for_n_sec="180" mandatory="true" force_evaluation="no" />
 		<task name="task_2_doors_closed" depends_on_task="task_2_crew_on" base_on_trigger="trig_2_doors_closed" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
 	</leg_2_tasks_dropoff>
 
@@ -662,7 +662,7 @@ Hints:
 		</message>
 		<message name="msg_2_patient_off" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Patient is off. Handover in progress - expect crew back in 2 minutes.]]>
+				<![CDATA[Patient is off. Handover in progress - expect crew back in 3 minutes.]]>
 			</mix >
 		</message>
 		<message name="msg_2_crew_on" is_mxpad="yes" >
@@ -1904,7 +1904,7 @@ Hints:
 		<obj3d  name="marker" file_name="marker_five_parts_02.obj" />
 		<!-- cars -->
 		<obj3d  name="ambulance" file_name="" random_tag="ambulance_select"   />
-		<obj3d  name="random_thing" file_name="" random_tag="people_at_location"  />
+		<obj3d  name="random_thing" file_name="" random_tag="clutter"  />
 	</object_templates>
 
 	<object_sets>
