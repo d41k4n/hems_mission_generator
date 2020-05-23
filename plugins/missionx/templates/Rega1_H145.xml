@@ -2616,8 +2616,8 @@ Hints:
 			<display_object  name="random_person3"   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="10|8"   random_water_tag="blank" limit_to_terrain_slope="" optional="45%" />
 			<display_object  name="random_person4"   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="15|10"  random_water_tag="blank" limit_to_terrain_slope="" optional="35%" />
 			<display_object  name="random_ambulance" random_tag="ambulance_select"  random_water_tag="water_replace_ambulance"    limit_to_terrain_slope="20" />
-			<display_object  name="aider01"          random_tag="push_wealchair"    relative_pos_bearing_deg_distance_mt="45|05"  random_water_tag="blank" limit_to_terrain_slope="20" />
-			<display_object  name="wealchair01"      random_tag="wealchairs"        relative_pos_bearing_deg_distance_mt="46|05"  random_water_tag="blank" limit_to_terrain_slope="20" />
+			<display_object  name="aider01"          random_tag="push_wheelchair"    relative_pos_bearing_deg_distance_mt="45|05"  random_water_tag="blank" limit_to_terrain_slope="20" />
+			<display_object  name="wheelchair01"      random_tag="wheelchairs"        relative_pos_bearing_deg_distance_mt="46|05"  random_water_tag="blank" limit_to_terrain_slope="20" />
 			<display_object  name="random_car"       random_tag="crashed_car"       relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="blank" limit_to_terrain_slope="20" />
 			<display_object  name="random_sign"      random_tag="clutter"           relative_pos_bearing_deg_distance_mt="180|10" random_water_tag="blank" />
 			<display_object  name="firetruck01"      random_tag="firetruck"         relative_pos_bearing_deg_distance_mt="270|5"  random_water_tag="blank" />
@@ -2699,13 +2699,13 @@ Hints:
 		<obj3d  name="car04" file_name="../../../RescueX_Lib/cars/crashed_CLK.obj" />
 	</crashed_car>
 
-	<wealchairs>
+	<wheelchairs>
 		<obj3d  name="person01" file_name="../../../3D_people_library/wheelchair.obj" />
-	</wealchairs>
+	</wheelchairs>
 
-	<push_wealchair>
+	<push_wheelchair>
 		<obj3d  name="person01" file_name="../../../3D_people_library/woman_push_wheelchair.obj" />
-	</push_wealchair>
+	</push_wheelchair>
 
 	<cars>
 		<obj3d  name="car01" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_alto.obj"/>
