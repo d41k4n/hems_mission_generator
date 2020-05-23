@@ -171,7 +171,7 @@ Hints:
 			<desc>Primary mission: Search and Rescue. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="sim/weapons/re_arm_aircraft,FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=2-30" override_trigger_name="trig_hover_goal_1_target_1"/>
-			<display_object_set random_tag="object_sets" set_name="medevac" />
+			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -2625,16 +2625,22 @@ Hints:
 		</medevac>
 		<medevac_slope>
 			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
-			<display_object  name="random_person1"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="10|10"  random_water_tag="blank" limit_to_terrain_slope="" />
-			<display_object  name="random_person2"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="15|10"  random_water_tag="blank" limit_to_terrain_slope="" optional="70%" />
-			<display_object  name="random_sign"     file_name=""   random_tag="clutter"              relative_pos_bearing_deg_distance_mt="180|10" random_water_tag="blank" optional="50%" />
-		</medevac_slope>
-		<medevac_slope>
-			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
-			<display_object  name="random_person1"  file_name=""     random_tag="people_at_location" relative_pos_bearing_deg_distance_mt=""       random_water_tag="blank" limit_to_terrain_slope="" optional="70%" />
-			<display_object  name="random_person2"  file_name=""     random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="10|10"  random_water_tag="blank" limit_to_terrain_slope="" />
-			<display_object  name="random_person3"  file_name=""     random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="15|10"  random_water_tag="blank" limit_to_terrain_slope="" optional="70%" />
-			<display_object  name="random_sign"     file_name=""     random_tag="clutter"              relative_pos_bearing_deg_distance_mt="180|10" random_water_tag="blank" optional="50%" />
+			<display_object  name="random_person1"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="0|1"   random_water_tag="blank" />
+			<display_object  name="random_person2"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="45|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person3"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="90|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person4"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="135|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person5"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="180|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person6"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="225|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person7"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="270|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person8"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="315|1"   random_water_tag="blank" />
+			<display_object  name="clutter1"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="0|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter2"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="45|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter3"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="90|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter4"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="135|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter5"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="180|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter6"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="225|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter7"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="270|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter8"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="315|3"   random_water_tag="blank" optional="30%"/>
 		</medevac_slope>
 		<delivery/>
 	</object_sets>
