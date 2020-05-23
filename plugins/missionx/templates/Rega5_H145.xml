@@ -2071,15 +2071,15 @@ Hints:
 		<obj3d  name="sign02" file_name="../../../RescueX_Lib/objects/OBJ_Faltdreieck_Leuchte.obj"/>
 		<obj3d  name="sign03" file_name="../../../RescueX_Lib/objects/OBJ_Leuchte.obj"/>
 		<!-- obj3d  name="sign04_blank" file_name=""/ -->
-		<obj3d  name="r2lib" file_name="../../../R2_Library/letiste/doplnky/kuzel_cerveny.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/letiste/doplnky/kuzel_modry.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/letiste/doplnky/oznaceni_letiste.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/letiste/doplnky/oznaceni_letiste_dlouhe.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/letiste/doplnky/sudy_CB_letiste.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/letiste/doplnky/sudy_letiste.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/letiste/doplnky/kuzely_cervene.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/letiste/doplnky/kuzely_modre.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/letiste/doplnky/znaceni_letiste_prkna.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzel_cerveny.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzel_modry.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/oznaceni_letiste.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/oznaceni_letiste_dlouhe.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/sudy_CB_letiste.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/sudy_letiste.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzely_cervene.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzely_modre.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/znaceni_letiste_prkna.obj" />
 	</clutter>
 
 	<people_aiders>
