@@ -269,7 +269,7 @@ function release_winch()
 	print("Hoist: Releasing winch")
 	--cargo_mass = cargo_mass_empty
 	--cargo_height = cargo_height_empty
-	command_once("HSL/Load_Release")
+	command_once("HSL/Sling_Reset")
 	-- cargo_size = XPLMGetDatavf(cargo_size_ref, 0, 3)
 	--local cargo_size_target = XPLMGetDatavf(cargo_size_ref, 0, 3)
 	--cargo_size_target[0] = cargo_size_released[1]
