@@ -209,7 +209,7 @@ Hints:
 			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Load_Connect" />
 			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
-			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=2-30" override_trigger_name="trig_land_goal_1_target_1" />
+			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=2-20" override_trigger_name="trig_land_goal_1_target_1" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
