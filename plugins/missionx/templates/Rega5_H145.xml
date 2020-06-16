@@ -234,7 +234,7 @@ Hints:
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
-			<expected_location location_type="start" location_value="nm=_" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
+			<expected_location location_type="start,xy" location_value="nm=_,tag=homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
 			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -272,7 +272,7 @@ Hints:
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
-			<expected_location location_type="start" location_value="nm=_" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
+			<expected_location location_type="start,xy" location_value="nm=_,tag=homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
 			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
