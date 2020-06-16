@@ -1886,10 +1886,9 @@ Hints:
 		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
 		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
 		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
-		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
-		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
-		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
-		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
+		<point lat="46.80010" long="10.30464" template="land" radius_mt="80" loc_desc="Helipad, Spital Unterengadin, Scuol / LSHU"/>
+		<point lat="46.69698" long="9.43648" template="land" radius_mt="80" loc_desc="Helipad, Spital Thusis / LSHT"/>
+		<point lat="46.77691" long="9.20489" template="land" radius_mt="80" loc_desc="Helipad, Regionalspital Surselva, Ilanz / LSHI"/>
 		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
 		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
