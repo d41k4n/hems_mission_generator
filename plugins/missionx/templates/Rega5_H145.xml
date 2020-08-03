@@ -863,7 +863,6 @@ Hints:
 		<point lat="47.177868539163704" long="9.467812764620717" template="land" radius_mt="80" loc_desc="Eichenaustrasse 28, 9470 Buchs, Switzerland, Accident involving pedestrian(s)"/>
 		<point lat="47.0383333" long="9.00111111" template="hover" radius_mt="80" loc_desc="Klöntalerstrasse 8750, 8750 Glarus, Switzerland, Search and Rescue, winch required"/>
 		<point lat="47.2705556" long="9.00027778" template="hover" radius_mt="80" loc_desc="8727 Walde, Switzerland, Search and Rescue, winch required"/>
-		<point lat="47.5688889" long="9.00861111" template="hover" radius_mt="80" loc_desc="Burgstrasse 18, 8553 Harenwilen, Switzerland, Search and Rescue, winch required"/>
 		<point lat="47.1755556" long="9.01027778" template="hover" radius_mt="80" loc_desc="Linthbettstrasse, 8717 Benken, Switzerland, Search and Rescue, winch required"/>
 		<point lat="47.0666667" long="9.02027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8752 Näfels, Switzerland, Search and Rescue, winch required"/>
 		<point lat="47.0316667" long="9.03027778" template="hover" radius_mt="80" loc_desc="Wanderweg, 8750 Glarus, Switzerland, Search and Rescue, winch required"/>
@@ -1034,29 +1033,15 @@ Hints:
 		<point lat="46.6811111" long="9.95027778" template="hover" radius_mt="80" loc_desc="7526 Cinuos-chel, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.5533333" long="9.99027778" template="hover" radius_mt="80" loc_desc="7524 Zuoz, Switzerland, Search and Rescue, winch required"/>
 		<point lat="47.0335" long="9.0015" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8750 Glarus, Switzerland, Search and Rescue"/>
-		<point lat="47.5735" long="9.003" template="land" radius_mt="80" loc_desc="Neuhofstrasse 5, 8553 Harenwilen, Switzerland, Search and Rescue"/>
 		<point lat="47.6675" long="9.0115" template="land" radius_mt="80" loc_desc="Bergstrasse, 8267 Berlingen, Switzerland, Search and Rescue"/>
 		<point lat="47.216" long="9.042" template="land" radius_mt="80" loc_desc="Rietwies 68, 8722 Kaltbrunn, Switzerland, Search and Rescue"/>
-		<point lat="47.619" long="9.046" template="land" radius_mt="80" loc_desc="Mühlrütistrasse, 8556 Wigoltingen, Switzerland, Search and Rescue"/>
 		<point lat="47.0815" long="9.062" template="land" radius_mt="80" loc_desc="Flugplatzweg, 8754 Mollis, Switzerland, Search and Rescue"/>
-		<point lat="47.597" long="9.0615" template="land" radius_mt="80" loc_desc="Grubmühlestrasse, 8560 Märstetten, Switzerland, Search and Rescue"/>
-		<point lat="47.595" long="9.1085" template="land" radius_mt="80" loc_desc="Buch 1, 8561 Märstetten, Switzerland, Search and Rescue"/>
 		<point lat="47.127" long="9.1405" template="hover" radius_mt="80" loc_desc="9, 8757 Filzbach, Switzerland, Search and Rescue"/>
-		<point lat="47.622" long="9.1455" template="land" radius_mt="80" loc_desc="Molkereistrasse, 8566 Kemmental, Switzerland, Search and Rescue"/>
-		<point lat="47.6135" long="9.1505" template="land" radius_mt="80" loc_desc="Höhenweg, 8573 Kemmental, Switzerland, Search and Rescue"/>
 		<point lat="47.1235" long="9.1605" template="hover" radius_mt="80" loc_desc="Mühletal 130, 8874 Obstalden, Switzerland, Search and Rescue"/>
-		<point lat="47.5625" long="9.168" template="land" radius_mt="80" loc_desc="Kreuzlingerstrasse, 8584 Bürglen, Switzerland, Search and Rescue"/>
 		<point lat="47.1205" long="9.1705" template="hover" radius_mt="80" loc_desc="Bachhorn 380, 8874 Mühlehorn, Switzerland, Search and Rescue"/>
-		<point lat="47.5565" long="9.2025" template="land" radius_mt="80" loc_desc="Sunnehof, 8583 Sulgen, Switzerland, Search and Rescue"/>
-		<point lat="47.5915" long="9.2305" template="land" radius_mt="80" loc_desc="Mattwilerstrasse, 8585 Langrickenbach, Switzerland, Search and Rescue"/>
 		<point lat="47.0595" long="9.2475" template="land" radius_mt="80" loc_desc="Unnamed Road, 8897 Flums, Switzerland, Search and Rescue"/>
-		<point lat="47.5375" long="9.2405" template="land" radius_mt="80" loc_desc="Schocherswilerstrasse 15, 8586 Erlen, Switzerland, Search and Rescue"/>
-		<point lat="47.5295" long="9.2535" template="land" radius_mt="80" loc_desc="Mattenhofstrasse, 8588 Zihlschlacht-Sitterdorf, Switzerland, Search and Rescue"/>
-		<point lat="47.5305" long="9.2665" template="land" radius_mt="80" loc_desc="Schützenhaus, 8588 Zihlschlacht-Sitterdorf, Switzerland, Search and Rescue"/>
 		<point lat="47.0105" long="9.271" template="land" radius_mt="80" loc_desc="8897 Flums, Switzerland, Search and Rescue"/>
-		<point lat="47.5245" long="9.2705" template="land" radius_mt="80" loc_desc="Hagenwilerstrasse, 8588 Zihlschlacht-Sitterdorf, Switzerland, Search and Rescue"/>
 		<point lat="47.0775" long="9.289" template="land" radius_mt="80" loc_desc="Ski trail 11, 8897 Flums, Switzerland, Search and Rescue"/>
-		<point lat="47.5305" long="9.2805" template="land" radius_mt="80" loc_desc="Spitzerüti, 8580 Amriswil, Switzerland, Search and Rescue"/>
 		<point lat="47.079" long="9.291" template="land" radius_mt="80" loc_desc="Ski trail 11, 8897 Flums, Switzerland, Search and Rescue"/>
 		<point lat="47.217" long="9.4605" template="land" radius_mt="80" loc_desc="Zielbachstrasse, 9473 Sennwald, Switzerland, Search and Rescue"/>
 		<point lat="47.0505" long="9.4745" template="land" radius_mt="80" loc_desc="Gassa, 7320 Sargans, Switzerland, Search and Rescue"/>
@@ -1070,26 +1055,13 @@ Hints:
 		<point lat="47.3205" long="9.5905" template="land" radius_mt="80" loc_desc="E43, 9462 Oberriet, Switzerland, Search and Rescue"/>
 		<point lat="47.381" long="9.6305" template="land" radius_mt="80" loc_desc="Unnamed Road, 9444 Diepoldsau, Switzerland, Search and Rescue"/>
 		<point lat="47.0777778" long="9.00166667" template="land" radius_mt="80" loc_desc="Unnamed Road, 8752 Näfels, Switzerland, Search and Rescue"/>
-		<point lat="47.5838889" long="9.00027778" template="land" radius_mt="80" loc_desc="Unnamed Road, 8553 Hüttlingen, Switzerland, Search and Rescue"/>
 		<point lat="47.6677778" long="9.02027778" template="land" radius_mt="80" loc_desc="Bergstrasse, 8267 Berlingen, Switzerland, Search and Rescue"/>
 		<point lat="47.0391667" long="9.03833333" template="land" radius_mt="80" loc_desc="Wanderweg, 8750 Glarus, Switzerland, Search and Rescue"/>
 		<point lat="47.0827778" long="9.05638889" template="land" radius_mt="80" loc_desc="Mühle 21a, 8752 Näfels, Switzerland, Search and Rescue"/>
-		<point lat="47.5630556" long="9.05194444" template="land" radius_mt="80" loc_desc="Rebhaldenstrasse 1, 8514 Amlikon-Bissegg, Switzerland, Search and Rescue"/>
 		<point lat="47.6444444" long="9.11027778" template="land" radius_mt="80" loc_desc="Staudenhof, 8274 Wäldi, Switzerland, Search and Rescue"/>
 		<point lat="47.0558333" long="9.12305556" template="land" radius_mt="80" loc_desc="Unnamed Road, 8755 Ennenda, Switzerland, Search and Rescue"/>
-		<point lat="47.6036111" long="9.12027778" template="land" radius_mt="80" loc_desc="Mannenmühlestrasse, 8565 Kemmental, Switzerland, Search and Rescue"/>
-		<point lat="47.5183333" long="9.13027778" template="land" radius_mt="80" loc_desc="Mettlenstrasse, 8577 Schönholzerswilen, Switzerland, Search and Rescue"/>
-		<point lat="47.5302778" long="9.15027778" template="land" radius_mt="80" loc_desc="Schönholzerswilerstrasse, 8577 Bürglen, Switzerland, Search and Rescue"/>
-		<point lat="47.6202778" long="9.17027778" template="land" radius_mt="80" loc_desc="Boolstrasse, 8573 Kemmental, Switzerland, Search and Rescue"/>
-		<point lat="47.5908333" long="9.18027778" template="land" radius_mt="80" loc_desc="Bergstrasse 1, 8572 Berg, Switzerland, Search and Rescue"/>
-		<point lat="47.5858333" long="9.19027778" template="land" radius_mt="80" loc_desc="Scherrersholz 2-14, 8572 Berg, Switzerland, Search and Rescue"/>
-		<point lat="47.5402778" long="9.20138889" template="land" radius_mt="80" loc_desc="Weinmoosstrasse 37, 8583 Sulgen, Switzerland, Search and Rescue"/>
 		<point lat="47.0572222" long="9.23444444" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8897 Flums, Switzerland, Search and Rescue"/>
 		<point lat="47.0333333" long="9.24416667" template="hover" radius_mt="80" loc_desc="Fuchsweg, 8897 Flums, Switzerland, Search and Rescue"/>
-		<point lat="47.5527778" long="9.24027778" template="land" radius_mt="80" loc_desc="Traubenquartier 4-8, 8586 Erlen, Switzerland, Search and Rescue"/>
-		<point lat="47.5638889" long="9.27027778" template="land" radius_mt="80" loc_desc="Aspen 1, 8587 Oberaach, Switzerland, Search and Rescue"/>
-		<point lat="47.5344444" long="9.30027778" template="land" radius_mt="80" loc_desc="Oberau 1, 8580 Amriswil, Switzerland, Search and Rescue"/>
-		<point lat="47.5666667" long="9.32055556" template="land" radius_mt="80" loc_desc="Chatzerüti 3, 8580 Hefenhofen, Switzerland, Search and Rescue"/>
 		<point lat="47.0797222" long="9.3725" template="land" radius_mt="80" loc_desc="Riet-Ragnatsch, 8893 Flums, Switzerland, Search and Rescue"/>
 		<point lat="47.0744444" long="9.38027778" template="land" radius_mt="80" loc_desc="Riet-Ragnatsch, 8893 Flums, Switzerland, Search and Rescue"/>
 		<point lat="47.0963889" long="9.39388889" template="hover" radius_mt="80" loc_desc="Berghaus Palfries, 9478 Wartau, Switzerland, Search and Rescue"/>
