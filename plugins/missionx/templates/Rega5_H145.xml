@@ -995,7 +995,6 @@ Hints:
 		<point lat="46.9136111" long="9.61027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7202 Says, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.4011111" long="9.62027778" template="hover" radius_mt="80" loc_desc="7603 Vicosoprano, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.8633333" long="9.62027778" template="hover" radius_mt="80" loc_desc="Maiasäss, 7027 Castiel, Switzerland, Search and Rescue, winch required"/>
-		<point lat="46.3641667" long="9.63027778" template="hover" radius_mt="80" loc_desc="Roticcio 999, 7603 Vicosoprano, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.8202778" long="9.63027778" template="hover" radius_mt="80" loc_desc="Am Wässerli, 7056 Tschiertschen, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.3308333" long="9.64027778" template="hover" radius_mt="80" loc_desc="7603 Vicosoprano, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.7908333" long="9.64027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7050 Arosa, Switzerland, Search and Rescue, winch required"/>
@@ -1006,13 +1005,11 @@ Hints:
 		<point lat="46.6313889" long="9.68027778" template="hover" radius_mt="80" loc_desc="7477 Filisur, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.6052778" long="9.69027778" template="hover" radius_mt="80" loc_desc="7477 Filisur, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.5694444" long="9.70027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7454 Surses, Switzerland, Search and Rescue, winch required"/>
-		<point lat="46.5263889" long="9.71027778" template="hover" radius_mt="80" loc_desc="7502 Bever, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.9855556" long="9.71222222" template="hover" radius_mt="80" loc_desc="Ober Pusserein 328, 7228 Schiers, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.9441667" long="9.72027778" template="hover" radius_mt="80" loc_desc="Furggaleidisstrasse 286, 7223 Luzein, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.9002778" long="9.73027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7235 Fideris, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.8733333" long="9.74027778" template="hover" radius_mt="80" loc_desc="Heuberge, 7235 Fideris, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.8438889" long="9.75027778" template="hover" radius_mt="80" loc_desc="Strassberg, 7057 Langwies, Switzerland, Search and Rescue, winch required"/>
-		<point lat="46.3502778" long="9.76027778" template="hover" radius_mt="80" loc_desc="7516 Stampa, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.8102778" long="9.76027778" template="hover" radius_mt="80" loc_desc="Chüpfen, 7057 Langwies, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.7805556" long="9.77027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7276 Davos, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.7411111" long="9.78083333" template="hover" radius_mt="80" loc_desc="Bordstrasse 2, 7277 Davos Glaris, Switzerland, Search and Rescue, winch required"/>
@@ -1030,8 +1027,6 @@ Hints:
 		<point lat="46.7905556" long="9.92027778" template="hover" radius_mt="80" loc_desc="Flüelapassstrasse 33-7, 7260 Davos, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.7505556" long="9.93027778" template="hover" radius_mt="80" loc_desc="Flüelapass, 7260 Davos, Switzerland, Search and Rescue, winch required"/>
 		<point lat="46.7002778" long="9.94027778" template="hover" radius_mt="80" loc_desc="7260 Davos Dorf, Switzerland, Search and Rescue, winch required"/>
-		<point lat="46.6811111" long="9.95027778" template="hover" radius_mt="80" loc_desc="7526 Cinuos-chel, Switzerland, Search and Rescue, winch required"/>
-		<point lat="46.5533333" long="9.99027778" template="hover" radius_mt="80" loc_desc="7524 Zuoz, Switzerland, Search and Rescue, winch required"/>
 		<point lat="47.0335" long="9.0015" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8750 Glarus, Switzerland, Search and Rescue"/>
 		<point lat="47.6675" long="9.0115" template="land" radius_mt="80" loc_desc="Bergstrasse, 8267 Berlingen, Switzerland, Search and Rescue"/>
 		<point lat="47.216" long="9.042" template="land" radius_mt="80" loc_desc="Rietwies 68, 8722 Kaltbrunn, Switzerland, Search and Rescue"/>
@@ -1123,7 +1118,6 @@ Hints:
 		<point lat="46.8285" long="9.4605" template="land" radius_mt="80" loc_desc="Via Quadras, 7013 Domat/Ems, Switzerland, Search and Rescue"/>
 		<point lat="46.833" long="9.475" template="land" radius_mt="80" loc_desc="Hof Quadrella 1, 7013 Domat/Ems, Switzerland, Search and Rescue"/>
 		<point lat="46.5715" long="9.486" template="land" radius_mt="80" loc_desc="7444 Ausserferrera, Switzerland, Search and Rescue"/>
-		<point lat="46.4155" long="9.4995" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7610 Soglio GR, Switzerland, Search and Rescue"/>
 		<point lat="46.4145" long="9.5005" template="hover" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue"/>
 		<point lat="46.872" long="9.5235" template="land" radius_mt="80" loc_desc="Canalweg 2, 7023 Haldenstein, Switzerland, Search and Rescue"/>
 		<point lat="46.999" long="9.531" template="land" radius_mt="80" loc_desc="Hauptweg, 7304 Maienfeld, Switzerland, Search and Rescue"/>
@@ -1152,14 +1146,10 @@ Hints:
 		<point lat="46.7815" long="9.6615" template="hover" radius_mt="80" loc_desc="Schlittenweg, 7050 Arosa, Switzerland, Search and Rescue"/>
 		<point lat="46.8525" long="9.6775" template="land" radius_mt="80" loc_desc="Zerfalta, 7029 Peist, Switzerland, Search and Rescue"/>
 		<point lat="46.7935" long="9.685" template="land" radius_mt="80" loc_desc="Maranerstrasse 60, 7050 Arosa, Switzerland, Search and Rescue"/>
-		<point lat="46.3105" long="9.6985" template="land" radius_mt="80" loc_desc="7516 Stampa, Switzerland, Search and Rescue"/>
 		<point lat="46.5655" long="9.699" template="land" radius_mt="80" loc_desc="Unnamed Road, 7454 Surses, Switzerland, Search and Rescue"/>
 		<point lat="46.751" long="9.695" template="land" radius_mt="80" loc_desc="Unnamed Road, 7492, Switzerland, Search and Rescue"/>
-		<point lat="46.316" long="9.705" template="land" radius_mt="80" loc_desc="7516 Stampa, Switzerland, Search and Rescue"/>
 		<point lat="46.7495" long="9.701" template="land" radius_mt="80" loc_desc="Unnamed Road, 7492, Switzerland, Search and Rescue"/>
-		<point lat="46.5175" long="9.7155" template="hover" radius_mt="80" loc_desc="7502 Bever, Switzerland, Search and Rescue"/>
 		<point lat="46.7415" long="9.7205" template="land" radius_mt="80" loc_desc="Unnamed Road, 7277 Arosa, Switzerland, Search and Rescue"/>
-		<point lat="46.5435" long="9.732" template="hover" radius_mt="80" loc_desc="7502 Bever, Switzerland, Search and Rescue"/>
 		<point lat="46.7715" long="9.732" template="land" radius_mt="80" loc_desc="Unnamed Road, 7276 Davos, Switzerland, Search and Rescue"/>
 		<point lat="46.6505" long="9.7575" template="land" radius_mt="80" loc_desc="Davos-Baselgia, 7482 Bergün/Bravuogn, Switzerland, Search and Rescue"/>
 		<point lat="46.9645" long="9.7885" template="land" radius_mt="80" loc_desc="Unnamed Road, 7244 Luzein, Switzerland, Search and Rescue"/>
@@ -1169,9 +1159,7 @@ Hints:
 		<point lat="46.8575" long="9.8465" template="land" radius_mt="80" loc_desc="Unnamed Road, 7260 Davos, Switzerland, Search and Rescue"/>
 		<point lat="46.718" long="9.8505" template="land" radius_mt="80" loc_desc="Sertigerstrasse 61, 7272 Davos, Switzerland, Search and Rescue"/>
 		<point lat="46.6795" long="9.868" template="land" radius_mt="80" loc_desc="7482 Stugl/Stuls, Switzerland, Search and Rescue"/>
-		<point lat="46.4065" long="9.9255" template="land" radius_mt="80" loc_desc="7504 Pontresina, Switzerland, Search and Rescue"/>
 		<point lat="46.8025" long="9.9365" template="hover" radius_mt="80" loc_desc="7260 Davos Dorf, Switzerland, Search and Rescue"/>
-		<point lat="46.393" long="9.949" template="land" radius_mt="80" loc_desc="7504 Pontresina, Switzerland, Search and Rescue"/>
 		<point lat="46.776" long="9.9595" template="hover" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
 		<point lat="46.892" long="9.9905" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
 		<point lat="46.1136111" long="9.00388889" template="hover" radius_mt="80" loc_desc="Baggio, 6951 Capriasca, Switzerland, Search and Rescue"/>
@@ -1277,12 +1265,10 @@ Hints:
 		<point lat="46.3186111" long="9.68055556" template="hover" radius_mt="80" loc_desc="7603 Vicosoprano, Switzerland, Search and Rescue"/>
 		<point lat="46.5669444" long="9.68527778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7454 Surses, Switzerland, Search and Rescue"/>
 		<point lat="46.7927778" long="9.68388889" template="land" radius_mt="80" loc_desc="Maranerstrasse 60, 7050 Arosa, Switzerland, Search and Rescue"/>
-		<point lat="46.3269444" long="9.69694444" template="hover" radius_mt="80" loc_desc="7516 Stampa, Switzerland, Search and Rescue"/>
 		<point lat="46.4880556" long="9.69611111" template="hover" radius_mt="80" loc_desc="7457 Surses, Switzerland, Search and Rescue"/>
 		<point lat="46.8558333" long="9.69027778" template="land" radius_mt="80" loc_desc="Unnamed Road, 7029 Peist, Switzerland, Search and Rescue"/>
 		<point lat="46.4894444" long="9.70027778" template="hover" radius_mt="80" loc_desc="7457 Surses, Switzerland, Search and Rescue"/>
 		<point lat="46.6344444" long="9.70194444" template="land" radius_mt="80" loc_desc="7477 Filisur, Switzerland, Search and Rescue"/>
-		<point lat="46.4377778" long="9.71361111" template="hover" radius_mt="80" loc_desc="7517 Plaun da Lej, Switzerland, Search and Rescue"/>
 		<point lat="46.7575" long="9.71027778" template="land" radius_mt="80" loc_desc="Unnamed Road, 7492, Switzerland, Search and Rescue"/>
 		<point lat="46.5525" long="9.7275" template="hover" radius_mt="80" loc_desc="7482 Stugl/Stuls, Switzerland, Search and Rescue"/>
 		<point lat="46.8358333" long="9.72472222" template="hover" radius_mt="80" loc_desc="Nufsch, 7057 Langwies, Switzerland, Search and Rescue"/>
@@ -1290,9 +1276,7 @@ Hints:
 		<point lat="46.7394444" long="9.74305556" template="land" radius_mt="80" loc_desc="Unnamed Road, 7277 Arosa, Switzerland, Search and Rescue"/>
 		<point lat="46.7813889" long="9.75333333" template="land" radius_mt="80" loc_desc="Unnamed Road, 7276 Davos, Switzerland, Search and Rescue"/>
 		<point lat="46.7980556" long="9.765" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7270 Langwies, Switzerland, Search and Rescue"/>
-		<point lat="46.485" long="9.77027778" template="hover" radius_mt="80" loc_desc="7513 Silvaplana-Surlej, Switzerland, Search and Rescue"/>
 		<point lat="46.8602778" long="9.78166667" template="hover" radius_mt="80" loc_desc="Fondei, 7057 Langwies, Switzerland, Search and Rescue"/>
-		<point lat="46.4066667" long="9.80083333" template="land" radius_mt="80" loc_desc="7514 Sils im Engadin/Segl, Switzerland, Search and Rescue"/>
 		<point lat="46.7311111" long="9.80638889" template="hover" radius_mt="80" loc_desc="Rinerhornstrasse, 7277 Davos, Switzerland, Search and Rescue"/>
 		<point lat="46.7461111" long="9.81444444" template="hover" radius_mt="80" loc_desc="Rinerhornstrasse, 7277 Davos, Switzerland, Search and Rescue"/>
 		<point lat="46.6641667" long="9.82472222" template="hover" radius_mt="80" loc_desc="Latsch, 7482 Bergün/Bravuogn, Switzerland, Search and Rescue"/>
@@ -1300,24 +1284,17 @@ Hints:
 		<point lat="46.9541667" long="9.84333333" template="hover" radius_mt="80" loc_desc="Sunnistafel, 7246 St. Antönien, Switzerland, Search and Rescue"/>
 		<point lat="46.9852778" long="9.85805556" template="hover" radius_mt="80" loc_desc="Partnun, 7246 St. Antönien, Switzerland, Search and Rescue"/>
 		<point lat="46.6852778" long="9.86055556" template="hover" radius_mt="80" loc_desc="7482 Stugl/Stuls, Switzerland, Search and Rescue"/>
-		<point lat="46.6766667" long="9.87861111" template="hover" radius_mt="80" loc_desc="7526 Cinuos-chel, Switzerland, Search and Rescue"/>
 		<point lat="46.9894444" long="9.87638889" template="land" radius_mt="80" loc_desc="Partnun, 7246 St. Antönien, Switzerland, Search and Rescue"/>
 		<point lat="46.7269444" long="9.88583333" template="land" radius_mt="80" loc_desc="7272 Davos, Switzerland, Search and Rescue"/>
-		<point lat="46.4016667" long="9.90916667" template="hover" radius_mt="80" loc_desc="7504 Pontresina, Switzerland, Search and Rescue"/>
-		<point lat="46.6663889" long="9.90194444" template="hover" radius_mt="80" loc_desc="7526 Cinuos-chel, Switzerland, Search and Rescue"/>
 		<point lat="46.9094444" long="9.90083333" template="land" radius_mt="80" loc_desc="Schlappinstrasse 555, 7252 Klosters Dorf, Switzerland, Search and Rescue"/>
-		<point lat="46.6688889" long="9.91083333" template="hover" radius_mt="80" loc_desc="7526 Cinuos-chel, Switzerland, Search and Rescue"/>
 		<point lat="46.8597222" long="9.91611111" template="hover" radius_mt="80" loc_desc="Schwäderlochstrasse 15, 7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
 		<point lat="46.8127778" long="9.92805556" template="hover" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
-		<point lat="46.5305556" long="9.93888889" template="land" radius_mt="80" loc_desc="7522 La Punt-Chamues-ch, Switzerland, Search and Rescue"/>
 		<point lat="46.7688889" long="9.93083333" template="land" radius_mt="80" loc_desc="Flüelapass, 7260 Davos, Switzerland, Search and Rescue"/>
 		<point lat="46.7641667" long="9.94166667" template="hover" radius_mt="80" loc_desc="Flüelapass, 7260 Davos, Switzerland, Search and Rescue"/>
 		<point lat="46.8247222" long="9.95333333" template="hover" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
 		<point lat="46.7722222" long="9.96194444" template="hover" radius_mt="80" loc_desc="Flüelapass, 7260 Davos, Switzerland, Search and Rescue"/>
 		<point lat="46.7725" long="9.97194444" template="land" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
-		<point lat="46.6819444" long="9.9825" template="hover" radius_mt="80" loc_desc="7527 Zernez, Switzerland, Search and Rescue"/>
 		<point lat="46.7802778" long="9.98777778" template="hover" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
-		<point lat="46.2969444" long="9.99472222" template="hover" radius_mt="80" loc_desc="7745 Li Curt, Switzerland, Search and Rescue"/>
 		<point lat="46.7158333" long="9.99638889" template="hover" radius_mt="80" loc_desc="7542 Susch, Switzerland, Search and Rescue"/>
 	</loc_acc>
 	<loc_hospitals>
