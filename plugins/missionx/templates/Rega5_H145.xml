@@ -24,6 +24,25 @@ Hints for patient dropoff:
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
 		</medevac_hover>
+		<medevac_hover min_valid_flight_legs="3" list="medevac_hover_set" plane_type="helos">
+In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+
+Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints for winch extraction:
+- Hover within 20m radius and below 150ft over target
+- Crew will perform all required tasks autonomously when within target range.
+- Observe status messages during all operations and follow instructions.
+- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
+- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
+
+Hints for patient dropoff:
+- Land on the helipad designated via GPS.
+- Shut down engines
+- Observe status messages and follow instructions.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hover>
 		<medevac_land min_valid_flight_legs="3" list="medevac_land_set" plane_type="helos">
 In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
 
@@ -72,42 +91,6 @@ Hints:
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
 		</medevac_land>
-		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
-
-Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land on the designated hospital helipad.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hospital>
-		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
-
-Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land on the designated hospital helipad.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hospital>
-		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
-
-Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land on the designated hospital helipad.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hospital>
 		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
 In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
 
