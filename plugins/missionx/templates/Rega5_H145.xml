@@ -692,6 +692,8 @@ Hints:
 		</shared_variables>
 	</embedded_scripts>
 	<loc_acc>
+		<point lat="46.755370" long="9.940814" template="land" radius_mt="80" loc_desc="Flüelapass H28, 7260 Davos, Switzerland, Accident with head-on collision"/>
+		<point lat="46.972705" long="9.604765" template="land" radius_mt="80" loc_desc="Felsenbach, 7302 Landquart, Switzerland, Accident with head-on collision"/>
 		<point lat="46.70447961714754" long="9.559977183483111" template="land" radius_mt="80" loc_desc="Bova Pintga, 7083 Lantsch/Lenz, Switzerland, Accident involving animal(s)"/>
 		<point lat="46.774595874052515" long="9.664523264865034" template="land" radius_mt="80" loc_desc="Poststrasse 519, 7050 Arosa, Switzerland, Accident with skidding or self-accident"/>
 		<point lat="46.97456509497379" long="9.610840032248616" template="land" radius_mt="80" loc_desc="Chlustunnel, 7212 Seewis im Prättigau, Switzerland, Accident with rear-end collision"/>
