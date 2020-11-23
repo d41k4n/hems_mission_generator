@@ -748,7 +748,7 @@ Hints:
 			<var name="counter" type="number" init_val="0"/>
 		</shared_variables>
 	</embedded_scripts>
-<!--	
+
 	<loc_acc>
 		<point lat="46.755370" long="9.940814" template="land" radius_mt="80" loc_desc="Flüelapass H28, 7260 Davos, Switzerland, Accident with head-on collision"/>
 		<point lat="46.972705" long="9.604765" template="land" radius_mt="80" loc_desc="Felsenbach, 7302 Landquart, Switzerland, Accident with head-on collision"/>
@@ -1357,7 +1357,7 @@ Hints:
 		<point lat="46.7802778" long="9.98777778" template="hover" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
 		<point lat="46.7158333" long="9.99638889" template="hover" radius_mt="80" loc_desc="7542 Susch, Switzerland, Search and Rescue"/>
 	</loc_acc>
--->
+
 	<loc_hospitals>
 		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
 		<point lat="46.69698" long="9.43650" template="land" radius_mt="80" loc_desc="Helipad, Thusis Spital / LSHT"/>
