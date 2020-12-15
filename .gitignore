@@ -30,6 +30,11 @@ aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1/*
 !aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1/HSLAircraft.ini
 !aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1/VRconfigHotspots.txt
 !aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1/.gitattributes
+!aircraft/Helicopters/EC 135 V5 EMS
+aircraft/Helicopters/EC 135 V5 EMS/*
+!aircraft/Helicopters/EC 135 V5 EMS/HSLAircraft.ini
+!aircraft/Helicopters/EC 135 V5 EMS/VRconfigHotspots.txt
+!aircraft/Helicopters/EC 135 V5 EMS/.gitattributes
 *.skp
 *.skb
 earth.wed.bak.xml
