@@ -25,6 +25,9 @@
             </Folder>
             <Folder name="FlyWithLua">
                 <File name="D:\X-Plane 11\Resources\plugins\FlyWithLua\Scripts\Hoist.lua" />
+                <Folder name="modules">
+                    <File name="D:\X-Plane 11\Resources\plugins\FlyWithLua\Modules\tween.lua" />
+                </Folder>
             </Folder>
         </Folder>
         <Folder name="Custom Scenery">
