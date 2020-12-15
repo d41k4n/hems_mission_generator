@@ -1,0 +1,1894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE version="301" plane_type="helos">
+	<!-- Random mission template for Medevac Helicopter "Rega 5" based in Untervaz Heliport LSXU
+	     using the MissionX plugin by snagar
+		 Version 1.0
+	-->
+	<content>
+		<medevac_hover_osm min_valid_flight_legs="3" list="medevac_hover_osm_set" plane_type="helos">
+Hover OSM: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+
+Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints for winch extraction:
+- Hover within 20m radius and below 150ft over target
+- Crew will perform all required tasks autonomously when within target range.
+- Observe status messages during all operations and follow instructions.
+- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
+- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
+
+Hints for patient dropoff:
+- Land on the helipad designated via GPS.
+- Shut down engines
+- Observe status messages and follow instructions.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hover_osm>
+		<medevac_road_osm min_valid_flight_legs="3" list="medevac_road_osm_set" plane_type="helos">
+Road OSM: In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
+
+Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints:
+- Land within a radius of 80m around the designated accident location.
+- Shut down engines
+- Observe status messages and follow instructions if requested.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_road_osm>
+		<medevac_hover min_valid_flight_legs="3" list="medevac_hover_set" plane_type="helos">
+Hover XY: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+
+Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints for winch extraction:
+- Hover within 20m radius and below 150ft over target
+- Crew will perform all required tasks autonomously when within target range.
+- Observe status messages during all operations and follow instructions.
+- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
+- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
+
+Hints for patient dropoff:
+- Land on the helipad designated via GPS.
+- Shut down engines
+- Observe status messages and follow instructions.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hover>
+		<medevac_land min_valid_flight_legs="3" list="medevac_land_set" plane_type="helos">
+Land XY: In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
+
+Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints:
+- Land within a radius of 80m around the designated accident location.
+- Shut down engines
+- Observe status messages and follow instructions if requested.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_land>
+		<medevac_land min_valid_flight_legs="3" list="medevac_land_set" plane_type="helos">
+Land XY: In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
+
+Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints:
+- Land within a radius of 80m around the designated accident location.
+- Shut down engines
+- Observe status messages and follow instructions if requested.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_land>
+		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
+In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
+
+Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints:
+- Land on the designated hospital helipad.
+- Shut down engines
+- Observe status messages and follow instructions if requested.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hospital>
+		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
+In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
+
+Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints:
+- Land on the designated hospital helipad.
+- Shut down engines
+- Observe status messages and follow instructions if requested.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hospital>
+	</content>
+
+	<mission_info 
+		mission_image_file_name="Rega1_2.png" 
+		template_image_file_name="Rega1_2.png" 
+		written_by="Daikan" 
+		plane_desc="Helicopter" 
+		estimate_time="~45 Minutes." 
+		difficulty="Medium" 
+		other_settings="" 
+		weather_settings="By Simmer" 
+		scenery_settings="RescueX, R2, OpenSceneryX, MisterX, 3D People, CDB" 
+		short_desc="Hello Pilot,
+		
+		In this mission you will be assigned a MEDEVAC task that may consist of an emergency extraction from an accident scene or hospital - either by winch or by landing. 
+		
+		Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090) 
+		Aircraft: Rotorsim EC135 V5
+		
+		Please make sure your aircraft is parked and ready before starting the mission. 
+		
+		Each mission ends successfully with you returning safely to your homebase.
+		
+		Further instructions will be provided after the mission is generated. 
+		
+		Good luck!"
+	/>
+
+	<!-- [plane | xy] {element name that holds points} -->
+	<briefer_and_start_location location_type="plane" start_cold_and_dark="yes" />
+
+	<datarefs_start_cold_and_dark>rotorsim/ec135/crew[0]:1,rotorsim/ec135/crew[1]:1,rotorsim/ec135/crew[2]:1,rotorsim/ec135/crew[3]:1,sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0</datarefs_start_cold_and_dark>
+
+	<medevac_hover_set is_set_of_flight_legs="yes" >
+		<!-- Road accident, mountain accident -->
+		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Search and Rescue. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=2-25" override_trigger_name="trig_hover_goal_1_target_1"/>
+			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="3000">Establish visual on target area and reduce speed.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="1000">Crew standby for hover. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_hover_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_hover_set>
+
+	<medevac_land_set is_set_of_flight_legs="yes" >
+		<!-- Accident or hospital transfer -->
+		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
+			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=2-25" override_trigger_name="trig_land_goal_1_target_1" />
+			<display_object_set random_tag="object_sets" set_name="medevac" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="3000">Look out for target and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_land_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_land_set>
+
+	<medevac_hospital_set is_set_of_flight_legs="yes" >
+		<!-- Hospital transfer -->
+		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Patient transfer. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
+			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup" override_trigger_name="trig_land_goal_1_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="3000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_hospitals_dropoff|nm_between=5-60" override_trigger_name="trig_land_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_hospital_set>
+
+	<medevac_hover_osm_set is_set_of_flight_legs="yes" >
+		<!-- Ski accident -->
+		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Skiing accident. Location: {navaid_loc_desc}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="webosm" location_value="tag=webosm_piste_filter|nm_between=2-25|keyname=piste:name|keydesc=piste:name|webosm_optimize=n" force_sloped_terrain="3" override_trigger_name="trig_hover_goal_1_target_1"/>
+			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="3000">Establish visual on target area and reduce speed.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="1000">Crew standby for hover. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_hover_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_hover_osm_set>
+
+	<medevac_road_osm_set is_set_of_flight_legs="yes" >
+		<!-- Accident or hospital transfer -->
+		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
+			<expected_location location_type="webosm" location_value="tag=webosm_road_filter|nm_between=7-25|keyname=name|keydesc=name|webosm_optimize=n" override_trigger_name="trig_land_goal_1_target_1" />
+			<display_object_set random_tag="object_sets" set_name="medevac" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="3000">Look out for target and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_land_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_road_osm_set>
+
+	<webosm_piste_filter>
+		<filter>['piste:type'='downhill']['piste:type'='nordic']['piste:type'='sled']['piste:type'='sleigh']['piste:type'='hike']['piste:type'='skitour']</filter>
+	</webosm_piste_filter>
+
+	<webosm_road_filter>
+		<filter>[highway=primary][highway=secondary][highway=tertiary][highway=residential][highway=service][highway=living_street]</filter>
+	</webosm_road_filter>
+
+
+	<!-- Patient extraction: Special leg directives -->
+	<leg_1_tasks_winch_ops>
+		<task name="task_1_open_door" depends_on_task="" base_on_trigger="trig_1_open_door" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_1_deploy_crew" depends_on_task="task_1_open_door" base_on_trigger="trig_1_deploy_crew" base_on_script="" eval_success_for_n_sec="10" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+		<task name="task_1_start_winch_down" depends_on_task="task_1_deploy_crew" base_on_trigger="trig_1_start_winch_down" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_1_hold_position" depends_on_task="task_1_deploy_crew" base_on_trigger="trig_1_hold_position" base_on_script="" eval_success_for_n_sec="3" cumulative_timer_flag="no" mandatory="true" force_evaluation="yes" />
+		<task name="task_1_stop_winch" depends_on_task="task_1_start_winch_down" base_on_trigger="trig_1_stop_winch" base_on_script="" eval_success_for_n_sec="5" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+		<task name="task_1_pickup_patient" depends_on_task="task_1_stop_winch" base_on_trigger="trig_1_pickup_patient" base_on_script="" eval_success_for_n_sec="20" mandatory="true" force_evaluation="no" />
+		<task name="task_1_winch_up" depends_on_task="task_1_pickup_patient" base_on_trigger="trig_1_winch_up" base_on_script="" eval_success_for_n_sec="15" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+		<task name="task_1_onboard_patient" depends_on_task="task_1_winch_up" base_on_trigger="trig_1_onboard_patient" base_on_script="" eval_success_for_n_sec="10" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+		<task name="task_1_onboard_crew" depends_on_task="task_1_onboard_patient" base_on_trigger="trig_1_onboard_crew" base_on_script="" eval_success_for_n_sec="5" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+		<task name="task_1_close_door" depends_on_task="task_1_onboard_crew" base_on_trigger="trig_1_close_door" base_on_script="" eval_success_for_n_sec="5" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+	</leg_1_tasks_winch_ops>
+
+	<leg_1_triggers_winch_ops>
+		<trigger name="trig_1_open_door" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="100" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_open_door" 
+			         message_name_when_left="msg_1_leaving_position"
+		             commands_to_exec_when_fired="HSL/Sling_Enable,sim/flight_controls/door_open_4" 
+					 commands_to_exec_when_left=""
+		             dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_deploy_crew" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="50" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_deploy_crew" 
+					 message_name_when_left="msg_1_leaving_position"
+					 commands_to_exec_when_fired="HSL/Load_Connect" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:0" 
+					 dataref_to_modify_when_left=""
+			/>
+		</trigger>
+		<trigger name="trig_1_start_winch_down" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="30" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_start_winch_down" 
+					 message_name_when_left="msg_1_leaving_position"
+					 commands_to_exec_when_left=""
+					 commands_to_exec_when_fired="ec135/hoist/out:5"
+					 dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_hold_position" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="30" />
+				<point lat="" long="" />
+				<elevation_volume elev_lower_upper_ft= "---150" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_hold_position" 
+					 message_name_when_left="msg_1_leaving_position"
+					 commands_to_exec_when_fired="" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_stop_winch" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="winch.check_down" />
+			<loc_and_elev_data>
+				<radius length_mt="30" />
+				<point lat="" long="" />
+				<elevation_volume elev_lower_upper_ft= "---150" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_stop_winch"
+					 message_name_when_left="msg_1_leaving_position"
+					 commands_to_exec_when_fired="" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_pickup_patient" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="30" />
+				<point lat="" long="" />
+				<elevation_volume elev_lower_upper_ft= "---150" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_pickup_patient" 
+					 message_name_when_left="msg_1_leaving_position"
+					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_add_patient" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_winch_up" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="500" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_winch_up" 
+					 message_name_when_left=""
+					 commands_to_exec_when_fired=""
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="" dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_onboard_patient" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="winch.check_up" />
+			<loc_and_elev_data>
+				<radius length_mt="500" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_onboard_patient" 
+			         message_name_when_left=""
+		             commands_to_exec_when_fired="ec135/hoist/in:5,FlyWithLua/hoist/winch_remove_patient" 
+					 commands_to_exec_when_left=""
+		             dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:1" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_onboard_crew" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="500" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_onboard_crew" 
+					 message_name_when_left=""
+					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_release" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="sim/flightmodel/weight/m_fixed:400" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_close_door" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="500" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_close_door" 
+					 message_name_when_left=""
+					 commands_to_exec_when_fired="sim/flight_controls/door_open_4,HSL/Sling_Disable" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+	</leg_1_triggers_winch_ops>
+
+	<leg_1_msgs_winch_ops>
+		<message name="msg_1_open_door" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Cabin door opened - standby for deploying crew.]]>
+			</mix>
+		</message>
+		<message name="msg_1_deploy_crew" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Crew deployed - standby to lower winch.]]>
+			</mix>
+		</message>
+		<message name="msg_1_start_winch_down" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Lowering winch - hold position and stay below 150 feet above ground.]]>
+			</mix>
+		</message>
+		<message name="msg_1_hold_position" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Hold position!]]>
+			</mix>
+		</message>
+		<message name="msg_1_leaving_position" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Get back into position!]]>
+			</mix>
+		</message>
+		<message name="msg_1_stop_winch" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Winch extended - standby for patient pickup. Hold position.]]>
+			</mix>
+		</message>
+		<message name="msg_1_pickup_patient" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Patient secured - standby for winch retrieval.]]>
+			</mix>
+		</message>
+		<message name="msg_1_winch_up" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Start raising winch carefully - standby for recovering patient.]]>
+			</mix>
+		</message>
+		<message name="msg_1_onboard_patient" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Patient recovered - standby for recovering crew.]]>
+			</mix>
+		</message>
+		<message name="msg_1_onboard_crew" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[All aboard - standby for closing door.]]>
+			</mix>
+		</message>
+		<message name="msg_1_close_door" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Door closed.]]>
+			</mix>
+		</message>
+	</leg_1_msgs_winch_ops>
+
+	<!-- Patient boarding: Special leg directives -->
+	<leg_1_tasks_patient_boarding>
+		<task name="task_1_doors_open" depends_on_task="" base_on_trigger="trig_1_doors_open" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="yes" />
+		<task name="task_1_crew_off" depends_on_task="task_1_doors_open" base_on_trigger="trig_1_crew_off" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_1_patient_on" depends_on_task="task_1_crew_off" base_on_trigger="trig_1_patient_on" base_on_script="" eval_success_for_n_sec="180" mandatory="true" force_evaluation="no" />
+		<task name="task_1_crew_on" depends_on_task="task_1_patient_on" base_on_trigger="trig_1_crew_on" base_on_script="" eval_success_for_n_sec="60" mandatory="true" force_evaluation="no" />
+		<task name="task_1_doors_closed" depends_on_task="task_1_crew_on" base_on_trigger="trig_1_doors_closed" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
+	</leg_1_tasks_patient_boarding>
+
+	<leg_1_triggers_patient_boarding>
+		<trigger name="trig_1_doors_open" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_doors_open" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_open_4" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
+		</trigger>
+		<trigger name="trig_1_crew_off" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_1" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_crew_off" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_open_6" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
+		</trigger>
+		<trigger name="trig_1_patient_on" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_patient_on" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_close_6" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
+		</trigger>
+		<trigger name="trig_1_crew_on" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_crew_on" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_close_4" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" dataref_to_modify_when_left=""  />
+		</trigger>
+		<trigger name="trig_1_doors_closed" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_doors_closed" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_close_2" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:1" dataref_to_modify_when_left=""  />
+		</trigger>
+	</leg_1_triggers_patient_boarding>
+
+	<leg_1_msgs_patient_boarding>
+		<message name="msg_1_doors_open" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Good landing. Shut down engines and standby for crew unboarding.]]>
+			</mix >
+		</message>
+		<message name="msg_1_crew_off" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Crew is off - expect patient boarding in 3 minutes.]]>
+			</mix >
+		</message>
+		<message name="msg_1_patient_on" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Patient on board and stable - standby for crew boarding.]]>
+			</mix >
+		</message>
+		<message name="msg_1_crew_on" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Crew boarding complete. Cleared for engine startup. Outside check in progress.]]>
+			</mix >
+		</message>
+		<message name="msg_1_doors_closed" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Outside check complete - cleared for takeoff.]]>
+			</mix >
+		</message>
+	</leg_1_msgs_patient_boarding>
+
+	<!-- Patient dropoff: Special leg directives -->
+	<leg_2_tasks_dropoff>
+		<task name="task_2_doors_open" depends_on_task="" base_on_trigger="trig_2_doors_open" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="yes" />
+		<task name="task_2_crew_off" depends_on_task="task_2_doors_open" base_on_trigger="trig_2_crew_off" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_2_patient_off" depends_on_task="task_2_crew_off" base_on_trigger="trig_2_patient_off" base_on_script="" eval_success_for_n_sec="60" mandatory="true" force_evaluation="no" />
+		<task name="task_2_crew_on" depends_on_task="task_2_patient_off" base_on_trigger="trig_2_crew_on" base_on_script="" eval_success_for_n_sec="180" mandatory="true" force_evaluation="no" />
+		<task name="task_2_doors_closed" depends_on_task="task_2_crew_on" base_on_trigger="trig_2_doors_closed" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
+	</leg_2_tasks_dropoff>
+
+	<leg_2_triggers_dropoff>
+		<trigger name="trig_2_doors_open" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_2_doors_open" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_open_4" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
+		</trigger>
+		<trigger name="trig_2_crew_off" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_2" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_2_crew_off" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_open_6" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
+		</trigger>
+		<trigger name="trig_2_patient_off" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_2_patient_off" message_name_when_left=""
+			commands_to_exec_when_fired="" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:0" dataref_to_modify_when_left=""  />
+		</trigger>
+		<trigger name="trig_2_crew_on" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_2_crew_on" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_close_4,sim/flight_controls/door_close_6," commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" dataref_to_modify_when_left=""  />
+		</trigger>
+		<trigger name="trig_2_doors_closed" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_2_doors_closed" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_close_2" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:1" dataref_to_modify_when_left=""  />
+		</trigger>
+	</leg_2_triggers_dropoff>
+
+	<leg_2_msgs_dropoff>
+		<message name="msg_2_doors_open" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Good landing. Shut down engines and standby for crew unboarding.]]>
+			</mix >
+		</message>
+		<message name="msg_2_crew_off" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Crew is off. Unloading patient.]]>
+			</mix >
+		</message>
+		<message name="msg_2_patient_off" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Patient is off. Handover in progress - expect crew back in 3 minutes.]]>
+			</mix >
+		</message>
+		<message name="msg_2_crew_on" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Crew boarding complete. Cleared for engine startup. Outside check in progress.]]>
+			</mix >
+		</message>
+		<message name="msg_2_doors_closed" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Outside check complete - cleared for takeoff.]]>
+			</mix >
+		</message>
+	</leg_2_msgs_dropoff>
+		
+	<xpdata>
+		<dataref name="agl" key="sim/flightmodel/position/y_agl"/>
+		<dataref name="hoist_ground_contact" key="hoist/ground_contact"/>
+		<dataref name="hoist_is_up" key="hoist/is_up"/>
+		<dataref name="rope_length" key="hoist/rope_length"/>
+		<dataref name="main_rotor_speed" key="sim/flightmodel2/engines/prop_rotation_speed_rad_sec[0]"/>		
+	</xpdata>
+	 
+	<embedded_scripts>
+		<file name="winch.bas"/>
+		<shared_variables>
+			<var name="counter" type="number" init_val="0"/>
+		</shared_variables>
+	</embedded_scripts>
+
+	<loc_acc>
+		<point lat="46.755370" long="9.940814" template="land" radius_mt="80" loc_desc="Flüelapass H28, 7260 Davos, Switzerland, Accident with head-on collision"/>
+		<point lat="46.972705" long="9.604765" template="land" radius_mt="80" loc_desc="Felsenbach, 7302 Landquart, Switzerland, Accident with head-on collision"/>
+		<point lat="46.70447961714754" long="9.559977183483111" template="land" radius_mt="80" loc_desc="Bova Pintga, 7083 Lantsch/Lenz, Switzerland, Accident involving animal(s)"/>
+		<point lat="46.774595874052515" long="9.664523264865034" template="land" radius_mt="80" loc_desc="Poststrasse 519, 7050 Arosa, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.97456509497379" long="9.610840032248616" template="land" radius_mt="80" loc_desc="Chlustunnel, 7212 Seewis im Prättigau, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.9282685590847" long="9.716787085876588" template="land" radius_mt="80" loc_desc="Graben 99, 7233 Jenaz, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.92212277540275" long="9.733877346670724" template="land" radius_mt="80" loc_desc="Aeuli 1, 7235 Fideris, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.84021288865024" long="9.587608119282978" template="land" radius_mt="80" loc_desc="Calfreisen Tunnel, 7027 Maladers, Switzerland, Accident with head-on collision"/>
+		<point lat="46.976864106465825" long="9.552874414266903" template="land" radius_mt="80" loc_desc="Landstrasse, 7304 Malans, Switzerland, Accident involving animal(s)"/>
+		<point lat="46.921240324232855" long="9.746435618988233" template="land" radius_mt="80" loc_desc="Talstrasse, 7235 Fideris, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.675823270702466" long="9.577049994405176" template="land" radius_mt="80" loc_desc="Voia da Brianzauls, 7083 Lantsch/Lenz, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.7961430994825" long="9.400798463290558" template="land" radius_mt="80" loc_desc="13 25, 7403 Rhäzüns, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.776137370486595" long="9.667154304406532" template="land" radius_mt="80" loc_desc="Sonnenberg 1, 7050 Arosa, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.828013171063354" long="9.550305594074276" template="land" radius_mt="80" loc_desc="Schluocht 1, 7062 Churwalden, Switzerland, Accident when parking"/>
+		<point lat="46.658626437699525" long="9.582315747125879" template="land" radius_mt="80" loc_desc="Julierstrasse, 7450 Tiefencastel, Switzerland, Accident when turning left or right"/>
+		<point lat="46.764526719550744" long="9.421947823399242" template="land" radius_mt="80" loc_desc="Kantonstrasse, 7405 Rothenbrunnen, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.96966531794987" long="9.68847860336952" template="land" radius_mt="80" loc_desc="Dorfstrasse 24, 7220 Schiers, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.822370057137256" long="9.404100820102666" template="land" radius_mt="80" loc_desc="Hauptstrasse 163, 7402 Bonaduz, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.8983398023805" long="9.550639424244356" template="land" radius_mt="80" loc_desc="Deutsche Str. 19A, 7203 Trimmis, Switzerland, Accident when turning left or right"/>
+		<point lat="46.816834327249325" long="9.53235475294091" template="land" radius_mt="80" loc_desc="Cartschinsweg 18, 7074 Malix, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.80928443810255" long="9.411539027067759" template="land" radius_mt="80" loc_desc="E43, 7013 Bonaduz, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.832246647205224" long="9.537871202940343" template="land" radius_mt="80" loc_desc="Hauptstrasse, 7062 Chur, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.77454210646446" long="9.202630372796921" template="land" radius_mt="80" loc_desc="Giessli 6, 7130 Ilanz, Switzerland, Accident involving pedestrian(s)"/>
+		<point lat="47.09963409425746" long="9.502060454321374" template="land" radius_mt="80" loc_desc="13 5, 9476 Wartau, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.81056374519599" long="9.410406359731352" template="land" radius_mt="80" loc_desc="Plazzastunnel, 7402 Bonaduz, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.17568682606548" long="9.478735223670654" template="land" radius_mt="80" loc_desc="Langäulistrasse 45, 9470 Buchs, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.66406168139681" long="9.57177398798457" template="land" radius_mt="80" loc_desc="Julierstrasse 64, 7450 Tiefencastel, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.83429272526086" long="9.327794132765192" template="land" radius_mt="80" loc_desc="Luiesta 859, 7016 Trin, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.96500105779323" long="9.558401073447781" template="land" radius_mt="80" loc_desc="Schulstrasse 29, 7302 Landquart, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="46.836434042284914" long="9.856458640035697" template="land" radius_mt="80" loc_desc="Kantonsstrasse 29, 7265 Davos, Switzerland, Accident with head-on collision"/>
+		<point lat="47.06990654450953" long="9.479804598151793" template="land" radius_mt="80" loc_desc="Süsswinkelstrasse 11, 9477 Trübbach, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.00895921364526" long="9.529434176356308" template="land" radius_mt="80" loc_desc="Steigstrasse 9, 7304 Maienfeld, Switzerland, Accident when turning left or right"/>
+		<point lat="46.963119169592375" long="9.564294098181128" template="land" radius_mt="80" loc_desc="Kantonsstrasse 17, 7302 Landquart, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.80691371172312" long="9.258964903044102" template="land" radius_mt="80" loc_desc="Via Val 287, 7031 Laax, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.63939882593789" long="9.440778523461697" template="land" radius_mt="80" loc_desc="E43, 7432 Zillis-Reischen, Switzerland, Accident with head-on collision"/>
+		<point lat="46.810964163919174" long="9.410145794296351" template="land" radius_mt="80" loc_desc="Plazzastunnel, 7402 Bonaduz, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.96745113717369" long="9.562638465751235" template="land" radius_mt="80" loc_desc="Kantonsstrasse 21, 7302 Landquart, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.03975475866017" long="9.435800567400994" template="land" radius_mt="80" loc_desc="Grossfeldstrasse 65, 8887 Mels, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="47.08224182425354" long="9.367438907925568" template="land" radius_mt="80" loc_desc="Guggelen 1, 8893 Flums, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.66421235084121" long="9.581008196463754" template="land" radius_mt="80" loc_desc="3, 7450 Albula/Alvra, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.09249558797057" long="9.354211777675141" template="land" radius_mt="80" loc_desc="A3, 8890 Flums, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.0333011243764" long="9.431783136922688" template="land" radius_mt="80" loc_desc="Brunnenweg 12, 7323 Vilters-Wangs, Switzerland, Accident when overtaking or changing lanes"/>
+		<point lat="47.00544794534726" long="9.530033968177392" template="land" radius_mt="80" loc_desc="Aeuli 6, 7304 Maienfeld, Switzerland, Accident involving pedestrian(s)"/>
+		<point lat="46.90131652517959" long="9.893017093843431" template="land" radius_mt="80" loc_desc="Schlappinstrasse, 7252 Klosters-Serneus, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.102563496588736" long="9.346125308113939" template="land" radius_mt="80" loc_desc="Palottaweg 2163, 8892 Walenstadt, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.11350024619753" long="9.336603677611626" template="land" radius_mt="80" loc_desc="A3, 8892 Walenstadt, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.16985302076589" long="9.459552524529522" template="land" radius_mt="80" loc_desc="Limsergässli 9, 9470 Grabs, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.02099645173687" long="9.486179964170638" template="land" radius_mt="80" loc_desc="E43, 7310 Bad Ragaz, Switzerland, Accident when overtaking or changing lanes"/>
+		<point lat="46.7012766119999" long="9.722938507665166" template="land" radius_mt="80" loc_desc="Hauptstrasse, 7494 Wiesen, Switzerland, Accident with head-on collision"/>
+		<point lat="46.77170874841461" long="9.936273184610288" template="land" radius_mt="80" loc_desc="Flüelapass, 7260 Davos, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.05113690124119" long="9.44097716549401" template="land" radius_mt="80" loc_desc="13 30, 7320 Sargans, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.80599239297945" long="9.838341080716253" template="land" radius_mt="80" loc_desc="Dischmastrasse 6, 7260 Davos Dorf, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.71170279997837" long="9.45193915453296" template="land" radius_mt="80" loc_desc="St. Agatha 144A, 7413 Fürstenaubruck, Switzerland, Accident when overtaking or changing lanes"/>
+		<point lat="46.76459640952254" long="9.554368421191487" template="land" radius_mt="80" loc_desc="Hauptstrasse 6-8, 7076 Parpan, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.84316926533687" long="9.585916352044563" template="land" radius_mt="80" loc_desc="Cholpl. 88A, 7026 Maladers, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.970287646711526" long="9.595286337779898" template="land" radius_mt="80" loc_desc="Ganda 25, 7302 Landquart, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.80786551030127" long="9.871887777894361" template="land" radius_mt="80" loc_desc="Flüelapassstrasse 2, 7260 Davos, Switzerland, Accident when overtaking or changing lanes"/>
+		<point lat="47.01616435681763" long="9.525123328236267" template="land" radius_mt="80" loc_desc="Steigstrasse, 7304 Maienfeld, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.83970593179735" long="9.870219234675895" template="land" radius_mt="80" loc_desc="28 48, 7265 Davos, Switzerland, Accident with head-on collision"/>
+		<point lat="46.77427858688271" long="9.208030533830799" template="land" radius_mt="80" loc_desc="Gassa 22, 7130 Ilanz, Switzerland, Accident when turning left or right"/>
+		<point lat="46.66407116276373" long="9.571748220318137" template="land" radius_mt="80" loc_desc="Julierstrasse 64, 7450 Tiefencastel, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.93323623469453" long="9.563269338289551" template="land" radius_mt="80" loc_desc="13 126, 7205 Zizers, Switzerland, Accident when overtaking or changing lanes"/>
+		<point lat="46.776792182163305" long="9.139132068405893" template="land" radius_mt="80" loc_desc="19, 7156 Rueun, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.83774210785048" long="9.541442526109504" template="land" radius_mt="80" loc_desc="Araschgerstrasse 6, 7062 Chur, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.94906980113263" long="9.578455377232174" template="land" radius_mt="80" loc_desc="Vadelsweg 2A, 7206 Igis, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="47.16785260574538" long="9.453051596494822" template="land" radius_mt="80" loc_desc="Egetenstrasse 9, 9470 Grabs, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.04670488810097" long="9.418972890333512" template="land" radius_mt="80" loc_desc="Oberdorfstrasse 4, 8887 Mels, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="47.0318285682143" long="9.468550730836856" template="land" radius_mt="80" loc_desc="E43, 7324 Vilters-Wangs, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.170431820069936" long="9.458360512252048" template="land" radius_mt="80" loc_desc="Staatsstrasse 4, 9470 Grabs, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.16550381869025" long="9.4709718204883" template="land" radius_mt="80" loc_desc="St. Gallerstrasse 1, 9470 Buchs, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="47.17195945525211" long="9.472259525914117" template="land" radius_mt="80" loc_desc="Heimstrasse 8, 9470 Buchs, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="47.04012429796592" long="9.43731482420185" template="land" radius_mt="80" loc_desc="Wolfriet 1, 8887 Mels, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.83474609344622" long="9.855845132701866" template="land" radius_mt="80" loc_desc="Prättigauerstrasse 31-27, 7265 Davos, Switzerland, Accident involving animal(s)"/>
+		<point lat="46.836311081722144" long="9.316156058657805" template="land" radius_mt="80" loc_desc="Via Nova, 7017 Flims, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.96737536379335" long="9.566237180604327" template="land" radius_mt="80" loc_desc="Falknisweg 8, 7302 Landquart, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="46.66860233335318" long="9.691187696303654" template="land" radius_mt="80" loc_desc="Dorfstrasse 79, 7477 Filisur, Switzerland, Accident involving animal(s)"/>
+		<point lat="46.72878211529438" long="9.406029194409268" template="land" radius_mt="80" loc_desc="Gir, 7423 Sarn, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.71081456520163" long="9.436443211704418" template="land" radius_mt="80" loc_desc="Italienische Str. 60, 7408 Cazis, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.977552473582605" long="9.652691852940592" template="land" radius_mt="80" loc_desc="Prastrasse 544, 7214 Grüsch, Switzerland, Accident with head-on collision"/>
+		<point lat="47.00328014427022" long="9.501182730775884" template="land" radius_mt="80" loc_desc="Bahnhofstrasse 2, 7310 Bad Ragaz, Switzerland, Accident involving pedestrian(s)"/>
+		<point lat="46.93284773939341" long="9.170668901130417" template="land" radius_mt="80" loc_desc="Kantonsstrasse 11, 8767 Elm, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.642426228054894" long="9.442602291715106" template="land" radius_mt="80" loc_desc="13, 7432 Zillis-Reischen, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="46.993481528741846" long="9.553502828803591" template="land" radius_mt="80" loc_desc="Wiesenstrasse 2, 7307 Jenins, Switzerland, Accident with head-on collision"/>
+		<point lat="47.03827593047421" long="9.440628498179073" template="land" radius_mt="80" loc_desc="Wolfrietstrasse, 7323 Vilters-Wangs, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.13789322711377" long="9.506080609583421" template="land" radius_mt="80" loc_desc="E43, 9475 Sevelen, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.03324531788343" long="9.460168392149065" template="land" radius_mt="80" loc_desc="3, 8887 Mels, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.07698248426036" long="9.484157321892152" template="land" radius_mt="80" loc_desc="Hauptstrasse 1, 9477 Trübbach, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.11972538302077" long="9.51411871763011" template="land" radius_mt="80" loc_desc="9, 9476 Wartau, Switzerland, Accident with head-on collision"/>
+		<point lat="47.03761672095513" long="9.443854804587799" template="land" radius_mt="80" loc_desc="Baltschanastrasse, 7323 Mels, Switzerland, Accident when turning-into main road"/>
+		<point lat="47.154959306361484" long="9.480569753188327" template="land" radius_mt="80" loc_desc="Ackerweg 1, 9470 Buchs, Switzerland, Accident when turning left or right"/>
+		<point lat="47.17943107211566" long="9.44799799109106" template="land" radius_mt="80" loc_desc="16 54, 9472 Grabs, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.049655673609124" long="9.429402862627558" template="land" radius_mt="80" loc_desc="Sarganserstrasse 78, 8887 Mels, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.020074338604225" long="9.486421070183145" template="land" radius_mt="80" loc_desc="Sarganserstrasse, 7310 Bad Ragaz, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.69796692918222" long="9.440427405621913" template="land" radius_mt="80" loc_desc="Marktwiesenstrasse, 7430 Thusis, Switzerland, Other"/>
+		<point lat="46.85785665021334" long="9.88253255272231" template="land" radius_mt="80" loc_desc="Selfrangastrasse 42a, 7250 Klosters-Serneus, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.701688220199664" long="9.455463235482792" template="land" radius_mt="80" loc_desc="Domleschgerstrasse 19, 7411 Sils im Domleschg, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.712737620916684" long="9.446836399802883" template="land" radius_mt="80" loc_desc="Querverbindung A dreizehn 2, 7430 Thusis, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.89429753533128" long="9.541462386715025" template="land" radius_mt="80" loc_desc="E43, 7203 Trimmis, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.93561706449961" long="9.564926823298324" template="land" radius_mt="80" loc_desc="3 47, 7205 Zizers, Switzerland, Accident when turning left or right"/>
+		<point lat="46.85838715101066" long="9.879184852972747" template="land" radius_mt="80" loc_desc="Davoserstrasse, 7250 Klosters-Serneus, Switzerland, Accident when overtaking or changing lanes"/>
+		<point lat="47.03980324102618" long="9.523608190486998" template="land" radius_mt="80" loc_desc="Steigstrasse, 7304 Fläsch, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.95147319917569" long="9.545895670492152" template="land" radius_mt="80" loc_desc="E43, 7205 Zizers, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.988127353684355" long="9.723681104566209" template="land" radius_mt="80" loc_desc="Crausch, 7228 Schiers, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.91381307506316" long="9.794721210869339" template="land" radius_mt="80" loc_desc="Prada 3C, 7240 Küblis, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.83974055309089" long="9.465186996494582" template="land" radius_mt="80" loc_desc="Plong Muling 36, 7013 Domat/Ems, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.72154755552708" long="9.558672653098279" template="land" radius_mt="80" loc_desc="3 12, 7078 Lenzerheide, Switzerland, Accident when turning left or right"/>
+		<point lat="47.050718456242215" long="9.431417048863572" template="land" radius_mt="80" loc_desc="3 75, 7320 Sargans, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="47.15262098529295" long="9.480506889348415" template="land" radius_mt="80" loc_desc="Churerstrasse 95, 9470 Buchs, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.063665106401324" long="9.396990357732479" template="land" radius_mt="80" loc_desc="A3, 8887 Mels, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.80161339253206" long="9.256178234565878" template="land" radius_mt="80" loc_desc="Stradun Cantonal 5, 7031 Laax, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.68625235706716" long="9.509348392529965" template="land" radius_mt="80" loc_desc="Tunnel Solis, 7431 Mutten, Switzerland, Accident with head-on collision"/>
+		<point lat="46.956556706513055" long="9.565887386287168" template="land" radius_mt="80" loc_desc="Schulstrasse 88, 7302 Landquart, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.867044929398354" long="9.885075824750887" template="land" radius_mt="80" loc_desc="Talbachstrasse 4, 7250 Klosters-Serneus, Switzerland, Accident when parking"/>
+		<point lat="47.05060247286151" long="9.43136007819317" template="land" radius_mt="80" loc_desc="Zürcherstrasse 73, 7320 Sargans, Switzerland, Accident when turning-into main road"/>
+		<point lat="47.1515031521064" long="9.481638120960787" template="land" radius_mt="80" loc_desc="Churerstrasse 100a, 9470 Buchs, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.971008331480704" long="9.556166866349649" template="land" radius_mt="80" loc_desc="Neugut 1, 7302 Landquart, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.12960715719343" long="9.485917920895336" template="land" radius_mt="80" loc_desc="Schildstrasse 6, 9475 Sevelen, Switzerland, Accident when turning-into main road"/>
+		<point lat="47.20898489632671" long="9.482937570656404" template="land" radius_mt="80" loc_desc="Gamserstrasse 40, 9469 Gams, Switzerland, Accident when turning-into main road"/>
+		<point lat="47.02341477407861" long="9.500364886055861" template="land" radius_mt="80" loc_desc="Augass 20, 7306 Fläsch, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="46.77851452675098" long="9.215111244038374" template="land" radius_mt="80" loc_desc="Isla Schluein 188, 7130 Ilanz, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.7233601191371" long="9.185870817866467" template="land" radius_mt="80" loc_desc="Cuschnaus 220, 7142 Cumbel, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.76465251575469" long="9.425579732336795" template="land" radius_mt="80" loc_desc="Pro Graund 37, 7405 Rothenbrunnen, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="46.6632597057224" long="9.579506448072628" template="land" radius_mt="80" loc_desc="3, 7450 Tiefencastel, Switzerland, Accident with head-on collision"/>
+		<point lat="46.794640643863794" long="9.823892553636405" template="land" radius_mt="80" loc_desc="Talstrasse 20, 7270 Davos Platz, Switzerland, Accident involving pedestrian(s)"/>
+		<point lat="46.971361611031774" long="9.553604210884723" template="land" radius_mt="80" loc_desc="Ragazerstrasse, 7208 Malans, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.83616935339087" long="9.318209672739348" template="land" radius_mt="80" loc_desc="Auas Sparsas, 7017 Flims, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.914435124972954" long="9.777557325609031" template="land" radius_mt="80" loc_desc="Dorfstrass 7, 7240 Küblis, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="47.031800661208166" long="9.46860231565017" template="land" radius_mt="80" loc_desc="E43, 7324 Vilters-Wangs, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.00158107668964" long="9.521004869173472" template="land" radius_mt="80" loc_desc="Maienfelderstrasse, 7304 Maienfeld, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.02506125775366" long="9.503875786789294" template="land" radius_mt="80" loc_desc="Augass, 7306 Fläsch, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.030558572007855" long="9.464041420900704" template="land" radius_mt="80" loc_desc="Landstrasse, 7324 Vilters-Wangs, Switzerland, Accident with head-on collision"/>
+		<point lat="46.7508778383781" long="9.556553142318169" template="land" radius_mt="80" loc_desc="Voa Principala 22, 7077 Valbella, Switzerland, Accident involving pedestrian(s)"/>
+		<point lat="46.80609102076848" long="9.838358583105913" template="land" radius_mt="80" loc_desc="Dischmastrasse 6, 7260 Davos Dorf, Switzerland, Accident involving pedestrian(s)"/>
+		<point lat="46.9370386983323" long="9.565902720949651" template="land" radius_mt="80" loc_desc="Kantonsstrasse 52, 7205 Zizers, Switzerland, Accident when overtaking or changing lanes"/>
+		<point lat="46.833706981957214" long="9.537731477249185" template="land" radius_mt="80" loc_desc="Malixerstrasse 124, 7062 Chur, Switzerland, Accident with head-on collision"/>
+		<point lat="47.12218551543835" long="9.488349705609439" template="land" radius_mt="80" loc_desc="Bahnhofstrasse 61, 9475 Sevelen, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.18167797912261" long="9.469659763655375" template="land" radius_mt="80" loc_desc="Werdenstrasse, 9472 Grabs, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.11901265197455" long="9.473477796059456" template="land" radius_mt="80" loc_desc="Hof, 9475 Sevelen, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.9148579366513" long="9.775802759711707" template="land" radius_mt="80" loc_desc="Hauptstrasse 19, 7240 Küblis, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="47.174326566225915" long="9.465593503646396" template="land" radius_mt="80" loc_desc="St. Gallerstrasse, 9470 Grabs, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="47.04958572470356" long="9.417841854046415" template="land" radius_mt="80" loc_desc="Bachstrasse 36, 8887 Mels, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="46.902887255359545" long="9.54705004689378" template="land" radius_mt="80" loc_desc="E43, 7203 Trimmis, Switzerland, Accident involving animal(s)"/>
+		<point lat="47.18252025547698" long="9.484076961092795" template="land" radius_mt="80" loc_desc="E43, 9470 Buchs, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.11473582084095" long="9.28898845016266" template="land" radius_mt="80" loc_desc="Bommersteinstrasse 15, 8885 Mols, Switzerland, Accident involving pedestrian(s)"/>
+		<point lat="47.1218765462697" long="9.487006439799845" template="land" radius_mt="80" loc_desc="Hauptstrasse 55, 9475 Sevelen, Switzerland, Accident when turning-into main road"/>
+		<point lat="47.041466105237326" long="9.434666524490611" template="land" radius_mt="80" loc_desc="Rietstrasse, 8887 Mels, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="46.777725665230996" long="9.81462871993699" template="land" radius_mt="80" loc_desc="Clavadelerstrasse 8, 7270 Davos Platz, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.95635961730795" long="9.565840151959398" template="land" radius_mt="80" loc_desc="Schulstrasse 88, 7302 Landquart, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="46.72947381091525" long="9.426338189522003" template="land" radius_mt="80" loc_desc="Ratitscherstrasse 4, 7408 Cazis, Switzerland, Accident when crossing the lane(s)"/>
+		<point lat="46.92119973217496" long="9.562110470820054" template="land" radius_mt="80" loc_desc="Oberaurütenen, 7201 Zizers, Switzerland, Accident when overtaking or changing lanes"/>
+		<point lat="46.970236710426626" long="9.56139467537342" template="land" radius_mt="80" loc_desc="Malans Karlihof 6, 7208 Malans, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.84840267073454" long="9.882312996055257" template="land" radius_mt="80" loc_desc="28, 7250 Klosters-Serneus, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.97160787270154" long="9.560239466001654" template="land" radius_mt="80" loc_desc="Neugutstrasse 2, 7208 Malans, Switzerland, Accident when turning-into main road"/>
+		<point lat="47.13375506896501" long="9.508030442686913" template="land" radius_mt="80" loc_desc="E43, 9475 Sevelen, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.819819681784246" long="9.405895298467792" template="land" radius_mt="80" loc_desc="E43, 7402 Bonaduz, Switzerland, Accident with head-on collision"/>
+		<point lat="46.812101542559255" long="9.397906807007354" template="land" radius_mt="80" loc_desc="Gassa 30, 7402 Bonaduz, Switzerland, Accident when turning left or right"/>
+		<point lat="46.941997675057564" long="9.568280147203282" template="land" radius_mt="80" loc_desc="Salviastrasse 7, 7205 Zizers, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.795389072261926" long="9.418419774079183" template="land" radius_mt="80" loc_desc="Isla Bellatunnel, 7405 Feldis/Veulden, Switzerland, Accident with head-on collision"/>
+		<point lat="47.17435522561445" long="9.46957959472219" template="land" radius_mt="80" loc_desc="Brunnenstrasse 9, 9470 Buchs, Switzerland, Accident when turning left or right"/>
+		<point lat="47.13015219193806" long="9.508734962945605" template="land" radius_mt="80" loc_desc="Sevelen, 9475 Sevelen, Switzerland, Accident with rear-end collision"/>
+		<point lat="46.93719009703551" long="9.565987541757378" template="land" radius_mt="80" loc_desc="Kantonsstrasse 48, 7205 Zizers, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.001936850749054" long="9.52172895060378" template="land" radius_mt="80" loc_desc="Untere Industrie 8, 7304 Maienfeld, Switzerland, Accident when turning-into main road"/>
+		<point lat="47.17595630796671" long="9.447062495843399" template="land" radius_mt="80" loc_desc="Spitalstrasse 31, 9472 Grabs, Switzerland, Other"/>
+		<point lat="46.95366483041306" long="9.17264106932937" template="land" radius_mt="80" loc_desc="Stalden 105, 8766 Matt, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.8277005753788" long="9.539437638700734" template="land" radius_mt="80" loc_desc="3 2, 7074 Malix, Switzerland, Accident with skidding or self-accident"/>
+		<point lat="46.80377163613241" long="9.836525185434276" template="land" radius_mt="80" loc_desc="Promenade 121B, 7260 Davos Dorf, Switzerland, Accident when overtaking or changing lanes"/>
+		<point lat="47.17434437108992" long="9.469684745603315" template="land" radius_mt="80" loc_desc="Brunnenstrasse 9, 9470 Buchs, Switzerland, Accident when turning-into main road"/>
+		<point lat="46.778964993963356" long="9.543785499691703" template="land" radius_mt="80" loc_desc="3 138, 7075 Churwalden, Switzerland, Accident involving pedestrian(s)"/>
+		<point lat="47.130432301061546" long="9.509668727903165" template="land" radius_mt="80" loc_desc="E43, 9475 Sevelen, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.17493072885323" long="9.483311637978808" template="land" radius_mt="80" loc_desc="Langäulistrasse 25, 9470 Buchs, Switzerland, Accident with rear-end collision"/>
+		<point lat="47.177868539163704" long="9.467812764620717" template="land" radius_mt="80" loc_desc="Eichenaustrasse 28, 9470 Buchs, Switzerland, Accident involving pedestrian(s)"/>
+		<point lat="47.0383333" long="9.00111111" template="hover" radius_mt="80" loc_desc="Klöntalerstrasse 8750, 8750 Glarus, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2705556" long="9.00027778" template="hover" radius_mt="80" loc_desc="8727 Walde, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1755556" long="9.01027778" template="hover" radius_mt="80" loc_desc="Linthbettstrasse, 8717 Benken, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0666667" long="9.02027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8752 Näfels, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0316667" long="9.03027778" template="hover" radius_mt="80" loc_desc="Wanderweg, 8750 Glarus, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2544444" long="9.04361111" template="hover" radius_mt="80" loc_desc="Uznacherstrasse, 8726 Ernetschwil, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2319444" long="9.05027778" template="hover" radius_mt="80" loc_desc="Gnippen, 8739 Rieden, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2402778" long="9.06027778" template="hover" radius_mt="80" loc_desc="Klosterbergstrasse, 8738 Gommiswald, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2308333" long="9.07027778" template="hover" radius_mt="80" loc_desc="Alp Wielesch 1, 8739 Rieden, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2116667" long="9.08027778" template="hover" radius_mt="80" loc_desc="Bergstrasse 5, 8739 Rieden, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2052778" long="9.09027778" template="hover" radius_mt="80" loc_desc="Wengistrasse, 8722 Kaltbrunn, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1819444" long="9.10027778" template="hover" radius_mt="80" loc_desc="Bergli, 8723 Schänis, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0902778" long="9.11027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8753 Mollis, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0422222" long="9.12027778" template="hover" radius_mt="80" loc_desc="8755 Ennenda, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2005556" long="9.14027778" template="hover" radius_mt="80" loc_desc="9650 Nesslau, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1805556" long="9.15027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8873 Amden, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1611111" long="9.16027778" template="hover" radius_mt="80" loc_desc="Fallen 409, 8873 Amden, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0347222" long="9.18027778" template="hover" radius_mt="80" loc_desc="8877 Murg, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0505556" long="9.19027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8877 Quarten, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0886111" long="9.20027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8877 Quarten, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1402778" long="9.21027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8878 Quarten, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1002778" long="9.22027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8883 Quarten, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0336111" long="9.26027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8897 Flums, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0508333" long="9.27027778" template="hover" radius_mt="80" loc_desc="Fuchsweg, 8897 Flums, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0708333" long="9.28027778" template="hover" radius_mt="80" loc_desc="Restaurant Maschgenlücke, 8897 Flums, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1005556" long="9.29027778" template="hover" radius_mt="80" loc_desc="Ackerwiesestrasse 1756, 8896 Quarten, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1077778" long="9.30027778" template="hover" radius_mt="80" loc_desc="Schulhausstrasse 24, 8885 Mols, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1305556" long="9.32027778" template="hover" radius_mt="80" loc_desc="Tünelenweg 21, 8880 Walenstadt, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1177778" long="9.33777778" template="hover" radius_mt="80" loc_desc="Höflistrasse 14, 8881 Tscherlach, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0736111" long="9.34027778" template="hover" radius_mt="80" loc_desc="Mutten 2477, 8894 Flums, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0316667" long="9.35027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7325 Mels, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1602778" long="9.36027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 9472 Grabs, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1033333" long="9.37055556" template="hover" radius_mt="80" loc_desc="Sersaxstrasse, 8892 Walenstadt, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0641667" long="9.38027778" template="hover" radius_mt="80" loc_desc="Tils 1, 8889 Plons, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0794444" long="9.39027778" template="hover" radius_mt="80" loc_desc="Valdarsch 1, 8893 Flums, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0452778" long="9.40027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8886 Mels, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2141667" long="9.41027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 9473 Gams, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2213889" long="9.42027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 9473 Gams, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1811111" long="9.43055556" template="hover" radius_mt="80" loc_desc="Friggs 4445, 9472 Grabs, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2175" long="9.44083333" template="hover" radius_mt="80" loc_desc="Walchenbach 271, 9473 Gams, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.4638889" long="9.44583333" template="hover" radius_mt="80" loc_desc="Rantelstrasse, 9403 Goldach, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0838889" long="9.47111111" template="hover" radius_mt="80" loc_desc="Wiesenrank, 9479 Wartau, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0972222" long="9.49027778" template="hover" radius_mt="80" loc_desc="Burghalde 2279, 9479 Gretschins, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.3713889" long="9.51027778" template="hover" radius_mt="80" loc_desc="Bühl 5, 9450 Altstätten, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2919444" long="9.52027778" template="hover" radius_mt="80" loc_desc="Im Plonerfeld 16, 9464 Altstätten, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0927778" long="9.53222222" template="hover" radius_mt="80" loc_desc="Unnamed Road, 9495 Triesen, Liechtenstein, Search and Rescue, winch required"/>
+		<point lat="47.4141667" long="9.53166667" template="hover" radius_mt="80" loc_desc="Grauenstein 299-1005, 9413 Oberegg, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.2344444" long="9.54083333" template="hover" radius_mt="80" loc_desc="Platta 78, 9488 Schellenberg, Liechtenstein, Search and Rescue, winch required"/>
+		<point lat="47.1016667" long="9.55027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 9495 Triesen, Liechtenstein, Search and Rescue, winch required"/>
+		<point lat="47.4341667" long="9.55666667" template="hover" radius_mt="80" loc_desc="Altenstein 458, 9410 Heiden, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1902778" long="9.56027778" template="hover" radius_mt="80" loc_desc="Gafadurastrasse, Planken, Liechtenstein, Search and Rescue, winch required"/>
+		<point lat="47.1369444" long="9.57027778" template="hover" radius_mt="80" loc_desc="Bünda Silum, 9497 Silum, Liechtenstein, Search and Rescue, winch required"/>
+		<point lat="47.0619444" long="9.58027778" template="hover" radius_mt="80" loc_desc="Triesen, Liechtenstein, Search and Rescue, winch required"/>
+		<point lat="47.4469444" long="9.58416667" template="hover" radius_mt="80" loc_desc="Sommersberg 673, 9427 Wolfhalden, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.1113889" long="9.60027778" template="hover" radius_mt="80" loc_desc="Malbunstrasse, 9497 Malbun, Liechtenstein, Search and Rescue, winch required"/>
+		<point lat="47.0513889" long="9.63027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7304 Maienfeld, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0313889" long="9.66027778" template="hover" radius_mt="80" loc_desc="Patenn, 7212 Maienfeld, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0422222" long="9.68027778" template="hover" radius_mt="80" loc_desc="Schesaplanahütte, 7212 Seewis im Prättigau, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.0316667" long="9.00027778" template="hover" radius_mt="80" loc_desc="Via alla Valà-Primaioo 1, 6965 Lugano, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9902778" long="9.00027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8775 Luchsingen, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9933333" long="9.01027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8775 Luchsingen, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5305556" long="9.02027778" template="hover" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5111111" long="9.03027778" template="hover" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9880556" long="9.03055556" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8775 Luchsingen, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.4830556" long="9.04027778" template="hover" radius_mt="80" loc_desc="6713 Malvaglia, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9413889" long="9.04027778" template="hover" radius_mt="80" loc_desc="Steinigen 107, 8777 Betschwanden, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8927778" long="9.05027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8767 Elm, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8533333" long="9.06027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7156 Pigniu, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8102778" long="9.07027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7165 Breil-Brigels, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7713889" long="9.08027778" template="hover" radius_mt="80" loc_desc="Tschuppina, 7165 Breil-Brigels, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7372222" long="9.09027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7134 Ruis, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.2202778" long="9.10055556" template="hover" radius_mt="80" loc_desc="San Vittore, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6913889" long="9.10027778" template="hover" radius_mt="80" loc_desc="via d&apos;Alp Nova, 7136 Ruis, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6533333" long="9.11138889" template="hover" radius_mt="80" loc_desc="Sut Vitg, 7149 Vrin, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6302778" long="9.12027778" template="hover" radius_mt="80" loc_desc="Vrin, 7149 Lumnezia, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5913889" long="9.13027778" template="hover" radius_mt="80" loc_desc="Im Ried, 7132 Vals, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5611111" long="9.14027778" template="hover" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5258333" long="9.15027778" template="hover" radius_mt="80" loc_desc="Fleugenmatt, 7438 Hinterrhein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9869444" long="9.15472222" template="hover" radius_mt="80" loc_desc="Atel 264, 8765 Engi, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9327778" long="9.16027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8767 Elm, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8869444" long="9.17027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8767 Elm, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8305556" long="9.18027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7154 Ruschein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7888889" long="9.19027778" template="hover" radius_mt="80" loc_desc="Sur Curtgins 15, 7154 Ruschein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7333333" long="9.20027778" template="hover" radius_mt="80" loc_desc="Suosta, 7142 Cumbel, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6869444" long="9.21027778" template="hover" radius_mt="80" loc_desc="Dorf, 7113 Suraua, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6305556" long="9.22027778" template="hover" radius_mt="80" loc_desc="St. Martin, 7116 Vals, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5908333" long="9.23027778" template="hover" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5602778" long="9.24027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7437 Nufenen, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5219444" long="9.25027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7437 Nufenen, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9802778" long="9.25027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8766 Matt, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9669444" long="9.26027778" template="hover" radius_mt="80" loc_desc="Wiesenhof 69, 7326 Mels, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9611111" long="9.27027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7326 Mels, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5611111" long="9.28027778" template="hover" radius_mt="80" loc_desc="Dörfli 9, 7436 Splügen, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6338889" long="9.29027778" template="hover" radius_mt="80" loc_desc="Gässli 125, 7109 Safien, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7011111" long="9.30027778" template="hover" radius_mt="80" loc_desc="Gün, 7107 Safien, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6969444" long="9.31027778" template="hover" radius_mt="80" loc_desc="Zalönerstrasse, 7107 Safien, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6602778" long="9.32027778" template="hover" radius_mt="80" loc_desc="Safierstrasse, 7109 Safien, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6511111" long="9.33027778" template="hover" radius_mt="80" loc_desc="7109 Thalkirch, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6247222" long="9.34027778" template="hover" radius_mt="80" loc_desc="Curtginatsch, 7433 Casti-Wergenstein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6036111" long="9.35027778" template="hover" radius_mt="80" loc_desc="Curtginatsch, 7433 Casti-Wergenstein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6016667" long="9.36027778" template="hover" radius_mt="80" loc_desc="7433 Casti-Wergenstein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6052778" long="9.37027778" template="hover" radius_mt="80" loc_desc="Curtginatsch, 7433 Casti-Wergenstein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6502778" long="9.38027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7433 Mathon, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7055556" long="9.39027778" template="hover" radius_mt="80" loc_desc="Oberurmein 181-185, 7426 Urmein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7102778" long="9.40027778" template="hover" radius_mt="80" loc_desc="Caschneras, 7423 Portein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7355556" long="9.41027778" template="hover" radius_mt="80" loc_desc="Curtgin, 7424 Präz, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7825" long="9.42027778" template="hover" radius_mt="80" loc_desc="Ravetg 36B, 7405 Rothenbrunnen, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8402778" long="9.43027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7012 Felsberg, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9144444" long="9.44055556" template="hover" radius_mt="80" loc_desc="Gams 1, 7315 Pfäfers, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9586111" long="9.45027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7317 Pfäfers, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.4608333" long="9.46027778" template="hover" radius_mt="80" loc_desc="Madrisch 183, 7446 Avers, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9366667" long="9.46027778" template="hover" radius_mt="80" loc_desc="Auen, 7314 Pfäfers, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.4319444" long="9.47027778" template="hover" radius_mt="80" loc_desc="Stettli, 7446 Avers, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9011111" long="9.47055556" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7023 Haldenstein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.4002778" long="9.48027778" template="hover" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8702778" long="9.48027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7023 Haldenstein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.3722222" long="9.49027778" template="hover" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8319444" long="9.49027778" template="hover" radius_mt="80" loc_desc="Hof Quadrella 1, 7013 Domat/Ems, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8019444" long="9.50027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7419 Malix, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7702778" long="9.51027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7075 Domleschg, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7466667" long="9.52027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7075 Churwalden, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7502778" long="9.53027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7075 Churwalden, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7616667" long="9.54027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7077 Vaz/Obervaz, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.3705556" long="9.55027778" template="hover" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5002778" long="9.56027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7455 Surses, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5402778" long="9.57027778" template="hover" radius_mt="80" loc_desc="7464 Parsonz, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5627778" long="9.58027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7464 Surses, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5213889" long="9.59027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7455 Surses, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.4925" long="9.60027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7455 Surses, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9555556" long="9.60277778" template="hover" radius_mt="80" loc_desc="Obercavadura 15, 7213 Valzeina, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.4511111" long="9.61027778" template="hover" radius_mt="80" loc_desc="Val Bivio, 7457 Surses, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9136111" long="9.61027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7202 Says, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.4011111" long="9.62027778" template="hover" radius_mt="80" loc_desc="7603 Vicosoprano, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8633333" long="9.62027778" template="hover" radius_mt="80" loc_desc="Maiasäss, 7027 Castiel, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8202778" long="9.63027778" template="hover" radius_mt="80" loc_desc="Am Wässerli, 7056 Tschiertschen, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.3308333" long="9.64027778" template="hover" radius_mt="80" loc_desc="7603 Vicosoprano, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7908333" long="9.64027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7050 Arosa, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.2961111" long="9.65027778" template="hover" radius_mt="80" loc_desc="7603 Vicosoprano, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7508333" long="9.65027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7050 Arosa, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7108333" long="9.66027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7492 Alvaneu, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6752778" long="9.67305556" template="hover" radius_mt="80" loc_desc="Sola Davains 130, 7477 Alvaneu, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6313889" long="9.68027778" template="hover" radius_mt="80" loc_desc="7477 Filisur, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6052778" long="9.69027778" template="hover" radius_mt="80" loc_desc="7477 Filisur, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.5694444" long="9.70027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7454 Surses, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9855556" long="9.71222222" template="hover" radius_mt="80" loc_desc="Ober Pusserein 328, 7228 Schiers, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9441667" long="9.72027778" template="hover" radius_mt="80" loc_desc="Furggaleidisstrasse 286, 7223 Luzein, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9002778" long="9.73027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7235 Fideris, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8733333" long="9.74027778" template="hover" radius_mt="80" loc_desc="Heuberge, 7235 Fideris, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8438889" long="9.75027778" template="hover" radius_mt="80" loc_desc="Strassberg, 7057 Langwies, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8102778" long="9.76027778" template="hover" radius_mt="80" loc_desc="Chüpfen, 7057 Langwies, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7805556" long="9.77027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7276 Davos, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7411111" long="9.78083333" template="hover" radius_mt="80" loc_desc="Bordstrasse 2, 7277 Davos Glaris, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7208333" long="9.79027778" template="hover" radius_mt="80" loc_desc="Rotschstrasse, Davos, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6827778" long="9.80027778" template="hover" radius_mt="80" loc_desc="Dorfstrasse, 7278 Davos, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6408333" long="9.81027778" template="hover" radius_mt="80" loc_desc="Latsch, 7482 Bergün/Bravuogn, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.6069444" long="9.82027778" template="hover" radius_mt="80" loc_desc="7482 Stugl/Stuls, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9833333" long="9.84027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7246 St. Antönien, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9405556" long="9.85027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7247 Saas, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9436111" long="9.86027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7247 Saas, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9402778" long="9.88027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7247 Saas, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.9002778" long="9.89027778" template="hover" radius_mt="80" loc_desc="Schlappinstrasse, 7252 Klosters-Serneus, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8680556" long="9.90027778" template="hover" radius_mt="80" loc_desc="Monbielerstrasse 78, 7250 Klosters-Serneus, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.8202778" long="9.91027778" template="hover" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7905556" long="9.92027778" template="hover" radius_mt="80" loc_desc="Flüelapassstrasse 33-7, 7260 Davos, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7505556" long="9.93027778" template="hover" radius_mt="80" loc_desc="Flüelapass, 7260 Davos, Switzerland, Search and Rescue, winch required"/>
+		<point lat="46.7002778" long="9.94027778" template="hover" radius_mt="80" loc_desc="7260 Davos Dorf, Switzerland, Search and Rescue, winch required"/>
+		<point lat="47.0335" long="9.0015" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8750 Glarus, Switzerland, Search and Rescue"/>
+		<point lat="47.6675" long="9.0115" template="land" radius_mt="80" loc_desc="Bergstrasse, 8267 Berlingen, Switzerland, Search and Rescue"/>
+		<point lat="47.216" long="9.042" template="land" radius_mt="80" loc_desc="Rietwies 68, 8722 Kaltbrunn, Switzerland, Search and Rescue"/>
+		<point lat="47.0815" long="9.062" template="land" radius_mt="80" loc_desc="Flugplatzweg, 8754 Mollis, Switzerland, Search and Rescue"/>
+		<point lat="47.127" long="9.1405" template="hover" radius_mt="80" loc_desc="9, 8757 Filzbach, Switzerland, Search and Rescue"/>
+		<point lat="47.1235" long="9.1605" template="hover" radius_mt="80" loc_desc="Mühletal 130, 8874 Obstalden, Switzerland, Search and Rescue"/>
+		<point lat="47.1205" long="9.1705" template="hover" radius_mt="80" loc_desc="Bachhorn 380, 8874 Mühlehorn, Switzerland, Search and Rescue"/>
+		<point lat="47.0595" long="9.2475" template="land" radius_mt="80" loc_desc="Unnamed Road, 8897 Flums, Switzerland, Search and Rescue"/>
+		<point lat="47.0105" long="9.271" template="land" radius_mt="80" loc_desc="8897 Flums, Switzerland, Search and Rescue"/>
+		<point lat="47.0775" long="9.289" template="land" radius_mt="80" loc_desc="Ski trail 11, 8897 Flums, Switzerland, Search and Rescue"/>
+		<point lat="47.079" long="9.291" template="land" radius_mt="80" loc_desc="Ski trail 11, 8897 Flums, Switzerland, Search and Rescue"/>
+		<point lat="47.217" long="9.4605" template="land" radius_mt="80" loc_desc="Zielbachstrasse, 9473 Sennwald, Switzerland, Search and Rescue"/>
+		<point lat="47.0505" long="9.4745" template="land" radius_mt="80" loc_desc="Gassa, 7320 Sargans, Switzerland, Search and Rescue"/>
+		<point lat="47.1785" long="9.487" template="hover" radius_mt="80" loc_desc="Rheindamm, 9494 Schaan, Liechtenstein, Search and Rescue"/>
+		<point lat="47.137" long="9.4925" template="land" radius_mt="80" loc_desc="Unnamed Road, 9475 Sevelen, Switzerland, Search and Rescue"/>
+		<point lat="47.0605" long="9.5045" template="land" radius_mt="80" loc_desc="Torbariet, 9496 Balzers, Liechtenstein, Search and Rescue"/>
+		<point lat="47.2395" long="9.5055" template="land" radius_mt="80" loc_desc="Fontanina 9, 9465 Sennwald, Switzerland, Search and Rescue"/>
+		<point lat="47.272" long="9.5205" template="land" radius_mt="80" loc_desc="Plattenstrasse, 9464 Altstätten, Switzerland, Search and Rescue"/>
+		<point lat="47.3405" long="9.5505" template="land" radius_mt="80" loc_desc="Fischbächli 4257, 9463 Oberriet, Switzerland, Search and Rescue"/>
+		<point lat="47.3705" long="9.5805" template="land" radius_mt="80" loc_desc="Im Lehmloch 1, 9450 Altstätten, Switzerland, Search and Rescue"/>
+		<point lat="47.3205" long="9.5905" template="land" radius_mt="80" loc_desc="E43, 9462 Oberriet, Switzerland, Search and Rescue"/>
+		<point lat="47.381" long="9.6305" template="land" radius_mt="80" loc_desc="Unnamed Road, 9444 Diepoldsau, Switzerland, Search and Rescue"/>
+		<point lat="47.0777778" long="9.00166667" template="land" radius_mt="80" loc_desc="Unnamed Road, 8752 Näfels, Switzerland, Search and Rescue"/>
+		<point lat="47.6677778" long="9.02027778" template="land" radius_mt="80" loc_desc="Bergstrasse, 8267 Berlingen, Switzerland, Search and Rescue"/>
+		<point lat="47.0391667" long="9.03833333" template="land" radius_mt="80" loc_desc="Wanderweg, 8750 Glarus, Switzerland, Search and Rescue"/>
+		<point lat="47.0827778" long="9.05638889" template="land" radius_mt="80" loc_desc="Mühle 21a, 8752 Näfels, Switzerland, Search and Rescue"/>
+		<point lat="47.6444444" long="9.11027778" template="land" radius_mt="80" loc_desc="Staudenhof, 8274 Wäldi, Switzerland, Search and Rescue"/>
+		<point lat="47.0558333" long="9.12305556" template="land" radius_mt="80" loc_desc="Unnamed Road, 8755 Ennenda, Switzerland, Search and Rescue"/>
+		<point lat="47.0572222" long="9.23444444" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8897 Flums, Switzerland, Search and Rescue"/>
+		<point lat="47.0333333" long="9.24416667" template="hover" radius_mt="80" loc_desc="Fuchsweg, 8897 Flums, Switzerland, Search and Rescue"/>
+		<point lat="47.0797222" long="9.3725" template="land" radius_mt="80" loc_desc="Riet-Ragnatsch, 8893 Flums, Switzerland, Search and Rescue"/>
+		<point lat="47.0744444" long="9.38027778" template="land" radius_mt="80" loc_desc="Riet-Ragnatsch, 8893 Flums, Switzerland, Search and Rescue"/>
+		<point lat="47.0963889" long="9.39388889" template="hover" radius_mt="80" loc_desc="Berghaus Palfries, 9478 Wartau, Switzerland, Search and Rescue"/>
+		<point lat="47.0361111" long="9.44222222" template="land" radius_mt="80" loc_desc="Moggbrüelweg, 7323 Vilters-Wangs, Switzerland, Search and Rescue"/>
+		<point lat="47.1894444" long="9.45083333" template="land" radius_mt="80" loc_desc="Hinterer Laubergrabenweg, 9472 Grabs, Switzerland, Search and Rescue"/>
+		<point lat="47.0602778" long="9.46472222" template="land" radius_mt="80" loc_desc="Rächenschürweg, 7320 Sargans, Switzerland, Search and Rescue"/>
+		<point lat="47.0602778" long="9.47472222" template="land" radius_mt="80" loc_desc="Äule 1, 9496 Mäls, Liechtenstein, Search and Rescue"/>
+		<point lat="47.3044444" long="9.5025" template="hover" radius_mt="80" loc_desc="Unnamed Road, 9464 Altstätten, Switzerland, Search and Rescue"/>
+		<point lat="47.2602778" long="9.51166667" template="land" radius_mt="80" loc_desc="Östliche Rhbk-Strasse, 9466 Sennwald, Switzerland, Search and Rescue"/>
+		<point lat="47.2202778" long="9.55638889" template="land" radius_mt="80" loc_desc="Grosse-Teile-Strasse, 9493 Mauren, Liechtenstein, Search and Rescue"/>
+		<point lat="47.2202778" long="9.56027778" template="land" radius_mt="80" loc_desc="Fabrikenweg, 9493 Mauren, Liechtenstein, Search and Rescue"/>
+		<point lat="47.3741667" long="9.60027778" template="land" radius_mt="80" loc_desc="Schwingerhof, 9436 Marbach, Switzerland, Search and Rescue"/>
+		<point lat="47.4169444" long="9.64888889" template="land" radius_mt="80" loc_desc="E43, 9434 Au, Switzerland, Search and Rescue"/>
+		<point lat="47.0402778" long="9.68027778" template="hover" radius_mt="80" loc_desc="Schesaplanahütte, 7212 Seewis im Prättigau, Switzerland, Search and Rescue"/>
+		<point lat="46.0005" long="9.0015" template="hover" radius_mt="80" loc_desc="Lung Portic 10, 6978 Lugano, Switzerland, Search and Rescue"/>
+		<point lat="46.5495" long="9.0055" template="land" radius_mt="80" loc_desc="6719 Aquila, Switzerland, Search and Rescue"/>
+		<point lat="46.6195" long="9.0015" template="land" radius_mt="80" loc_desc="Vrin, 7149 Lumnezia, Switzerland, Search and Rescue"/>
+		<point lat="46.0105" long="9.017" template="hover" radius_mt="80" loc_desc="Via Cantonale 5, 6978 Lugano, Switzerland, Search and Rescue"/>
+		<point lat="46.628" long="9.0115" template="land" radius_mt="80" loc_desc="Vrin, 7149 Lumnezia, Switzerland, Search and Rescue"/>
+		<point lat="46.8405" long="9.0105" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8783 Linthal, Switzerland, Search and Rescue"/>
+		<point lat="46.002" long="9.0205" template="hover" radius_mt="80" loc_desc="Cantine di Gandria, 6976 Paradiso, Switzerland, Search and Rescue"/>
+		<point lat="46.8605" long="9.022" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8783 Linthal, Switzerland, Search and Rescue"/>
+		<point lat="46.828" long="9.033" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7165 Breil-Brigels, Switzerland, Search and Rescue"/>
+		<point lat="46.2965" long="9.046" template="land" radius_mt="80" loc_desc="6702 Claro, Switzerland, Search and Rescue"/>
+		<point lat="46.8495" long="9.0595" template="land" radius_mt="80" loc_desc="Unnamed Road, 7156 Pigniu, Switzerland, Search and Rescue"/>
+		<point lat="46.855" long="9.0675" template="land" radius_mt="80" loc_desc="Unnamed Road, 7156 Pigniu, Switzerland, Search and Rescue"/>
+		<point lat="46.7155" long="9.087" template="land" radius_mt="80" loc_desc="Unnamed Road, 7134 Ruis, Switzerland, Search and Rescue"/>
+		<point lat="46.8335" long="9.098" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7156 Pigniu, Switzerland, Search and Rescue"/>
+		<point lat="46.8315" long="9.1005" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7156 Pigniu, Switzerland, Search and Rescue"/>
+		<point lat="46.536" long="9.133" template="hover" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue"/>
+		<point lat="46.819" long="9.1395" template="land" radius_mt="80" loc_desc="Unnamed Road, 7157 Siat, Switzerland, Search and Rescue"/>
+		<point lat="46.542" long="9.148" template="land" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue"/>
+		<point lat="46.501" long="9.1575" template="hover" radius_mt="80" loc_desc="13, 7438 Mesocco, Switzerland, Search and Rescue"/>
+		<point lat="46.5055" long="9.1655" template="land" radius_mt="80" loc_desc="13, 7438 Mesocco, Switzerland, Search and Rescue"/>
+		<point lat="46.5095" long="9.1715" template="hover" radius_mt="80" loc_desc="13, 7438 Mesocco, Switzerland, Search and Rescue"/>
+		<point lat="46.881" long="9.179" template="land" radius_mt="80" loc_desc="Unnamed Road, 7032 Laax, Switzerland, Search and Rescue"/>
+		<point lat="46.496" long="9.181" template="land" radius_mt="80" loc_desc="Galleria S. Bernardino, 7438 Mesocco, Switzerland, Search and Rescue"/>
+		<point lat="46.6095" long="9.217" template="land" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue"/>
+		<point lat="46.989" long="9.2215" template="land" radius_mt="80" loc_desc="Unnamed Road, 8766 Matt, Switzerland, Search and Rescue"/>
+		<point lat="46.878" long="9.232" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7017 Flims, Switzerland, Search and Rescue"/>
+		<point lat="46.784" long="9.244" template="land" radius_mt="80" loc_desc="Quadras, 7126 Castrisch, Switzerland, Search and Rescue"/>
+		<point lat="46.6195" long="9.2795" template="hover" radius_mt="80" loc_desc="Unteres Turrahus, 7109 Safien, Switzerland, Search and Rescue"/>
+		<point lat="46.8195" long="9.2965" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7017 Flims, Switzerland, Search and Rescue"/>
+		<point lat="46.519" long="9.302" template="land" radius_mt="80" loc_desc="7436 Splügen, Switzerland, Search and Rescue"/>
+		<point lat="46.8595" long="9.313" template="land" radius_mt="80" loc_desc="Unnamed Road, 7017 Trin, Switzerland, Search and Rescue"/>
+		<point lat="46.8545" long="9.3205" template="land" radius_mt="80" loc_desc="Unnamed Road, 7017 Trin, Switzerland, Search and Rescue"/>
+		<point lat="46.6135" long="9.339" template="hover" radius_mt="80" loc_desc="Curtginatsch, 7433 Casti-Wergenstein, Switzerland, Search and Rescue"/>
+		<point lat="46.5365" long="9.3475" template="hover" radius_mt="80" loc_desc="7435 Splügen, Switzerland, Search and Rescue"/>
+		<point lat="46.6905" long="9.3495" template="land" radius_mt="80" loc_desc="Obergmeind 68, 7428 Tschappina, Switzerland, Search and Rescue"/>
+		<point lat="46.6265" long="9.355" template="land" radius_mt="80" loc_desc="Curtginatsch, 7433 Casti-Wergenstein, Switzerland, Search and Rescue"/>
+		<point lat="46.566" long="9.3705" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7435 Splügen, Switzerland, Search and Rescue"/>
+		<point lat="46.8065" long="9.3895" template="land" radius_mt="80" loc_desc="Via Lag 143, 7402 Bonaduz, Switzerland, Search and Rescue"/>
+		<point lat="46.969" long="9.394" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7326 Mels, Switzerland, Search and Rescue"/>
+		<point lat="46.524" long="9.403" template="hover" radius_mt="80" loc_desc="7445 Innerferrera, Switzerland, Search and Rescue"/>
+		<point lat="46.506" long="9.418" template="hover" radius_mt="80" loc_desc="7445 Innerferrera, Switzerland, Search and Rescue"/>
+		<point lat="46.979" long="9.4195" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7323 Vilters-Wangs, Switzerland, Search and Rescue"/>
+		<point lat="46.7495" long="9.4325" template="land" radius_mt="80" loc_desc="E43, 7415 Domleschg, Switzerland, Search and Rescue"/>
+		<point lat="46.7265" long="9.4485" template="land" radius_mt="80" loc_desc="Mühle 18, 7415 Domleschg, Switzerland, Search and Rescue"/>
+		<point lat="46.8285" long="9.4605" template="land" radius_mt="80" loc_desc="Via Quadras, 7013 Domat/Ems, Switzerland, Search and Rescue"/>
+		<point lat="46.833" long="9.475" template="land" radius_mt="80" loc_desc="Hof Quadrella 1, 7013 Domat/Ems, Switzerland, Search and Rescue"/>
+		<point lat="46.5715" long="9.486" template="land" radius_mt="80" loc_desc="7444 Ausserferrera, Switzerland, Search and Rescue"/>
+		<point lat="46.4145" long="9.5005" template="hover" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue"/>
+		<point lat="46.872" long="9.5235" template="land" radius_mt="80" loc_desc="Canalweg 2, 7023 Haldenstein, Switzerland, Search and Rescue"/>
+		<point lat="46.999" long="9.531" template="land" radius_mt="80" loc_desc="Hauptweg, 7304 Maienfeld, Switzerland, Search and Rescue"/>
+		<point lat="46.7375" long="9.549" template="hover" radius_mt="80" loc_desc="Voa Principala 61, 7078 Vaz/Obervaz, Switzerland, Search and Rescue"/>
+		<point lat="46.9005" long="9.5405" template="hover" radius_mt="80" loc_desc="Oberaustrasse, 7203 Trimmis, Switzerland, Search and Rescue"/>
+		<point lat="46.9935" long="9.5455" template="land" radius_mt="80" loc_desc="Landstrasse, 7304 Maienfeld, Switzerland, Search and Rescue"/>
+		<point lat="46.4455" long="9.553" template="land" radius_mt="80" loc_desc="Vorder Bergalga, 7447 Avers, Switzerland, Search and Rescue"/>
+		<point lat="46.567" long="9.5505" template="land" radius_mt="80" loc_desc="Tigia 123, 7464 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.9785" long="9.5555" template="land" radius_mt="80" loc_desc="Landstrasse, 7304 Malans, Switzerland, Search and Rescue"/>
+		<point lat="46.9145" long="9.5675" template="land" radius_mt="80" loc_desc="Molinära 377, 7203 Trimmis, Switzerland, Search and Rescue"/>
+		<point lat="46.9765" long="9.5605" template="land" radius_mt="80" loc_desc="Mühlbachweg 11-9, 7208 Malans, Switzerland, Search and Rescue"/>
+		<point lat="46.9345" long="9.577" template="hover" radius_mt="80" loc_desc="Bovel, 7205 Zizers, Switzerland, Search and Rescue"/>
+		<point lat="46.4415" long="9.584" template="land" radius_mt="80" loc_desc="Under Juf 3, 7448 Avers, Switzerland, Search and Rescue"/>
+		<point lat="46.9595" long="9.5815" template="land" radius_mt="80" loc_desc="Ganda 4, 7302 Landquart, Switzerland, Search and Rescue"/>
+		<point lat="46.3925" long="9.605" template="land" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue"/>
+		<point lat="46.389" long="9.6145" template="land" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue"/>
+		<point lat="46.4835" long="9.6105" template="land" radius_mt="80" loc_desc="Caschegna, 7457 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.4215" long="9.6275" template="hover" radius_mt="80" loc_desc="7457 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.7635" long="9.6245" template="land" radius_mt="80" loc_desc="Unnamed Road, 7050 Tschiertschen, Switzerland, Search and Rescue"/>
+		<point lat="46.4995" long="9.6325" template="hover" radius_mt="80" loc_desc="3, 7456 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.927" long="9.6375" template="land" radius_mt="80" loc_desc="Unnamed Road, 7232 Furna, Switzerland, Search and Rescue"/>
+		<point lat="46.332" long="9.6425" template="hover" radius_mt="80" loc_desc="7603 Vicosoprano, Switzerland, Search and Rescue"/>
+		<point lat="46.674" long="9.644" template="land" radius_mt="80" loc_desc="Unnamed Road, 7492 Alvaneu, Switzerland, Search and Rescue"/>
+		<point lat="46.4365" long="9.651" template="land" radius_mt="80" loc_desc="Prevostin, 7457 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.973" long="9.6505" template="land" radius_mt="80" loc_desc="Pradali, 7214 Grüsch, Switzerland, Search and Rescue"/>
+		<point lat="46.7815" long="9.6615" template="hover" radius_mt="80" loc_desc="Schlittenweg, 7050 Arosa, Switzerland, Search and Rescue"/>
+		<point lat="46.8525" long="9.6775" template="land" radius_mt="80" loc_desc="Zerfalta, 7029 Peist, Switzerland, Search and Rescue"/>
+		<point lat="46.7935" long="9.685" template="land" radius_mt="80" loc_desc="Maranerstrasse 60, 7050 Arosa, Switzerland, Search and Rescue"/>
+		<point lat="46.5655" long="9.699" template="land" radius_mt="80" loc_desc="Unnamed Road, 7454 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.751" long="9.695" template="land" radius_mt="80" loc_desc="Unnamed Road, 7492, Switzerland, Search and Rescue"/>
+		<point lat="46.7495" long="9.701" template="land" radius_mt="80" loc_desc="Unnamed Road, 7492, Switzerland, Search and Rescue"/>
+		<point lat="46.7415" long="9.7205" template="land" radius_mt="80" loc_desc="Unnamed Road, 7277 Arosa, Switzerland, Search and Rescue"/>
+		<point lat="46.7715" long="9.732" template="land" radius_mt="80" loc_desc="Unnamed Road, 7276 Davos, Switzerland, Search and Rescue"/>
+		<point lat="46.6505" long="9.7575" template="land" radius_mt="80" loc_desc="Davos-Baselgia, 7482 Bergün/Bravuogn, Switzerland, Search and Rescue"/>
+		<point lat="46.9645" long="9.7885" template="land" radius_mt="80" loc_desc="Unnamed Road, 7244 Luzein, Switzerland, Search and Rescue"/>
+		<point lat="46.571" long="9.804" template="land" radius_mt="80" loc_desc="Albulapassstrasse, 7482 Bergün/Bravuogn, Switzerland, Search and Rescue"/>
+		<point lat="46.8375" long="9.811" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7265 Davos, Switzerland, Search and Rescue"/>
+		<point lat="46.6145" long="9.8275" template="hover" radius_mt="80" loc_desc="7482 Stugl/Stuls, Switzerland, Search and Rescue"/>
+		<point lat="46.8575" long="9.8465" template="land" radius_mt="80" loc_desc="Unnamed Road, 7260 Davos, Switzerland, Search and Rescue"/>
+		<point lat="46.718" long="9.8505" template="land" radius_mt="80" loc_desc="Sertigerstrasse 61, 7272 Davos, Switzerland, Search and Rescue"/>
+		<point lat="46.6795" long="9.868" template="land" radius_mt="80" loc_desc="7482 Stugl/Stuls, Switzerland, Search and Rescue"/>
+		<point lat="46.8025" long="9.9365" template="hover" radius_mt="80" loc_desc="7260 Davos Dorf, Switzerland, Search and Rescue"/>
+		<point lat="46.776" long="9.9595" template="hover" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
+		<point lat="46.892" long="9.9905" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
+		<point lat="46.1136111" long="9.00388889" template="hover" radius_mt="80" loc_desc="Baggio, 6951 Capriasca, Switzerland, Search and Rescue"/>
+		<point lat="46.6888889" long="9.00611111" template="land" radius_mt="80" loc_desc="7166 Trun, Switzerland, Search and Rescue"/>
+		<point lat="46.7866667" long="9.01361111" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7165 Breil-Brigels, Switzerland, Search and Rescue"/>
+		<point lat="46.4763889" long="9.02166667" template="hover" radius_mt="80" loc_desc="6713 Malvaglia, Switzerland, Search and Rescue"/>
+		<point lat="46.8219444" long="9.02166667" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7165 Breil-Brigels, Switzerland, Search and Rescue"/>
+		<point lat="46.5811111" long="9.03916667" template="hover" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue"/>
+		<point lat="46.9891667" long="9.03027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 8775 Luchsingen, Switzerland, Search and Rescue"/>
+		<point lat="46.1141667" long="9.05472222" template="hover" radius_mt="80" loc_desc="In Serdéna, 6946 Piano Cuescio, Switzerland, Search and Rescue"/>
+		<point lat="46.7258333" long="9.05166667" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7136 Ruis, Switzerland, Search and Rescue"/>
+		<point lat="46.8191667" long="9.06277778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7165 Breil-Brigels, Switzerland, Search and Rescue"/>
+		<point lat="46.0694444" long="9.07777778" template="land" radius_mt="80" loc_desc="Certara, 6959 Lugano, Switzerland, Search and Rescue"/>
+		<point lat="46.8186111" long="9.07055556" template="land" radius_mt="80" loc_desc="Moutta, 7159 Andiast, Switzerland, Search and Rescue"/>
+		<point lat="46.7802778" long="9.08138889" template="hover" radius_mt="80" loc_desc="Darums, 7158 Ruis, Switzerland, Search and Rescue"/>
+		<point lat="46.6997222" long="9.09472222" template="land" radius_mt="80" loc_desc="via d&apos;Alp Nova, 7136 Ruis, Switzerland, Search and Rescue"/>
+		<point lat="46.9502778" long="9.10166667" template="land" radius_mt="80" loc_desc="Unnamed Road, 8762 Schwanden, Switzerland, Search and Rescue"/>
+		<point lat="46.7133333" long="9.11527778" template="hover" radius_mt="80" loc_desc="via d&apos;alp Sezner, 7147 Vignogn, Switzerland, Search and Rescue"/>
+		<point lat="46.6027778" long="9.12388889" template="hover" radius_mt="80" loc_desc="Im Ried, 7132 Vals, Switzerland, Search and Rescue"/>
+		<point lat="46.5591667" long="9.13583333" template="hover" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue"/>
+		<point lat="46.9380556" long="9.13722222" template="land" radius_mt="80" loc_desc="Unnamed Road, 8767 Elm, Switzerland, Search and Rescue"/>
+		<point lat="46.7097222" long="9.14222222" template="land" radius_mt="80" loc_desc="Surval, 7146 Degen, Switzerland, Search and Rescue"/>
+		<point lat="46.5463889" long="9.15083333" template="hover" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue"/>
+		<point lat="46.5783333" long="9.16611111" template="hover" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue"/>
+		<point lat="46.9502778" long="9.16916667" template="hover" radius_mt="80" loc_desc="Au 483, 8766 Matt, Switzerland, Search and Rescue"/>
+		<point lat="46.4908333" long="9.17361111" template="hover" radius_mt="80" loc_desc="13, 7438 Mesocco, Switzerland, Search and Rescue"/>
+		<point lat="46.8672222" long="9.17861111" template="land" radius_mt="80" loc_desc="Unnamed Road, 7032 Laax, Switzerland, Search and Rescue"/>
+		<point lat="46.7036111" long="9.18444444" template="land" radius_mt="80" loc_desc="Via Puoz Sut 10, 7114 Suraua, Switzerland, Search and Rescue"/>
+		<point lat="46.8625" long="9.19722222" template="land" radius_mt="80" loc_desc="Unnamed Road, 7032 Falera, Switzerland, Search and Rescue"/>
+		<point lat="46.8661111" long="9.20027778" template="land" radius_mt="80" loc_desc="Unnamed Road, 7032 Falera, Switzerland, Search and Rescue"/>
+		<point lat="46.6758333" long="9.21916667" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7113 Suraua, Switzerland, Search and Rescue"/>
+		<point lat="46.7680556" long="9.22138889" template="land" radius_mt="80" loc_desc="Cresta 191, 7127 Sevgein, Switzerland, Search and Rescue"/>
+		<point lat="46.9183333" long="9.22027778" template="land" radius_mt="80" loc_desc="Unnamed Road, 8767 Elm, Switzerland, Search and Rescue"/>
+		<point lat="46.5847222" long="9.23416667" template="land" radius_mt="80" loc_desc="7132 Vals, Switzerland, Search and Rescue"/>
+		<point lat="46.8813889" long="9.23027778" template="land" radius_mt="80" loc_desc="Unnamed Road, 7017 Flims, Switzerland, Search and Rescue"/>
+		<point lat="46.8711111" long="9.24027778" template="land" radius_mt="80" loc_desc="Höhenweg, 7017 Flims, Switzerland, Search and Rescue"/>
+		<point lat="46.5927778" long="9.25305556" template="hover" radius_mt="80" loc_desc="7109 Thalkirch, Switzerland, Search and Rescue"/>
+		<point lat="46.6661111" long="9.26027778" template="hover" radius_mt="80" loc_desc="Litzi, 7109 Safien, Switzerland, Search and Rescue"/>
+		<point lat="46.7944444" long="9.27305556" template="land" radius_mt="80" loc_desc="Val Casti, 7152 Sagogn, Switzerland, Search and Rescue"/>
+		<point lat="46.5808333" long="9.28583333" template="hover" radius_mt="80" loc_desc="7435 Splügen, Switzerland, Search and Rescue"/>
+		<point lat="46.9969444" long="9.28583333" template="land" radius_mt="80" loc_desc="7326 Weisstannen, Switzerland, Search and Rescue"/>
+		<point lat="46.5102778" long="9.29972222" template="land" radius_mt="80" loc_desc="7435 Splügen, Switzerland, Search and Rescue"/>
+		<point lat="46.8666667" long="9.29555556" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7017 Flims, Switzerland, Search and Rescue"/>
+		<point lat="46.5333333" long="9.30888889" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7435 Splügen, Switzerland, Search and Rescue"/>
+		<point lat="46.9505556" long="9.30027778" template="land" radius_mt="80" loc_desc="Unnamed Road, 7315 Pfäfers, Switzerland, Search and Rescue"/>
+		<point lat="46.5130556" long="9.31138889" template="hover" radius_mt="80" loc_desc="7435 Splügen, Switzerland, Search and Rescue"/>
+		<point lat="46.9541667" long="9.3125" template="land" radius_mt="80" loc_desc="Unnamed Road, 7315 Pfäfers, Switzerland, Search and Rescue"/>
+		<point lat="46.6416667" long="9.32805556" template="land" radius_mt="80" loc_desc="7109 Thalkirch, Switzerland, Search and Rescue"/>
+		<point lat="46.7158333" long="9.33222222" template="land" radius_mt="80" loc_desc="Grafa 359, 7107 Safien Platz, Switzerland, Search and Rescue"/>
+		<point lat="46.6911111" long="9.345" template="hover" radius_mt="80" loc_desc="Obergmeind 68, 7428 Tschappina, Switzerland, Search and Rescue"/>
+		<point lat="46.6897222" long="9.35083333" template="land" radius_mt="80" loc_desc="Obergmeind 68, 7428 Tschappina, Switzerland, Search and Rescue"/>
+		<point lat="46.7077778" long="9.36138889" template="hover" radius_mt="80" loc_desc="Unnamed Road, Switzerland, Search and Rescue"/>
+		<point lat="46.5002778" long="9.37861111" template="hover" radius_mt="80" loc_desc="7445 Innerferrera, Switzerland, Search and Rescue"/>
+		<point lat="46.5922222" long="9.38583333" template="land" radius_mt="80" loc_desc="Schmelza, 7440 Andeer, Switzerland, Search and Rescue"/>
+		<point lat="46.6880556" long="9.395" template="land" radius_mt="80" loc_desc="Cazeschg, 7427 Urmein, Switzerland, Search and Rescue"/>
+		<point lat="46.7844444" long="9.40027778" template="land" radius_mt="80" loc_desc="Runcaglia, 7403 Rhäzüns, Switzerland, Search and Rescue"/>
+		<point lat="46.8388889" long="9.41277778" template="land" radius_mt="80" loc_desc="Unnamed Road, 7015 Tamins, Switzerland, Search and Rescue"/>
+		<point lat="46.8341667" long="9.42416667" template="hover" radius_mt="80" loc_desc="Assella 2140, 7015 Tamins, Switzerland, Search and Rescue"/>
+		<point lat="46.6383333" long="9.43861111" template="hover" radius_mt="80" loc_desc="Pardi sut, 7432 Zillis-Reischen, Switzerland, Search and Rescue"/>
+		<point lat="46.9322222" long="9.4525" template="hover" radius_mt="80" loc_desc="Auen, 7315 Pfäfers, Switzerland, Search and Rescue"/>
+		<point lat="46.9908333" long="9.46666667" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7310 Bad Ragaz, Switzerland, Search and Rescue"/>
+		<point lat="46.5844444" long="9.475" template="hover" radius_mt="80" loc_desc="7440 Andeer, Switzerland, Search and Rescue"/>
+		<point lat="46.5319444" long="9.48083333" template="land" radius_mt="80" loc_desc="7444 Ausserferrera, Switzerland, Search and Rescue"/>
+		<point lat="46.7563889" long="9.48027778" template="land" radius_mt="80" loc_desc="Acla 45, 7407 Trans, Switzerland, Search and Rescue"/>
+		<point lat="46.4944444" long="9.49166667" template="hover" radius_mt="80" loc_desc="Campsut 227, 7446 Avers, Switzerland, Search and Rescue"/>
+		<point lat="46.7919444" long="9.49361111" template="land" radius_mt="80" loc_desc="Bargia, 7419 Scheid, Switzerland, Search and Rescue"/>
+		<point lat="46.375" long="9.50333333" template="land" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue"/>
+		<point lat="46.7897222" long="9.50055556" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7419, Switzerland, Search and Rescue"/>
+		<point lat="46.3755556" long="9.51638889" template="land" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue"/>
+		<point lat="46.7133333" long="9.515" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7078 Vaz/Obervaz, Switzerland, Search and Rescue"/>
+		<point lat="46.4102778" long="9.52805556" template="hover" radius_mt="80" loc_desc="7447 Cresta, Switzerland, Search and Rescue"/>
+		<point lat="46.6422222" long="9.52833333" template="land" radius_mt="80" loc_desc="Del, 7462 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.4983333" long="9.53027778" template="land" radius_mt="80" loc_desc="7445 Innerferrera, Switzerland, Search and Rescue"/>
+		<point lat="46.8877778" long="9.53055556" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7023 Haldenstein, Switzerland, Search and Rescue"/>
+		<point lat="46.3694444" long="9.54027778" template="land" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue"/>
+		<point lat="46.7291667" long="9.5425" template="land" radius_mt="80" loc_desc="Voa sot Valos 5, 7078 Lenzerheide, Switzerland, Search and Rescue"/>
+		<point lat="46.9961111" long="9.54111111" template="land" radius_mt="80" loc_desc="Landstrasse, 7304 Maienfeld, Switzerland, Search and Rescue"/>
+		<point lat="46.4702778" long="9.55305556" template="land" radius_mt="80" loc_desc="7447 Cresta, Switzerland, Search and Rescue"/>
+		<point lat="46.9505556" long="9.55027778" template="land" radius_mt="80" loc_desc="Rheinlöser, 7205 Zizers, Switzerland, Search and Rescue"/>
+		<point lat="46.7488889" long="9.56083333" template="hover" radius_mt="80" loc_desc="Voa Selva 9A, 7077 Valbella, Switzerland, Search and Rescue"/>
+		<point lat="46.9802778" long="9.56027778" template="land" radius_mt="80" loc_desc="Baguggiweg, 7208 Malans, Switzerland, Search and Rescue"/>
+		<point lat="46.7941667" long="9.57777778" template="land" radius_mt="80" loc_desc="Unnamed Road, 7064 Tschiertschen, Switzerland, Search and Rescue"/>
+		<point lat="46.3997222" long="9.58027778" template="hover" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue"/>
+		<point lat="46.9575" long="9.58027778" template="land" radius_mt="80" loc_desc="Schalmans 108, 7302 Landquart, Switzerland, Search and Rescue"/>
+		<point lat="46.4591667" long="9.59027778" template="hover" radius_mt="80" loc_desc="Ober Juf 12, 7448 Avers, Switzerland, Search and Rescue"/>
+		<point lat="46.9669444" long="9.59305556" template="land" radius_mt="80" loc_desc="Ganda 21, 7302 Landquart, Switzerland, Search and Rescue"/>
+		<point lat="46.4872222" long="9.60777778" template="hover" radius_mt="80" loc_desc="Caschegna, 7457 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.3808333" long="9.61027778" template="land" radius_mt="80" loc_desc="7610 Soglio, Switzerland, Search and Rescue"/>
+		<point lat="46.5111111" long="9.61277778" template="land" radius_mt="80" loc_desc="Scalotta 51, 7456 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.8955556" long="9.61305556" template="land" radius_mt="80" loc_desc="Unnamed Road, 7202 Says, Switzerland, Search and Rescue"/>
+		<point lat="46.5547222" long="9.62027778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7454 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.4897222" long="9.63138889" template="hover" radius_mt="80" loc_desc="Caschegna, 7457 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.5194444" long="9.64833333" template="land" radius_mt="80" loc_desc="7456 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.7302778" long="9.64055556" template="land" radius_mt="80" loc_desc="Unnamed Road, 7492 Alvaneu, Switzerland, Search and Rescue"/>
+		<point lat="46.9241667" long="9.64222222" template="land" radius_mt="80" loc_desc="Unnamed Road, 7232 Furna, Switzerland, Search and Rescue"/>
+		<point lat="46.4427778" long="9.65305556" template="land" radius_mt="80" loc_desc="Prevostin, 7457 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.5836111" long="9.65055556" template="land" radius_mt="80" loc_desc="Unnamed Road, 7453 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.9466667" long="9.65388889" template="land" radius_mt="80" loc_desc="Danusa, 7232 Furna, Switzerland, Search and Rescue"/>
+		<point lat="46.6236111" long="9.66055556" template="land" radius_mt="80" loc_desc="7477 Filisur, Switzerland, Search and Rescue"/>
+		<point lat="46.9536111" long="9.66555556" template="land" radius_mt="80" loc_desc="Teufried 229, 7232 Furna, Switzerland, Search and Rescue"/>
+		<point lat="46.4777778" long="9.67666667" template="land" radius_mt="80" loc_desc="3, 7457 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.6863889" long="9.67611111" template="land" radius_mt="80" loc_desc="Schatzmura 88L, 7493 Schmitten, Switzerland, Search and Rescue"/>
+		<point lat="46.3186111" long="9.68055556" template="hover" radius_mt="80" loc_desc="7603 Vicosoprano, Switzerland, Search and Rescue"/>
+		<point lat="46.5669444" long="9.68527778" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7454 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.7927778" long="9.68388889" template="land" radius_mt="80" loc_desc="Maranerstrasse 60, 7050 Arosa, Switzerland, Search and Rescue"/>
+		<point lat="46.4880556" long="9.69611111" template="hover" radius_mt="80" loc_desc="7457 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.8558333" long="9.69027778" template="land" radius_mt="80" loc_desc="Unnamed Road, 7029 Peist, Switzerland, Search and Rescue"/>
+		<point lat="46.4894444" long="9.70027778" template="hover" radius_mt="80" loc_desc="7457 Surses, Switzerland, Search and Rescue"/>
+		<point lat="46.6344444" long="9.70194444" template="land" radius_mt="80" loc_desc="7477 Filisur, Switzerland, Search and Rescue"/>
+		<point lat="46.7575" long="9.71027778" template="land" radius_mt="80" loc_desc="Unnamed Road, 7492, Switzerland, Search and Rescue"/>
+		<point lat="46.5525" long="9.7275" template="hover" radius_mt="80" loc_desc="7482 Stugl/Stuls, Switzerland, Search and Rescue"/>
+		<point lat="46.8358333" long="9.72472222" template="hover" radius_mt="80" loc_desc="Nufsch, 7057 Langwies, Switzerland, Search and Rescue"/>
+		<point lat="46.8713889" long="9.73138889" template="land" radius_mt="80" loc_desc="Arflina, 7235 Fideris, Switzerland, Search and Rescue"/>
+		<point lat="46.7394444" long="9.74305556" template="land" radius_mt="80" loc_desc="Unnamed Road, 7277 Arosa, Switzerland, Search and Rescue"/>
+		<point lat="46.7813889" long="9.75333333" template="land" radius_mt="80" loc_desc="Unnamed Road, 7276 Davos, Switzerland, Search and Rescue"/>
+		<point lat="46.7980556" long="9.765" template="hover" radius_mt="80" loc_desc="Unnamed Road, 7270 Langwies, Switzerland, Search and Rescue"/>
+		<point lat="46.8602778" long="9.78166667" template="hover" radius_mt="80" loc_desc="Fondei, 7057 Langwies, Switzerland, Search and Rescue"/>
+		<point lat="46.7311111" long="9.80638889" template="hover" radius_mt="80" loc_desc="Rinerhornstrasse, 7277 Davos, Switzerland, Search and Rescue"/>
+		<point lat="46.7461111" long="9.81444444" template="hover" radius_mt="80" loc_desc="Rinerhornstrasse, 7277 Davos, Switzerland, Search and Rescue"/>
+		<point lat="46.6641667" long="9.82472222" template="hover" radius_mt="80" loc_desc="Latsch, 7482 Bergün/Bravuogn, Switzerland, Search and Rescue"/>
+		<point lat="46.8936111" long="9.83416667" template="hover" radius_mt="80" loc_desc="Clavanuovweg 22, 7249 Klosters-Serneus, Switzerland, Search and Rescue"/>
+		<point lat="46.9541667" long="9.84333333" template="hover" radius_mt="80" loc_desc="Sunnistafel, 7246 St. Antönien, Switzerland, Search and Rescue"/>
+		<point lat="46.9852778" long="9.85805556" template="hover" radius_mt="80" loc_desc="Partnun, 7246 St. Antönien, Switzerland, Search and Rescue"/>
+		<point lat="46.6852778" long="9.86055556" template="hover" radius_mt="80" loc_desc="7482 Stugl/Stuls, Switzerland, Search and Rescue"/>
+		<point lat="46.9894444" long="9.87638889" template="land" radius_mt="80" loc_desc="Partnun, 7246 St. Antönien, Switzerland, Search and Rescue"/>
+		<point lat="46.7269444" long="9.88583333" template="land" radius_mt="80" loc_desc="7272 Davos, Switzerland, Search and Rescue"/>
+		<point lat="46.9094444" long="9.90083333" template="land" radius_mt="80" loc_desc="Schlappinstrasse 555, 7252 Klosters Dorf, Switzerland, Search and Rescue"/>
+		<point lat="46.8597222" long="9.91611111" template="hover" radius_mt="80" loc_desc="Schwäderlochstrasse 15, 7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
+		<point lat="46.8127778" long="9.92805556" template="hover" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
+		<point lat="46.7688889" long="9.93083333" template="land" radius_mt="80" loc_desc="Flüelapass, 7260 Davos, Switzerland, Search and Rescue"/>
+		<point lat="46.7641667" long="9.94166667" template="hover" radius_mt="80" loc_desc="Flüelapass, 7260 Davos, Switzerland, Search and Rescue"/>
+		<point lat="46.8247222" long="9.95333333" template="hover" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
+		<point lat="46.7722222" long="9.96194444" template="hover" radius_mt="80" loc_desc="Flüelapass, 7260 Davos, Switzerland, Search and Rescue"/>
+		<point lat="46.7725" long="9.97194444" template="land" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
+		<point lat="46.7802778" long="9.98777778" template="hover" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
+		<point lat="46.7158333" long="9.99638889" template="hover" radius_mt="80" loc_desc="7542 Susch, Switzerland, Search and Rescue"/>
+	</loc_acc>
+
+	<loc_hospitals>
+		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
+		<point lat="46.69698" long="9.43650" template="land" radius_mt="80" loc_desc="Helipad, Thusis Spital / LSHT"/>
+		<point lat="46.80010" long="10.30462" template="land" radius_mt="80" loc_desc="Helipad, Unterengadin Spital, Scuol / LSHU"/>
+		<point lat="46.77692" long="9.20489" template="land" radius_mt="80" loc_desc="Helipad, Surselva Spital, Ilanz / LSHI"/>
+		<point lat="46.78763" long="9.81421" template="land" radius_mt="80" loc_desc="Helipad, Davos Spital, Davos / LSHD"/>		  
+	</loc_hospitals>
+	<loc_hospitals_pickup>
+		<point lat="46.69698" long="9.43650" template="land" radius_mt="80" loc_desc="Helipad, Thusis Spital / LSHT"/>
+		<point lat="46.80010" long="10.30462" template="land" radius_mt="80" loc_desc="Helipad, Unterengadin Spital, Scuol / LSHU"/>
+		<point lat="46.77692" long="9.20489" template="land" radius_mt="80" loc_desc="Helipad, Surselva Spital, Ilanz / LSHI"/>
+		<point lat="46.78763" long="9.81421" template="land" radius_mt="80" loc_desc="Helipad, Davos Spital, Davos / LSHD"/>		  
+	</loc_hospitals_pickup>
+	<loc_hospitals_dropoff>
+		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
+		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
+		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
+		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
+		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
+	</loc_hospitals_dropoff>
+	<loc_homebase>
+		<point lat="46.91287" long="9.55090" template="land" radius_mt="80" loc_desc="LSXU REGA5 Base Untervaz"/>
+	</loc_homebase>
+	<object_templates>
+		<!-- markers -->
+		<obj3d  name="marker" file_name="marker_five_parts_02.obj" />
+		<!-- cars -->
+		<obj3d  name="ambulance" file_name="" random_tag="ambulance_select"   />
+		<obj3d  name="random_thing" file_name="" random_tag="clutter"  />
+	</object_templates>
+
+	<object_sets>
+		<medevac>
+			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
+			<display_object  name="random_ambulance" file_name=""  random_tag="ambulance_select"  random_water_tag="water_replace_ambulance"    limit_to_terrain_slope="20" />
+			<display_object  name="random_car"       file_name=""  random_tag="crashed_car"       relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="blank" limit_to_terrain_slope="20" />
+			<display_object  name="random_sign"      file_name=""  random_tag="clutter"           relative_pos_bearing_deg_distance_mt="180|10" random_water_tag="blank" />
+		</medevac>
+		<medevac>
+			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
+			<display_object  name="random_police_car" file_name=""    random_tag="police_car"         random_water_tag="water_replace_ambulance"    limit_to_terrain_slope="20" />
+			<display_object  name="random_car"        file_name=""    random_tag="crashed_car"        relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="blank" limit_to_terrain_slope="20" />
+			<display_object  name="random_police01"   file_name=""    random_tag="policeman"          relative_pos_bearing_deg_distance_mt="360|5"  random_water_tag="blank" limit_to_terrain_slope="" />
+			<display_object  name="random_police02"   file_name=""    random_tag="policeman"          relative_pos_bearing_deg_distance_mt="345|5"  random_water_tag="blank" limit_to_terrain_slope="" />
+			<display_object  name="random_person1"    file_name=""    random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="10|10"  random_water_tag="blank" limit_to_terrain_slope="" />
+			<display_object  name="random_person2"    file_name=""    random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="15|10"  random_water_tag="blank" limit_to_terrain_slope="" />
+			<display_object  name="random_sign"       file_name=""    random_tag="clutter"            relative_pos_bearing_deg_distance_mt="180|10" random_water_tag="blank" />
+		</medevac>
+		<medevac>
+			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
+			<display_object  name="random_person1"   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="10|10"  random_water_tag="blank" limit_to_terrain_slope="" />
+			<display_object  name="random_person2"   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="12|10"  random_water_tag="blank" limit_to_terrain_slope="" />
+			<display_object  name="random_person3"   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="10|8"   random_water_tag="blank" limit_to_terrain_slope="" optional="45%" />
+			<display_object  name="random_person4"   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="15|10"  random_water_tag="blank" limit_to_terrain_slope="" optional="35%" />
+			<display_object  name="random_ambulance" random_tag="ambulance_select"  random_water_tag="water_replace_ambulance"    limit_to_terrain_slope="20" />
+			<display_object  name="aider01"          random_tag="push_wheelchair"    relative_pos_bearing_deg_distance_mt="45|05"  random_water_tag="blank" limit_to_terrain_slope="20" />
+			<display_object  name="wheelchair01"      random_tag="wheelchairs"        relative_pos_bearing_deg_distance_mt="46|05"  random_water_tag="blank" limit_to_terrain_slope="20" />
+			<display_object  name="random_car"       random_tag="crashed_car"       relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="blank" limit_to_terrain_slope="20" />
+			<display_object  name="random_sign"      random_tag="clutter"           relative_pos_bearing_deg_distance_mt="180|10" random_water_tag="blank" />
+			<display_object  name="firetruck01"      random_tag="firetruck"         relative_pos_bearing_deg_distance_mt="270|5"  random_water_tag="blank" />
+			<display_object  name="fireman01"        random_tag="fireman"           relative_pos_bearing_deg_distance_mt="295|4"  random_water_tag="blank" />
+		</medevac>
+		<medevac_slope>
+			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
+			<display_object  name="random_person1"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="0|1"   random_water_tag="blank" />
+			<display_object  name="random_person2"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="45|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person3"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="90|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person4"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="135|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person5"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="180|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person6"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="225|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person7"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="270|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person8"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="315|1"   random_water_tag="blank" />
+			<display_object  name="clutter1"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="0|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter2"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="45|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter3"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="90|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter4"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="135|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter5"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="180|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter6"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="225|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter7"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="270|3"   random_water_tag="blank" optional="30%"/>
+			<display_object  name="clutter8"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="315|3"   random_water_tag="blank" optional="30%"/>
+		</medevac_slope>
+	</object_sets>
+
+	<!-- the name attribute is not important -->
+	<blank>
+		<obj3d  name="blank" file_name="" />
+		<!-- disable 3D Object -->
+	</blank>
+
+	<ambulance_select>
+<!--
+		<obj3d  name="ambulance1" file_name="../../../RescueX_Lib/cars/RTW_01.obj" />
+		<obj3d  name="ambulance2" file_name="../../../RescueX_Lib/cars/RTW_02.obj" />
+		<obj3d  name="ambulance3" file_name="../../../RescueX_Lib/cars/RTW_03.obj" />
+		<obj3d  name="ambulance4" file_name="../../../RescueX_Lib/cars/RTW_04.obj" />
+-->
+		<obj3d  name="ambulance5" file_name="car_ambulance.obj" />
+		<obj3d  name="ambulance6" file_name="USAmbulance.obj" />
+		<obj3d  name="ambulance7" file_name="../../../CDB-Library/Airport/GSE/ambulance/car_ambulance1.obj" />
+		<obj3d  name="ambulance8" file_name="../../../CDB-Library/Airport/GSE/ambulance/car_ambulance2.obj" />
+		<obj3d  name="ambulance9" file_name="../../../CDB-Library/Airport/GSE/ambulance/car_ambulance3.obj" />
+		<obj3d  name="ambulance10" file_name="../../../pm_library/Ambulance.obj" />
+	</ambulance_select>
+
+	<police_car>
+<!--
+		<obj3d  name="police01" file_name="../../../RescueX_Lib/cars/Polizei_FuStw_01.obj" />
+-->
+		<obj3d  name="police02" file_name="../../../RescueX_Lib/cars/Polizei_FuStw_01_lit.obj" />
+		<obj3d  name="police03" file_name="../../../RescueX_Lib/cars/Polizei_FuStw_01_lit_open.obj" />
+		<obj3d  name="police04" file_name="../../../RescueX_Lib/cars/FW_FF_Stuehlingen_RW1_open.obj" />
+	</police_car>
+
+	<policeman>
+		<obj3d  name="person01" file_name="../../../3D_people_library/policeman_1.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/policeman_1_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/policeman_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/policeman3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/policeman4.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/policeman5.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/policeman6.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/policeman7.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/policeman8.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/policeman_motorcyclist.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/police.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/police_officer.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/sheriff.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/sheriff_walking.obj" />
+	</policeman>
+
+	<crashed_car>
+		<obj3d  name="car01" file_name="../../../RescueX_Lib/cars/NEF_Passat_sb1099.obj" />
+		<obj3d  name="car02" file_name="../../../RescueX_Lib/cars/crashed_CLK.obj" />
+		<obj3d  name="car03" file_name="../../../RescueX_Lib/cars/crashed_CLK.obj" />
+		<obj3d  name="car04" file_name="../../../RescueX_Lib/cars/crashed_CLK.obj" />
+	</crashed_car>
+
+	<wheelchairs>
+		<obj3d  name="person01" file_name="../../../3D_people_library/wheelchair.obj" />
+	</wheelchairs>
+
+	<push_wheelchair>
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_push_wheelchair.obj" />
+	</push_wheelchair>
+
+	<cars>
+		<obj3d  name="car01" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_alto.obj"/>
+		<obj3d  name="car02" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_daihatsu_tanto.obj"/>
+		<obj3d  name="car03" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_Datsun_620-73.obj"/>
+		<obj3d  name="car04" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_datsunGO.obj"/>
+		<obj3d  name="car05" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_datsunGOPlus.obj"/>
+		<obj3d  name="car06" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_fordRangerWhite.obj"/>
+		<obj3d  name="car07" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_gmc_airport.obj"/>
+		<obj3d  name="car08" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_gmc_old.obj"/>
+		<obj3d  name="car09" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_KiaSuv.obj"/>
+		<obj3d  name="car10" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_LandRover107.obj"/>
+		<obj3d  name="car11" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_lexus.obj"/>
+		<obj3d  name="car12" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_mitshubishiTbox.obj"/>
+		<obj3d  name="car13" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_mitsubishi_pack.obj"/>
+		<obj3d  name="car14" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_nissanStanzaWG.obj"/>
+		<obj3d  name="car15" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_old_pickup.obj"/>
+		<obj3d  name="car16" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_Pajero.obj"/>
+		<obj3d  name="car17" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_peugeotrossa.obj"/>
+		<obj3d  name="car18" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_postTruck.obj"/>
+		<obj3d  name="car19" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_sinca.obj"/>
+		<obj3d  name="car20" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_subaru_wagon.obj"/>
+		<obj3d  name="car21" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_suzuki_cappuccino.obj"/>
+		<obj3d  name="car22" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_suzukiCarry.obj"/>
+		<obj3d  name="car23" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_SuzukiCarry_pickup.obj"/>
+		<obj3d  name="car24" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_SuzukiCarry2.obj"/>
+		<obj3d  name="car25" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_toyota_camry.obj"/>
+		<obj3d  name="car26" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_toyota_corolla.obj"/>
+		<obj3d  name="car27" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_toyota_corolla_old.obj"/>
+		<obj3d  name="car28" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_toyotaRed_old_pickup.obj"/>
+		<obj3d  name="car29" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_toyotaTacoma.obj"/>
+		<obj3d  name="car30" file_name="../../../RescueX_Lib/cars/CamiDeBellis/CDBambassador_carblack.obj"/>
+		<obj3d  name="car31" file_name="../../../RescueX_Lib/cars/CamiDeBellis/CDBcar_van.obj"/>
+		<obj3d  name="car32" file_name="../../../RescueX_Lib/cars/CamiDeBellis/CDBhummer.obj"/>
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/avia.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/bus_mhd.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/bus_2.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/DAF55.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/s105-red.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/s105-blue.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/s105-green.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/skoda_favorit_blue.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/skoda_favorit_red.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/skoda_favorit_white.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/skoda_favorit_yellow.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/T815.obj" />
+		<!-- truck -->
+		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/z7745.obj" />
+		<!-- traktor -->
+	</cars>
+
+	<clutter>
+		<obj3d  name="sign01" file_name="../../../RescueX_Lib/objects/OBJ_Faltdreieck.obj"/>
+		<obj3d  name="sign02" file_name="../../../RescueX_Lib/objects/OBJ_Faltdreieck_Leuchte.obj"/>
+		<obj3d  name="sign03" file_name="../../../RescueX_Lib/objects/OBJ_Leuchte.obj"/>
+		<!-- obj3d  name="sign04_blank" file_name=""/ -->
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzel_cerveny.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzel_modry.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/oznaceni_letiste.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/oznaceni_letiste_dlouhe.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/sudy_CB_letiste.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/sudy_letiste.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzely_cervene.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzely_modre.obj" />
+		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/znaceni_letiste_prkna.obj" />
+	</clutter>
+
+	<people_aiders>
+		<obj3d  name="person01" file_name="../../../3D_people_library/first_aider.obj" />
+	</people_aiders>
+
+	<people_at_location>
+		<!-- People -->
+		<obj3d  name="hicker01" file_name="../../../MisterX_Library/People/Airport_Worker_4.obj" />
+		<obj3d  name="hicker02" file_name="../../../MisterX_Library/People/Man_Shirt_1.obj" />
+		<obj3d  name="hicker03" file_name="../../../MisterX_Library/People/Man_Shirt_2.obj" />
+		<obj3d  name="Woman01" file_name="../../../MisterX_Library/People/Woman_1.obj" />
+		<obj3d  name="Woman02" file_name="../../../MisterX_Library/People/Woman_4.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/biker2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/biker3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/biker.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/boy_shouting.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/boy_sitting.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/business_woman.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/child.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_female_a1.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_female_a2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_female_a3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_a1.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_a2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_a3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_b1.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_b2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_b3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/cyclist.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/cyclist_standing.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/dog_handler.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/door_supervisor.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm10.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm10_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm11.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm11_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm1.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm1_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm2_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm2_with_spade.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm3_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm4.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm4_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm5.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm5_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm6.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm6_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm6_with_hay_fork.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm7.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm7_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm7_with_scythe.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm8.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm8_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm9.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/farm9_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/female1.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/female2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/female3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/girl_sitting_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_female1.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_female2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_female3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_10.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_10_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_1.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_male1.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_4.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_security.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_with_extinguisher.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_with_toolbox_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_with_toolbox.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Male_with_jerry_can.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_1_sport.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_arms_crossed.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_baseball_cap.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_blue_shirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_blue_T_shirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_bodyguard.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_brown_suit.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_brown_top.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_camo_trousers.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_casual.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_check_shirt2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_check_shirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_cloth_cap.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_cool_dude.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_green_shirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_green_tshirt2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_green_tshirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Man_grey_coat.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_grey_jumper.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_grey_shirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_greytop.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_hand_in_pocket.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_hawaiin_shirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_holding_elbow.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_jeans.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_mobile_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_mobile.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_odd_hat.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_old_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_old.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_overcoat.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_purple_shirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_red_tshirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_running.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_sfpd.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_shirt_jeans.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_smiling.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_10.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_11.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_12.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_13.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_14.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_15.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_16.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_17.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_18.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_19.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_20.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_21.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_22.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_23.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_24.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_25.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_26.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_27.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_28.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_29.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_30.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_31.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_32.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_33.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_34.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_35.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_36.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_37.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_4.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_5.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_6.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_7.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_8.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_9.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_striped_jacket.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_striped_shirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_tatoo.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_tattoo2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_walking_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_walking_37.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_walking_3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_white_shirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_with_beard.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_with_mobile.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_with_sunglasses.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_woollen_hat.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_yellow.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/mechanic.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/stewardess_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/stewardess.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/teenager_sitting2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/teenager_sitting.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/teenager_standing.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/teenager_with_dog.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/watchman.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_5.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_backpack.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_black_skirt.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_black_skirt_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_brown_shoulder_bag.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_business.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_checking_in.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_chinese_top.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_denim.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_flowerytop.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_hand_on_hip.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_jeans_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_pony_tail.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_purple_top.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_reclining.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing10.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing11.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing12.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing14.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing4.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing5.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing7.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing8.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing9.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_walking2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_walking_brown.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_walking_dog.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_yellow_top.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/worker.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/workers_manhole.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/worker_stop_sign.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/worker_walking_2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/worker_walking.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/worker_waving.obj" />
+	</people_at_location>
+
+	<fireman>
+		<obj3d  name="person01" file_name="../../../3D_people_library/fireman2.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/fireman3.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/fireman4.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/Fireman.obj" />
+	</fireman>
+
+	<water_replace_ambulance>
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/fishing/10/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/canoes_kayaks/3/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/canoes_kayaks/4/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/canoes_kayaks/6/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/fishing/11/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/fishing/9/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/sail/10/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/sail/11/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/sail/13/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/sail/9/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/tour/1/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/tour/2/object.obj" />
+		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/tour/3/object.obj" />
+		<obj3d  name="boat01" file_name="../../../MisterX_Library/Vehicles/Boats/Yacht_1.obj" />
+		<obj3d  name="boat01" file_name="../../../MisterX_Library/Vehicles/Boats/Fishing_Boat_1.obj" />
+	</water_replace_ambulance>
+
+	<something_in_water>
+		<!-- People -->
+		<obj3d  name="person01" file_name="../../../3D_people_library/man_swimming.obj" />
+		<obj3d  name="person01" file_name="../../../3D_people_library/woman_bikini.obj" />
+	</something_in_water>
+
+	<!-- inventory items to pick randomly from -->
+	<item_blueprints>
+		<item barcode="payload01" name="Staff_10kg"  weight_kg="10" />
+		<item barcode="payload02" name="Staff_25kg"  weight_kg="25" />
+		<item barcode="payload03" name="Med Staff_20kg"  weight_kg="20" />
+		<item barcode="payload04" name="Staff_30kg"  weight_kg="30" />
+		<item barcode="payload05" name="Med Staff_15kg"  weight_kg="15" />
+		<item barcode="payload06" name="Med Staff_50kg"  weight_kg="50" />
+	</item_blueprints>
+
+	<!-- message templates that can be used with dynamic_messages -->
+	<message_templates>
+		<message name="5nm_alert" is_mxpad="yes">
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="radio" mxpad_label_color="yellow">
+				<![CDATA[5 nautical miles to destination.]]>
+			</mix>
+		</message>
+		<message name="2nm_alert" is_mxpad="yes">
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="radio" mxpad_label_color="yellow">
+				<![CDATA[2 nautical miles to destination.]]>
+			</mix>
+		</message>
+	</message_templates>
+
+
+</TEMPLATE>
+
+<MAPPING>
+	<global_settings>
+		<folders sound_folder_name="sound" obj3d_folder_name="obj" />
+		<start_time day_in_year="" hours_local="9" min="00" />
+		<base_weights_kg pilot="85" passengers="180" storage="35" />
+		<position auto_position_plane="false" />
+	</global_settings>
+	<leg name="" title="" next_leg=""  >
+		<start_leg_message name="" />
+		<link_to_objective name="" />
+		<desc/>
+		<post_leg_message name="" />
+	</leg>
+	<objective name="" title="" />
+	<task name="" base_on_trigger="" base_on_script="" eval_success_for_n_sec="3" mandatory="true" force_evaluation=""/>
+	<trigger name="" type="rad" rearm="" post_script="" >
+		<conditions plane_on_ground="true" cond_script="" />
+		<outcome message_name_when_fired="" message_name_when_left="" script_name_when_fired="" script_name_when_left="" commands_to_exec_when_fired="" commands_to_exec_when_left="" dataref_to_modify_when_fired=""  dataref_to_modify_when_left=""  />
+		<loc_and_elev_data>
+			<radius length_mt="80" />
+			<elevation_volume  elev_lower_upper_ft="" />
+		</loc_and_elev_data>
+	</trigger>
+	<message name="" is_mxpad="yes">
+		<mix track_type="text"  mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow" />
+	</message>
+	<end_mission>
+		<success_image file_name="success.png"  />
+		<success_msg >
+			<![CDATA[Well done pilot! See you next time!]]>
+		</success_msg>
+		<success_sound sound_file="" sound_vol="" />
+		<fail_image file_name="fail.png"  />
+		<fail_msg >
+			<![CDATA[You failed!]]>
+		</fail_msg>
+		<fail_sound sound_file="" sound_vol="" />
+	</end_mission>
+	<inventory name="" type="rad" >
+		<item name="" barcode="" quantity="1"  weight_kg="20"/>
+		<loc_and_elev_data>
+			<radius length_mt="100" />
+			<point lat="" long=""/>
+		</loc_and_elev_data>
+	</inventory>
+	<item name="" barcode="" quantity="1"  weight_kg="20"/>
+	<point lat="" long=""/>
+</MAPPING>

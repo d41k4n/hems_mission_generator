@@ -20,6 +20,9 @@ dataref("custom_slider_on_5", "sim/cockpit2/switches/custom_slider_on", "writabl
 dataref("ground_contact", "hoist/ground_contact", "writable")
 dataref("is_up", "hoist/is_up", "writable")
 dataref("rope_length", "hoist/rope_length", "writable")
+dataref("jett_x", "sim/aircraft/overflow/jett_X", "readonly")
+dataref("jett_y", "sim/aircraft/overflow/jett_Y", "readonly")
+dataref("jett_z", "sim/aircraft/overflow/jett_Z", "readonly")
 
 if not SUPPORTS_FLOATING_WINDOWS then
     -- to make sure the script doesn't stop old FlyWithLua versions
@@ -32,6 +35,7 @@ ground_contact = 0
 is_up = 1
 
 local init_completed = false
+local is_rotorsim = false
 local tween = require 'tween'
 
 local winch_position_retracted = {-0.920000, 0.617768, -1.588976}
@@ -83,6 +87,10 @@ function monitor()
 			winch_pos = XPLMGetDatavf(winch_position_ref, 0, 3)
 			cargo_size_ref = XPLMFindDataRef("HSL/Cargo/Size")
 			cw_cargo_ref  = XPLMFindDataRef("HSL/Cargo/CWFront")
+			if XPLMFindDataRef("rotorsim/ec135/hoist_angle") ~= nil then
+				is_rotorsim = true
+				dataref("winch_angle", "rotorsim/ec135/hoist_angle", "readonly")
+			end
 			init_completed = true
 		else
 			draw_string_Helvetica_18(50, 500, "Hoist: Waiting on datarefs to be created!")
@@ -102,12 +110,6 @@ function monitor()
 			end
 		end
 	end
-end
-
-if init_completed == false then
-	do_every_draw("monitor()")
-else
-	do_sometimes("monitor()")
 end
 
 function round(num, numDecimalPlaces)
@@ -133,13 +135,21 @@ function hoist_op()
 		elseif rope_speed > 0 then
 			rope_speed = 0
 		end
-		if not winch_stopped then	
-			-- print("Hoist: Moving...")
-			winch_stopped = winch_tween:update(dt)
+		if not is_rotorsim then
+			if not winch_stopped then
+				-- print("Hoist: Moving...")
+				winch_stopped = winch_tween:update(dt)
+				winch_pos_current = XPLMGetDatavf(winch_position_ref, 0, 3)
+				winch_pos_current[0] = winch_pos[0]
+				winch_pos_current[1] = winch_pos[1]
+				winch_pos_current[2] = winch_pos[2]
+				XPLMSetDatavf(winch_position_ref, winch_pos_current, 0, 3)
+			end
+		else
 			winch_pos_current = XPLMGetDatavf(winch_position_ref, 0, 3)
-			winch_pos_current[0] = winch_pos[0]
-			winch_pos_current[1] = winch_pos[1]
-			winch_pos_current[2] = winch_pos[2]
+			winch_pos_current[0] = jett_x
+			winch_pos_current[1] = jett_y
+			winch_pos_current[2] = jett_z
 			XPLMSetDatavf(winch_position_ref, winch_pos_current, 0, 3)
 		end
 	end
@@ -294,6 +304,7 @@ function remove_patient()
 	cargo_mass = cargo_mass_crew
 end
 
+do_sometimes("monitor()")
 do_every_frame ("hoist_op()")
 
 -- make a switchable menu entry , default is on
