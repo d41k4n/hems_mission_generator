@@ -178,7 +178,7 @@ Hints:
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Load_Connect" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
 			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=2-25" override_trigger_name="trig_land_goal_1_target_1" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
@@ -217,7 +217,7 @@ Hints:
 		<!-- Hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Primary mission: Patient transfer. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Load_Connect" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
 			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup" override_trigger_name="trig_land_goal_1_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -293,7 +293,7 @@ Hints:
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Load_Connect" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
 			<expected_location location_type="webosm" location_value="tag=webosm_road_filter|nm_between=7-25|keyname=name|keydesc=name|webosm_optimize=n" override_trigger_name="trig_land_goal_1_target_1" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
