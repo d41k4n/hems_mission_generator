@@ -118,8 +118,8 @@ Hints:
 	</content>
 
 	<mission_info 
-		mission_image_file_name="Rega1_2.png" 
-		template_image_file_name="Rega1_2.png" 
+		mission_image_file_name="Rega5.png" 
+		template_image_file_name="Rega5.png" 
 		written_by="Daikan" 
 		plane_desc="Helicopter" 
 		estimate_time="~45 Minutes." 
