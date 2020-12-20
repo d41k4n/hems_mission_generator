@@ -488,7 +488,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_close_door" 
 					 message_name_when_left=""
-					 commands_to_exec_when_fired="sim/flight_controls/door_open_4,HSL/Sling_Disable" 
+					 commands_to_exec_when_fired="sim/flight_controls/door_close_4,HSL/Sling_Disable" 
 					 commands_to_exec_when_left=""
 					 dataref_to_modify_when_fired="" 
 					 dataref_to_modify_when_left=""  
