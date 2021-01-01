@@ -34,6 +34,9 @@
             <Folder name="missionx">
                 <Folder name="random">
                     <File name="D:\X-Plane 11\Custom Scenery\missionx\random\winch.bas" />
+                    <Folder name="briefer">
+                        <File name="D:\X-Plane 11\Custom Scenery\missionx\random\briefer\random.xml" />
+                    </Folder>
                 </Folder>
             </Folder>
         </Folder>
