@@ -5,8 +5,39 @@
 		 Version 1.0
 	-->
 	<content>
+		<medevac_hover_osm min_valid_flight_legs="3" list="medevac_hover_osm_set" plane_type="helos">
+Hover OSM: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+
+Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints for winch extraction:
+- Hover within 20m radius and below 150ft over target
+- Crew will perform all required tasks autonomously when within target range.
+- Observe status messages during all operations and follow instructions.
+- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
+- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
+
+Hints for patient dropoff:
+- Land on the helipad designated via GPS.
+- Shut down engines
+- Observe status messages and follow instructions.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hover_osm>
+		<medevac_road_osm min_valid_flight_legs="3" list="medevac_road_osm_set" plane_type="helos">
+Road OSM: In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
+
+Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints:
+- Land within a radius of 80m around the designated accident location.
+- Shut down engines
+- Observe status messages and follow instructions if requested.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_road_osm>
 		<medevac_hover min_valid_flight_legs="3" list="medevac_hover_set" plane_type="helos">
-In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+Hover XY: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
 
 Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
 
@@ -24,27 +55,8 @@ Hints for patient dropoff:
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
 		</medevac_hover>
-		<medevac_hover min_valid_flight_legs="3" list="medevac_hover_set" plane_type="helos">
-In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
-
-Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints for winch extraction:
-- Hover within 20m radius and below 150ft over target
-- Crew will perform all required tasks autonomously when within target range.
-- Observe status messages during all operations and follow instructions.
-- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
-- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
-
-Hints for patient dropoff:
-- Land on the helipad designated via GPS.
-- Shut down engines
-- Observe status messages and follow instructions.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hover>
 		<medevac_land min_valid_flight_legs="3" list="medevac_land_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
+Land XY: In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
 
 Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
 
@@ -56,31 +68,7 @@ Hints:
 - Start engines and proceed to next GPS waypoint.
 		</medevac_land>
 		<medevac_land min_valid_flight_legs="3" list="medevac_land_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
-
-Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land within a radius of 80m around the designated accident location.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_land>
-		<medevac_land min_valid_flight_legs="3" list="medevac_land_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
-
-Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land within a radius of 80m around the designated accident location.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_land>
-		<medevac_land min_valid_flight_legs="3" list="medevac_land_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
+Land XY: In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
 
 Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
 
@@ -132,7 +120,7 @@ Hints:
 		In this mission you will be assigned a MEDEVAC task that may consist of an emergency extraction from an accident scene or hospital - either by winch or by landing. 
 		
 		Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090) 
-		Aircraft: VLC H145 T2 Rescue Version v3.1
+		Aircraft: Airbus H145 
 		
 		Please make sure your aircraft is parked and ready before starting the mission. 
 		
@@ -190,7 +178,7 @@ Hints:
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Load_Connect" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
 			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=2-25" override_trigger_name="trig_land_goal_1_target_1" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
@@ -229,7 +217,7 @@ Hints:
 		<!-- Hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Primary mission: Patient transfer. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Load_Connect" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
 			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup" override_trigger_name="trig_land_goal_1_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -262,6 +250,92 @@ Hints:
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
 		</leg>
 	</medevac_hospital_set>
+
+	<medevac_hover_osm_set is_set_of_flight_legs="yes" >
+		<!-- Ski accident -->
+		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Skiing accident. Location: {navaid_loc_desc}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="sim/weapons/re_arm_aircraft,FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="webosm" location_value="tag=webosm_piste_filter|nm_between=2-25|keyname=piste:name|keydesc=piste:name|webosm_optimize=n" force_sloped_terrain="3" override_trigger_name="trig_hover_goal_1_target_1"/>
+			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="3000">Establish visual on target area and reduce speed.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="1000">Crew standby for hover. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="sim/weapons/re_arm_aircraft,FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_hover_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_hover_osm_set>
+
+	<medevac_road_osm_set is_set_of_flight_legs="yes" >
+		<!-- Accident or hospital transfer -->
+		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
+			<expected_location location_type="webosm" location_value="tag=webosm_road_filter|nm_between=7-25|keyname=name|keydesc=name|webosm_optimize=n" override_trigger_name="trig_land_goal_1_target_1" />
+			<display_object_set random_tag="object_sets" set_name="medevac" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="3000">Look out for target and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_land_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_road_osm_set>
+
+	<webosm_piste_filter>
+		<filter>['piste:type'='downhill']['piste:type'='nordic']['piste:type'='sled']['piste:type'='sleigh']['piste:type'='hike']['piste:type'='skitour']</filter>
+	</webosm_piste_filter>
+
+	<webosm_road_filter>
+		<filter>[highway=primary][highway=secondary][highway=tertiary][highway=residential][highway=service][highway=living_street]</filter>
+	</webosm_road_filter>
+
 
 	<!-- Patient extraction: Special leg directives -->
 	<leg_1_tasks_winch_ops>
@@ -674,6 +748,7 @@ Hints:
 			<var name="counter" type="number" init_val="0"/>
 		</shared_variables>
 	</embedded_scripts>
+
 	<loc_acc>
 		<point lat="46.755370" long="9.940814" template="land" radius_mt="80" loc_desc="Flüelapass H28, 7260 Davos, Switzerland, Accident with head-on collision"/>
 		<point lat="46.972705" long="9.604765" template="land" radius_mt="80" loc_desc="Felsenbach, 7302 Landquart, Switzerland, Accident with head-on collision"/>
@@ -1282,6 +1357,7 @@ Hints:
 		<point lat="46.7802778" long="9.98777778" template="hover" radius_mt="80" loc_desc="7250 Klosters-Serneus, Switzerland, Search and Rescue"/>
 		<point lat="46.7158333" long="9.99638889" template="hover" radius_mt="80" loc_desc="7542 Susch, Switzerland, Search and Rescue"/>
 	</loc_acc>
+
 	<loc_hospitals>
 		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
 		<point lat="46.69698" long="9.43650" template="land" radius_mt="80" loc_desc="Helipad, Thusis Spital / LSHT"/>
