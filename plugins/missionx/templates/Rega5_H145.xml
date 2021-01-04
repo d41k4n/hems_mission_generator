@@ -6,7 +6,7 @@
 	-->
 	<content>
 		<medevac_hover_osm min_valid_flight_legs="3" list="medevac_hover_osm_set" plane_type="helos">
-Hover OSM: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
 
 Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
 
@@ -25,7 +25,7 @@ Hints for patient dropoff:
 - Start engines and proceed to next GPS waypoint.
 		</medevac_hover_osm>
 		<medevac_road_osm min_valid_flight_legs="3" list="medevac_road_osm_set" plane_type="helos">
-Road OSM: In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
+In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
 
 Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
 
@@ -37,7 +37,7 @@ Hints:
 - Start engines and proceed to next GPS waypoint.
 		</medevac_road_osm>
 		<medevac_hover min_valid_flight_legs="3" list="medevac_hover_set" plane_type="helos">
-Hover XY: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
 
 Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
 
@@ -56,7 +56,7 @@ Hints for patient dropoff:
 - Start engines and proceed to next GPS waypoint.
 		</medevac_hover>
 		<medevac_land min_valid_flight_legs="3" list="medevac_land_set" plane_type="helos">
-Land XY: In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
+In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
 
 Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
 
@@ -68,7 +68,7 @@ Hints:
 - Start engines and proceed to next GPS waypoint.
 		</medevac_land>
 		<medevac_land min_valid_flight_legs="3" list="medevac_land_set" plane_type="helos">
-Land XY: In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
+In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
 
 Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
 
