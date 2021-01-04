@@ -1,14 +1,10 @@
 <NotepadPlus>
     <Project name="MissionX HEMS Template">
-        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Rega1.png" />
-        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Rega5.png" />
-        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Rega1_H145.xml" />
+        <File name="plugins\missionx\templates\Rega1_H145.xml" />
+        <File name="plugins\missionx\templates\Rega5_EC135.xml" />
+        <File name="plugins\missionx\templates\Rega5_EC135_test.xml" />
         <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Rega5_H145.xml" />
         <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Rega5_H145_test.xml" />
-        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Rega5_osm_EC135.xml" />
-        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Rega5_osm_EC135_test.xml" />
-        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Rega5_osm_H145.xml" />
-        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Rega5_osm_H145_test.xml" />
         <Folder name="Aircraft">
             <Folder name="H145">
                 <File name="D:\X-Plane 11\Aircraft\Helicopters\H145 T2 Rescue Version XP11 V3.1\HSLAircraft.ini" />
