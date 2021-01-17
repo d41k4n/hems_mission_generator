@@ -11,6 +11,7 @@ plugins/missionx/*
 !plugins/missionx/templates
 plugins/missionx/templates/*
 !plugins/missionx/templates/Rega*
+!plugins/missionx/templates/Lions*
 plugins/missionx/templates/Rega*test*.xml
 scenery/missionx/*
 !scenery/missionx/random
