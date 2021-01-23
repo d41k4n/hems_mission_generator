@@ -2480,21 +2480,21 @@ Hints:
 	</loc_acc>
 
 	<loc_hospitals>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
@@ -2559,14 +2559,14 @@ Hints:
 	</loc_hospitals_pickup>
 
 	<loc_hospitals_dropoff>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>

@@ -452,29 +452,31 @@ Hints:
 	</loc_acc>
 
 	<loc_hospitals>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
 		<point lat="47.36657" long="8.49748" template="land" radius_mt="80" loc_desc="Helipad, Zürich Triemli Stadtspital"/>
 		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
 		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
+		<point lat="47.38827" long="8.05890" template="land" radius_mt="80" loc_desc="Helipad, Aarau Kantonsspital"/>	
 		<point lat="47.52183" long="8.53326" template="land" radius_mt="80" loc_desc="Helipad, Bülach Spital"/>
 		<point lat="47.45568" long="8.27856" template="land" radius_mt="80" loc_desc="Helipad, Baden Kantonsspital"/>	
-		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Uniklinikum Freiburg"/>	
-		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, LRZ Christoph 11 Villingen-Schwenningen"/>	
+		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
+		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
 	</loc_hospitals>
 	<loc_hospitals_pickup>
 		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
 		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
+		<point lat="47.38827" long="8.05890" template="land" radius_mt="80" loc_desc="Helipad, Aarau Kantonsspital"/>	
 		<point lat="47.52183" long="8.53326" template="land" radius_mt="80" loc_desc="Helipad, Bülach Spital"/>
 		<point lat="47.45568" long="8.27856" template="land" radius_mt="80" loc_desc="Helipad, Baden Kantonsspital"/>	
-		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Uniklinikum Freiburg"/>	
-		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, LRZ Christoph 11 Villingen-Schwenningen"/>	
+		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
+		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
 	</loc_hospitals_pickup>
 	<loc_hospitals_dropoff>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich UniSpital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Uniklinikum Freiburg"/>	
-		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, LRZ Christoph 11 Villingen-Schwenningen"/>	
+		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
+		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
 	</loc_hospitals_dropoff>
 	<loc_homebase>
 		<point lat="47.444291" long="8.233662" template="land" radius_mt="80" loc_desc="LSZF LIONS1 Base Birrfeld"/>
