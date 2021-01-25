@@ -571,7 +571,7 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_doors_open" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_open_4" commands_to_exec_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_open_5" commands_to_exec_when_left=""
 			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_crew_off" type="rad" enabled="yes" >
@@ -581,8 +581,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_crew_off" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_open_6" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="sim/flight_controls/door_close_2,sim/flight_controls/door_open_6" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_patient_on" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -592,7 +592,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_patient_on" message_name_when_left=""
 			commands_to_exec_when_fired="sim/flight_controls/door_close_6" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_crew_on" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -601,8 +601,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_crew_on" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_close_4" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_close_5" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_doors_closed" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -655,13 +655,13 @@ Hints:
 
 	<leg_2_triggers_dropoff>
 		<trigger name="trig_2_doors_open" type="rad" enabled="yes" >
-			<conditions plane_on_ground="yes" cond_script="" />
+			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_1" />
 			<loc_and_elev_data>
 				<radius length_mt="80" />
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_doors_open" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_open_4" commands_to_exec_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_open_5" commands_to_exec_when_left=""
 			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_crew_off" type="rad" enabled="yes" >
@@ -671,8 +671,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_crew_off" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_open_6" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="sim/flight_controls/door_close_2,sim/flight_controls/door_open_6" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_patient_off" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -681,8 +681,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_patient_off" message_name_when_left=""
-			commands_to_exec_when_fired="" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:0" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="sim/flight_controls/door_close_6" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_crew_on" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -691,8 +691,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_crew_on" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_close_4,sim/flight_controls/door_close_6," commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_close_5" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_doors_closed" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
