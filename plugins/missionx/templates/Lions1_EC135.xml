@@ -53,6 +53,18 @@ Hints:
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
 		</medevac_hospital>
+		<medevac_hospital_germany min_valid_flight_legs="3" list="medevac_hospital_germany_set" plane_type="helos">
+In this mission you will provide cross-border HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
+
+Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints:
+- Land on the designated hospital helipad.
+- Shut down engines
+- Observe status messages and follow instructions if requested.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hospital_germany>
 	</content>
 
 	<mission_info 
@@ -104,7 +116,7 @@ Hints:
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Next waypoint: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
-			<expected_location location_type="xy" location_value="tag=loc_hospitals_dropoff|nm_between=5-60" override_trigger_name="trig_land_goal_2_target_1" />
+			<expected_location location_type="xy" location_value="tag=loc_hospitals_dropoff|nm_between=10-30" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -123,6 +135,44 @@ Hints:
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
 		</leg>
 	</medevac_hospital_set>
+
+	<medevac_hospital_germany_set is_set_of_flight_legs="yes" >
+		<!-- Hospital transfer -->
+		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Patient transfer. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
+			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup_germany" override_trigger_name="trig_land_goal_1_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="3000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_hospitals_dropoff_germany|nm_between=10-30" override_trigger_name="trig_land_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_hospital_germany_set>
 
 	<medevac_road_osm_set is_set_of_flight_legs="yes" >
 		<!-- Accident or hospital transfer -->
@@ -182,7 +232,7 @@ Hints:
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Next waypoint: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_land_goal_2_target_1" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=3-25" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -463,21 +513,34 @@ Hints:
 		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
 		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
 	</loc_hospitals>
+
 	<loc_hospitals_pickup>
 		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
-		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
 		<point lat="47.38827" long="8.05890" template="land" radius_mt="80" loc_desc="Helipad, Aarau Kantonsspital"/>	
 		<point lat="47.52183" long="8.53326" template="land" radius_mt="80" loc_desc="Helipad, Bülach Spital"/>
 		<point lat="47.45568" long="8.27856" template="land" radius_mt="80" loc_desc="Helipad, Baden Kantonsspital"/>	
-		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
-		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
 	</loc_hospitals_pickup>
+
 	<loc_hospitals_dropoff>
 		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
+		<point lat="47.38827" long="8.05890" template="land" radius_mt="80" loc_desc="Helipad, Aarau Kantonsspital"/>	
 		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
 		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
+		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
 	</loc_hospitals_dropoff>
+
+	<loc_hospitals_pickup_germany>
+		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
+		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
+		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
+	</loc_hospitals_pickup_germany>
+
+	<loc_hospitals_dropoff_germany>
+		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
+		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
+	</loc_hospitals_dropoff_germany>
+
 	<loc_homebase>
 		<point lat="47.444291" long="8.233662" template="land" radius_mt="80" loc_desc="LSZF LIONS1 Base Birrfeld"/>
 	</loc_homebase>
