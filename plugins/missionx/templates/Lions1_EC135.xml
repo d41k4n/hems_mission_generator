@@ -6,9 +6,21 @@
 	-->
 	<content>
 		<medevac_road_osm min_valid_flight_legs="3" list="medevac_road_osm_set" plane_type="helos">
-Road OSM: In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
+In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
 
-Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
+Details on the target location will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints:
+- Land within a radius of 80m around the designated accident location.
+- Shut down engines
+- Observe status messages and follow instructions if requested.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_road_osm>
+		<medevac_road_osm min_valid_flight_legs="3" list="medevac_road_osm_set" plane_type="helos">
+In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
+
+Details on the target location will be provided at mission start. Usage of a helicopter is mandatory.
 
 Hints:
 - Land within a radius of 80m around the designated accident location.
@@ -18,31 +30,35 @@ Hints:
 - Start engines and proceed to next GPS waypoint.
 		</medevac_road_osm>
 		<medevac_parking_osm min_valid_flight_legs="3" list="medevac_parking_osm_set" plane_type="helos">
-Parking OSM: In this mission you will provide HEMS assistance performing a patient extraction by landing on a car park designated on your GPS.
+In this mission you will provide HEMS assistance performing a patient extraction by landing near the location designated on your GPS.
 
-Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
+In this case a car park has been chosen as the most suitable landing spot by the on-site emergency response team.
+
+Details on the target location will be provided at mission start. Usage of a helicopter is mandatory.
 
 Hints:
-- Land on the designated hospital helipad.
+- Land within a radius of 80m around the designated accident location.
 - Shut down engines
 - Observe status messages and follow instructions if requested.
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
 		</medevac_parking_osm>
 		<medevac_pitch_osm min_valid_flight_legs="3" list="medevac_pitch_osm_set" plane_type="helos">
-Pitch OSM: In this mission you will provide HEMS assistance performing a patient extraction by landing sports pitch designated on your GPS.
+In this mission you will provide HEMS assistance performing a patient extraction by landing near the location designated on your GPS.
+
+In this case an outdoor sports pitch has been chosen as the most suitable landing spot by the on-site emergency response team.
 
 Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
 
 Hints:
-- Land on the designated hospital helipad.
+- Land within a radius of 80m around the designated accident location.
 - Shut down engines
 - Observe status messages and follow instructions if requested.
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
 		</medevac_pitch_osm>
 		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
+In this mission you will provide HEMS assistance performing a patient transfer between two hospitals designated on your GPS.
 
 Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
 
@@ -54,7 +70,7 @@ Hints:
 - Start engines and proceed to next GPS waypoint.
 		</medevac_hospital>
 		<medevac_hospital_germany min_valid_flight_legs="3" list="medevac_hospital_germany_set" plane_type="helos">
-In this mission you will provide cross-border HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
+In this mission you will provide cross-border HEMS assistance performing a patient transfer between two hospitals designated on your GPS.
 
 Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
 
@@ -79,7 +95,7 @@ Hints:
 		scenery_settings="RescueX, R2, OpenSceneryX, MisterX, 3D People, CDB" 
 		short_desc="Hello Pilot,
 		
-		In this mission you will be assigned a MEDEVAC task that may consist of an emergency extraction from an accident scene or hospital - either by winch or by landing. 
+		In this mission you will be assigned a MEDEVAC task that may consist of an emergency extraction from an accident scene or a hospital transfer. 
 		
 		Homebase: LSZF, LIONS1 heliport (lat: 47.44429142, lon: 8.23366269) 
 		Aircraft: Rotorsim EC135 V5
@@ -219,7 +235,7 @@ Hints:
 			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
-			<expected_location location_type="webosm" location_value="tag=webosm_parking_filter|nm_between=7-25|keyname=name|keydesc=name|webosm_optimize=n" override_trigger_name="trig_land_goal_1_target_1" />
+			<expected_location location_type="webosm" location_value="tag=webosm_parking_filter|nm_between=7-25|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -258,7 +274,7 @@ Hints:
 			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
-			<expected_location location_type="webosm" location_value="tag=webosm_pitch_filter|nm_between=7-25|keyname=name|keydesc=name|webosm_optimize=n" override_trigger_name="trig_land_goal_1_target_1" />
+			<expected_location location_type="webosm" location_value="tag=webosm_pitches_filter|nm_between=7-25|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
