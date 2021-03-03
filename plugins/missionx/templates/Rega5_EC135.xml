@@ -757,7 +757,7 @@ Hints:
 
 	<leg_2_triggers_dropoff>
 		<trigger name="trig_2_doors_open" type="rad" enabled="yes" >
-			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_1" />
+			<conditions plane_on_ground="yes" cond_script="" />
 			<loc_and_elev_data>
 				<radius length_mt="80" />
 				<point lat="" long="" />
