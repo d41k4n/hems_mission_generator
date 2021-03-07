@@ -423,11 +423,11 @@ Hints:
 	</medevac_pitch_osm_set>
 
 	<webosm_piste_filter>
-		<filter>(way['piste:type']({{bbox}});relation['piste:type']({{bbox}}););(._;>;);out;</filter>
+		<filter>(way['piste:type']({{bbox}});relation['piste:type']({{bbox}}););out;</filter>
 	</webosm_piste_filter>
 
 	<webosm_road_filter>
-		<filter>(way[highway=primary]({{bbox}});way[highway=secondary]({{bbox}});way[highway=tertiary]({{bbox}});way[highway=residential]({{bbox}});way[highway=service]({{bbox}});way[highway=living_street]({{bbox}}););(._;>;);out;</filter>
+		<filter>(way[highway=primary]({{bbox}});way[highway=secondary]({{bbox}});way[highway=tertiary]({{bbox}});way[highway=residential]({{bbox}});way[highway=service]({{bbox}});way[highway=living_street]({{bbox}}););out;</filter>
 	</webosm_road_filter>
 
 	<webosm_parking_filter>
