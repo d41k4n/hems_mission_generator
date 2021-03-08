@@ -564,7 +564,7 @@ Hints:
 			         message_name_when_left=""
 		             commands_to_exec_when_fired="ec135/hoist/in:5,FlyWithLua/hoist/winch_remove_patient" 
 					 commands_to_exec_when_left=""
-		             dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:1" 
+		             dataref_to_modify_when_fired="rotorsim/ec135/crew[4]:1" 
 					 dataref_to_modify_when_left=""  
 			/>
 		</trigger>
@@ -578,7 +578,7 @@ Hints:
 					 message_name_when_left=""
 					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_release" 
 					 commands_to_exec_when_left=""
-					 dataref_to_modify_when_fired="sim/flightmodel/weight/m_fixed:400" 
+					 dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:1" 
 					 dataref_to_modify_when_left=""  
 			/>
 		</trigger>
