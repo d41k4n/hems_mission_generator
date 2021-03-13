@@ -1495,13 +1495,13 @@ Hints:
 		<medevac>
 			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
 			<display_object  name="random_ambulance" file_name=""  random_tag="ambulance_select"  random_water_tag="water_replace_ambulance"    limit_to_terrain_slope="20" />
-			<display_object  name="random_car"       file_name=""  random_tag="crashed_car"       relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="blank" limit_to_terrain_slope="20" />
+			<display_object  name="random_car"       file_name=""  random_tag="crashed_car"       relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="something_in_water" limit_to_terrain_slope="20" />
 			<display_object  name="random_sign"      file_name=""  random_tag="clutter"           relative_pos_bearing_deg_distance_mt="180|10" random_water_tag="blank" />
 		</medevac>
 		<medevac>
 			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
 			<display_object  name="random_police_car" file_name=""    random_tag="police_car"         random_water_tag="water_replace_ambulance"    limit_to_terrain_slope="20" />
-			<display_object  name="random_car"        file_name=""    random_tag="crashed_car"        relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="blank" limit_to_terrain_slope="20" />
+			<display_object  name="random_car"        file_name=""    random_tag="crashed_car"        relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="something_in_water" limit_to_terrain_slope="20" />
 			<display_object  name="random_police01"   file_name=""    random_tag="policeman"          relative_pos_bearing_deg_distance_mt="360|5"  random_water_tag="blank" limit_to_terrain_slope="" />
 			<display_object  name="random_police02"   file_name=""    random_tag="policeman"          relative_pos_bearing_deg_distance_mt="345|5"  random_water_tag="blank" limit_to_terrain_slope="" />
 			<display_object  name="random_person1"    file_name=""    random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="10|10"  random_water_tag="blank" limit_to_terrain_slope="" />
@@ -1517,15 +1517,15 @@ Hints:
 			<display_object  name="random_ambulance" random_tag="ambulance_select"  random_water_tag="water_replace_ambulance"    limit_to_terrain_slope="20" />
 			<display_object  name="aider01"          random_tag="push_wheelchair"    relative_pos_bearing_deg_distance_mt="45|05"  random_water_tag="blank" limit_to_terrain_slope="20" />
 			<display_object  name="wheelchair01"      random_tag="wheelchairs"        relative_pos_bearing_deg_distance_mt="46|05"  random_water_tag="blank" limit_to_terrain_slope="20" />
-			<display_object  name="random_car"       random_tag="crashed_car"       relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="blank" limit_to_terrain_slope="20" />
+			<display_object  name="random_car"       random_tag="crashed_car"       relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="something_in_water" limit_to_terrain_slope="20" />
 			<display_object  name="random_sign"      random_tag="clutter"           relative_pos_bearing_deg_distance_mt="180|10" random_water_tag="blank" />
 			<display_object  name="firetruck01"      random_tag="firetruck"         relative_pos_bearing_deg_distance_mt="270|5"  random_water_tag="blank" />
 			<display_object  name="fireman01"        random_tag="fireman"           relative_pos_bearing_deg_distance_mt="295|4"  random_water_tag="blank" />
 		</medevac>
 		<medevac_slope>
 			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
-			<display_object  name="random_person1"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="0|1"   random_water_tag="blank" />
-			<display_object  name="random_person2"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="45|1"   random_water_tag="blank" optional="50%"/>
+			<display_object  name="random_person1"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="0|1"   random_water_tag="water_replace_ambulance" />
+			<display_object  name="random_person2"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="45|1"   random_water_tag="something_in_water" optional="50%"/>
 			<display_object  name="random_person3"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="90|1"   random_water_tag="blank" optional="50%"/>
 			<display_object  name="random_person4"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="135|1"   random_water_tag="blank" optional="50%"/>
 			<display_object  name="random_person5"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="180|1"   random_water_tag="blank" optional="50%"/>
