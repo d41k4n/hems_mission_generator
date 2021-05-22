@@ -92,8 +92,8 @@ function monitor()
 				dataref("winch_angle", "rotorsim/ec135/hoist_angle", "readonly")
 			end
 			init_completed = true
-		else
-			draw_string_Helvetica_18(50, 500, "Hoist: Waiting on datarefs to be created!")
+		-- else
+			-- draw_string_Helvetica_18(50, 500, "Hoist: Waiting on datarefs to be created!")
 		end
 	else
 		rope_length = RopeLength;
