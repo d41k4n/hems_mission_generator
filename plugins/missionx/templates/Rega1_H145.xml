@@ -60,10 +60,46 @@ Hints:
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
 		</medevac_land>
-		<medevac_land min_valid_flight_legs="3" list="medevac_land_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
+		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
+In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
 
-Details on the location and accident type (if applicable) will be provided at mission start. Usage of a helicopter is mandatory.
+Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints:
+- Land on the designated hospital helipad.
+- Shut down engines
+- Observe status messages and follow instructions if requested.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hospital>
+		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
+In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
+
+Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints:
+- Land on the designated hospital helipad.
+- Shut down engines
+- Observe status messages and follow instructions if requested.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hospital>
+		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
+In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
+
+Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints:
+- Land on the designated hospital helipad.
+- Shut down engines
+- Observe status messages and follow instructions if requested.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hospital>
+		<medevac_road_osm min_valid_flight_legs="3" list="medevac_road_osm_set" plane_type="helos">
+In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
+
+Details on the target location will be provided at mission start. Usage of a helicopter is mandatory.
 
 Hints:
 - Land within a radius of 80m around the designated accident location.
@@ -71,67 +107,47 @@ Hints:
 - Observe status messages and follow instructions if requested.
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
-		</medevac_land>
-		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
+		</medevac_road_osm>
+		<medevac_road_osm min_valid_flight_legs="3" list="medevac_road_osm_set" plane_type="helos">
+In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
 
-Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
+Details on the target location will be provided at mission start. Usage of a helicopter is mandatory.
 
 Hints:
-- Land on the designated hospital helipad.
+- Land within a radius of 80m around the designated accident location.
 - Shut down engines
 - Observe status messages and follow instructions if requested.
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
-		</medevac_hospital>
-		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
+		</medevac_road_osm>
+		<medevac_parking_osm min_valid_flight_legs="3" list="medevac_parking_osm_set" plane_type="helos">
+In this mission you will provide HEMS assistance performing a patient extraction by landing near the location designated on your GPS.
 
-Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
+In this case a car park has been chosen as the most suitable landing spot by the on-site emergency response team.
+
+Details on the target location will be provided at mission start. Usage of a helicopter is mandatory.
 
 Hints:
-- Land on the designated hospital helipad.
+- Land within a radius of 80m around the designated accident location.
 - Shut down engines
 - Observe status messages and follow instructions if requested.
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
-		</medevac_hospital>
-		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
+		</medevac_parking_osm>
+		<medevac_pitch_osm min_valid_flight_legs="3" list="medevac_pitch_osm_set" plane_type="helos">
+In this mission you will provide HEMS assistance performing a patient extraction by landing near the location designated on your GPS.
+
+In this case an outdoor sports pitch has been chosen as the most suitable landing spot by the on-site emergency response team.
 
 Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
 
 Hints:
-- Land on the designated hospital helipad.
+- Land within a radius of 80m around the designated accident location.
 - Shut down engines
 - Observe status messages and follow instructions if requested.
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
-		</medevac_hospital>
-		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
-
-Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land on the designated hospital helipad.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hospital>
-		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
-
-Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land on the designated hospital helipad.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hospital>
+		</medevac_pitch_osm>
 	</content>
 
 	<mission_info 
@@ -2481,49 +2497,16 @@ Hints:
 
 	<loc_hospitals>
 		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.36657" long="8.49748" template="land" radius_mt="80" loc_desc="Helipad, Zürich Triemli Stadtspital"/>
-		<point lat="47.36657" long="8.49748" template="land" radius_mt="80" loc_desc="Helipad, Zürich Triemli Stadtspital"/>
-		<point lat="47.36657" long="8.49748" template="land" radius_mt="80" loc_desc="Helipad, Zürich Triemli Stadtspital"/>
-		<point lat="47.36657" long="8.49748" template="land" radius_mt="80" loc_desc="Helipad, Zürich Triemli Stadtspital"/>
 		<point lat="47.36657" long="8.49748" template="land" radius_mt="80" loc_desc="Helipad, Zürich Triemli Stadtspital"/>
 		<point lat="47.36657" long="8.49748" template="land" radius_mt="80" loc_desc="Helipad, Zürich Triemli Stadtspital"/>
 		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
 		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
-		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
-		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
-		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
-		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
-		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
 		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
 		<point lat="47.52183" long="8.53326" template="land" radius_mt="80" loc_desc="Helipad, Bülach Spital"/>
 		<point lat="47.45568" long="8.27856" template="land" radius_mt="80" loc_desc="Helipad, Baden Kantonsspital"/>
 		<point lat="47.54923" long="8.91122" template="land" radius_mt="80" loc_desc="Helipad, Frauenfeld Kantonsspital"/>
 		<point lat="47.04583" long="8.06527" template="land" radius_mt="80" loc_desc="Helipad, Glarus Kantonsspital"/>
-		
 		<!--
 		<point lat="47.28525" long="8.45575" template="land" radius_mt="80" loc_desc="Helipad, Affoltern a.A. Bezirksspital, elevation: 500"/>
 		<point lat="47.26299" long="8.59028" template="land" radius_mt="80" loc_desc="Helipad, Horgen Zimmerberg Spital, elevation: 415"/>
