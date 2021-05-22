@@ -179,7 +179,7 @@ Hints:
 	<!-- [plane | xy] {element name that holds points} -->
 	<briefer_and_start_location location_type="plane" start_cold_and_dark="yes" />
 
-	<datarefs_start_cold_and_dark>sim/weapons/total_weapon_mass_now[0]:80,sim/weapons/total_weapon_mass_now[1]:80,sim/weapons/total_weapon_mass_now[2]:80,sim/weapons/total_weapon_mass_now[3]:10,sim/weapons/total_weapon_mass_now[4]:90,sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0</datarefs_start_cold_and_dark>
+	<datarefs_start_cold_and_dark>sim/weapons/total_weapon_mass_now[0]:85,sim/weapons/total_weapon_mass_now[1]:85,sim/weapons/total_weapon_mass_now[2]:85,sim/weapons/total_weapon_mass_now[3]:0,sim/weapons/total_weapon_mass_now[4]:85,sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0</datarefs_start_cold_and_dark>
 
 	<medevac_hover_set is_set_of_flight_legs="yes" >
 		<!-- Road accident, mountain accident -->
@@ -421,7 +421,7 @@ Hints:
 			         message_name_when_left=""
 		             commands_to_exec_when_fired="FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_remove_patient" 
 					 commands_to_exec_when_left=""
-		             dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[3]:100" 
+		             dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[3]:85" 
 					 dataref_to_modify_when_left=""  
 			/>
 		</trigger>
@@ -435,7 +435,7 @@ Hints:
 					 message_name_when_left=""
 					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_release" 
 					 commands_to_exec_when_left=""
-					 dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[4]:90" 
+					 dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[4]:85" 
 					 dataref_to_modify_when_left=""  
 			/>
 		</trigger>
@@ -551,7 +551,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_patient_on" message_name_when_left=""
 			commands_to_exec_when_fired="" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[3]:100" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[3]:85" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_crew_on" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -561,7 +561,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_crew_on" message_name_when_left=""
 			commands_to_exec_when_fired="sim/operation/slider_03,sim/operation/slider_04,sim/operation/slider_05" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[2]:80,sim/weapons/total_weapon_mass_now[4]:90" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[2]:85,sim/weapons/total_weapon_mass_now[4]:85" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_doors_closed" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -571,7 +571,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_doors_closed" message_name_when_left=""
 			commands_to_exec_when_fired="sim/operation/slider_02" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[1]:80" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[1]:85" dataref_to_modify_when_left=""  />
 		</trigger>
 	</leg_1_triggers_patient_boarding>
 
@@ -651,7 +651,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_crew_on" message_name_when_left=""
 			commands_to_exec_when_fired="sim/operation/slider_03,sim/operation/slider_04,sim/operation/slider_05" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[2]:80,sim/weapons/total_weapon_mass_now[3]:10,sim/weapons/total_weapon_mass_now[4]:90" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[2]:85,sim/weapons/total_weapon_mass_now[3]:0,sim/weapons/total_weapon_mass_now[4]:85" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_doors_closed" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -661,7 +661,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_doors_closed" message_name_when_left=""
 			commands_to_exec_when_fired="sim/operation/slider_02" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[1]:80" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[1]:85" dataref_to_modify_when_left=""  />
 		</trigger>
 	</leg_2_triggers_dropoff>
 
