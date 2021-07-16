@@ -1465,6 +1465,7 @@ Hints:
 		<point lat="46.80010" long="10.30462" template="land" radius_mt="80" loc_desc="Helipad, Unterengadin Spital, Scuol / LSHU"/>
 		<point lat="46.77692" long="9.20489" template="land" radius_mt="80" loc_desc="Helipad, Surselva Spital, Ilanz / LSHI"/>
 		<point lat="46.78763" long="9.81421" template="land" radius_mt="80" loc_desc="Helipad, Davos Spital, Davos / LSHD"/>		  
+		<point lat="47.04583" long="9.06527" template="land" radius_mt="80" loc_desc="Helipad, Glarus Kantonsspital"/>
 	</loc_hospitals>
 	<loc_hospitals_pickup>
 		<point lat="46.69698" long="9.43650" template="land" radius_mt="80" loc_desc="Helipad, Thusis Spital / LSHT"/>
