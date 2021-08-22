@@ -150,7 +150,7 @@ Hints:
 	<!-- [plane | xy] {element name that holds points} -->
 	<briefer_and_start_location location_type="plane" start_cold_and_dark="yes" />
 
-	<datarefs_start_cold_and_dark>rotorsim/ec135/crew[0]:1,rotorsim/ec135/crew[1]:1,rotorsim/ec135/crew[2]:1,rotorsim/ec135/crew[3]:1,rotorsim/ec135/crew[4]:0,sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0</datarefs_start_cold_and_dark>
+	<datarefs_start_cold_and_dark>rotorsim/ec135/crew[0]:1,rotorsim/ec135/crew[1]:1,rotorsim/ec135/crew[2]:0,rotorsim/ec135/crew[3]:1,rotorsim/ec135/crew[4]:0,sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0</datarefs_start_cold_and_dark>
 
 	<medevac_hover_set is_set_of_flight_legs="yes" >
 		<!-- Road accident, mountain accident -->
@@ -441,7 +441,8 @@ Hints:
 
 	<!-- Patient extraction: Special leg directives -->
 	<leg_1_tasks_winch_ops>
-		<task name="task_1_open_door" depends_on_task="" base_on_trigger="trig_1_open_door" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_1_operator_boarding" depends_on_task="" base_on_trigger="trig_1_operator_boarding" base_on_script="" eval_success_for_n_sec="1" mandatory="true" force_evaluation="no" />
+		<task name="task_1_open_door" depends_on_task="task_1_operator_boarding" base_on_trigger="trig_1_open_door" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
 		<task name="task_1_deploy_crew" depends_on_task="task_1_open_door" base_on_trigger="trig_1_deploy_crew" base_on_script="" eval_success_for_n_sec="10" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
 		<task name="task_1_start_winch_down" depends_on_task="task_1_deploy_crew" base_on_trigger="trig_1_start_winch_down" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
 		<task name="task_1_hold_position" depends_on_task="task_1_deploy_crew" base_on_trigger="trig_1_hold_position" base_on_script="" eval_success_for_n_sec="3" cumulative_timer_flag="no" mandatory="true" force_evaluation="yes" />
@@ -454,6 +455,20 @@ Hints:
 	</leg_1_tasks_winch_ops>
 
 	<leg_1_triggers_winch_ops>
+		<trigger name="trig_1_operator_boarding" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="10000000" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="" 
+			         message_name_when_left=""
+		             commands_to_exec_when_fired="" 
+					 commands_to_exec_when_left=""
+		             dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
 		<trigger name="trig_1_open_door" type="rad" enabled="yes" >
 			<conditions plane_on_ground="no" cond_script="" />
 			<loc_and_elev_data>
