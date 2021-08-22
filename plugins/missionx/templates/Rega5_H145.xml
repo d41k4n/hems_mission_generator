@@ -36,7 +36,7 @@ Hints:
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
 		</medevac_land>
-		<medevac_hover_osm min_valid_flight_legs="3" list="medevac_hover_osm_set" plane_type="helos">
+		<medevac_hover_ski_osm min_valid_flight_legs="3" list="medevac_hover_ski_osm_set" plane_type="helos">
 Skiing accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
 
 Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
@@ -54,7 +54,26 @@ Hints for patient dropoff:
 - Observe status messages and follow instructions.
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
-		</medevac_hover_osm>
+		</medevac_hover_ski_osm>
+		<medevac_hover_hiker_osm min_valid_flight_legs="3" list="medevac_hover_hiker_osm_set" plane_type="helos">
+Skiing accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+
+Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints for winch extraction:
+- Hover within 20m radius and below 150ft over target
+- Crew will perform all required tasks autonomously when within target range.
+- Observe status messages during all operations and follow instructions.
+- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
+- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
+
+Hints for patient dropoff:
+- Land on the helipad designated via GPS.
+- Shut down engines
+- Observe status messages and follow instructions.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hover_hiker_osm>
 		<medevac_road_osm min_valid_flight_legs="3" list="medevac_road_osm_set" plane_type="helos">
 In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
 
@@ -267,12 +286,12 @@ Hints:
 		</leg>
 	</medevac_hospital_set>
 
-	<medevac_hover_osm_set is_set_of_flight_legs="yes" >
+	<medevac_hover_ski_osm_set is_set_of_flight_legs="yes" >
 		<!-- Ski accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Primary mission: Skiing accident. Location: {navaid_loc_desc}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="sim/weapons/re_arm_aircraft,FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
-			<expected_location location_type="webosm" location_value="tag=webosm_piste_filter|nm_between=2-25|keyname=piste:name|keydesc=piste:name|webosm_optimize=n" force_sloped_terrain="3" override_trigger_name="trig_hover_goal_1_target_1"/>
+			<expected_location location_type="webosm" location_value="tag=webosm_piste_filter|nm_between=2-25|keyname=piste:name|keydesc=piste:name|webosm_optimize=n" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
 			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -303,7 +322,45 @@ Hints:
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
 		</leg>
-	</medevac_hover_osm_set>
+	</medevac_hover_ski_osm_set>
+
+	<medevac_hover_hiker_osm_set is_set_of_flight_legs="yes" >
+		<!-- Hiking accident -->
+		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Skiing accident. Location: {navaid_loc_desc}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="sim/weapons/re_arm_aircraft,FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="webosm" location_value="tag=webosm_trail_filter|nm_between=2-25|keyname=name|keydesc=name|webosm_optimize=y" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
+			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="3000">Establish visual on target area and reduce speed.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="1000">Crew standby for hover. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="sim/weapons/re_arm_aircraft,FlyWithLua/hoist/winch_retract,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_hover_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_hover_hiker_osm_set>
 
 	<medevac_road_osm_set is_set_of_flight_legs="yes" >
 		<!-- Accident or hospital transfer -->
