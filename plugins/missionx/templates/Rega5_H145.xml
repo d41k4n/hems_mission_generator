@@ -423,19 +423,23 @@ Hints:
 	</medevac_pitch_osm_set>
 
 	<webosm_piste_filter>
-		<filter>(way['piste:type'](area:3600051701)({{bbox}});way['piste:type'](area:3601155955)({{bbox}});relation['piste:type'](area:3600051701)({{bbox}});relation['piste:type'](area:3601155955)({{bbox}}););out;</filter>
+		<filter>(way['piste:type'](area:3601687214)({{bbox}});way['piste:type'](area:3601686631)({{bbox}});relation['piste:type'](area:3601687214)({{bbox}});relation['piste:type'](area:3601686631)({{bbox}}););out;</filter>
 	</webosm_piste_filter>
 
+	<webosm_trail_filter>
+		<filter>(way[highway=track](area:3601687214)({{bbox}});way[highway=path](area:3601687214)({{bbox}});way[highway=track](area:3601686631)({{bbox}});way[highway=path](area:3601686631)({{bbox}});relation[highway=track](area:3601687214)({{bbox}});relation[highway=path](area:3601687214)({{bbox}});relation[highway=track](area:3601686631)({{bbox}});relation[highway=path](area:3601686631)({{bbox}}););out;</filter>
+	</webosm_trail_filter>
+
 	<webosm_road_filter>
-		<filter>(way[highway=primary](area:3600051701)({{bbox}});way[highway=primary](area:3601155955)({{bbox}});way[highway=secondary](area:3600051701)({{bbox}});way[highway=secondary](area:3601155955)({{bbox}});way[highway=tertiary](area:3600051701)({{bbox}});way[highway=tertiary](area:3601155955)({{bbox}});way[highway=residential](area:3600051701)({{bbox}});way[highway=residential](area:3601155955)({{bbox}});way[highway=service](area:3600051701)({{bbox}});way[highway=service](area:3601155955)({{bbox}});way[highway=living_street](area:3600051701)({{bbox}});way[highway=living_street](area:3601155955)({{bbox}}););out;</filter>
+		<filter>(way[highway=primary](area:3601687214)({{bbox}});way[highway=primary](area:3601686631)({{bbox}});way[highway=secondary](area:3601687214)({{bbox}});way[highway=secondary](area:3601686631)({{bbox}});way[highway=tertiary](area:3601687214)({{bbox}});way[highway=tertiary](area:3601686631)({{bbox}});way[highway=residential](area:3601687214)({{bbox}});way[highway=residential](area:3601686631)({{bbox}});way[highway=service](area:3601687214)({{bbox}});way[highway=service](area:3601686631)({{bbox}});way[highway=living_street](area:3601687214)({{bbox}});way[highway=living_street](area:3601686631)({{bbox}}););out;</filter>
 	</webosm_road_filter>
 
 	<webosm_parking_filter>
-		<filter>(way["parking"="surface"][!"building"](if:is_closed()%26%26length()>100)(area:3600051701)({{bbox}});way["parking"="surface"][!"building"](if:is_closed()%26%26length()>100)(area:3601155955)({{bbox}}););out+center;</filter>
+		<filter>(way["parking"="surface"][!"building"](if:is_closed()%26%26length()>100)(area:3601687214)({{bbox}});way["parking"="surface"][!"building"](if:is_closed()%26%26length()>100)(area:3601686631)({{bbox}}););out+center;</filter>
 	</webosm_parking_filter>
 
 	<webosm_pitches_filter>
-		<filter>(way["leisure"="pitch"][!"building"](if:is_closed()%26%26length()>100)(area:3600051701)({{bbox}});way["leisure"="pitch"][!"building"](if:is_closed()%26%26length()>100)(area:3601155955)({{bbox}}););way._["sport"!="tennis"]({{bbox}});way._["sport"!~"shooting.*"]({{bbox}});out+center;</filter>
+		<filter>(way["leisure"="pitch"][!"building"](if:is_closed()%26%26length()>100)(area:3601687214)({{bbox}});way["leisure"="pitch"][!"building"](if:is_closed()%26%26length()>100)(area:3601686631)({{bbox}}););way._["sport"!="tennis"]({{bbox}});way._["sport"!~"shooting.*"]({{bbox}});out+center;</filter>
 	</webosm_pitches_filter>
 
 	<!-- Patient extraction: Special leg directives -->
