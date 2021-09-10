@@ -28042,8 +28042,8 @@ ATTR_shiny_rat	0
 ATTR_hard_deck
 ANIM_begin
 	# <Empty stretcher>
-	ANIM_show	100 119	HSL/Cargo/Mass
-	ANIM_hide	0.0 99	HSL/Cargo/Mass
+	ANIM_show	90  119	HSL/Cargo/Mass
+	ANIM_hide	0   89	HSL/Cargo/Mass
 	ANIM_hide	120 300	HSL/Cargo/Mass
 	TRIS	3027 3864
 ANIM_end

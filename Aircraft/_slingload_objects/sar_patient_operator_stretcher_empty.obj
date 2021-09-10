@@ -28042,7 +28042,9 @@ TRIS	0 3027
 
 # operator and empty stretcher
 ATTR_shiny_rat	0
+ATTR_hard_deck
 TRIS	3027 3864
+ATTR_no_hard
 TRIS	6891 37719
 ATTR_shiny_rat	1
 TRIS	44610 12084
