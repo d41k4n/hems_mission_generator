@@ -190,7 +190,7 @@ Hints:
 			<desc>Next waypoint: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_hover_goal_2_target_1" />
-			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -305,7 +305,7 @@ Hints:
 			<desc>Next waypoint: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_hover_goal_2_target_1" />
-			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -343,7 +343,7 @@ Hints:
 			<desc>Next waypoint: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_hover_goal_2_target_1" />
-			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -523,7 +523,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="" 
 			         message_name_when_left=""
-		             commands_to_exec_when_fired="" 
+		             commands_to_exec_when_fired="HSL/Load_Release" 
 					 commands_to_exec_when_left=""
 		             dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" 
 					 dataref_to_modify_when_left=""  
@@ -537,7 +537,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_open_door" 
 			         message_name_when_left="msg_1_leaving_position"
-		             commands_to_exec_when_fired="HSL/Sling_Enable,sim/flight_controls/door_open_4" 
+		             commands_to_exec_when_fired="sim/flight_controls/door_open_4" 
 					 commands_to_exec_when_left=""
 		             dataref_to_modify_when_fired="" 
 					 dataref_to_modify_when_left=""  
@@ -551,9 +551,9 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_deploy_crew" 
 					 message_name_when_left="msg_1_leaving_position"
-					 commands_to_exec_when_fired="HSL/Load_Connect" 
+					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_connect" 
 					 commands_to_exec_when_left=""
-					 dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:0" 
+					 dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" 
 					 dataref_to_modify_when_left=""
 			/>
 		</trigger>
@@ -653,7 +653,7 @@ Hints:
 					 message_name_when_left=""
 					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_release" 
 					 commands_to_exec_when_left=""
-					 dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:1" 
+					 dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" 
 					 dataref_to_modify_when_left=""  
 			/>
 		</trigger>
@@ -665,7 +665,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_close_door" 
 					 message_name_when_left=""
-					 commands_to_exec_when_fired="sim/flight_controls/door_close_4,HSL/Sling_Disable" 
+					 commands_to_exec_when_fired="sim/flight_controls/door_close_4" 
 					 commands_to_exec_when_left=""
 					 dataref_to_modify_when_fired="" 
 					 dataref_to_modify_when_left=""  
@@ -749,7 +749,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_doors_open" message_name_when_left=""
 			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_open_5" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0,rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_crew_off" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_1" />
@@ -759,7 +759,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_crew_off" message_name_when_left=""
 			commands_to_exec_when_fired="sim/flight_controls/door_close_2,sim/flight_controls/door_open_6" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:0" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_patient_on" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -779,7 +779,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_crew_on" message_name_when_left=""
 			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_close_5" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1,rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_doors_closed" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -821,6 +821,15 @@ Hints:
 		</message>
 	</leg_1_msgs_patient_boarding>
 
+	<!-- Patient dropoff for winch ops: Special leg directives -->
+	<leg_2_tasks_dropoff_winch_op>
+		<task name="task_2_doors_open" depends_on_task="" base_on_trigger="trig_2_doors_open" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="yes" />
+		<task name="task_2_crew_off_winch_op" depends_on_task="task_2_doors_open" base_on_trigger="trig_2_crew_off_winch_op" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_2_patient_off" depends_on_task="task_2_crew_off_winch_op" base_on_trigger="trig_2_patient_off" base_on_script="" eval_success_for_n_sec="60" mandatory="true" force_evaluation="no" />
+		<task name="task_2_crew_on_winch_op" depends_on_task="task_2_patient_off" base_on_trigger="trig_2_crew_on_winch_op" base_on_script="" eval_success_for_n_sec="180" mandatory="true" force_evaluation="no" />
+		<task name="task_2_doors_closed" depends_on_task="task_2_crew_on_winch_op" base_on_trigger="trig_2_doors_closed" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
+	</leg_2_tasks_dropoff_winch_op>
+
 	<!-- Patient dropoff: Special leg directives -->
 	<leg_2_tasks_dropoff>
 		<task name="task_2_doors_open" depends_on_task="" base_on_trigger="trig_2_doors_open" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="yes" />
@@ -838,8 +847,18 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_doors_open" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_open_5" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0,rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="sim/flight_controls/door_open_2" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
+		</trigger>
+		<trigger name="trig_2_crew_off_winch_op" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_2" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_2_crew_off" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_close_2,sim/flight_controls/door_open_5,sim/flight_controls/door_open_6" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0;rotorsim/ec135/crew[3]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_crew_off" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_2" />
@@ -848,8 +867,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_crew_off" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_close_2,sim/flight_controls/door_open_6" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:0" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="sim/flight_controls/door_close_2,sim/flight_controls/door_open_5,sim/flight_controls/door_open_6" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_patient_off" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -861,7 +880,7 @@ Hints:
 			commands_to_exec_when_fired="sim/flight_controls/door_close_6" commands_to_exec_when_left=""
 			dataref_to_modify_when_fired="rotorsim/ec135/crew[4]:0" dataref_to_modify_when_left=""  />
 		</trigger>
-		<trigger name="trig_2_crew_on" type="rad" enabled="yes" >
+		<trigger name="trig_2_crew_on_winch_op" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
 			<loc_and_elev_data>
 				<radius length_mt="80" />
@@ -870,6 +889,16 @@ Hints:
 			<outcome message_name_when_fired="msg_2_crew_on" message_name_when_left=""
 			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_close_5" commands_to_exec_when_left=""
 			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1,rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
+		</trigger>
+		<trigger name="trig_2_crew_on" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_2_crew_on" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_close_5" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_doors_closed" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />

@@ -55,7 +55,7 @@ local rope_near = 2
 local winch_duration = 5
 local cargo_size_connected = {1, 1, 1.8}
 local cargo_size_released = {0.2, 0.2, 0.2}
-local cargo_mass_crew = 85
+local cargo_mass_crew = 90
 local cargo_mass_patient = 85
 local cargo_mass_empty = 2.5
 local cargo_height_crew = 1.1
@@ -258,7 +258,7 @@ function connect_winch()
 	print("Hoist: Connecting winch")
     --cargo_mass = cargo_mass_crew
 	--cargo_height = cargo_height_crew
-	command_once("HSL/Load_Connect")
+	command_once("HSL/Sling_Enable")
 	-- Set cargo size
 	-- cargo_size = XPLMGetDatavf(cargo_size_ref, 0, 3)
 	--local cargo_size_target = XPLMGetDatavf(cargo_size_ref, 0, 3)
@@ -279,7 +279,7 @@ function release_winch()
 	print("Hoist: Releasing winch")
 	--cargo_mass = cargo_mass_empty
 	--cargo_height = cargo_height_empty
-	command_once("HSL/Sling_Reset")
+	command_once("HSL/Sling_Disable")
 	-- cargo_size = XPLMGetDatavf(cargo_size_ref, 0, 3)
 	--local cargo_size_target = XPLMGetDatavf(cargo_size_ref, 0, 3)
 	--cargo_size_target[0] = cargo_size_released[1]
@@ -297,6 +297,7 @@ end
 function add_patient()
 	print("Hoist: Adding patient to winch cargo")
 	cargo_mass = cargo_mass_crew + cargo_mass_patient
+	command_once("HSL/Load_Connect")
 end
 
 function remove_patient()
