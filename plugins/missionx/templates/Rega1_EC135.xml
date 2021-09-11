@@ -776,7 +776,7 @@ Hints:
 			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_crew_off_winch_op" type="rad" enabled="yes" >
-			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_2" />
+			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_2_winch_op" />
 			<loc_and_elev_data>
 				<radius length_mt="80" />
 				<point lat="" long="" />

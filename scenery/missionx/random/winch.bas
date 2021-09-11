@@ -81,6 +81,19 @@ def func_rotor_stopped_2()
   endif
 enddef
 
+def func_rotor_stopped_2_winch_op()
+  'print "[Script] Rotor stopped check"; 'debug
+  main_rotor_speed = fn_get_dref_value("main_rotor_speed");
+  'print "[Script] main rotor speed: ", main_rotor_speed;
+  if (mxError <> "") then 
+    print "Error: ", mxError;
+  elseif main_rotor_speed < 0.5 then 
+    fn_set_trigger_property("trig_2_crew_off_winch_op", "script_conditions_met_b", "true");
+  'elseif main_rotor_speed > 0.5 then 
+  '  fn_send_text_message ("Shut down engines!", "main_rotor_stopped_check", true);
+  endif
+enddef
+
 
 ' Main branching code
 if (mxFuncCall = "check_down") then
@@ -91,5 +104,7 @@ elseif (mxFuncCall = "rotor_stopped_1") then
   call func_rotor_stopped_1();
 elseif (mxFuncCall = "rotor_stopped_2") then
   call func_rotor_stopped_2();
+elseif (mxFuncCall = "rotor_stopped_2_winch_op") then
+  call func_rotor_stopped_2_winch_op();
 endif
 
