@@ -179,7 +179,7 @@ Hints:
 	<!-- [plane | xy] {element name that holds points} -->
 	<briefer_and_start_location location_type="plane" start_cold_and_dark="yes" />
 
-	<datarefs_start_cold_and_dark>rotorsim/ec135/crew[0]:1,rotorsim/ec135/crew[1]:1,rotorsim/ec135/crew[2]:0,rotorsim/ec135/crew[3]:1,sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0</datarefs_start_cold_and_dark>
+	<datarefs_start_cold_and_dark>rotorsim/ec135/crew[0]:1,rotorsim/ec135/crew[1]:1,rotorsim/ec135/crew[2]:0,rotorsim/ec135/crew[3]:1,rotorsim/ec135/crew[4]:0,sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0</datarefs_start_cold_and_dark>
 
 	<medevac_hover_set is_set_of_flight_legs="yes" >
 		<!-- Road accident, mountain accident -->
