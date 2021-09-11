@@ -749,10 +749,10 @@ Hints:
 	<!-- Patient dropoff for winch ops: Special leg directives -->
 	<leg_2_tasks_dropoff_winch_op>
 		<task name="task_2_doors_open" depends_on_task="" base_on_trigger="trig_2_doors_open" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="yes" />
-		<task name="task_2_crew_off_winch_op" depends_on_task="task_2_doors_open" base_on_trigger="trig_2_crew_off_winch_op" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
-		<task name="task_2_patient_off" depends_on_task="task_2_crew_off_winch_op" base_on_trigger="trig_2_patient_off" base_on_script="" eval_success_for_n_sec="60" mandatory="true" force_evaluation="no" />
-		<task name="task_2_crew_on_winch_op" depends_on_task="task_2_patient_off" base_on_trigger="trig_2_crew_on_winch_op" base_on_script="" eval_success_for_n_sec="180" mandatory="true" force_evaluation="no" />
-		<task name="task_2_doors_closed" depends_on_task="task_2_crew_on_winch_op" base_on_trigger="trig_2_doors_closed" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
+		<task name="task_2_crew" depends_on_task="task_2_doors_open" base_on_trigger="trig_2_crew_off_winch_op" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_2_patient_off" depends_on_task="task_2_crew_off" base_on_trigger="trig_2_patient_off" base_on_script="" eval_success_for_n_sec="60" mandatory="true" force_evaluation="no" />
+		<task name="task_2_crew" depends_on_task="task_2_patient_off" base_on_trigger="trig_2_crew_on_winch_op" base_on_script="" eval_success_for_n_sec="180" mandatory="true" force_evaluation="no" />
+		<task name="task_2_doors_closed" depends_on_task="task_2_crew_on" base_on_trigger="trig_2_doors_closed" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
 	</leg_2_tasks_dropoff_winch_op>
 
 	<!-- Patient dropoff: Special leg directives -->
