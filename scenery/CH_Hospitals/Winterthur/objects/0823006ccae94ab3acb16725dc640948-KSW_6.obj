@@ -1,0 +1,36 @@
+I
+800
+OBJ
+
+TEXTURE		KSW_6.png
+TEXTURE_LIT	KSW_6_LIT.png
+POINT_COUNTS	4 0 0 6
+
+VT	   3.8960   25.6800    5.7480	 0.000  1.000 -0.000	 0.9996  0.0008
+VT	  -1.5160   25.6800   -7.3200	 0.000  1.000 -0.000	 0.0000  1.0000
+VT	  -5.3400   25.6800    1.9200	 0.000  1.000 -0.000	 0.0000  0.0010
+VT	   7.7240   25.6800   -3.4920	 0.000  1.000 -0.000	 1.0000  1.0000
+
+IDX	2
+IDX	1
+IDX	0
+IDX	3
+IDX	0
+IDX	1
+
+LIGHT_NAMED	inset_heli_g	  -5.3400   25.6800    1.9200	
+LIGHT_NAMED	inset_heli_g	   3.8960   25.6800    5.7480	
+LIGHT_NAMED	inset_heli_g	   7.7240   25.6800   -3.4920	
+LIGHT_NAMED	inset_heli_g	  -1.5160   25.6800   -7.3200	
+LIGHT_NAMED	inset_heli_g	  -2.2532   25.6800    3.1994	
+LIGHT_NAMED	inset_heli_g	   0.8050   25.6800    4.4669	
+LIGHT_NAMED	inset_heli_g	   1.5486   25.6800   -6.0504	
+LIGHT_NAMED	inset_heli_g	  -2.8065   25.6800   -4.2018	
+LIGHT_NAMED	inset_heli_g	   5.1512   25.6800    2.7183	
+LIGHT_NAMED	inset_heli_g	   6.4260   25.6800   -0.3588	
+LIGHT_NAMED	inset_heli_g	   4.6239   25.6800   -4.7763	
+LIGHT_NAMED	inset_heli_g	  -4.0720   25.6800   -1.1439	
+ATTR_hard
+TRIS	0 6
+
+# Built with SketchUp 17.2.2555. Exported with SketchUp2XPlane 1.70.

@@ -1,0 +1,24 @@
+I
+800	# Converted by FS2XPlane 3.26
+OBJ
+
+# file InselFLATTEN.bgl
+
+TEXTURE		nefli.png
+POINT_COUNTS	4 0 0 6
+
+VT	  -2.264    0.272    0.870	-0.743 -0.000  0.670	0.0813 0.1116
+VT	  -1.155    0.271    2.101	-0.743 -0.000  0.670	0.9026 0.1016
+VT	  -1.153    0.738    2.103	-0.743 -0.000  0.670	0.9063 0.4024
+VT	  -2.268    0.715    0.861	-0.743 -0.000  0.670	0.0781 0.3973
+
+IDX	2
+IDX	1
+IDX	0
+IDX	3
+IDX	2
+IDX	0
+
+ATTR_no_blend
+
+TRIS	0 6

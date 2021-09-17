@@ -1,0 +1,24 @@
+I
+800	# Converted by FS2XPlane 3.26
+OBJ
+
+# file Spital Limmattal.bgl
+
+TEXTURE		flatroof_2.png
+POINT_COUNTS	4 0 0 6
+
+VT	 -64.438    8.500  -25.000	 0.000  1.000 -0.000	0.0000 0.0157
+VT	 -64.438    8.500  -79.000	 0.000  1.000 -0.000	0.0000 0.9843
+VT	  -1.438    8.500  -79.000	 0.000  1.000 -0.000	0.9647 0.9843
+VT	  -1.438    8.500  -25.000	 0.000  1.000 -0.000	0.9647 0.0157
+
+IDX	0
+IDX	2
+IDX	3
+IDX	0
+IDX	1
+IDX	2
+
+ATTR_no_blend
+
+TRIS	0 6

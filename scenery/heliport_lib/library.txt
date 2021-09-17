@@ -1,0 +1,6 @@
+A
+800
+LIBRARY
+
+EXPORT heliport_lib/uh_modern05_autogen.fac US/uh_modern05_autogen.fac
+EXPORT heliport_lib/uh_modern07_autogen.fac US/uh_modern07_autogen.fac

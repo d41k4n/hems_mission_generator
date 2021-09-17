@@ -1,0 +1,25 @@
+A
+1000
+AG_POINT
+
+TEXTURE_SCALE 128 128
+TEXTURE_WIDTH 128
+
+OBJECT lib/constructions/helipads/rooftop_helipad_4.obj
+OBJECT RescueX/lights/obsl+15.obj
+FACADE heliport_lib/uh_modern05_autogen.fac
+
+HIDE_TILES
+
+# Tile: variant_1
+TILE 0 0 50 19
+
+ROTATION 0
+OBJ_DELTA 9.00 9.50 0.000000 11 0
+OBJ_DELTA 0.00 0.00 0.000000 11 1
+OBJ_DELTA 0.00 19.0 0.000000 11 1
+
+#	|index	|heightm|x1pixel|y1pixel|x2pixel|y2pixel|x3pixel|y3pixel|x4pixel|y4pixel
+FAC	0		12		0		0		50		0		50		19		0		19
+ANCHOR_PT 9 9.5
+GROUND_PT 9 9.5
