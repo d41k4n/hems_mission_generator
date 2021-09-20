@@ -262,7 +262,7 @@ I
 1300  46.16859700  008.79033500 81.5 misc helos H1 Ramp Start
 1301 A none 
 
-17   1640 0 0 LSHS [H] Hopital de Sion
+17   1640 0 0 XLS000V [H] Hopital de Sion
 1302 gui_label 3D
 1302 icao_code LSHS
 1302 region_code LS
