@@ -12,6 +12,7 @@ plugins/missionx/*
 plugins/missionx/templates/*
 !plugins/missionx/templates/Rega*
 !plugins/missionx/templates/Lions*
+!plugins/missionx/templates/AirZermatt*
 plugins/missionx/templates/Rega*test*.xml
 plugins/missionx/templates/Lions*test*.xml
 plugins/missionx/templates/AirZermatt*test*.xml

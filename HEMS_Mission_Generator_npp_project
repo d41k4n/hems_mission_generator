@@ -1,5 +1,6 @@
 <NotepadPlus>
     <Project name="MissionX HEMS Template">
+        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\AirZermatt_Zermatt_EC135.xml" />
         <File name="plugins\missionx\templates\Rega1_H145.xml" />
         <File name="plugins\missionx\templates\Rega5_EC135.xml" />
         <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Rega5_H145.xml" />
