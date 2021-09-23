@@ -84,7 +84,7 @@ Hints:
 	</content>
 
 	<mission_info 
-		mission_image_file_name="Lions1.png" 
+		mission_image_file_name="../../../../Resources/plugins/missionx/Lions1.png" 
 		template_image_file_name="Lions1.png" 
 		written_by="Daikan" 
 		plane_desc="Helicopter" 

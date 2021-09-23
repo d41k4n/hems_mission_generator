@@ -160,7 +160,7 @@ Hints:
 	</content>
 
 	<mission_info 
-		mission_image_file_name="AirZermatt-Zermatt.png" 
+		mission_image_file_name="../../../../Resources/plugins/missionx/AirZermatt-Zermatt.png" 
 		template_image_file_name="AirZermatt-Zermatt.png" 
 		written_by="Daikan" 
 		plane_desc="Helicopter" 

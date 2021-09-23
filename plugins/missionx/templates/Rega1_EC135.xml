@@ -152,7 +152,7 @@ Hints:
 	</content>
 
 	<mission_info 
-		mission_image_file_name="Rega1.png" 
+		mission_image_file_name="../../../../Resources/plugins/missionx/Rega1.png" 
 		template_image_file_name="Rega1.png" 
 		written_by="Daikan" 
 		plane_desc="Helicopter" 
