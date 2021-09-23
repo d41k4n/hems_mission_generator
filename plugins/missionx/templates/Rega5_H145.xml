@@ -12,7 +12,8 @@ Details on the accident location and accident type will be provided at mission s
 
 Hints for winch extraction:
 - Hover within 20m radius and below 150ft over target
-- Crew will perform all required tasks autonomously when within target range.
+- Crew will operate doors and winch boom autonomously when within target range.
+- Lower, raise or stop winch when instructed.
 - Observe status messages during all operations and follow instructions.
 - Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
 - Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
@@ -43,7 +44,8 @@ Details on the accident location and accident type will be provided at mission s
 
 Hints for winch extraction:
 - Hover within 20m radius and below 150ft over target
-- Crew will perform all required tasks autonomously when within target range.
+- Crew will operate doors and winch boom autonomously when within target range.
+- Lower, raise or stop winch when instructed.
 - Observe status messages during all operations and follow instructions.
 - Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
 - Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
@@ -62,7 +64,8 @@ Details on the accident location and accident type will be provided at mission s
 
 Hints for winch extraction:
 - Hover within 20m radius and below 150ft over target
-- Crew will perform all required tasks autonomously when within target range.
+- Crew will operate doors and winch boom autonomously when within target range.
+- Lower, raise or stop winch when instructed.
 - Observe status messages during all operations and follow instructions.
 - Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
 - Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
@@ -681,12 +684,12 @@ Hints:
 		</message>
 		<message name="msg_1_deploy_crew" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Crew deployed - standby to lower winch.]]>
+				<![CDATA[Crew deployed - standby for lowering winch.]]>
 			</mix>
 		</message>
 		<message name="msg_1_start_winch_down" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Lowering winch - hold position and stay below 150 feet above ground.]]>
+				<![CDATA[Start lowering winch - hold position and stay below 150 feet above ground.]]>
 			</mix>
 		</message>
 		<message name="msg_1_hold_position" is_mxpad="yes" >
