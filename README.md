@@ -2,11 +2,14 @@
 A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator for the [X-Plane](https://www.x-plane.com) flight simulator. 
 
 ### Content
-The package includes a set of custom
+The package basically includes the following:
 
- - config files (.xml, .ini)
- - scripts
- - custom scenery
+ - config files (.xml, .ini, .txt)
+ - scripts (.bas, .lua)
+ - custom overlay scenery for hospitals
+ - a custom heliport scenery library ([heliport_lib](https://github.com/d41k4n/hems_mission_generator/tree/master/scenery/heliport_lib))
+ - custom aircraft definitions (.acf)
+ - various resources (e.g. images)
 
 ### Limitations
 In the current state it provides dedicated mission templates for HEMS missions originating out of a subset of heliports located in __Switzerland only__ as well as for a limited number of aircraft models. 
