@@ -14,14 +14,18 @@ The package basically includes the following:
 ### Limitations
 In the current state it provides dedicated mission templates for HEMS missions originating out of a subset of heliports located in __Switzerland only__ as well as for a limited number of aircraft models. 
 
-Currently supported origin heliports:
+#### Currently supported origin heliports:
 - LSMD Dübendorf ([Rega 1](https://www.rega.ch/en/our-missions/sites-and-infrastructure/rega-1-zurich-base) home base)
 - LSXU Untervaz ([Rega 5](https://www.rega.ch/en/our-missions/sites-and-infrastructure/rega-5-untervaz-base) home base)
 - LSZF Birrfeld ([Lions 1](https://de.wikipedia.org/wiki/LIONS_1) home base, operated by [Alpine Air Ambulance AG](https://www.air-ambulance.ch/))
 - LSZE Zermatt (operated by [Air Zermatt](https://www.air-zermatt.ch/))
 - LSGS Sion (operated by [Air-Glaciers](https://www.air-glaciers.ch/))
 
-This might be extended and/or made more generic in the future.
+#### Currently supported helicopter models
+- [EC 135 v5](https://rotorsim.de/ec135v5/) by Rotorsim
+- [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) by VLC-Entwicklung
+
+This might get extended and/or made more generic in the future.
 
 ### Prerequisites
 
@@ -32,4 +36,9 @@ This might be extended and/or made more generic in the future.
  - Latest [Mission-X](https://forums.x-plane.org/index.php?/files/file/41874-mission-x/) plugin
  - Latest [FlyWithLUA](https://forums.x-plane.org/index.php?/files/file/38445-flywithlua-ng-next-generation-edition-for-x-plane-11-win-lin-mac/) plugin
  - Latest [Helicopter Sling Load (HSL)](https://github.com/kristian80/HSL) plugin
+ - At least one of the following aircraft models:
+	 -  [EC 135 v5](https://rotorsim.de/ec135v5/) by Rotorsim
+	 -  [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) by VLC-Entwicklung
+
+
 
