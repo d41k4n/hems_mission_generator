@@ -1,7 +1,13 @@
 # HEMS Mission Generator
 A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator for the [X-Plane](https://www.x-plane.com) flight simulator. 
+
 ### Content
-It includes a set of custom scenery
+The package includes a set of custom
+
+ - config files (.xml, .ini)
+ - scripts
+ - custom scenery
+
 ### Limitations
 In the current state it provides dedicated mission templates for HEMS missions originating out of a subset of heliports located in __Switzerland only__ as well as for a limited number of aircraft models. 
 
@@ -12,7 +18,6 @@ Currently supported origin heliports:
 - LSZE Zermatt (operated by [Air Zermatt](https://www.air-zermatt.ch/))
 - LSGS Sion (operated by [Air-Glaciers](https://www.air-glaciers.ch/))
 
-
 This might be extended and/or made more generic in the future.
 
 ### Prerequisites
@@ -20,8 +25,8 @@ This might be extended and/or made more generic in the future.
  - Working X-Plane 11 installation (Windows/Mac/Linux are supported)
  - Base mesh scenery covering Central Europe or at least the area of Switzerland as a minimum)
 	 - ZL17 orthophoto mesh is highly recommended
- - Latest [X-Europe](https://simheaven.com/x-europe/) overlay scenery by Simheaven
+ - Latest [X-Europe](https://simheaven.com/x-europe/) overlay scenery
  - Latest [Mission-X](https://forums.x-plane.org/index.php?/files/file/41874-mission-x/) plugin
  - Latest [FlyWithLUA](https://forums.x-plane.org/index.php?/files/file/38445-flywithlua-ng-next-generation-edition-for-x-plane-11-win-lin-mac/) plugin
- - 
+ - Latest [Helicopter Sling Load (HSL)](https://github.com/kristian80/HSL) plugin
 
