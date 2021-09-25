@@ -1,5 +1,5 @@
 # HEMS Mission Generator
-A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator for the [X-Plane](https://www.x-plane.com) flight simulator. 
+A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator package for the [X-Plane](https://www.x-plane.com) flight simulator including crew intercom simulation and automatic animations (doors, boom, winch, cargo, boarding/unboarding etc.).
 
 ### Content
 The package basically includes the following:
@@ -39,10 +39,10 @@ This might get extended and/or made more generic in the future.
  - At least one of the following aircraft models:
 	 -  [EC 135 v5](https://rotorsim.de/ec135v5/) by Rotorsim
 	 -  [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) by VLC-Entwicklung
- - Scenery libraries: [RescueX](https://www.rotorsim.de/component/jdownloads/download/4-andere/9-rescuex?Itemid=3111), [3D People](https://forums.x-plane.org/index.php?/files/file/26611-3d-people-library/), [R2](http://r2.xpl.cz/), [OpenSceneryX](https://www.opensceneryx.com/), [MisterX](https://forums.x-plane.org/index.php?/files/file/28167-misterx-library-and-static-aircraft-extension/), [CDB](https://forums.x-plane.org/index.php?/files/file/27907-cdb-library/), [RuScenery](http://ruscenery.x-air.ru/)
+ - Scenery libraries: [RescueX](https://www.rotorsim.de/component/jdownloads/download/4-andere/9-rescuex?Itemid=3111), [3D People](https://forums.x-plane.org/index.php?/files/file/26611-3d-people-library/), [R2](http://r2.xpl.cz/), [OpenSceneryX](https://www.opensceneryx.com/), [MisterX](https://forums.x-plane.org/index.php?/files/file/28167-misterx-library-and-static-aircraft-extension/), [CDB](https://forums.x-plane.org/index.php?/files/file/27907-cdb-library/), [RuScenery](http://ruscenery.x-air.ru/), [Handy Objects](https://forums.x-plane.org/index.php?/files/file/24261-the-handy-objects-library/)
 ### Recommended free custom airport scenery
 - [HeliAlpes Swiss Pack](https://forums.x-plane.org/index.php?/files/file/72131-h%C3%A9lialpes-swiss-pack-v11/)
 - [LSMD Dübendorf Rega 1 heliport](https://forums.x-plane.org/index.php?/files/file/19778-lsmd-d%C3%BCbendorf-rega-1-heliport/)
-- 
+- [LSXU Untervaz Rega 5 heliport](https://forums.x-plane.org/index.php?/files/file/39336-lsxu-untervaz-rega-5-heliport/)
 
 
