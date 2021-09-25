@@ -26,7 +26,7 @@ This might be extended and/or made more generic in the future.
 ### Prerequisites
 
  - Working X-Plane 11 installation (Windows/Mac/Linux are supported)
- - Base mesh scenery covering Central Europe or at least the area of Switzerland as a minimum
+ - Base mesh scenery covering Central Europe or at least the area of Switzerland and Southern Germany (Baden-Württemberg) as a minimum
 	 - A ZL17 orthophoto mesh based on [high-quality elevation data](https://forums.x-plane.org/index.php?/forums/topic/165525-lidar-digital-terrain-models-dtm-of-european-countries/) is highly recommended
  - Latest [X-Europe](https://simheaven.com/x-europe/) overlay scenery
  - Latest [Mission-X](https://forums.x-plane.org/index.php?/files/file/41874-mission-x/) plugin
