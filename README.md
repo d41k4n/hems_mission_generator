@@ -22,7 +22,7 @@ In the current state it provides dedicated mission templates for HEMS missions o
 - LSGS Sion (operated by [Air-Glaciers](https://www.air-glaciers.ch/))
 
 #### Currently supported helicopter models
-- [EC 135 v5](https://rotorsim.de/ec135v5/) by Rotorsim
+- [EC 135 v5 EMS](https://rotorsim.de/download-ec-135-v5/download/5-ec-135/14-ec-135-v5-ems) by Rotorsim
 - [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) by VLC-Entwicklung
 
 This might get extended and/or made more generic in the future.
