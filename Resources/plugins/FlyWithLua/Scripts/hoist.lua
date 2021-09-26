@@ -187,7 +187,7 @@ end
 hoist_wnd = nil
 
 function hoist_show_wnd()
-    hoist_wnd = float_wnd_create(210, 70, 1, true)
+    hoist_wnd = float_wnd_create(330, 100, 1, true)
     float_wnd_set_title(hoist_wnd, "Hoist v0.3.0")
     float_wnd_set_imgui_builder(hoist_wnd, "hoist_on_build")
 end
