@@ -44,5 +44,6 @@
             </Folder>
         </Folder>
         <File name=".gitignore" />
+        <File name="README.md" />
     </Project>
 </NotepadPlus>
