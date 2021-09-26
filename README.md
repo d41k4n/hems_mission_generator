@@ -116,11 +116,11 @@ git reset --hard HEAD
 For best experience during hover missions it is recommended to assign the following commands to some physical controllers (e.g. joystick buttons):
 
  - `FlyWithLua/hoist/show_toggle`
-	 - Toggles a pop-up window with some useful info about the status of the hoist
+	 - Toggles a small pop-up window with some useful info about the status of the hoist such as current rope length and payload distance to ground.
  - `FlyWithLua/hoist/winch_down`
-	 - Lowers the winch
+	 - Lowers the winch while pressed (release to stop)
  - `FlyWithLua/hoist/winch_up`
-	 - Raises the winch
+	 - Raises the winch while pressed (release to stop)
 
 ### Optional: Configure custom overpass server
 In order to optimize mission creation in Mission-X for the general area of Switzerland it is highly recommended to customize the overpass server URL in the plugin settings. 
