@@ -105,7 +105,7 @@ git reset --hard HEAD
 
  4. Finally, replace file
 
-		./Custom Scenery/CH_Heliports/heliport_lib/textures
+		./Custom Scenery/heliport_lib/textures
 
 	with either a copy or a symbolic link to the core asset folder within X-Plane's home folder i.e.
 
