@@ -50,7 +50,7 @@ This might get extended and/or made more generic in the future.
 
 ### Installation
 
-Since the package relies on certain X-Plane core assets that cannot be re-distributed the installation process may be a bit more involved depending on the chosen installation methods as provided below.
+Since the package relies on certain X-Plane core assets that cannot be re-distributed the installation process may be a bit more involved depending on the chosen installation method as provided below.
 
 Before starting it might be a good idea to back up the following files residing within your X-Plane home (if they already exist):
 
@@ -62,7 +62,7 @@ Before starting it might be a good idea to back up the following files residing 
 
 #### Git clone method
 
-This method is the easiest but requires an installed [Git client](https://git-scm.com/downloads) so that the `git` command is available via on the command line. To verify open a command terminal and execute the following command:
+This method is the easiest but requires an installed [Git client](https://git-scm.com/downloads) so that the `git` command is available on the command line. To verify open a command terminal and execute the following command:
 
     git --version
 
