@@ -136,7 +136,7 @@ To do so proceed as follows:
 
 Starting missions is done by selecting one of the provided mission templates through the Mission-X UI:
 
-1. In the X-Plane menu select Plugins -> Mission-X vx.x.xxx.x
+1. In the X-Plane menu select `Plugins -> Mission-X vx.x.xxx.x`
 2. Click on `Templates`
 3. Select any of the "Random HEMS Mission Generator" template icons
 4. Read the template description carefully and make sure that 
