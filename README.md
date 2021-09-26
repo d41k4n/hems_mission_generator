@@ -1,7 +1,8 @@
 # HEMS Mission Generator
 A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator package for the [X-Plane](https://www.x-plane.com) flight simulator including crew intercom simulation and automatic animations (doors, boom, winch, cargo, boarding/unboarding etc.).
 
-### Content
+
+### What's included?
 The package basically includes the following:
 
  - config files (.xml, .ini, .txt)
@@ -65,13 +66,12 @@ This method is the easiest but requires an installed [Git client](https://git-sc
 
     git --version
 
-It should output the Git version on the console. If not your Git client was not installed correctly.
+It should output the Git version on the console. If not that means your Git client was not installed correctly.
 
-By following this method the repository will be checked out into the existing X-Plane home folder and overwrite any existing files. The Git client will take care of creating required symbolic links automatically and everything should _just work_&trade;.
+By following the instructions below the master branch of this Github repository will be checked out ("cloned") locally into the existing X-Plane home folder and overwrite any existing files. It assumes there is no pre-existing folder named `.git` inside your X-Plane home folder. The Git client will then take care of creating required symbolic links automatically and everything should _just work_&trade;.
 
- 1. Open a command terminal
- 2. Change your current directory to X-Plane's home folder
- 3. Execute the following commands:
+ 1. Open a command terminal inside X-Plane's home folder
+ 3. Execute the following commands in sequence:
 ```
 git init
 git config core.symlinks true
@@ -82,5 +82,7 @@ git reset --hard HEAD
 ```
 
 #### Zip file method
+tbd
+
 
 
