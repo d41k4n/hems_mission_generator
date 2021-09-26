@@ -50,7 +50,7 @@ This might get extended and/or made more generic in the future.
 
 ### Installation
 
-Since the package relies on symbolic links pointing to X-Plane's core assets the installation process may be a bit more involved depending on the chosen installation methods as provided below.
+Since the package relies on certain X-Plane core assets that cannot be re-distributed the installation process may be a bit more involved depending on the chosen installation methods as provided below.
 
 Before starting it might be a good idea to back up the following files residing within your X-Plane home (if they already exist):
 
@@ -62,27 +62,49 @@ Before starting it might be a good idea to back up the following files residing 
 
 #### Git clone method
 
-This method is the easiest but requires an installed [Git client](https://git-scm.com/downloads) so that the `git` command is available via on the command line. To verify open a command terminal and type the following followed by `RETURN`:
+This method is the easiest but requires an installed [Git client](https://git-scm.com/downloads) so that the `git` command is available via on the command line. To verify open a command terminal and execute the following command:
 
     git --version
 
 It should output the Git version on the console. If not that means your Git client was not installed correctly.
 
-By following the instructions below the master branch of this Github repository will be checked out ("cloned") locally into the existing X-Plane home folder and overwrite any existing files. It assumes there is no pre-existing folder named `.git` inside your X-Plane home folder. The Git client will then take care of creating required symbolic links automatically and everything should _just work_&trade;.
+By following the instructions below the master branch of this Github repository will be checked out ("cloned") locally into the existing X-Plane home folder overwriting any existing files. It assumes there is no pre-existing folder named `.git` inside your X-Plane home folder. The Git client will then take care of creating required symbolic links automatically and everything should _just work_&trade;.
 
  1. Open a command terminal inside X-Plane's home folder
  3. Execute the following commands in sequence:
+
+		git init
+		git config core.symlinks true
+		git remote add origin https://github.com/d41k4n/hems_mission_generator.git
+		git fetch
+		git reset origin/master
+		git reset --hard HEAD
+
+To update (or reinstall) the latest version simply execute the following commands from within X-Plane's home folder:
 ```
-git init
-git config core.symlinks true
-git remote add origin https://github.com/d41k4n/hems_mission_generator.git
 git fetch
-git reset origin/master
 git reset --hard HEAD
 ```
 
 #### Zip file method
-tbd
 
+ 1. Download the [current master branch as a zip file](https://github.com/d41k4n/hems_mission_generator/archive/refs/heads/master.zip)
+ 2. Unzip the contents of the zipped folder "hems_mission_generator_master" into X-Plane's home folder overwriting existing files (don't unzip the folder "hems_mission_generator_master" itself).
+ 3. Within folder `./Custom Scenery/CH_Heliports` find and replace all file occurrences like
 
+		*/apt_lights.png
+		*/apt_lights_LIT
+        
+	with either copies or symbolic links to the same-name core assets within X-Plane home folder i.e.
 
+		./Resources/default scenery/sim objects/apt_lights/apt_lights.png
+		./Resources/default scenery/sim objects/apt_lights/apt_lights_LIT.png
+
+ 4. Replace file
+
+		./Custom Scenery/CH_Heliports/heliport_lib/textures
+
+	with either a copy or a symbolic link to the core asset folder
+
+		./Resources/default scenery/1000 autogen/US/urban_high/textures
+		
