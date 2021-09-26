@@ -30,7 +30,8 @@ This might get extended and/or made more generic in the future.
 
 ### Prerequisites
 
- - Working X-Plane 11 installation (Windows/Mac/Linux are supported)
+ - Working X-Plane installation (Windows/Mac/Linux are supported)
+ - X-Plane sound output enabled with system support for speech synthesis (check sound settings)
  - Base mesh scenery covering Central Europe or at least the area of Switzerland and Southern Germany (Baden-Württemberg) as a minimum
 	 - A ZL17 orthophoto mesh based on [high-quality elevation data](https://forums.x-plane.org/index.php?/forums/topic/165525-lidar-digital-terrain-models-dtm-of-european-countries/) is highly recommended
  - Latest [X-Europe](https://simheaven.com/x-europe/) overlay scenery
@@ -108,3 +109,44 @@ git reset --hard HEAD
 
 		./Resources/default scenery/1000 autogen/US/urban_high/textures
 		
+### Suggested controller setup
+
+For best experience during hover missions it is recommended to assign the following commands to some physical controllers (e.g. joystick buttons):
+
+ - `FlyWithLua/hoist/show_toggle`
+	 - Toggles a pop-up window with some useful info about the status of the hoist
+ - `FlyWithLua/hoist/winch_down`
+	 - Lowers the winch
+ - `FlyWithLua/hoist/winch_up`
+	 - Raises the winch
+
+### Optional: Configure custom overpass server
+In order to optimize mission creation in Mission-X for the general area of Switzerland it is highly recommended to customize the overpass server URL in the plugin settings. 
+
+To do so proceed as follows:
+
+1. In the X-Plane menu select Plugins -> Mission-X vx.x.xxx.x
+2. Click on `Setup`
+3. Locate section `OVERPASS settings`
+4. Replace the value for `Overpass URL` with `https://overpass.osm.ch/api/interpreter`
+
+### Starting a mission
+
+Starting missions is done by selecting one of the provided mission templates through the Mission-X UI:
+
+1. In the X-Plane menu select Plugins -> Mission-X vx.x.xxx.x
+2. Click on `Templates`
+3. Select any of the "Random HEMS Mission Generator" template icons
+4. Read the template description carefully and make sure that 
+	- you have selected the stated helicopter model 
+	- you are positioned within 80m of the indicated home base coordinates
+5. Click on `Generate Mission from Template`
+6. Wait for the actual mission to be generated (a blue button labeled `>> Start mission <<` will appear)
+7. Read again the template description as it will contain updated information about your mission
+8. When ready, click  `>> Start mission <<` 
+9. Listen for audio messages containing status information and/or instructions as the mission progresses
+10. Have fun!
+
+### Troubleshooting
+
+tbd
