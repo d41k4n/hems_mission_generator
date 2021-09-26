@@ -51,7 +51,7 @@ This might get extended and/or made more generic in the future.
 
 Since the package relies on symbolic links pointing to X-Plane's core assets the installation process may be a bit more involved depending on the chosen installation methods as provided below.
 
-Before starting it might be a good idea to back up the following folders inside your X-Plane home folder structure (if existing):
+Before starting it might be a good idea to back up the following files residing within your X-Plane home (if they already exist):
 
     ./Aircraft/Helicopters/EC 145 V5 EMS/HSLAircraft.ini 
     ./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1/HSLAircraft.ini
