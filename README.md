@@ -89,7 +89,7 @@ git reset --hard HEAD
 #### Zip file method
 
  1. Download the [current master branch as a zip file](https://github.com/d41k4n/hems_mission_generator/archive/refs/heads/master.zip)
- 2. Unzip the contents of the zipped folder "hems_mission_generator_master" into X-Plane's home folder overwriting existing files (don't unzip the folder "hems_mission_generator_master" itself).
+ 2. Unzip the contents of the zipped folder "hems_mission_generator_master" directly into X-Plane's home folder overwriting any existing files (don't unzip the folder "hems_mission_generator_master" itself!).
  3. Within folder `./Custom Scenery/CH_Heliports` find and replace all file occurrences like
 
 		*/apt_lights.png
@@ -100,11 +100,11 @@ git reset --hard HEAD
 		./Resources/default scenery/sim objects/apt_lights/apt_lights.png
 		./Resources/default scenery/sim objects/apt_lights/apt_lights_LIT.png
 
- 4. Replace file
+ 4. Finally, replace file
 
 		./Custom Scenery/CH_Heliports/heliport_lib/textures
 
-	with either a copy or a symbolic link to the core asset folder
+	with either a copy or a symbolic link to the core asset folder within X-Plane's home folder i.e.
 
 		./Resources/default scenery/1000 autogen/US/urban_high/textures
 		
