@@ -1,38 +1,44 @@
 <NotepadPlus>
     <Project name="MissionX HEMS Template">
-        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\AirGlaciers_Sion_EC135.xml" />
-        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\AirZermatt_Zermatt_EC135.xml" />
-        <File name="plugins\missionx\templates\Rega1_H145.xml" />
-        <File name="plugins\missionx\templates\Rega5_EC135.xml" />
-        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Rega5_H145.xml" />
-        <File name="D:\X-Plane 11\Resources\plugins\missionx\templates\Lions1_EC135.xml" />
         <Folder name="Aircraft">
-            <Folder name="H145">
-                <File name="D:\X-Plane 11\Aircraft\Helicopters\H145 T2 Rescue Version XP11 V3.1\HSLAircraft.ini" />
-                <File name="D:\X-Plane 11\Aircraft\Helicopters\H145 T2 Rescue Version XP11 V3.1\VRconfigHotspots.txt" />
+            <Folder name="H145 T2 Rrescue Version XP11 V3.1">
+                <File name="Aircraft\Helicopters\H145 T2 Rescue Version XP11 V3.1\HSLAircraft.ini" />
+                <File name="Aircraft\Helicopters\H145 T2 Rescue Version XP11 V3.1\VRconfigHotspots.txt" />
             </Folder>
-            <Folder name="H135">
-                <File name="D:\X-Plane 11\Aircraft\Helicopters\EC 135 V5 EMS\HSLAircraft.ini" />
-            </Folder>
-        </Folder>
-        <Folder name="plugins">
-            <Folder name="HSL">
-                <File name="D:\X-Plane 11\Resources\plugins\HSL\HSL.ini" />
-                <File name="D:\X-Plane 11\Resources\plugins\HSL\Stretcher.ini" />
-            </Folder>
-            <Folder name="FlyWithLua">
-                <File name="D:\X-Plane 11\Resources\plugins\FlyWithLua\Scripts\Hoist.lua" />
-                <Folder name="modules">
-                    <File name="D:\X-Plane 11\Resources\plugins\FlyWithLua\Modules\tween.lua" />
-                </Folder>
+            <Folder name="EC 135 V5 EMS">
+                <File name="Aircraft\Helicopters\EC 135 V5 EMS\HSLAircraft.ini" />
             </Folder>
         </Folder>
         <Folder name="Custom Scenery">
             <Folder name="missionx">
                 <Folder name="random">
-                    <File name="D:\X-Plane 11\Custom Scenery\missionx\random\winch.bas" />
+                    <File name="Custom Scenery\missionx\random\winch.bas" />
                     <Folder name="briefer">
-                        <File name="D:\X-Plane 11\Custom Scenery\missionx\random\briefer\random.xml" />
+                        <File name="Custom Scenery\missionx\random\briefer\random.xml" />
+                    </Folder>
+                </Folder>
+            </Folder>
+        </Folder>
+        <Folder name="Resources">
+            <Folder name="plugins">
+                <Folder name="HSL">
+                    <File name="Resources\plugins\HSL\HSL.ini" />
+                    <File name="Resources\plugins\HSL\Stretcher.ini" />
+                </Folder>
+                <Folder name="FlyWithLua">
+                    <File name="Resources\plugins\FlyWithLua\Scripts\Hoist.lua" />
+                    <Folder name="modules">
+                        <File name="Resources\plugins\FlyWithLua\Modules\tween.lua" />
+                    </Folder>
+                </Folder>
+                <Folder name="missionx">
+                    <Folder name="templates">
+                        <File name="Resources\plugins\missionx\templates\AirGlaciers_Sion_EC135.xml" />
+                        <File name="Resources\plugins\missionx\templates\AirZermatt_Zermatt_EC135.xml" />
+                        <File name="Resources\plugins\missionx\templates\Rega1_H145.xml" />
+                        <File name="Resources\plugins\missionx\templates\Rega5_EC135.xml" />
+                        <File name="Resources\plugins\missionx\templates\Rega5_H145.xml" />
+                        <File name="Resources\plugins\missionx\templates\Lions1_EC135.xml" />
                     </Folder>
                 </Folder>
             </Folder>

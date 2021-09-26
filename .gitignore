@@ -1,28 +1,32 @@
-plugins/FlyWithLua/*
-!plugins/FlyWithLua/Scripts
-plugins/FlyWithLua/Scripts/*
-!plugins/FlyWithLua/Scripts/Hoist.lua
-!plugins/FlyWithLua/Modules
-plugins/FlyWithLua/Modules/*
-!plugins/FlyWithLua/Modules/tween.lua
-plugins/HSL/*
-!plugins/HSL/HSL.ini
-plugins/missionx/*
-!plugins/missionx/templates
-plugins/missionx/templates/*
-!plugins/missionx/templates/AirGlaciers*
-!plugins/missionx/templates/AirZermatt*
-!plugins/missionx/templates/Lions*
-!plugins/missionx/templates/Rega*
-plugins/missionx/templates/AirZermatt*test*.xml
-plugins/missionx/templates/AirGlaciers*test*.xml
-plugins/missionx/templates/Lions*test*.xml
-plugins/missionx/templates/Rega*test*.xml
-plugins/missionx/templates/*raw.jpg
-scenery/missionx/*
-!scenery/missionx/random
-scenery/missionx/random/*
-!scenery/missionx/random/Winch.bas
+Resources/plugins/FlyWithLua/*
+!Resources/plugins/FlyWithLua/Scripts
+Resources/plugins/FlyWithLua/Scripts/*
+!Resources/plugins/FlyWithLua/Scripts/Hoist.lua
+!Resources/plugins/FlyWithLua/Modules
+Resources/plugins/FlyWithLua/Modules/*
+!Resources/plugins/FlyWithLua/Modules/tween.lua
+Resources/plugins/HSL/*
+!Resources/plugins/HSL/HSL.ini
+Resources/plugins/missionx/*
+!Resources/plugins/missionx/templates
+Resources/plugins/missionx/templates/*
+!Resources/plugins/missionx/templates/AirGlaciers*
+!Resources/plugins/missionx/templates/AirZermatt*
+!Resources/plugins/missionx/templates/Lions*
+!Resources/plugins/missionx/templates/Rega*
+Resources/plugins/missionx/templates/AirZermatt*test*.xml
+Resources/plugins/missionx/templates/AirGlaciers*test*.xml
+Resources/plugins/missionx/templates/Lions*test*.xml
+Resources/plugins/missionx/templates/Rega*test*.xml
+Resources/plugins/missionx/templates/*raw.jpg
+Custom Scenery/*
+!Custom Scenery/missionx
+!Custom Scenery/heliport_lib
+!Custom Scenery/CH_Hospitals
+Custom Scenery/missionx/*
+!Custom Scenery/missionx/random
+Custom Scenery/missionx/random/*
+!Custom Scenery/missionx/random/Winch.bas
 aircraft/*
 !aircraft/_slingload_objects
 aircraft/_slingload_objects/*
