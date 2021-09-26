@@ -93,7 +93,7 @@ git reset --hard HEAD
  3. Within folder `./Custom Scenery/CH_Heliports` find and replace all file occurrences like
 
 		*/apt_lights.png
-		*/apt_lights_LIT
+		*/apt_lights_LIT.png
         
 	with either copies or symbolic links to the same-name core assets within X-Plane home folder i.e.
 
