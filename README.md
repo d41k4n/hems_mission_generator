@@ -40,9 +40,47 @@ This might get extended and/or made more generic in the future.
 	 -  [EC 135 v5 EMS](https://rotorsim.de/download-ec-135-v5/download/5-ec-135/14-ec-135-v5-ems) installed under `./Aircraft/Helicopters/EC 145 V5 EMS`
 	 -  [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) installed under `./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1`
  - Scenery libraries: [RescueX](https://www.rotorsim.de/component/jdownloads/download/4-andere/9-rescuex?Itemid=3111), [3D People](https://forums.x-plane.org/index.php?/files/file/26611-3d-people-library/), [R2](http://r2.xpl.cz/), [OpenSceneryX](https://www.opensceneryx.com/), [MisterX](https://forums.x-plane.org/index.php?/files/file/28167-misterx-library-and-static-aircraft-extension/), [CDB](https://forums.x-plane.org/index.php?/files/file/27907-cdb-library/), [RuScenery](http://ruscenery.x-air.ru/), [Handy Objects](https://forums.x-plane.org/index.php?/files/file/24261-the-handy-objects-library/)
+
 ### Recommended free custom airport scenery
-- [HeliAlpes Swiss Pack](https://forums.x-plane.org/index.php?/files/file/72131-h%C3%A9lialpes-swiss-pack-v11/)
-- [LSMD Dübendorf Rega 1 heliport](https://forums.x-plane.org/index.php?/files/file/19778-lsmd-d%C3%BCbendorf-rega-1-heliport/)
-- [LSXU Untervaz Rega 5 heliport](https://forums.x-plane.org/index.php?/files/file/39336-lsxu-untervaz-rega-5-heliport/)
+
+ - [HeliAlpes Swiss Pack](https://forums.x-plane.org/index.php?/files/file/72131-h%C3%A9lialpes-swiss-pack-v11/)
+ - [LSMD Dübendorf Rega 1 heliport](https://forums.x-plane.org/index.php?/files/file/19778-lsmd-d%C3%BCbendorf-rega-1-heliport/)
+ - [LSXU Untervaz Rega 5 heliport](https://forums.x-plane.org/index.php?/files/file/39336-lsxu-untervaz-rega-5-heliport/)
+
+### Installation
+
+Since the package relies on symbolic links pointing to X-Plane's core assets the installation process may be a bit more involved depending on the chosen installation methods as provided below.
+
+Before starting it might be a good idea to back up the following folders inside your X-Plane home folder structure (if existing):
+
+    ./Aircraft/Helicopters/EC 145 V5 EMS/HSLAircraft.ini 
+    ./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1/HSLAircraft.ini
+    ./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1/VRConfigHotSpots.ini
+    ./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1/ec145T2.acf
+  
+
+#### Git clone method
+
+This method is the easiest but requires an installed [Git client](https://git-scm.com/downloads) so that the `git` command is available via on the command line. To verify open a command terminal and type the following followed by `RETURN`:
+
+    git --version
+
+It should output the Git version on the console. If not your Git client was not installed correctly.
+
+By following this method the repository will be checked out into the existing X-Plane home folder and overwrite any existing files. The Git client will take care of creating required symbolic links automatically and everything should _just work_&trade;.
+
+ 1. Open a command terminal
+ 2. Change your current directory to X-Plane's home folder
+ 3. Execute the following commands:
+```
+git init
+git config core.symlinks true
+git remote add origin https://github.com/d41k4n/hems_mission_generator.git
+git fetch
+git reset origin/master
+git reset --hard HEAD
+```
+
+#### Zip file method
 
 
