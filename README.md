@@ -28,6 +28,8 @@ In the current state it provides dedicated mission templates for HEMS missions o
 
 This might get extended and/or made more generic in the future.
 
+Note that only a _port-side_ mounted hoist is supported for hover missions or otherwise animations will not match.
+
 ### Prerequisites
 
  - Working X-Plane installation (Windows/Mac/Linux are supported)
@@ -138,8 +140,8 @@ Starting missions is done by selecting one of the provided mission templates thr
 2. Click on `Templates`
 3. Select any of the "Random HEMS Mission Generator" template icons
 4. Read the template description carefully and make sure that 
-	- you have selected the stated helicopter model 
-	- you are positioned within 80m of the indicated home base coordinates
+	- you have selected the appropriate helicopter model (e.g. enable port-side hoist equipment for hover missions)
+	- you are positioned within 80m of the indicated home base coordinates (this will also be evaluated as your last waypoint or the mission won't terminate)
 5. Click on `Generate Mission from Template`
 6. Wait for the actual mission to be generated (a blue button labeled `>> Start mission <<` will appear)
 7. Read again the template description as it will contain updated information about your mission
