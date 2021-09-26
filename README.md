@@ -1,6 +1,8 @@
 # HEMS Mission Generator
 A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator package for the [X-Plane](https://www.x-plane.com) flight simulator including crew intercom simulation and automatic animations (doors, boom, winch, cargo, boarding/unboarding etc.).
 
+### How does it work?
+The mission generator uses random mission templates which are processed by the Mission-X plugin for creating random but plausible rescue scenarios. Mission goals and accident locations are computed dynamically based on distance, terrain features (slope, surface), annotated vector data obtained from the live OpenStreetMap database (roads, trails, pistes, outdoor pitches/parkings and administrative boundaries) and augmented with real historical traffic accident open data (where available). Mission types include patient extractions by either landing or hovering over designated accident locations and hospital transfers. Crew interaction during hovering (winch ops) is partially automated and simulated (attach/detach payload, boom operation, payload and hover position advisories). Location of patient drop-off is calculated to give a plausible travel distance (e.g. closest hospital up to a maximum, but not too close). Mission progress and instructions are communicated over audio (TTS).
 
 ### What's included?
 The package basically includes the following:
@@ -34,6 +36,7 @@ Note that only a _port-side_ mounted hoist is supported for hover missions or ot
 
  - Working X-Plane installation (Windows/Mac/Linux are supported)
  - X-Plane sound output enabled with system support for speech synthesis (check sound settings)
+ - Working internet connection
  - Base mesh scenery covering Central Europe or at least the area of Switzerland and Southern Germany (Baden-Württemberg) as a minimum
 	 - A ZL17 orthophoto mesh based on [high-quality elevation data](https://forums.x-plane.org/index.php?/forums/topic/165525-lidar-digital-terrain-models-dtm-of-european-countries/) is highly recommended
  - Latest [X-Europe](https://simheaven.com/x-europe/) overlay scenery
