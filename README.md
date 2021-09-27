@@ -1,3 +1,4 @@
+
 # HEMS Mission Generator
 A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator package for the [X-Plane](https://www.x-plane.com) flight simulator including crew intercom simulation and automatic animations (doors, boom, winch, cargo, boarding/unboarding etc.).
 
@@ -40,13 +41,22 @@ Note that only a _port-side_ mounted hoist is supported for hover missions or ot
  - Base mesh scenery covering Central Europe or at least the area of Switzerland and Southern Germany (Baden-Württemberg) as a minimum
 	 - A ZL17 orthophoto mesh based on [high-quality elevation data](https://forums.x-plane.org/index.php?/forums/topic/165525-lidar-digital-terrain-models-dtm-of-european-countries/) is highly recommended
  - Latest [X-Europe](https://simheaven.com/x-europe/) overlay scenery
- - Latest [Mission-X](https://forums.x-plane.org/index.php?/files/file/41874-mission-x/) (use the .jar installer!)
+ - Latest [Mission-X](https://forums.x-plane.org/index.php?/files/file/41874-mission-x/) incl. "Random Mission Pack"
  - Latest [FlyWithLUA](https://forums.x-plane.org/index.php?/files/file/38445-flywithlua-ng-next-generation-edition-for-x-plane-11-win-lin-mac/) plugin
  - Latest [Helicopter Sling Load (HSL)](https://github.com/kristian80/HSL) plugin
  - At least one of the following aircraft models installed in X-Plane's home folder under `./Aircraft/Helicopters` using their default folder names i.e.:
 	 -  [EC 135 v5 EMS](https://rotorsim.de/download-ec-135-v5/download/5-ec-135/14-ec-135-v5-ems) installed under `./Aircraft/Helicopters/EC 145 V5 EMS`
 	 -  [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) installed under `./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1`
  - Scenery libraries: [RescueX](https://www.rotorsim.de/component/jdownloads/download/4-andere/9-rescuex?Itemid=3111), [3D People](https://forums.x-plane.org/index.php?/files/file/26611-3d-people-library/), [R2](http://r2.xpl.cz/), [OpenSceneryX](https://www.opensceneryx.com/), [MisterX](https://forums.x-plane.org/index.php?/files/file/28167-misterx-library-and-static-aircraft-extension/), [CDB](https://forums.x-plane.org/index.php?/files/file/27907-cdb-library/), [RuScenery](http://ruscenery.x-air.ru/), [Handy Objects](https://forums.x-plane.org/index.php?/files/file/24261-the-handy-objects-library/), [NZ Pro Scenery Overlay](http://www.alpilotx.net/downloads/x-plane-10-new-zealand-pro/#Download)
+	 - Make sure the libraries are installed using their _default folder names_ or otherwise objects might not be loaded properly i.e.
+
+			./Custom Scenery/CDB-Library
+			./Custom Scenery/pm_library
+			./Custom Scenery/RescueX_Lib
+			./Custom Scenery/3D_people_library
+			./Custom Scenery/R2_Library
+			./Custom Scenery/MisterX_Library
+			./Custom Scenery/OpenSceneryX
 
 ### Recommended free custom airport scenery
 
