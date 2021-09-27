@@ -40,7 +40,7 @@ Note that only a _port-side_ mounted hoist is supported for hover missions or ot
  - Base mesh scenery covering Central Europe or at least the area of Switzerland and Southern Germany (Baden-Württemberg) as a minimum
 	 - A ZL17 orthophoto mesh based on [high-quality elevation data](https://forums.x-plane.org/index.php?/forums/topic/165525-lidar-digital-terrain-models-dtm-of-european-countries/) is highly recommended
  - Latest [X-Europe](https://simheaven.com/x-europe/) overlay scenery
- - Latest [Mission-X](https://forums.x-plane.org/index.php?/files/file/41874-mission-x/) plugin
+ - Latest [Mission-X](https://forums.x-plane.org/index.php?/files/file/41874-mission-x/) (use the .jar installer!)
  - Latest [FlyWithLUA](https://forums.x-plane.org/index.php?/files/file/38445-flywithlua-ng-next-generation-edition-for-x-plane-11-win-lin-mac/) plugin
  - Latest [Helicopter Sling Load (HSL)](https://github.com/kristian80/HSL) plugin
  - At least one of the following aircraft models installed in X-Plane's home folder under `./Aircraft/Helicopters` using their default folder names i.e.:
