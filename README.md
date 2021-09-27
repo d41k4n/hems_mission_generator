@@ -165,3 +165,10 @@ Starting missions is done by selecting one of the provided mission templates thr
 ### Troubleshooting
 
 tbd
+
+### Acknowledgements
+
+The following third party assets were used (and where adapted where necessary) with kind permission of their authors:
+ - Custom stretcher, operator and patient objects by [X-Alberto](https://forums.x-plane.org/index.php?/profile/14984-x-alberto/)
+ - Sion hospital custom scenery by [marc1227](https://forums.x-plane.org/index.php?/profile/398981-marc1227/) 
+ - "CH HEMS HeliPack 2016 A" for FSX by Pascal Küffer
