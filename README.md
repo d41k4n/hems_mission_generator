@@ -2,13 +2,13 @@
 A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator package for the [X-Plane](https://www.x-plane.com) flight simulator including crew intercom simulation and automatic animations (doors, boom, winch, cargo, boarding/unboarding etc.).
 
 ### How does it work?
-The mission generator uses random mission templates which are processed by the Mission-X plugin for creating random but plausible rescue scenarios. Mission goals and accident locations are computed dynamically based on distance, terrain features (slope, surface), annotated vector data obtained from the live OpenStreetMap database (roads, trails, pistes, outdoor pitches/parkings and administrative boundaries) and augmented with real historical traffic accident open data (where available). Rescue locations are populated with plausible objects to make them recognizable from the air. Mission types include patient extractions (by either landing at or hovering over designated accident locations) and hospital transfers. Crew interaction during hovering (winch ops) is partially automated and simulated (attach/detach payload, boom operation, payload and hover position advisories). Location of patient drop-off is calculated to give a plausible travel distance (e.g. closest hospital up to a maximum, but not too close). Mission progress and instructions are communicated over audio (TTS).
+The mission generator uses random mission templates which are processed by the [Mission-X](https://forums.x-plane.org/index.php?/files/file/41874-mission-x/) plugin for creating random but plausible rescue scenarios. Mission goals and accident locations are computed dynamically based on distance, terrain features (slope, surface), annotated vector data obtained from the live OpenStreetMap database (roads, trails, pistes, outdoor pitches/parkings and administrative boundaries) and augmented with real historical traffic accident open data (where available). Rescue locations are populated with plausible objects to make them recognizable from the air. Mission types include patient extractions (by either landing at or hovering over designated accident locations) and hospital transfers. Crew interaction during hovering (winch ops) is partially automated and simulated (attach/detach payload, boom operation, payload and hover position advisories). Location of patient drop-off is calculated to give a plausible travel distance (e.g. closest hospital up to a maximum, but not too close). Mission progress and instructions are communicated over audio (TTS).
 
 ### What's included?
 The package basically includes the following:
 
  - config files (.xml, .ini, .txt)
- - scripts (.bas, .lua)
+ - script files (.bas, .lua)
  - custom overlay scenery for hospitals
  - a custom heliport scenery library ([heliport_lib](https://github.com/d41k4n/hems_mission_generator/tree/master/scenery/heliport_lib))
  - custom aircraft definitions (.acf)
@@ -143,7 +143,7 @@ Starting missions is done by selecting one of the provided mission templates thr
 2. Click on `Templates`
 3. Select any of the "Random HEMS Mission Generator" template icons
 4. Read the template description carefully and make sure that 
-	- you have selected the appropriate helicopter model (e.g. enable port-side hoist equipment for hover missions)
+	- you have selected the appropriate helicopter model as indicated (use port-side hoist configuration for hover missions)
 	- you are positioned within 80m of the indicated home base coordinates (this will also be evaluated as your last waypoint or the mission won't terminate)
 5. Click on `Generate Mission from Template`
 6. Wait for the actual mission to be generated (a blue button labeled `>> Start mission <<` will appear)
