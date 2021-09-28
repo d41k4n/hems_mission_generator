@@ -8,6 +8,10 @@
             <Folder name="EC 135 V5 EMS">
                 <File name="Aircraft\Helicopters\EC 135 V5 EMS\HSLAircraft.ini" />
             </Folder>
+            <Folder name="_slingload_objects">
+                <File name="D:\X-Plane 11\Aircraft\_slingload_objects\sar_patient_operator_stretcher_patient.obj" />
+                <File name="D:\X-Plane 11\Aircraft\_slingload_objects\sar_patient_operator_stretcher.obj" />
+            </Folder>
         </Folder>
         <Folder name="Custom Scenery">
             <Folder name="missionx">

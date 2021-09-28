@@ -30,8 +30,8 @@ Custom Scenery/missionx/random/*
 aircraft/*
 !aircraft/_slingload_objects
 aircraft/_slingload_objects/*
-!aircraft/_slingload_objects/sar_patient_operator_stretcher.obj
-!aircraft/_slingload_objects/sar_patient_operator_stretcher_*.obj
+!aircraft/_slingload_objects/sar_patient_operator_stretcher_patient.obj
+!aircraft/_slingload_objects/sar_patient_operator_stretcher_empty.obj
 !aircraft/_slingload_objects/Pilot.png
 !aircraft/Helicopters
 aircraft/Helicopters/*
