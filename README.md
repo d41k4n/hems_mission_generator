@@ -1,5 +1,6 @@
 
 
+
 # HEMS Mission Generator
 A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator package for the [X-Plane](https://www.x-plane.com) flight simulator including crew intercom simulation and automatic animations (doors, boom, winch, cargo, boarding/unboarding etc.).
 
@@ -170,6 +171,22 @@ Starting missions is done by selecting one of the provided mission templates thr
 8. When ready, click  `>> Start mission <<` 
 9. Listen for audio messages containing status information and/or instructions as the mission progresses
 10. Have fun!
+
+### Hints
+
+#### General
+- It's important to follow the instructions provided during flight and wait with proceeding to the next waypoint of the generated flight plan until you are instructed to do so. Aborting/skipping any intermediate tasks will cause the mission not to progress correctly.
+
+#### Navigation
+- A flight plan containing the minimal set of mandatory waypoints is auto-generated and will be loaded into the GPS/FMS at missions start. Reaching of these waypoints (within a radius of 80m) is evaluated by the mission script.
+- The flight plan can also be exported for use in third-party tools. Have a look at the documentation at `./Resources/plugins/missionx/docs/Configuring External FPLN folders for Mission-X (vx.x.xxx.x).pdf`
+
+#### Hover missions
+- Lowering/raising the winch must be done by you (the pilot). While this is not realistic it is done to give full control over coordinating your flight position and attitude with respect to the position and movement of attached load.
+- Use the hoist plugin pop-up to determine when the attached load reaches the ground by comparing current rope length with above ground altitude. 
+- Keep lowering the winch until you hear/read the message "Winch extended - standby for patient pickup". You might have to keep lowering the winch so the rope length exceeds above ground altitude.
+- Start raising the winch when you hear/read message "Start raising winch carefully".
+- If you hear/read the message "Get back into position!" that means you have strayed too far from the hover target (> 30m horizontally, >150ft vertically). Correct your position using the accident scene mission objects as a visual reference.
 
 ### Troubleshooting
 
