@@ -139,7 +139,7 @@ git reset --hard HEAD
 For best experience during hover missions it is recommended to assign the following commands to some physical controllers (e.g. joystick buttons):
 
  - `FlyWithLua/hoist/show_toggle`
-	 - Toggles a small pop-up window with some useful info about the status of the hoist such as current rope length and payload distance to ground.
+	 - Toggles a small pop-up window with some useful info about the status of the hoist such as current rope length and height above ground.
  - `FlyWithLua/hoist/winch_down`
 	 - Lowers the winch while pressed (release to stop)
  - `FlyWithLua/hoist/winch_up`
@@ -184,7 +184,7 @@ Starting missions is done by selecting one of the provided mission templates thr
 #### Hover missions
 - Lowering/raising the winch must be done by you (the pilot). While this is not realistic it is done to give full control over coordinating your flight position and attitude with respect to the position and movement of attached load.
 - Use the hoist plugin pop-up (see [Suggested controller setup](#suggested-controller-setup)) to determine when the attached load reaches the ground by comparing current rope length with above ground altitude. 
-- Keep lowering the winch until you hear/read the message "Winch extended - standby for patient pickup". You might have to keep lowering the winch so the rope length exceeds above ground altitude.
+- Keep lowering the winch until you hear/read the message "Stop winch!". You might have to keep extending the rope beyond the current height above ground in order to provide some extra slack (e.g. to compensate for horizontal and/or vertical drift).
 - Start raising the winch when you hear/read message "Start raising winch carefully".
 - If you hear/read the message "Get back into position!" that means you have strayed too far from the hover target (> 30m horizontally, >150ft vertically). Correct your position using the accident scene mission objects as a visual reference.
 
