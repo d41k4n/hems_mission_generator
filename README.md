@@ -121,7 +121,7 @@ git reset --hard HEAD
 		*/apt_lights.png
 		*/apt_lights_LIT.png
         
-	with either copies or symbolic links to the same-name core assets within X-Plane home folder i.e.
+	with either copies or symbolic links to the same-name core assets within X-Plane's home folder i.e.
 
 		./Resources/default scenery/sim objects/apt_lights/apt_lights.png
 		./Resources/default scenery/sim objects/apt_lights/apt_lights_LIT.png
@@ -178,7 +178,7 @@ Starting missions is done by selecting one of the provided mission templates thr
 - It's important to follow the instructions provided during flight and wait with proceeding to the next waypoint of the generated flight plan until you are instructed to do so. Aborting/skipping any intermediate tasks will cause the mission not to progress correctly.
 
 #### Navigation
-- A flight plan containing the minimal set of mandatory waypoints is auto-generated and will be loaded into the GPS/FMS at missions start. Reaching of these waypoints (within a radius of 80m) is evaluated by the mission script.
+- A flight plan containing the minimal set of mandatory waypoints is auto-generated and will be loaded into the GPS/FMS at mission start. Reaching of these waypoints (within a radius of 80m) is evaluated by the mission script.
 - The flight plan can also be exported for use in third-party tools. Have a look at the documentation at `./Resources/plugins/missionx/docs/Configuring External FPLN folders for Mission-X (vx.x.xxx.x).pdf`
 
 #### Hover missions
