@@ -183,7 +183,7 @@ Starting missions is done by selecting one of the provided mission templates thr
 
 #### Hover missions
 - Lowering/raising the winch must be done by you (the pilot). While this is not realistic it is done to give full control over coordinating your flight position and attitude with respect to the position and movement of attached load.
-- Use the hoist plugin pop-up to determine when the attached load reaches the ground by comparing current rope length with above ground altitude. 
+- Use the hoist plugin pop-up (see [Suggested controller setup](#suggested-controller-setup) )to determine when the attached load reaches the ground by comparing current rope length with above ground altitude. 
 - Keep lowering the winch until you hear/read the message "Winch extended - standby for patient pickup". You might have to keep lowering the winch so the rope length exceeds above ground altitude.
 - Start raising the winch when you hear/read message "Start raising winch carefully".
 - If you hear/read the message "Get back into position!" that means you have strayed too far from the hover target (> 30m horizontally, >150ft vertically). Correct your position using the accident scene mission objects as a visual reference.
