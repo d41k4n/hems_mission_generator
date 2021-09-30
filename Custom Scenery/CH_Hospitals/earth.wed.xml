@@ -52,7 +52,9 @@
     <object class="WED_Select" id="2" parent_id="1">
       <children/>
       <hierarchy name="selection"/>
-      <selection/>
+      <selection>
+        <sel id="4086"/>
+      </selection>
     </object>
     <object class="WED_KeyObjects" id="3" parent_id="1">
       <children/>
@@ -1268,6 +1270,7 @@
       </children>
       <hierarchy name="Exclusion Zone" locked="0" hidden="0"/>
       <excluzions>
+        <exclusion value="Objects"/>
         <exclusion value="Facades"/>
         <exclusion value="Forests"/>
       </excluzions>
@@ -49698,7 +49701,6 @@
       <item value="1847"/>
       <item value="1848"/>
       <item value="1859"/>
-      <item value="3419"/>
       <item value="3425"/>
       <item value="3435"/>
       <item value="3448"/>
@@ -49731,7 +49733,6 @@
       <item value="4046"/>
       <item value="4063"/>
       <item value="4083"/>
-      <item value="4111"/>
       <item value="4929"/>
       <item value="5043"/>
       <item value="5140"/>
@@ -49750,6 +49751,7 @@
       <item value="13548"/>
       <item value="13562"/>
       <item value="13568"/>
+      <item value="13576"/>
       <item value="13582"/>
       <item value="13594"/>
       <item value="13596"/>
@@ -49757,17 +49759,17 @@
     </pref>
     <pref name="doc/export_target" value="5"/>
     <pref name="doc/xml_compatibility" value="204"/>
-    <pref name="map/east" value="7.492201"/>
+    <pref name="map/east" value="7.389628"/>
     <pref name="map/navaid_map_vis" value="0"/>
-    <pref name="map/north" value="46.016283"/>
+    <pref name="map/north" value="46.235590"/>
     <pref name="map/obj_density" value="6"/>
     <pref name="map/pavement_alpha" value="4"/>
     <pref name="map/preview_vis" value="1"/>
     <pref name="map/real_lines_vis" value="1"/>
     <pref name="map/slippy_vis" value="1"/>
-    <pref name="map/south" value="46.007784"/>
+    <pref name="map/south" value="46.232694"/>
     <pref name="map/vertices_vis" value="1"/>
-    <pref name="map/west" value="7.482703"/>
+    <pref name="map/west" value="7.386378"/>
     <pref name="map/world_map_vis" value="1"/>
     <pref name="map_Airport Beacon_Kind" value="71"/>
     <pref name="map_Autogen_Autogen Height" value="10.000000"/>
