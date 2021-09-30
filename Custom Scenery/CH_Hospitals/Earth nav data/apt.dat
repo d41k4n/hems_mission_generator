@@ -321,4 +321,30 @@ I
 1301 A none 
 1300  46.28770105  007.88388375 6.1 misc helos Ramp Start H2
 1301 A none 
+
+17   2326 0 0 LSUS [H] Urgence Sembrancher
+1302 gui_label 3D
+1302 icao_code LSUS
+1302 region_code LS
+1302 flatten 1
+1302 drive_on_left 1
+102 H1  46.07836652  007.14580002 357.4 10.20 10.00 15 0 0 0.00 0
+1300  46.07836652  007.14580002 357.4 misc helos Ramp Start H1
+1301 A none 
+
+17   3653 0 0 LSOC [H] Chermignon
+1302 gui_label 3D
+1302 icao_code LSOC
+1302 region_code LS
+102 H1  46.28423169  007.46580887 138.8 7.90 8.00 15 0 0 0.00 0
+1300  46.28423169  007.46580887 138.8 misc helos Ramp Start H1
+1301 A none 
+
+17   6590 0 0 LSOA [H] Arolla
+1302 gui_label 3D
+1302 icao_code LSVI
+1302 region_code LS
+102 H1  46.01355348  007.48464797 217.2 9.40 10.00 15 0 0 0.00 0
+1300  46.01355348  007.48464797 217.2 misc helos Ramp Start H1
+1301 A none 
 99
