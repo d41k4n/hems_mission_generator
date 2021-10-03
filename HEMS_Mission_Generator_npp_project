@@ -9,17 +9,17 @@
                 <File name="Aircraft\Helicopters\EC 135 V5 EMS\HSLAircraft.ini" />
             </Folder>
             <Folder name="_slingload_objects">
-                <File name="D:\X-Plane 11\Aircraft\_slingload_objects\sar_patient_operator_stretcher_patient.obj" />
-                <File name="D:\X-Plane 11\Aircraft\_slingload_objects\sar_patient_operator_stretcher.obj" />
+                <File name="Aircraft\_slingload_objects\sar_patient_operator_stretcher.obj" />
+                <File name="Aircraft\_slingload_objects\sar_patient_operator_stretcher_patient.obj" />
             </Folder>
         </Folder>
         <Folder name="Custom Scenery">
             <Folder name="missionx">
                 <Folder name="random">
-                    <File name="Custom Scenery\missionx\random\HMG_winch.bas" />
                     <Folder name="briefer">
                         <File name="Custom Scenery\missionx\random\briefer\random.xml" />
                     </Folder>
+                    <File name="Custom Scenery\missionx\random\HMS_winch.bas" />
                 </Folder>
             </Folder>
         </Folder>
