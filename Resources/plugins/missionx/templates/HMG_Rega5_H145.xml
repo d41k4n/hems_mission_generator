@@ -590,7 +590,7 @@ Hints:
 			/>
 		</trigger>
 		<trigger name="trig_1_stop_winch" type="rad" enabled="yes" >
-			<conditions plane_on_ground="no" cond_script="winch.check_down" />
+			<conditions plane_on_ground="no" cond_script="HMG_winch.check_down" />
 			<loc_and_elev_data>
 				<radius length_mt="30" />
 				<point lat="" long="" />
@@ -633,7 +633,7 @@ Hints:
 			/>
 		</trigger>
 		<trigger name="trig_1_onboard_patient" type="rad" enabled="yes" >
-			<conditions plane_on_ground="no" cond_script="winch.check_up" />
+			<conditions plane_on_ground="no" cond_script="HMG_winch.check_up" />
 			<loc_and_elev_data>
 				<radius length_mt="500" />
 				<point lat="" long="" />
@@ -755,7 +755,7 @@ Hints:
 			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[1]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_crew_off" type="rad" enabled="yes" >
-			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_1" />
+			<conditions plane_on_ground="yes" cond_script="HMG_winch.rotor_stopped_1" />
 			<loc_and_elev_data>
 				<radius length_mt="80" />
 				<point lat="" long="" />
@@ -845,7 +845,7 @@ Hints:
 			dataref_to_modify_when_fired="sim/weapons/total_weapon_mass_now[1]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_crew_off" type="rad" enabled="yes" >
-			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_2" />
+			<conditions plane_on_ground="yes" cond_script="HMG_winch.rotor_stopped_2" />
 			<loc_and_elev_data>
 				<radius length_mt="80" />
 				<point lat="" long="" />

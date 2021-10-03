@@ -339,7 +339,7 @@ Hints:
 			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0,rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_crew_off" type="rad" enabled="yes" >
-			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_1" />
+			<conditions plane_on_ground="yes" cond_script="HMG_winch.rotor_stopped_1" />
 			<loc_and_elev_data>
 				<radius length_mt="80" />
 				<point lat="" long="" />
@@ -429,7 +429,7 @@ Hints:
 			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_crew_off" type="rad" enabled="yes" >
-			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_2" />
+			<conditions plane_on_ground="yes" cond_script="HMG_winch.rotor_stopped_2" />
 			<loc_and_elev_data>
 				<radius length_mt="80" />
 				<point lat="" long="" />
