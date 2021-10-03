@@ -25,46 +25,6 @@ Hints for patient dropoff:
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
 		</medevac_hover_ski_osm>
-		<medevac_hover_ski_osm min_valid_flight_legs="3" list="medevac_hover_ski_osm_set" plane_type="helos">
-Skiing accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
-
-Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints for winch extraction:
-- Hover within 20m radius and below 150ft over target
-- Crew will operate doors and winch boom autonomously when within target range.
-- Lower, raise or stop winch when instructed.
-- Observe status messages during all operations and follow instructions.
-- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
-- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
-
-Hints for patient dropoff:
-- Land on the helipad designated via GPS.
-- Shut down engines
-- Observe status messages and follow instructions.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hover_ski_osm>
-		<medevac_hover_hiker_osm min_valid_flight_legs="3" list="medevac_hover_hiker_osm_set" plane_type="helos">
-Hiking accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
-
-Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints for winch extraction:
-- Hover within 20m radius and below 150ft over target
-- Crew will operate doors and winch boom autonomously when within target range.
-- Lower, raise or stop winch when instructed.
-- Observe status messages during all operations and follow instructions.
-- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
-- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
-
-Hints for patient dropoff:
-- Land on the helipad designated via GPS.
-- Shut down engines
-- Observe status messages and follow instructions.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hover_hiker_osm>
 		<medevac_hover_hiker_osm min_valid_flight_legs="3" list="medevac_hover_hiker_osm_set" plane_type="helos">
 Hiking accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
 
@@ -914,7 +874,7 @@ Hints:
 		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSGS"/>
 		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSGS"/>
 		<point lat="46.01356" long="7.48465" template="land" radius_mt="80" loc_desc="Helipad, Arolla / LSOA"/>
-		<point lat="46.28423" long="7.46581" template="land" radius_mt="80" loc_desc="Helipad, Chermignon / LSVI"/>
+		<point lat="46.28417" long="7.46572" template="land" radius_mt="80" loc_desc="Helipad, Chermignon / LSVI"/>
 	</loc_hospitals_pickup>
 
 	<loc_hospitals_dropoff>
