@@ -19,7 +19,7 @@
                     <Folder name="briefer">
                         <File name="Custom Scenery\missionx\random\briefer\random.xml" />
                     </Folder>
-                    <File name="Custom Scenery\missionx\random\HMS_winch.bas" />
+                    <File name="Custom Scenery\missionx\random\HMG_winch.bas" />
                 </Folder>
             </Folder>
         </Folder>
