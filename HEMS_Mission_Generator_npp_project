@@ -16,7 +16,7 @@
         <Folder name="Custom Scenery">
             <Folder name="missionx">
                 <Folder name="random">
-                    <File name="Custom Scenery\missionx\random\winch.bas" />
+                    <File name="Custom Scenery\missionx\random\HMG_winch.bas" />
                     <Folder name="briefer">
                         <File name="Custom Scenery\missionx\random\briefer\random.xml" />
                     </Folder>
@@ -30,19 +30,19 @@
                     <File name="Resources\plugins\HSL\Stretcher.ini" />
                 </Folder>
                 <Folder name="FlyWithLua">
-                    <File name="Resources\plugins\FlyWithLua\Scripts\Hoist.lua" />
+                    <File name="Resources\plugins\FlyWithLua\Scripts\HMG_hoist.lua" />
                     <Folder name="modules">
                         <File name="Resources\plugins\FlyWithLua\Modules\tween.lua" />
                     </Folder>
                 </Folder>
                 <Folder name="missionx">
                     <Folder name="templates">
-                        <File name="Resources\plugins\missionx\templates\AirGlaciers_Sion_EC135.xml" />
-                        <File name="Resources\plugins\missionx\templates\AirZermatt_Zermatt_EC135.xml" />
-                        <File name="Resources\plugins\missionx\templates\Rega1_H145.xml" />
-                        <File name="Resources\plugins\missionx\templates\Rega5_EC135.xml" />
-                        <File name="Resources\plugins\missionx\templates\Rega5_H145.xml" />
-                        <File name="Resources\plugins\missionx\templates\Lions1_EC135.xml" />
+                        <File name="Resources\plugins\missionx\templates\HMG_AirGlaciers_Sion_EC135.xml" />
+                        <File name="Resources\plugins\missionx\templates\HMG_AirZermatt_Zermatt_EC135.xml" />
+                        <File name="Resources\plugins\missionx\templates\HMG_Rega1_H145.xml" />
+                        <File name="Resources\plugins\missionx\templates\HMG_Rega5_EC135.xml" />
+                        <File name="Resources\plugins\missionx\templates\HMG_Rega5_H145.xml" />
+                        <File name="Resources\plugins\missionx\templates\HMG_Lions1_EC135.xml" />
                     </Folder>
                 </Folder>
             </Folder>

@@ -1,22 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEMPLATE version="301" plane_type="helos">
-	<!-- Random mission template for Medevac Helicopter "Lions 1" based in Birrfeld Airpost LSZF
+	<!-- Random mission template for Medevac Helicopter "Air-Glaciers" based at Sion Heliport LSGS
 	     using the MissionX plugin by snagar
 		 Version 1.0
 	-->
 	<content>
-		<medevac_road_osm min_valid_flight_legs="3" list="medevac_road_osm_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
+		<medevac_hover_ski_osm min_valid_flight_legs="3" list="medevac_hover_ski_osm_set" plane_type="helos">
+Skiing accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
 
-Details on the target location will be provided at mission start. Usage of a helicopter is mandatory.
+Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
 
-Hints:
-- Land within a radius of 80m around the designated accident location.
+Hints for winch extraction:
+- Hover within 20m radius and below 150ft over target
+- Crew will operate doors and winch boom autonomously when within target range.
+- Lower, raise or stop winch when instructed.
+- Observe status messages during all operations and follow instructions.
+- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
+- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
+
+Hints for patient dropoff:
+- Land on the helipad designated via GPS.
 - Shut down engines
-- Observe status messages and follow instructions if requested.
+- Observe status messages and follow instructions.
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
-		</medevac_road_osm>
+		</medevac_hover_ski_osm>
+		<medevac_hover_ski_osm min_valid_flight_legs="3" list="medevac_hover_ski_osm_set" plane_type="helos">
+Skiing accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+
+Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints for winch extraction:
+- Hover within 20m radius and below 150ft over target
+- Crew will operate doors and winch boom autonomously when within target range.
+- Lower, raise or stop winch when instructed.
+- Observe status messages during all operations and follow instructions.
+- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
+- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
+
+Hints for patient dropoff:
+- Land on the helipad designated via GPS.
+- Shut down engines
+- Observe status messages and follow instructions.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hover_ski_osm>
+		<medevac_hover_hiker_osm min_valid_flight_legs="3" list="medevac_hover_hiker_osm_set" plane_type="helos">
+Hiking accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+
+Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints for winch extraction:
+- Hover within 20m radius and below 150ft over target
+- Crew will operate doors and winch boom autonomously when within target range.
+- Lower, raise or stop winch when instructed.
+- Observe status messages during all operations and follow instructions.
+- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
+- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
+
+Hints for patient dropoff:
+- Land on the helipad designated via GPS.
+- Shut down engines
+- Observe status messages and follow instructions.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hover_hiker_osm>
+		<medevac_hover_hiker_osm min_valid_flight_legs="3" list="medevac_hover_hiker_osm_set" plane_type="helos">
+Hiking accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+
+Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints for winch extraction:
+- Hover within 20m radius and below 150ft over target
+- Crew will operate doors and winch boom autonomously when within target range.
+- Lower, raise or stop winch when instructed.
+- Observe status messages during all operations and follow instructions.
+- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
+- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
+
+Hints for patient dropoff:
+- Land on the helipad designated via GPS.
+- Shut down engines
+- Observe status messages and follow instructions.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hover_hiker_osm>
+		<medevac_hover_hiker_osm min_valid_flight_legs="3" list="medevac_hover_hiker_osm_set" plane_type="helos">
+Hiking accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
+
+Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
+
+Hints for winch extraction:
+- Hover within 20m radius and below 150ft over target
+- Crew will operate doors and winch boom autonomously when within target range.
+- Lower, raise or stop winch when instructed.
+- Observe status messages during all operations and follow instructions.
+- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
+- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
+
+Hints for patient dropoff:
+- Land on the helipad designated via GPS.
+- Shut down engines
+- Observe status messages and follow instructions.
+- Wait for signal to take off.
+- Start engines and proceed to next GPS waypoint.
+		</medevac_hover_hiker_osm>
 		<medevac_road_osm min_valid_flight_legs="3" list="medevac_road_osm_set" plane_type="helos">
 In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
 
@@ -58,7 +146,7 @@ Hints:
 - Start engines and proceed to next GPS waypoint.
 		</medevac_pitch_osm>
 		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient transfer between two hospitals designated on your GPS.
+In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
 
 Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
 
@@ -69,23 +157,11 @@ Hints:
 - Wait for signal to take off.
 - Start engines and proceed to next GPS waypoint.
 		</medevac_hospital>
-		<medevac_hospital_germany min_valid_flight_legs="3" list="medevac_hospital_germany_set" plane_type="helos">
-In this mission you will provide cross-border HEMS assistance performing a patient transfer between two hospitals designated on your GPS.
-
-Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land on the designated hospital helipad.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hospital_germany>
 	</content>
 
 	<mission_info 
-		mission_image_file_name="../../../../Resources/plugins/missionx/Lions1.png" 
-		template_image_file_name="Lions1.png" 
+		mission_image_file_name="../../../../Resources/plugins/missionx/HMG_AirGlaciers-Sion.png" 
+		template_image_file_name="HMG_AirGlaciers-Sion.png" 
 		written_by="Daikan" 
 		plane_desc="Helicopter" 
 		estimate_time="~45 Minutes." 
@@ -95,9 +171,9 @@ Hints:
 		scenery_settings="RescueX, R2, OpenSceneryX, MisterX, 3D People, CDB" 
 		short_desc="Hello Pilot,
 		
-		In this mission you will be assigned a MEDEVAC task that may consist of an emergency extraction from an accident scene or a hospital transfer. 
+		In this mission you will be assigned a MEDEVAC task that may consist of an emergency extraction from an accident scene or hospital - either by winch or by landing. 
 		
-		Homebase: LSZF, LIONS1 heliport (lat: 47.44429142, lon: 8.23366269) 
+		Homebase: LSGS, Sion, pad #6 (lat=46.22168 long=7.34633) 
 		Aircraft: Rotorsim EC135 V5
 		
 		Please make sure your aircraft is parked and ready before starting the mission. 
@@ -115,7 +191,7 @@ Hints:
 	<datarefs_start_cold_and_dark>rotorsim/ec135/crew[0]:1,rotorsim/ec135/crew[1]:1,rotorsim/ec135/crew[2]:0,rotorsim/ec135/crew[3]:1,rotorsim/ec135/crew[4]:0,sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0</datarefs_start_cold_and_dark>
 
 	<medevac_hospital_set is_set_of_flight_legs="yes" >
-		<!-- Pickup hospital -->
+		<!-- Hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Primary mission: Patient transfer. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
@@ -132,7 +208,7 @@ Hints:
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Next waypoint: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
-			<expected_location location_type="xy" location_value="tag=loc_hospitals_dropoff|nm_between=10-30" override_trigger_name="trig_land_goal_2_target_1" />
+			<expected_location location_type="xy" location_value="tag=loc_hospitals_dropoff|nm_between=5-60" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -152,51 +228,89 @@ Hints:
 		</leg>
 	</medevac_hospital_set>
 
-	<medevac_hospital_germany_set is_set_of_flight_legs="yes" >
-		<!-- Pickup hospital -->
-		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
-			<desc>Primary mission: Patient transfer. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
+	<medevac_hover_ski_osm_set is_set_of_flight_legs="yes" >
+		<!-- Ski accident -->
+		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Skiing accident. Location: {navaid_loc_desc}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
-			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
-			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup_germany" override_trigger_name="trig_land_goal_1_target_1"  />
-			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
-			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
-			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
-			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="3000">Look out for helipad and prepare for landing.</dynamic_message>
-			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+			<expected_location location_type="webosm" location_value="tag=webosm_piste_filter|nm_between=2-13|keyname=piste:name|keydesc=piste:name|webosm_optimize=n" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
+			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="3000">Establish visual on target area and reduce speed.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="1000">Crew standby for hover. Wind check.</dynamic_message>
 		</leg>
 
 		<!-- Hospital -->
-		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Next waypoint: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
-			<expected_location location_type="xy" location_value="tag=loc_hospitals_dropoff_germany|nm_between=10-30" override_trigger_name="trig_land_goal_2_target_1" />
-			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
-			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
-			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
-			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
-			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_hover_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
 		</leg>
 
 		<!-- Homebase -->
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
-			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
-			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
-			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
-			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
-			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
 		</leg>
-	</medevac_hospital_germany_set>
+	</medevac_hover_ski_osm_set>
+
+	<medevac_hover_hiker_osm_set is_set_of_flight_legs="yes" >
+		<!-- Hiking accident -->
+		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Hiking accident. Location: {navaid_loc_desc}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="webosm" location_value="tag=webosm_trail_filter|nm_between=2-13|keyname=name|keydesc=name|webosm_optimize=y" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
+			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="3000">Establish visual on target area and reduce speed.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="1000">Crew standby for hover. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_hover_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_hover_hiker_osm_set>
 
 	<medevac_road_osm_set is_set_of_flight_legs="yes" >
-		<!-- Accident -->
+		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
-			<expected_location location_type="webosm" location_value="tag=webosm_road_filter|nm_between=7-25|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" />
+			<expected_location location_type="webosm" location_value="tag=webosm_road_filter|nm_between=2-13|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" max_slope_to_land="12" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -230,11 +344,12 @@ Hints:
 	</medevac_road_osm_set>
 
 	<medevac_parking_osm_set is_set_of_flight_legs="yes" >
-		<!-- Accident -->
+		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
-			<expected_location location_type="webosm" location_value="tag=webosm_parking_filter|nm_between=7-25|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" />
+			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
+			<expected_location location_type="webosm" location_value="tag=webosm_parking_filter|nm_between=2-13|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3"/>
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -273,7 +388,7 @@ Hints:
 			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
-			<expected_location location_type="webosm" location_value="tag=webosm_pitches_filter|nm_between=7-25|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3"/>
+			<expected_location location_type="webosm" location_value="tag=webosm_pitches_filter|nm_between=2-13|keyname=name|keydesc=name|webosm_optimize=n" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -306,17 +421,257 @@ Hints:
 		</leg>
 	</medevac_pitch_osm_set>
 
+	<webosm_piste_filter>
+		<filter>(way['piste:type'](area:3601686699)({{bbox}});relation['piste:type'](area:3601686699)({{bbox}}););out;</filter>
+	</webosm_piste_filter>
+
+	<webosm_trail_filter>
+		<filter>(way[highway=track](area:3601686699)({{bbox}});way[highway=path](area:3601686699)({{bbox}});relation[highway=track](area:3601686699)({{bbox}});relation[highway=path](area:3601686699)({{bbox}}););out;</filter>
+	</webosm_trail_filter>
+
 	<webosm_road_filter>
-		<filter>(way[highway=primary]({{bbox}});way[highway=secondary]({{bbox}});way[highway=tertiary]({{bbox}});way[highway=residential]({{bbox}});way[highway=service]({{bbox}});way[highway=living_street]({{bbox}}););out;</filter>
+		<filter>(way[highway=primary](area:3601686699)({{bbox}});way[highway=secondary](area:3601686699)({{bbox}});way[highway=tertiary](area:3601686699)({{bbox}});way[highway=residential](area:3601686699)({{bbox}});way[highway=service](area:3601686699)({{bbox}});way[highway=living_street](area:3601686699)({{bbox}}););out;</filter>
 	</webosm_road_filter>
 
 	<webosm_parking_filter>
-		<filter>way["parking"="surface"][!"building"](if:is_closed()%26%26length()>100)({{bbox}});out+center;</filter>
+		<filter>(way["parking"="surface"][!"building"](if:is_closed()%26%26length()>100)(area:3601686699)({{bbox}}););out+center;</filter>
 	</webosm_parking_filter>
 
 	<webosm_pitches_filter>
-		<filter>way["leisure"="pitch"][!"building"](if:is_closed()%26%26length()>100)({{bbox}});way._["sport"!="tennis"]({{bbox}});way._["sport"!~"shooting.*"]({{bbox}});out+center;</filter>
+		<filter>(way["leisure"="pitch"][!"building"](if:is_closed()%26%26length()>100)(area:3601686699)({{bbox}}););way._["sport"!="tennis"]({{bbox}});way._["sport"!~"shooting.*"]({{bbox}});out+center;</filter>
 	</webosm_pitches_filter>
+
+	<!-- Patient extraction: Special leg directives -->
+	<leg_1_tasks_winch_ops>
+		<task name="task_1_operator_boarding" depends_on_task="" base_on_trigger="trig_1_operator_boarding" base_on_script="" eval_success_for_n_sec="1" mandatory="true" force_evaluation="no" />
+		<task name="task_1_open_door" depends_on_task="task_1_operator_boarding" base_on_trigger="trig_1_open_door" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_1_deploy_crew" depends_on_task="task_1_open_door" base_on_trigger="trig_1_deploy_crew" base_on_script="" eval_success_for_n_sec="10" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+		<task name="task_1_start_winch_down" depends_on_task="task_1_deploy_crew" base_on_trigger="trig_1_start_winch_down" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_1_hold_position" depends_on_task="task_1_deploy_crew" base_on_trigger="trig_1_hold_position" base_on_script="" eval_success_for_n_sec="3" cumulative_timer_flag="no" mandatory="true" force_evaluation="yes" />
+		<task name="task_1_stop_winch" depends_on_task="task_1_start_winch_down" base_on_trigger="trig_1_stop_winch" base_on_script="" eval_success_for_n_sec="5" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+		<task name="task_1_pickup_patient" depends_on_task="task_1_stop_winch" base_on_trigger="trig_1_pickup_patient" base_on_script="" eval_success_for_n_sec="20" mandatory="true" force_evaluation="no" />
+		<task name="task_1_winch_up" depends_on_task="task_1_pickup_patient" base_on_trigger="trig_1_winch_up" base_on_script="" eval_success_for_n_sec="15" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+		<task name="task_1_onboard_patient" depends_on_task="task_1_winch_up" base_on_trigger="trig_1_onboard_patient" base_on_script="" eval_success_for_n_sec="10" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+		<task name="task_1_onboard_crew" depends_on_task="task_1_onboard_patient" base_on_trigger="trig_1_onboard_crew" base_on_script="" eval_success_for_n_sec="5" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+		<task name="task_1_close_door" depends_on_task="task_1_onboard_crew" base_on_trigger="trig_1_close_door" base_on_script="" eval_success_for_n_sec="5" cumulative_timer_flag="yes" mandatory="true" force_evaluation="no" />
+	</leg_1_tasks_winch_ops>
+
+	<leg_1_triggers_winch_ops>
+		<trigger name="trig_1_operator_boarding" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="10000000" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="" 
+			         message_name_when_left=""
+		             commands_to_exec_when_fired="HSL/Load_Release" 
+					 commands_to_exec_when_left=""
+		             dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_open_door" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="100" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_open_door" 
+			         message_name_when_left="msg_1_leaving_position"
+		             commands_to_exec_when_fired="sim/flight_controls/door_open_4" 
+					 commands_to_exec_when_left=""
+		             dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_deploy_crew" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="50" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_deploy_crew" 
+					 message_name_when_left="msg_1_leaving_position"
+					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_connect" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" 
+					 dataref_to_modify_when_left=""
+			/>
+		</trigger>
+		<trigger name="trig_1_start_winch_down" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="30" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_start_winch_down" 
+					 message_name_when_left="msg_1_leaving_position"
+					 commands_to_exec_when_left=""
+					 commands_to_exec_when_fired="ec135/hoist/out:5"
+					 dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_hold_position" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="30" />
+				<point lat="" long="" />
+				<elevation_volume elev_lower_upper_ft= "---150" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_hold_position" 
+					 message_name_when_left="msg_1_leaving_position"
+					 commands_to_exec_when_fired="" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_stop_winch" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="winch.check_down" />
+			<loc_and_elev_data>
+				<radius length_mt="30" />
+				<point lat="" long="" />
+				<elevation_volume elev_lower_upper_ft= "---150" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_stop_winch"
+					 message_name_when_left="msg_1_leaving_position"
+					 commands_to_exec_when_fired="" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_pickup_patient" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="30" />
+				<point lat="" long="" />
+				<elevation_volume elev_lower_upper_ft= "---150" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_pickup_patient" 
+					 message_name_when_left="msg_1_leaving_position"
+					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_add_patient" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_winch_up" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="500" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_winch_up" 
+					 message_name_when_left=""
+					 commands_to_exec_when_fired=""
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="" dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_onboard_patient" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="winch.check_up" />
+			<loc_and_elev_data>
+				<radius length_mt="500" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_onboard_patient" 
+			         message_name_when_left=""
+		             commands_to_exec_when_fired="ec135/hoist/in:5,FlyWithLua/hoist/winch_remove_patient" 
+					 commands_to_exec_when_left=""
+		             dataref_to_modify_when_fired="rotorsim/ec135/crew[4]:1" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_onboard_crew" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="500" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_onboard_crew" 
+					 message_name_when_left=""
+					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_release" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+		<trigger name="trig_1_close_door" type="rad" enabled="yes" >
+			<conditions plane_on_ground="no" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="500" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_1_close_door" 
+					 message_name_when_left=""
+					 commands_to_exec_when_fired="sim/flight_controls/door_close_4" 
+					 commands_to_exec_when_left=""
+					 dataref_to_modify_when_fired="" 
+					 dataref_to_modify_when_left=""  
+			/>
+		</trigger>
+	</leg_1_triggers_winch_ops>
+
+	<leg_1_msgs_winch_ops>
+		<message name="msg_1_open_door" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Cabin door opened - standby for deploying crew.]]>
+			</mix>
+		</message>
+		<message name="msg_1_deploy_crew" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Crew deployed - standby for lowering winch.]]>
+			</mix>
+		</message>
+		<message name="msg_1_start_winch_down" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Start lowering winch - hold position and stay below 150 feet above ground.]]>
+			</mix>
+		</message>
+		<message name="msg_1_hold_position" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Hold position!]]>
+			</mix>
+		</message>
+		<message name="msg_1_leaving_position" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Get back into position!]]>
+			</mix>
+		</message>
+		<message name="msg_1_stop_winch" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Winch extended - standby for patient pickup. Hold position.]]>
+			</mix>
+		</message>
+		<message name="msg_1_pickup_patient" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Patient secured - standby for winch retrieval.]]>
+			</mix>
+		</message>
+		<message name="msg_1_winch_up" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Start raising winch carefully - standby for recovering patient.]]>
+			</mix>
+		</message>
+		<message name="msg_1_onboard_patient" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Patient recovered - standby for recovering crew.]]>
+			</mix>
+		</message>
+		<message name="msg_1_onboard_crew" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[All aboard - standby for closing door.]]>
+			</mix>
+		</message>
+		<message name="msg_1_close_door" is_mxpad="yes" >
+			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
+				<![CDATA[Door closed.]]>
+			</mix>
+		</message>
+	</leg_1_msgs_winch_ops>
 
 	<!-- Patient boarding: Special leg directives -->
 	<leg_1_tasks_patient_boarding>
@@ -336,7 +691,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_doors_open" message_name_when_left=""
 			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_open_5" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0,rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_crew_off" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_1" />
@@ -366,7 +721,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_crew_on" message_name_when_left=""
 			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_close_5" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1,rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_doors_closed" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -408,6 +763,15 @@ Hints:
 		</message>
 	</leg_1_msgs_patient_boarding>
 
+	<!-- Patient dropoff for winch ops: Special leg directives -->
+	<leg_2_tasks_dropoff_winch_op>
+		<task name="task_2_doors_open" depends_on_task="" base_on_trigger="trig_2_doors_open" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="yes" />
+		<task name="task_2_crew_off" depends_on_task="task_2_doors_open" base_on_trigger="trig_2_crew_off_winch_op" base_on_script="" eval_success_for_n_sec="10" mandatory="true" force_evaluation="no" />
+		<task name="task_2_patient_off" depends_on_task="task_2_crew_off" base_on_trigger="trig_2_patient_off" base_on_script="" eval_success_for_n_sec="60" mandatory="true" force_evaluation="no" />
+		<task name="task_2_crew_on" depends_on_task="task_2_patient_off" base_on_trigger="trig_2_crew_on_winch_op" base_on_script="" eval_success_for_n_sec="180" mandatory="true" force_evaluation="no" />
+		<task name="task_2_doors_closed" depends_on_task="task_2_crew_on" base_on_trigger="trig_2_doors_closed" base_on_script="" eval_success_for_n_sec="120" mandatory="true" force_evaluation="no" />
+	</leg_2_tasks_dropoff_winch_op>
+
 	<!-- Patient dropoff: Special leg directives -->
 	<leg_2_tasks_dropoff>
 		<task name="task_2_doors_open" depends_on_task="" base_on_trigger="trig_2_doors_open" base_on_script="" eval_success_for_n_sec="5" mandatory="true" force_evaluation="yes" />
@@ -428,6 +792,16 @@ Hints:
 			commands_to_exec_when_fired="sim/flight_controls/door_open_2" commands_to_exec_when_left=""
 			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
 		</trigger>
+		<trigger name="trig_2_crew_off_winch_op" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_2_winch_op" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_2_crew_off" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_close_2,sim/flight_controls/door_open_5,sim/flight_controls/door_open_6" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0,rotorsim/ec135/crew[3]:0" dataref_to_modify_when_left=""  />
+		</trigger>
 		<trigger name="trig_2_crew_off" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="winch.rotor_stopped_2" />
 			<loc_and_elev_data>
@@ -436,7 +810,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_crew_off" message_name_when_left=""
 			commands_to_exec_when_fired="sim/flight_controls/door_close_2,sim/flight_controls/door_open_5,sim/flight_controls/door_open_6" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:0" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_patient_off" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -448,6 +822,16 @@ Hints:
 			commands_to_exec_when_fired="sim/flight_controls/door_close_6" commands_to_exec_when_left=""
 			dataref_to_modify_when_fired="rotorsim/ec135/crew[4]:0" dataref_to_modify_when_left=""  />
 		</trigger>
+		<trigger name="trig_2_crew_on_winch_op" type="rad" enabled="yes" >
+			<conditions plane_on_ground="yes" cond_script="" />
+			<loc_and_elev_data>
+				<radius length_mt="80" />
+				<point lat="" long="" />
+			</loc_and_elev_data>
+			<outcome message_name_when_fired="msg_2_crew_on" message_name_when_left=""
+			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_close_5" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1,rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
+		</trigger>
 		<trigger name="trig_2_crew_on" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
 			<loc_and_elev_data>
@@ -456,7 +840,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_crew_on" message_name_when_left=""
 			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_close_5" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_doors_closed" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -507,57 +891,38 @@ Hints:
 	</xpdata>
 	 
 	<embedded_scripts>
-		<file name="winch.bas"/>
+		<file name="HMG_winch.bas"/>
 		<shared_variables>
 			<var name="counter" type="number" init_val="0"/>
 		</shared_variables>
 	</embedded_scripts>
 
-	<loc_acc>
-	</loc_acc>
-
 	<loc_hospitals>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.36657" long="8.49748" template="land" radius_mt="80" loc_desc="Helipad, Zürich Triemli Stadtspital"/>
-		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
-		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
-		<point lat="47.38827" long="8.05890" template="land" radius_mt="80" loc_desc="Helipad, Aarau Kantonsspital"/>	
-		<point lat="47.52183" long="8.53326" template="land" radius_mt="80" loc_desc="Helipad, Bülach Spital"/>
-		<point lat="47.45568" long="8.27856" template="land" radius_mt="80" loc_desc="Helipad, Baden Kantonsspital"/>	
-		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
-		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
+		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
+		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSGS"/>
+		<point lat="46.52458" long="6.64096" template="land" radius_mt="80" loc_desc="Helipad, Lausanne CHUV / LSHL"/>
 	</loc_hospitals>
 
 	<loc_hospitals_pickup>
-		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
-		<point lat="47.38827" long="8.05890" template="land" radius_mt="80" loc_desc="Helipad, Aarau Kantonsspital"/>	
-		<point lat="47.52183" long="8.53326" template="land" radius_mt="80" loc_desc="Helipad, Bülach Spital"/>
-		<point lat="47.45568" long="8.27856" template="land" radius_mt="80" loc_desc="Helipad, Baden Kantonsspital"/>	
+		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
+		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
+		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
+		<point lat="46.07837" long="7.14578" template="land" radius_mt="80" loc_desc="Helipad, Sembrancher / LSUS"/>
+		<point lat="46.07837" long="7.14578" template="land" radius_mt="80" loc_desc="Helipad, Sembrancher / LSUS"/>
+		<point lat="46.07837" long="7.14578" template="land" radius_mt="80" loc_desc="Helipad, Sembrancher / LSUS"/>
+		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSGS"/>
+		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSGS"/>
+		<point lat="46.01356" long="7.48465" template="land" radius_mt="80" loc_desc="Helipad, Arolla / LSOA"/>
+		<point lat="46.28423" long="7.46581" template="land" radius_mt="80" loc_desc="Helipad, Chermignon / LSVI"/>
 	</loc_hospitals_pickup>
 
 	<loc_hospitals_dropoff>
-		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
-		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
-		<point lat="47.38827" long="8.05890" template="land" radius_mt="80" loc_desc="Helipad, Aarau Kantonsspital"/>	
-		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
-		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
-		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
+		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital, Sion / LSGS"/>
+		<point lat="46.52458" long="6.64096" template="land" radius_mt="80" loc_desc="Helipad, Lausanne CHUV / LSHL"/>
 	</loc_hospitals_dropoff>
 
-	<loc_hospitals_pickup_germany>
-		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
-		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
-		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
-	</loc_hospitals_pickup_germany>
-
-	<loc_hospitals_dropoff_germany>
-		<point lat="48.00747" long="7.83925" template="land" radius_mt="80" loc_desc="Helipad, Freiburg Uniklinikum"/>	
-		<point lat="48.06636" long="8.50062" template="land" radius_mt="80" loc_desc="Helipad, Villingen-Schwenningen LRZ Christoph 11"/>	
-	</loc_hospitals_dropoff_germany>
-
 	<loc_homebase>
-		<point lat="47.444291" long="8.233662" template="land" radius_mt="80" loc_desc="LSZF LIONS1 Base Birrfeld"/>
+		<point lat="46.22168" long="7.34633" template="land" radius_mt="80" loc_desc="LSGS Air-Glaciers Base, Sion"/>
 	</loc_homebase>
 
 	<object_templates>

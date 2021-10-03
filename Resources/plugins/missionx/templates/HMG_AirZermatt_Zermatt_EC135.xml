@@ -160,8 +160,8 @@ Hints:
 	</content>
 
 	<mission_info 
-		mission_image_file_name="../../../../Resources/plugins/missionx/AirZermatt-Zermatt.png" 
-		template_image_file_name="AirZermatt-Zermatt.png" 
+		mission_image_file_name="../../../../Resources/plugins/missionx/HMG_AirZermatt-Zermatt.png" 
+		template_image_file_name="HMG_AirZermatt-Zermatt.png" 
 		written_by="Daikan" 
 		plane_desc="Helicopter" 
 		estimate_time="~45 Minutes." 
@@ -886,7 +886,7 @@ Hints:
 	</xpdata>
 	 
 	<embedded_scripts>
-		<file name="winch.bas"/>
+		<file name="HMG_winch.bas"/>
 		<shared_variables>
 			<var name="counter" type="number" init_val="0"/>
 		</shared_variables>

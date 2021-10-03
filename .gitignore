@@ -1,7 +1,7 @@
 Resources/plugins/FlyWithLua/*
 !Resources/plugins/FlyWithLua/Scripts
 Resources/plugins/FlyWithLua/Scripts/*
-!Resources/plugins/FlyWithLua/Scripts/Hoist.lua
+!Resources/plugins/FlyWithLua/Scripts/HMG_hoist.lua
 !Resources/plugins/FlyWithLua/Modules
 Resources/plugins/FlyWithLua/Modules/*
 !Resources/plugins/FlyWithLua/Modules/tween.lua
@@ -10,15 +10,9 @@ Resources/plugins/HSL/*
 Resources/plugins/missionx/*
 !Resources/plugins/missionx/templates
 Resources/plugins/missionx/templates/*
-!Resources/plugins/missionx/templates/AirGlaciers*
-!Resources/plugins/missionx/templates/AirZermatt*
-!Resources/plugins/missionx/templates/Lions*
-!Resources/plugins/missionx/templates/Rega*
-Resources/plugins/missionx/templates/AirZermatt*test*.xml
-Resources/plugins/missionx/templates/AirGlaciers*test*.xml
-Resources/plugins/missionx/templates/Lions*test*.xml
-Resources/plugins/missionx/templates/Rega*test*.xml
-Resources/plugins/missionx/templates/*raw.jpg
+!Resources/plugins/missionx/templates/HMG_*
+Resources/plugins/missionx/templates/HMG_*test*.xml
+Resources/plugins/missionx/templates/HMG_*raw.jpg
 Custom Scenery/*
 !Custom Scenery/missionx
 !Custom Scenery/heliport_lib
@@ -26,7 +20,7 @@ Custom Scenery/*
 Custom Scenery/missionx/*
 !Custom Scenery/missionx/random
 Custom Scenery/missionx/random/*
-!Custom Scenery/missionx/random/Winch.bas
+!Custom Scenery/missionx/random/HMG_winch.bas
 aircraft/*
 !aircraft/_slingload_objects
 aircraft/_slingload_objects/*
