@@ -27,7 +27,10 @@ In the current state it provides dedicated mission templates for HEMS missions o
 - LSZE Zermatt (operated by [Air Zermatt](https://www.air-zermatt.ch/))
 - LSGS Sion (operated by [Air-Glaciers](https://www.air-glaciers.ch/))
 
-#### Currently supported helicopter models
+#### Supported helicopter models
+Due to the scripted interaction with the aircraft (animations, weight distribution etc.) custom integration for the actual aircraft model is required. This is the reason why separate mission templates are provided per aircraft type.
+
+Currently the following helicopter models are supported:
 - [EC 135 v5 EMS](https://rotorsim.de/download-ec-135-v5/download/5-ec-135/14-ec-135-v5-ems) by Rotorsim
 - [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) by VLC-Entwicklung
 
