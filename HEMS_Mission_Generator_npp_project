@@ -39,6 +39,7 @@
                     <Folder name="templates">
                         <File name="Resources\plugins\missionx\templates\HMG_AirGlaciers_Sion_EC135.xml" />
                         <File name="Resources\plugins\missionx\templates\HMG_AirZermatt_Zermatt_EC135.xml" />
+                        <File name="Resources\plugins\missionx\templates\HMG_Rega1_EC135.xml" />
                         <File name="Resources\plugins\missionx\templates\HMG_Rega1_H145.xml" />
                         <File name="Resources\plugins\missionx\templates\HMG_Rega5_EC135.xml" />
                         <File name="Resources\plugins\missionx\templates\HMG_Rega5_H145.xml" />
