@@ -2800,379 +2800,373 @@ Hints:
 		</medevac_slope>
 	</object_sets>
 
-	<!-- the name attribute is not important -->
-	<blank>
-		<obj3d  name="blank" file_name="" />
-		<!-- disable 3D Object -->
-	</blank>
-
 	<ambulance_select>
 <!--
-		<obj3d  name="ambulance1" file_name="../../../RescueX_Lib/cars/RTW_01.obj" />
-		<obj3d  name="ambulance2" file_name="../../../RescueX_Lib/cars/RTW_02.obj" />
-		<obj3d  name="ambulance3" file_name="../../../RescueX_Lib/cars/RTW_03.obj" />
-		<obj3d  name="ambulance4" file_name="../../../RescueX_Lib/cars/RTW_04.obj" />
+		<obj3d  name="ambulance1" is_virtual_b="yes" file_name="RescueX/cars/RTW_01.obj" />
+		<obj3d  name="ambulance2" is_virtual_b="yes" file_name="RescueX/cars/RTW_02.obj" />
+		<obj3d  name="ambulance3" is_virtual_b="yes" file_name="RescueX/cars/RTW_03.obj" />
+		<obj3d  name="ambulance4" is_virtual_b="yes" file_name="RescueX/cars/RTW_04.obj" />
 -->
 		<obj3d  name="ambulance5" file_name="car_ambulance.obj" />
 		<obj3d  name="ambulance6" file_name="USAmbulance.obj" />
-		<obj3d  name="ambulance7" file_name="../../../CDB-Library/Airport/GSE/ambulance/car_ambulance1.obj" />
-		<obj3d  name="ambulance8" file_name="../../../CDB-Library/Airport/GSE/ambulance/car_ambulance2.obj" />
-		<obj3d  name="ambulance9" file_name="../../../CDB-Library/Airport/GSE/ambulance/car_ambulance3.obj" />
-		<obj3d  name="ambulance10" file_name="../../../pm_library/Ambulance.obj" />
+		<obj3d  name="ambulance7" is_virtual_b="yes" file_name="CDB-Library/Airport/GSE/ambulance/car_ambulance1.obj" />
+		<obj3d  name="ambulance8" is_virtual_b="yes" file_name="CDB-Library/Airport/GSE/ambulance/car_ambulance2.obj" />
+		<obj3d  name="ambulance9" is_virtual_b="yes" file_name="CDB-Library/Airport/GSE/ambulance/car_ambulance3.obj" />
+		<obj3d  name="ambulance10" is_virtual_b="yes" file_name="pm_library/UK_Ambulance.obj" />
 	</ambulance_select>
 
 	<police_car>
 <!--
-		<obj3d  name="police01" file_name="../../../RescueX_Lib/cars/Polizei_FuStw_01.obj" />
+		<obj3d  name="police01" is_virtual_b="yes" file_name="RescueX/cars/Polizei_FuStw_01.obj" />
 -->
-		<obj3d  name="police02" file_name="../../../RescueX_Lib/cars/Polizei_FuStw_01_lit.obj" />
-		<obj3d  name="police03" file_name="../../../RescueX_Lib/cars/Polizei_FuStw_01_lit_open.obj" />
-		<obj3d  name="police04" file_name="../../../RescueX_Lib/cars/FW_FF_Stuehlingen_RW1_open.obj" />
+		<obj3d  name="police02" is_virtual_b="yes" file_name="RescueX/cars/Polizei_FuStw_01_lit.obj" />
+		<obj3d  name="police03" is_virtual_b="yes" file_name="RescueX/cars/Polizei_FuStw_01_lit_open.obj" />
+		<obj3d  name="police04" is_virtual_b="yes" file_name="RescueX/cars/FW_FF_Stuehlingen_RW1_open.obj" />
 	</police_car>
 
 	<policeman>
-		<obj3d  name="person01" file_name="../../../3D_people_library/policeman_1.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/policeman_1_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/policeman_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/policeman3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/policeman4.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/policeman5.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/policeman6.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/policeman7.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/policeman8.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/policeman_motorcyclist.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/police.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/police_officer.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/sheriff.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/sheriff_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman_1.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman_1_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman4.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman5.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman6.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman7.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman8.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman_motorcyclist.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/police.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/police_officer.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/sheriff.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/sheriff_walking.obj" />
 	</policeman>
 
 	<crashed_car>
-		<obj3d  name="car01" file_name="../../../RescueX_Lib/cars/NEF_Passat_sb1099.obj" />
-		<obj3d  name="car02" file_name="../../../RescueX_Lib/cars/crashed_CLK.obj" />
-		<obj3d  name="car03" file_name="../../../RescueX_Lib/cars/crashed_CLK.obj" />
-		<obj3d  name="car04" file_name="../../../RescueX_Lib/cars/crashed_CLK.obj" />
+		<obj3d  name="car01" is_virtual_b="yes" file_name="RescueX/cars/NEF_Passat_sb1099.obj" />
+		<obj3d  name="car02" is_virtual_b="yes" file_name="RescueX/cars/Crashed_CLK.obj" />
+		<obj3d  name="car03" is_virtual_b="yes" file_name="RescueX/cars/Crashed_CLK.obj" />
+		<obj3d  name="car04" is_virtual_b="yes" file_name="RescueX/cars/Crashed_CLK.obj" />
 	</crashed_car>
 
 	<wheelchairs>
-		<obj3d  name="person01" file_name="../../../3D_people_library/wheelchair.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/wheelchair.obj" />
 	</wheelchairs>
 
 	<push_wheelchair>
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_push_wheelchair.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_push_wheelchair.obj" />
 	</push_wheelchair>
 
 	<cars>
-		<obj3d  name="car01" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_alto.obj"/>
-		<obj3d  name="car02" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_daihatsu_tanto.obj"/>
-		<obj3d  name="car03" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_Datsun_620-73.obj"/>
-		<obj3d  name="car04" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_datsunGO.obj"/>
-		<obj3d  name="car05" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_datsunGOPlus.obj"/>
-		<obj3d  name="car06" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_fordRangerWhite.obj"/>
-		<obj3d  name="car07" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_gmc_airport.obj"/>
-		<obj3d  name="car08" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_gmc_old.obj"/>
-		<obj3d  name="car09" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_KiaSuv.obj"/>
-		<obj3d  name="car10" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_LandRover107.obj"/>
-		<obj3d  name="car11" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_lexus.obj"/>
-		<obj3d  name="car12" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_mitshubishiTbox.obj"/>
-		<obj3d  name="car13" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_mitsubishi_pack.obj"/>
-		<obj3d  name="car14" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_nissanStanzaWG.obj"/>
-		<obj3d  name="car15" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_old_pickup.obj"/>
-		<obj3d  name="car16" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_Pajero.obj"/>
-		<obj3d  name="car17" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_peugeotrossa.obj"/>
-		<obj3d  name="car18" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_postTruck.obj"/>
-		<obj3d  name="car19" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_sinca.obj"/>
-		<obj3d  name="car20" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_subaru_wagon.obj"/>
-		<obj3d  name="car21" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_suzuki_cappuccino.obj"/>
-		<obj3d  name="car22" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_suzukiCarry.obj"/>
-		<obj3d  name="car23" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_SuzukiCarry_pickup.obj"/>
-		<obj3d  name="car24" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_SuzukiCarry2.obj"/>
-		<obj3d  name="car25" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_toyota_camry.obj"/>
-		<obj3d  name="car26" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_toyota_corolla.obj"/>
-		<obj3d  name="car27" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_toyota_corolla_old.obj"/>
-		<obj3d  name="car28" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_toyotaRed_old_pickup.obj"/>
-		<obj3d  name="car29" file_name="../../../RescueX_Lib/cars/CamiDeBellis/car_toyotaTacoma.obj"/>
-		<obj3d  name="car30" file_name="../../../RescueX_Lib/cars/CamiDeBellis/CDBambassador_carblack.obj"/>
-		<obj3d  name="car31" file_name="../../../RescueX_Lib/cars/CamiDeBellis/CDBcar_van.obj"/>
-		<obj3d  name="car32" file_name="../../../RescueX_Lib/cars/CamiDeBellis/CDBhummer.obj"/>
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/avia.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/bus_mhd.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/bus_2.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/DAF55.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/s105-red.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/s105-blue.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/s105-green.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/skoda_favorit_blue.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/skoda_favorit_red.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/skoda_favorit_white.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/skoda_favorit_yellow.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/T815.obj" />
+		<obj3d  name="car01" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_alto.obj"/>
+		<obj3d  name="car02" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_daihatsu_tanto.obj"/>
+		<obj3d  name="car03" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_Datsun_620-73.obj"/>
+		<obj3d  name="car04" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_datsunGO.obj"/>
+		<obj3d  name="car05" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_datsunGOPlus.obj"/>
+		<obj3d  name="car06" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_fordRangerWhite.obj"/>
+		<obj3d  name="car07" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_gmc_airport.obj"/>
+		<obj3d  name="car08" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_gmc_old.obj"/>
+		<obj3d  name="car09" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_KiaSuv.obj"/>
+		<obj3d  name="car10" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_LandRover107.obj"/>
+		<obj3d  name="car11" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_lexus.obj"/>
+		<obj3d  name="car12" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_mitshubishiTbox.obj"/>
+		<obj3d  name="car13" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_mitsubishi_pack.obj"/>
+		<obj3d  name="car14" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_nissanStanzaWG.obj"/>
+		<obj3d  name="car15" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_old_pickup.obj"/>
+		<obj3d  name="car16" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_Pajero.obj"/>
+		<obj3d  name="car17" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_peugeotrossa.obj"/>
+		<obj3d  name="car18" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_postTruck.obj"/>
+		<obj3d  name="car19" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_sinca.obj"/>
+		<obj3d  name="car20" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_subaru_wagon.obj"/>
+		<obj3d  name="car21" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_suzuki_cappuccino.obj"/>
+		<obj3d  name="car22" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_suzukiCarry.obj"/>
+		<obj3d  name="car23" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_SuzukiCarry_pickup.obj"/>
+		<obj3d  name="car24" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_SuzukiCarry2.obj"/>
+		<obj3d  name="car25" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_toyota_camry.obj"/>
+		<obj3d  name="car26" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_toyota_corolla.obj"/>
+		<obj3d  name="car27" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_toyota_corolla_old.obj"/>
+		<obj3d  name="car28" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_toyotaRed_old_pickup.obj"/>
+		<obj3d  name="car29" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_toyotaTacoma.obj"/>
+		<obj3d  name="car30" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/CDBambassador_carblack.obj"/>
+		<obj3d  name="car31" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/CDBcar_van.obj"/>
+		<obj3d  name="car32" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/CDBhummer.obj"/>
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/avia.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/bus_mhd.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/bus_2.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/DAF55.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/s105-red.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/s105-blue.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/s105-green.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/skoda_favorit_blue.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/skoda_favorit_red.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/skoda_favorit_white.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/skoda_favorit_yellow.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/T815.obj" />
 		<!-- truck -->
-		<obj3d  name="r2lib" file_name="../../../R2_Library/doprava/vozidla/z7745.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/z7745.obj" />
 		<!-- traktor -->
 	</cars>
 
 	<clutter>
-		<obj3d  name="sign01" file_name="../../../RescueX_Lib/objects/OBJ_Faltdreieck.obj"/>
-		<obj3d  name="sign02" file_name="../../../RescueX_Lib/objects/OBJ_Faltdreieck_Leuchte.obj"/>
-		<obj3d  name="sign03" file_name="../../../RescueX_Lib/objects/OBJ_Leuchte.obj"/>
+		<obj3d  name="sign01" is_virtual_b="yes" file_name="RescueX/objects/OBJ_Faltdreieck.obj"/>
+		<obj3d  name="sign02" is_virtual_b="yes" file_name="RescueX/objects/OBJ_Faltdreieck_Leuchte.obj"/>
+		<obj3d  name="sign03" is_virtual_b="yes" file_name="RescueX/objects/OBJ_Leuchte.obj"/>
 		<!-- obj3d  name="sign04_blank" file_name=""/ -->
-		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzel_cerveny.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzel_modry.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/oznaceni_letiste.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/oznaceni_letiste_dlouhe.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/sudy_CB_letiste.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/sudy_letiste.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzely_cervene.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/kuzely_modre.obj" />
-		<obj3d  name="r2lib" file_name="../../../R2_Library/airport/accessories/znaceni_letiste_prkna.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/kuzel_cerveny.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/kuzel_modry.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/oznaceni_letiste.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/oznaceni_letiste_dlouhe.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/sudy_CB_letiste.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/sudy_letiste.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/kuzely_cervene.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/kuzely_modre.obj" />
+		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/znaceni_letiste_prkna.obj" />
 	</clutter>
 
 	<people_aiders>
-		<obj3d  name="person01" file_name="../../../3D_people_library/first_aider.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/first_aider.obj" />
 	</people_aiders>
 
 	<people_at_location>
 		<!-- People -->
-		<obj3d  name="hicker01" file_name="../../../MisterX_Library/People/Airport_Worker_4.obj" />
-		<obj3d  name="hicker02" file_name="../../../MisterX_Library/People/Man_Shirt_1.obj" />
-		<obj3d  name="hicker03" file_name="../../../MisterX_Library/People/Man_Shirt_2.obj" />
-		<obj3d  name="Woman01" file_name="../../../MisterX_Library/People/Woman_1.obj" />
-		<obj3d  name="Woman02" file_name="../../../MisterX_Library/People/Woman_4.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/biker2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/biker3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/biker.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/boy_shouting.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/boy_sitting.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/business_woman.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/child.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_female_a1.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_female_a2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_female_a3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_a1.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_a2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_a3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_b1.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_b2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Crew_male_b3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/cyclist.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/cyclist_standing.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/dog_handler.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/door_supervisor.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm10.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm10_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm11.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm11_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm1.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm1_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm2_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm2_with_spade.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm3_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm4.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm4_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm5.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm5_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm6.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm6_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm6_with_hay_fork.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm7.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm7_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm7_with_scythe.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm8.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm8_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm9.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/farm9_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/female1.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/female2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/female3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/girl_sitting_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_female1.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_female2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_female3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_10.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_10_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_1.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_male1.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_4.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/ground_crew_male_security.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_with_extinguisher.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_with_toolbox_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Ground_crew_with_toolbox.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Male_with_jerry_can.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_1_sport.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_arms_crossed.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_baseball_cap.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_blue_shirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_blue_T_shirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_bodyguard.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_brown_suit.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_brown_top.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_camo_trousers.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_casual.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_check_shirt2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_check_shirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_cloth_cap.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_cool_dude.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_green_shirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_green_tshirt2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_green_tshirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Man_grey_coat.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_grey_jumper.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_grey_shirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_greytop.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_hand_in_pocket.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_hawaiin_shirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_holding_elbow.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_jeans.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_mobile_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_mobile.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_odd_hat.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_old_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_old.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_overcoat.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_purple_shirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_red_tshirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_running.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_sfpd.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_shirt_jeans.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_smiling.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_10.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_11.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_12.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_13.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_14.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_15.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_16.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_17.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_18.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_19.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_20.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_21.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_22.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_23.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_24.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_25.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_26.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_27.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_28.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_29.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_30.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_31.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_32.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_33.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_34.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_35.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_36.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_37.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_4.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_5.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_6.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_7.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_8.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing_9.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_standing.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_striped_jacket.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_striped_shirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_tatoo.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_tattoo2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_walking_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_walking_37.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_walking_3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_white_shirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_with_beard.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_with_mobile.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_with_sunglasses.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_woollen_hat.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_yellow.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/mechanic.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/stewardess_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/stewardess.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/teenager_sitting2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/teenager_sitting.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/teenager_standing.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/teenager_with_dog.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/watchman.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_5.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_backpack.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_black_skirt.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_black_skirt_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_brown_shoulder_bag.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_business.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_checking_in.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_chinese_top.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_denim.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_flowerytop.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_hand_on_hip.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_jeans_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_pony_tail.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_purple_top.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_reclining.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing10.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing11.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing12.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing14.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing4.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing5.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing7.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing8.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing9.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_standing.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_walking2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_walking_brown.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_walking_dog.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_yellow_top.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/worker.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/workers_manhole.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/worker_stop_sign.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/worker_walking_2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/worker_walking.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/worker_waving.obj" />
+		<obj3d  name="hicker01" is_virtual_b="yes" file_name="MisterX_Library/People/Airport_Worker_4.obj" />
+		<obj3d  name="hicker02" is_virtual_b="yes" file_name="MisterX_Library/People/Man_Shirt_1.obj" />
+		<obj3d  name="hicker03" is_virtual_b="yes" file_name="MisterX_Library/People/Man_Shirt_2.obj" />
+		<obj3d  name="Woman01" is_virtual_b="yes" file_name="MisterX_Library/People/Woman_1.obj" />
+		<obj3d  name="Woman02" is_virtual_b="yes" file_name="MisterX_Library/People/Woman_4.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/biker2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/biker3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/biker.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/boy_shouting.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/boy_sitting.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/business_woman.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/child.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_female_a1.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_female_a2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_female_a3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_a1.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_a2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_a3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_b1.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_b2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_b3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/cyclist.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/cyclist_standing.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/dog_handler.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/door_supervisor.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm10.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm10_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm11.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm11_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm1.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm1_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm2_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm2_with_spade.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm3_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm4.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm4_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm5.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm5_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm6.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm6_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm6_with_hay_fork.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm7.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm7_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm7_with_scythe.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm8.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm8_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm9.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm9_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/female1.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/female2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/female3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/girl_sitting_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_female1.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_female2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_female3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_10.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_10_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_1.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_male1.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_4.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_security.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_with_extinguisher.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_with_toolbox_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_with_toolbox.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Male_with_jerry_can.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_1_sport.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_arms_crossed.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_baseball_cap.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_blue_shirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_blue_T_shirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_bodyguard.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_brown_suit.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_brown_top.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_camo_trousers.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_casual.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_check_shirt2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_check_shirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_cloth_cap.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_cool_dude.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_green_shirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_green_tshirt2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_green_tshirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Man_grey_coat.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_grey_jumper.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_grey_shirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_greytop.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_hand_in_pocket.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_hawaiin_shirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_holding_elbow.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_jeans.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_mobile_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_mobile.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_odd_hat.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_old_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_old.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_overcoat.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_purple_shirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_red_tshirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_running.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_sfpd.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_shirt_jeans.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_smiling.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_10.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_11.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_12.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_13.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_14.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_15.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_16.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_17.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_18.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_19.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_20.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_21.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_22.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_23.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_24.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_25.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_26.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_27.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_28.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_29.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_30.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_31.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_32.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_33.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_34.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_35.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_36.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_37.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_4.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_5.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_6.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_7.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_8.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_9.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_striped_jacket.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_striped_shirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_tatoo.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_tattoo2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_walking_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_walking_37.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_walking_3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_white_shirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_with_beard.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_with_mobile.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_with_sunglasses.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_woollen_hat.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_yellow.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/mechanic.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/stewardess_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/stewardess.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/teenager_sitting2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/teenager_sitting.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/teenager_standing.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/teenager_with_dog.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/watchman.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_5.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_backpack.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_black_skirt.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_black_skirt_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_brown_shoulder_bag.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_business.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_checking_in.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_chinese_top.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_denim.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_flowerytop.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_hand_on_hip.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_jeans_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_pony_tail.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_purple_top.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_reclining.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing10.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing11.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing12.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing14.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing4.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing5.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing7.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing8.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing9.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_walking2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_walking_brown.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_walking_dog.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_yellow_top.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/worker.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/workers_manhole.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/worker_stop_sign.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/worker_walking_2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/worker_walking.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/worker_waving.obj" />
 	</people_at_location>
 
 	<fireman>
-		<obj3d  name="person01" file_name="../../../3D_people_library/fireman2.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/fireman3.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/fireman4.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/Fireman.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/fireman2.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/fireman3.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/fireman4.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Fireman.obj" />
 	</fireman>
 
 	<water_replace_ambulance>
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/fishing/10/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/canoes_kayaks/3/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/canoes_kayaks/4/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/canoes_kayaks/6/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/fishing/11/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/fishing/9/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/sail/10/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/sail/11/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/sail/13/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/sail/9/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/tour/1/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/tour/2/object.obj" />
-		<obj3d  name="boat01" file_name="../../../OpenSceneryX/objects/vehicles/boats_ships/tour/3/object.obj" />
-		<obj3d  name="boat01" file_name="../../../MisterX_Library/Vehicles/Boats/Yacht_1.obj" />
-		<obj3d  name="boat01" file_name="../../../MisterX_Library/Vehicles/Boats/Fishing_Boat_1.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/fishing/10.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/canoes_kayaks/3.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/canoes_kayaks/4.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/canoes_kayaks/6.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/fishing/11.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/fishing/9.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/sail/10.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/sail/11.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/sail/13.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/sail/9.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/tour/1.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/tour/2.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/tour/3.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="MisterX_Library/Vehicles/Boats/Yacht_1.obj" />
+		<obj3d  name="boat01" is_virtual_b="yes" file_name="MisterX_Library/Vehicles/Boats/Fishing_Boat_1.obj" />
 	</water_replace_ambulance>
 
 	<something_in_water>
 		<!-- People -->
-		<obj3d  name="person01" file_name="../../../3D_people_library/man_swimming.obj" />
-		<obj3d  name="person01" file_name="../../../3D_people_library/woman_bikini.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_swimming.obj" />
+		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_bikini.obj" />
 	</something_in_water>
 
 	<!-- inventory items to pick randomly from -->
