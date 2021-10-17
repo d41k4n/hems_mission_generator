@@ -1,154 +1,420 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEMPLATE version="301" plane_type="helos">
-	<!-- Random mission template for Medevac Helicopter "Air-Glaciers" based at Sion Heliport LSGS
+	<!-- HEMS Random mission generator template
 	     using the MissionX plugin by snagar
 		 Version 1.0
 	-->
-	<content>
-		<medevac_hover_ski_osm min_valid_flight_legs="3" list="medevac_hover_ski_osm_set" plane_type="helos">
-Skiing accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
-
-Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints for winch extraction:
-- Hover within 20m radius and below 150ft over target
-- Crew will operate doors and winch boom autonomously when within target range.
-- Lower, raise or stop winch when instructed.
-- Observe status messages during all operations and follow instructions.
-- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
-- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
-
-Hints for patient dropoff:
-- Land on the helipad designated via GPS.
-- Shut down engines
-- Observe status messages and follow instructions.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hover_ski_osm>
-		<medevac_hover_hiker_osm min_valid_flight_legs="3" list="medevac_hover_hiker_osm_set" plane_type="helos">
-Hiking accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
-
-Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints for winch extraction:
-- Hover within 20m radius and below 150ft over target
-- Crew will operate doors and winch boom autonomously when within target range.
-- Lower, raise or stop winch when instructed.
-- Observe status messages during all operations and follow instructions.
-- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
-- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
-
-Hints for patient dropoff:
-- Land on the helipad designated via GPS.
-- Shut down engines
-- Observe status messages and follow instructions.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hover_hiker_osm>
-		<medevac_hover_hiker_osm min_valid_flight_legs="3" list="medevac_hover_hiker_osm_set" plane_type="helos">
-Hiking accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.
-
-Details on the accident location and accident type will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints for winch extraction:
-- Hover within 20m radius and below 150ft over target
-- Crew will operate doors and winch boom autonomously when within target range.
-- Lower, raise or stop winch when instructed.
-- Observe status messages during all operations and follow instructions.
-- Maintain a stable hover to prevent inducing dangerous oscillations while the winch is extended.
-- Once patient and crew recovery is complete you will be instructed to proceed to the next waypoint.
-
-Hints for patient dropoff:
-- Land on the helipad designated via GPS.
-- Shut down engines
-- Observe status messages and follow instructions.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hover_hiker_osm>
-		<medevac_road_osm min_valid_flight_legs="3" list="medevac_road_osm_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient extraction by landing near a traffic accident location designated on your GPS.
-
-Details on the target location will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land within a radius of 80m around the designated accident location.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_road_osm>
-		<medevac_parking_osm min_valid_flight_legs="3" list="medevac_parking_osm_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient extraction by landing near the location designated on your GPS.
-
-In this case a car park has been chosen as the most suitable landing spot by the on-site emergency response team.
-
-Details on the target location will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land within a radius of 80m around the designated accident location.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_parking_osm>
-		<medevac_pitch_osm min_valid_flight_legs="3" list="medevac_pitch_osm_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient extraction by landing near the location designated on your GPS.
-
-In this case an outdoor sports pitch has been chosen as the most suitable landing spot by the on-site emergency response team.
-
-Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land within a radius of 80m around the designated accident location.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_pitch_osm>
-		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
-In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.
-
-Details on the location will be provided at mission start. Usage of a helicopter is mandatory.
-
-Hints:
-- Land on the designated hospital helipad.
-- Shut down engines
-- Observe status messages and follow instructions if requested.
-- Wait for signal to take off.
-- Start engines and proceed to next GPS waypoint.
-		</medevac_hospital>
-	</content>
 
 	<mission_info 
-		mission_image_file_name="../../../../Resources/plugins/missionx/HMG_AirGlaciers-Sion.png" 
-		template_image_file_name="HMG_AirGlaciers-Sion.png" 
+		mission_image_file_name="HMG_template.png" 
+		template_image_file_name="HMG_template.png" 
 		written_by="Daikan" 
 		plane_desc="Helicopter" 
 		estimate_time="~45 Minutes." 
 		difficulty="Medium" 
 		other_settings="" 
 		weather_settings="By Simmer" 
-		scenery_settings="RescueX, R2, OpenSceneryX, MisterX, 3D People, CDB" 
+		scenery_settings="RescueX, R2, PM, OpenSceneryX, MisterX, 3D People, CDB, NZ Pro" 
 		short_desc="Hello Pilot,
 		
-		In this mission you will be assigned a MEDEVAC task that may consist of an emergency extraction from an accident scene or hospital - either by winch or by landing. 
+		This random mission template will generate a MEDEVAC mission that may consist of an emergency extraction from an accident scene or hospital - either by winch or by landing. 
 		
-		Homebase: LSGS, Sion, pad #6 (lat=46.22168 long=7.34633) 
-		Aircraft: Rotorsim EC135 V5
+		Pick your desired starting location and helicopter from the available options in the dropdown above.
 		
-		Please make sure your aircraft is parked and ready before starting the mission. 
+		Make sure your helicopter is positioned according to your chosen option and in a parked state (cold and dark) before proceeding with generating the mission.
 		
-		Each mission ends successfully with you returning safely to your homebase.
+		Note: Your aircraft MUST be positioned within 80m of any of the following locations:
+		- LSMD, Rega 1 helipad (lat: 47.39612, lon: 8.63762)
+		- LSXU, Rega 5 helipad (lat: 46.91287, lon: 9.55090)
+		- LSZF, Lions1 helipad (lat: 47.44429, lon: 8.23366)
+		- LSGS, Air Glaciers helipad #6 (lat: 46.22168 lon: 7.34633)
+		- LSEZ, Air Zermatt helipad (lat: 46.02939, lon: 7.75330)
+		
+		Each mission ends successfully with you landing safely within 80m of one of the above locations depending on your picked option.
 		
 		Further instructions will be provided after the mission is generated. 
 		
 		Good luck!"
-	/>
+	>
+	    <replace_options>
+			<opt name="AirGlaciers_LSGS_Sion_EC135">
+				<info mission_image_file_name="HMG_AirGlaciers-Sion.png" plane_desc="Rotorsim EC135 V5" short_desc="
+					Homebase: LSGS, Sion, pad #6 (lat=46.22168 long=7.34633) 
+					Aircraft: Rotorsim EC135 V5
+		
+					Please make sure your aircraft is parked and ready before starting the mission. 
+		
+					Each mission ends successfully with you returning safely to your homebase.
+		
+					Further instructions will be provided after the mission is started. 
+		
+					Good luck!"/>
+				<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-AirGlaciers_Sion.xml"/>
+				<find_replace find="%content-medevac_hover%" replace_with="includes/empty.xml"/>
+				<find_replace find="%content-medevac_land%" replace_with="includes/empty.xml"/>
+				<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
+				<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/content-medevac_hover_hiker_osm.xml"/>
+				<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
+				<find_replace find="%content-medevac_parking_osm%" replace_with="includes/content-medevac_parking_osm.xml"/>
+				<find_replace find="%content-medevac_pitch_osm%" replace_with="includes/content-medevac_pitch_osm.xml"/>
+				<find_replace find="%content-medevac_hospital%" replace_with="includes/content-medevac_hospital.xml"/>
+				<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/empty.xml"/>
+				<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-ec135.xml"/>
+				<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-ec135.xml"/>
+				<find_replace find="%locations%" replace_with="includes/locations_AirGlaciers_Sion.xml"/>
+				<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_AirGlaciers_Sion.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%base_info%" replace_with="includes/base_info_AirGlaciers.xml"/>
+			</opt>
+			<opt name="AirZermatt_LSEZ_Zermatt_EC135">
+				<info mission_image_file_name="HMG_AirZermatt-Zermatt.png" plane_desc="Rotorsim EC135 V5" short_desc="
+					Homebase: LSEZ, Zermatt heliport (lat: 46.02939, lon: 7.75330) 
+					Aircraft: Rotorsim EC135 V5
+		
+					Please make sure your aircraft is parked and ready before starting the mission. 
+		
+					Each mission ends successfully with you returning safely to your homebase.
+		
+					Further instructions will be provided after the mission is started. 
+		
+					Good luck!"/>
+				<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-AirZermatt_Zermatt.xml"/>
+				<find_replace find="%content-medevac_hover%" replace_with="includes/empty.xml"/>
+				<find_replace find="%content-medevac_land%" replace_with="includes/empty.xml"/>
+				<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
+				<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/content-medevac_hover_hiker_osm.xml"/>
+				<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
+				<find_replace find="%content-medevac_parking_osm%" replace_with="includes/content-medevac_parking_osm.xml"/>
+				<find_replace find="%content-medevac_pitch_osm%" replace_with="includes/content-medevac_pitch_osm.xml"/>
+				<find_replace find="%content-medevac_hospital%" replace_with="includes/content-medevac_hospital.xml"/>
+				<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/empty.xml"/>
+				<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-ec135.xml"/>
+				<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-ec135.xml"/>
+				<find_replace find="%locations%" replace_with="includes/locations_AirZermatt_Zermatt.xml"/>
+				<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_AirZermatt_Zermatt.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%base_info%" replace_with="includes/base_info_AirZermatt.xml"/>
+			</opt>
+			<opt name="Lions1_LSZF_Birrfeld_EC135">
+				<info mission_image_file_name="HMG_Lion1.png" plane_desc="Rotorsim EC135 V5" short_desc="
+					Homebase: LSZF, LIONS1 heliport (lat: 47.44429142, lon: 8.23366269) 
+					Aircraft: Rotorsim EC135 V5
+		
+					Please make sure your aircraft is parked and ready before starting the mission. 
+		
+					Each mission ends successfully with you returning safely to your homebase.
+		
+					Further instructions will be provided after the mission is started. 
+		
+					Good luck!"/>
+				<find_replace find="%content-medevac_hover%" replace_with="includes/empty.xml"/>
+				<find_replace find="%content-medevac_land%" replace_with="includes/empty.xml"/>
+				<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-Lions1.xml"/>
+				<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/empty.xml"/>
+				<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/empty.xml"/>
+				<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
+				<find_replace find="%content-medevac_parking_osm%" replace_with="includes/content-medevac_parking_osm.xml"/>
+				<find_replace find="%content-medevac_pitch_osm%" replace_with="includes/content-medevac_pitch_osm.xml"/>
+				<find_replace find="%content-medevac_hospital%" replace_with="includes/content-medevac_hospital.xml"/>
+				<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/content-medevac_hospital_germany.xml"/>
+				<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-ec135.xml"/>
+				<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-ec135.xml"/>
+				<find_replace find="%locations%" replace_with="includes/locations_Lions1.xml"/>
+				<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_Lions1.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%base_info%" replace_with="includes/base_info_Lions1.xml"/>
+			</opt>
+			<opt name="Rega5_LSXU_Untervaz_EC135">
+				<info mission_image_file_name="HMG_Rega5.png" plane_desc="Rotorsim EC135 V5" short_desc="
+					Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090) 
+					Aircraft: Rotorsim EC135 V5
+		
+					Please make sure your aircraft is parked and ready before starting the mission. 
+		
+					Each mission ends successfully with you returning safely to your homebase.
+		
+					Further instructions will be provided after the mission is started. 
+		
+					Good luck!"/>
+				<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
+				<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
+				<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-Rega5.xml"/>
+				<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
+				<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/content-medevac_hover_hiker_osm.xml"/>
+				<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
+				<find_replace find="%content-medevac_parking_osm%" replace_with="includes/content-medevac_parking_osm.xml"/>
+				<find_replace find="%content-medevac_pitch_osm%" replace_with="includes/content-medevac_pitch_osm.xml"/>
+				<find_replace find="%content-medevac_hospital%" replace_with="includes/content-medevac_hospital.xml"/>
+				<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/empty.xml"/>
+				<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-ec135.xml"/>
+				<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-ec135.xml"/>
+				<find_replace find="%locations%" replace_with="includes/locations_Rega5.xml"/>
+				<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_Rega5.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%base_info%" replace_with="includes/base_info_Rega5.xml"/>
+			</opt>
+			<opt name="Rega1_LSMD_Dübendorf_EC135">
+				<info mission_image_file_name="HMG_Rega1.png" plane_desc="Rotorsim EC135 V5" short_desc="
+					Homebase: LSMD,  Rega 1 helipad (lat:47.39612 lon:8.63762) 
+					Aircraft: Rotorsim EC135 V5
+		
+					Please make sure your aircraft is parked and ready before starting the mission. 
+		
+					Each mission ends successfully with you returning safely to your homebase.
+		
+					Further instructions will be provided after the mission is started. 
+		
+					Good luck!"/>
+				<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
+				<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
+				<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-Rega1.xml"/>
+				<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
+				<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/content-medevac_hover_hiker_osm.xml"/>
+				<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
+				<find_replace find="%content-medevac_parking_osm%" replace_with="includes/content-medevac_parking_osm.xml"/>
+				<find_replace find="%content-medevac_pitch_osm%" replace_with="includes/content-medevac_pitch_osm.xml"/>
+				<find_replace find="%content-medevac_hospital%" replace_with="includes/content-medevac_hospital.xml"/>
+				<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/empty.xml"/>
+				<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-ec135.xml"/>
+				<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-ec135.xml"/>
+				<find_replace find="%locations%" replace_with="includes/locations_Rega1.xml"/>
+				<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_Rega1.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+				<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+				<find_replace find="%base_info%" replace_with="includes/base_info_Rega1.xml"/>
+			</opt>
+		</replace_options>
+	</mission_info>
+
+	<content>
+		%content-medevac_hover%
+		%content-medevac_land%
+		%content-medevac_hover_ski_osm%
+		%content-medevac_hover_ski_osm%
+		%content-medevac_hover_hiker_osm%
+		%content-medevac_hover_hiker_osm%
+		%content-medevac_hover_hiker_osm%
+		%content-medevac_road_osm%
+		%content-medevac_parking_osm%
+		%content-medevac_pitch_osm%
+		%content-medevac_hospital%
+		%content-medevac_hospital_germany%
+	</content>
 
 	<!-- [plane | xy] {element name that holds points} -->
 	<briefer_and_start_location location_type="plane" start_cold_and_dark="yes" />
 
-	<datarefs_start_cold_and_dark>rotorsim/ec135/crew[0]:1,rotorsim/ec135/crew[1]:1,rotorsim/ec135/crew[2]:0,rotorsim/ec135/crew[3]:1,rotorsim/ec135/crew[4]:0,sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0</datarefs_start_cold_and_dark>
+	%datarefs_start_cold_and_dark%
+
+	<medevac_hover_set is_set_of_flight_legs="yes" >
+		<!-- Road accident, mountain accident -->
+		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Search and Rescue. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=2-25" override_trigger_name="trig_hover_goal_1_target_1"/>
+			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="3000">Establish visual on target area and reduce speed.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="1000">Crew standby for hover. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_hover_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_hover_set>
+
+	<medevac_land_set is_set_of_flight_legs="yes" >
+		<!-- Accident or hospital transfer -->
+		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
+			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=2-25" override_trigger_name="trig_land_goal_1_target_1" />
+			<display_object_set random_tag="object_sets" set_name="medevac" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="3000">Look out for target and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-25" override_trigger_name="trig_land_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_land_set>
 
 	<medevac_hospital_set is_set_of_flight_legs="yes" >
 		<!-- Hospital transfer -->
@@ -187,6 +453,44 @@ Hints:
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
 		</leg>
 	</medevac_hospital_set>
+
+	<medevac_hospital_germany_set is_set_of_flight_legs="yes" >
+		<!-- Pickup hospital -->
+		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Primary mission: Patient transfer. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
+			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
+			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup_germany" override_trigger_name="trig_land_goal_1_target_1"  />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="3000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
+			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_hospitals_dropoff_germany|nm_between=10-30" override_trigger_name="trig_land_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
+			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_hospital_germany_set>
 
 	<medevac_hover_ski_osm_set is_set_of_flight_legs="yes" >
 		<!-- Ski accident -->
@@ -381,25 +685,7 @@ Hints:
 		</leg>
 	</medevac_pitch_osm_set>
 
-	<webosm_piste_filter>
-		<filter>(way['piste:type'](area:3601686699)({{bbox}});relation['piste:type'](area:3601686699)({{bbox}}););out;</filter>
-	</webosm_piste_filter>
-
-	<webosm_trail_filter>
-		<filter>(way[highway=track](area:3601686699)({{bbox}});way[highway=path](area:3601686699)({{bbox}});relation[highway=track](area:3601686699)({{bbox}});relation[highway=path](area:3601686699)({{bbox}}););out;</filter>
-	</webosm_trail_filter>
-
-	<webosm_road_filter>
-		<filter>(way[highway=primary](area:3601686699)({{bbox}});way[highway=secondary](area:3601686699)({{bbox}});way[highway=tertiary](area:3601686699)({{bbox}});way[highway=residential](area:3601686699)({{bbox}});way[highway=service](area:3601686699)({{bbox}});way[highway=living_street](area:3601686699)({{bbox}}););out;</filter>
-	</webosm_road_filter>
-
-	<webosm_parking_filter>
-		<filter>(way["parking"="surface"][!"building"](if:is_closed()%26%26length()>100)(area:3601686699)({{bbox}}););out+center;</filter>
-	</webosm_parking_filter>
-
-	<webosm_pitches_filter>
-		<filter>(way["leisure"="pitch"][!"building"](if:is_closed()%26%26length()>100)(area:3601686699)({{bbox}}););way._["sport"!="tennis"]({{bbox}});way._["sport"!~"shooting.*"]({{bbox}});out+center;</filter>
-	</webosm_pitches_filter>
+	%webosm_filters%
 
 	<!-- Patient extraction: Special leg directives -->
 	<leg_1_tasks_winch_ops>
@@ -427,7 +713,7 @@ Hints:
 			         message_name_when_left=""
 		             commands_to_exec_when_fired="HSL/Load_Release" 
 					 commands_to_exec_when_left=""
-		             dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" 
+		             dataref_to_modify_when_fired="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" 
 					 dataref_to_modify_when_left=""  
 			/>
 		</trigger>
@@ -439,7 +725,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_open_door" 
 			         message_name_when_left="msg_1_leaving_position"
-		             commands_to_exec_when_fired="sim/flight_controls/door_open_4" 
+		             commands_to_exec_when_fired="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" 
 					 commands_to_exec_when_left=""
 		             dataref_to_modify_when_fired="" 
 					 dataref_to_modify_when_left=""  
@@ -455,7 +741,7 @@ Hints:
 					 message_name_when_left="msg_1_leaving_position"
 					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_connect" 
 					 commands_to_exec_when_left=""
-					 dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" 
+					 dataref_to_modify_when_fired="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" 
 					 dataref_to_modify_when_left=""
 			/>
 		</trigger>
@@ -468,7 +754,7 @@ Hints:
 			<outcome message_name_when_fired="msg_1_start_winch_down" 
 					 message_name_when_left="msg_1_leaving_position"
 					 commands_to_exec_when_left=""
-					 commands_to_exec_when_fired="ec135/hoist/out:5"
+					 commands_to_exec_when_fired="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%"
 					 dataref_to_modify_when_fired="" 
 					 dataref_to_modify_when_left=""  
 			/>
@@ -539,9 +825,9 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_onboard_patient" 
 			         message_name_when_left=""
-		             commands_to_exec_when_fired="ec135/hoist/in:5,FlyWithLua/hoist/winch_remove_patient" 
+		             commands_to_exec_when_fired="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%,FlyWithLua/hoist/winch_remove_patient" 
 					 commands_to_exec_when_left=""
-		             dataref_to_modify_when_fired="rotorsim/ec135/crew[4]:1" 
+		             dataref_to_modify_when_fired="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" 
 					 dataref_to_modify_when_left=""  
 			/>
 		</trigger>
@@ -555,7 +841,7 @@ Hints:
 					 message_name_when_left=""
 					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_release" 
 					 commands_to_exec_when_left=""
-					 dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" 
+					 dataref_to_modify_when_fired="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" 
 					 dataref_to_modify_when_left=""  
 			/>
 		</trigger>
@@ -567,7 +853,7 @@ Hints:
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_close_door" 
 					 message_name_when_left=""
-					 commands_to_exec_when_fired="sim/flight_controls/door_close_4" 
+					 commands_to_exec_when_fired="%leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired%" 
 					 commands_to_exec_when_left=""
 					 dataref_to_modify_when_fired="" 
 					 dataref_to_modify_when_left=""  
@@ -576,11 +862,6 @@ Hints:
 	</leg_1_triggers_winch_ops>
 
 	<leg_1_msgs_winch_ops>
-		<message name="msg_1_open_door" is_mxpad="yes" >
-			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
-				<![CDATA[Cabin door opened - standby for deploying crew.]]>
-			</mix>
-		</message>
 		<message name="msg_1_deploy_crew" is_mxpad="yes" >
 			<mix track_type="text" mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow">
 				<![CDATA[Crew deployed - standby for lowering winch.]]>
@@ -650,8 +931,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_doors_open" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_open_5" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_crew_off" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="HMG_winch.rotor_stopped_1" />
@@ -660,8 +941,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_crew_off" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_close_2,sim/flight_controls/door_open_6" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:0" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_patient_on" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -670,8 +951,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_patient_on" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_close_6" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[4]:1" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_1_triggers_patient_boarding-trig_1_patient_on_open-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_crew_on" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -680,8 +961,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_crew_on" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_close_5" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_doors_closed" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -690,8 +971,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_doors_closed" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_close_2" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:1" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 	</leg_1_triggers_patient_boarding>
 
@@ -749,8 +1030,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_doors_open" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_open_2" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:0" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_crew_off_winch_op" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="HMG_winch.rotor_stopped_2_winch_op" />
@@ -759,8 +1040,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_crew_off" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_close_2,sim/flight_controls/door_open_5,sim/flight_controls/door_open_6" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0,rotorsim/ec135/crew[3]:0" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_crew_off" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="HMG_winch.rotor_stopped_2" />
@@ -769,8 +1050,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_crew_off" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_close_2,sim/flight_controls/door_open_5,sim/flight_controls/door_open_6" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:0" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_patient_off" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -779,8 +1060,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_patient_off" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_close_6" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[4]:0" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_crew_on_winch_op" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -789,8 +1070,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_crew_on" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_close_5" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1,rotorsim/ec135/crew[3]:1" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_crew_on" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -799,8 +1080,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_crew_on" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_open_2,sim/flight_controls/door_close_5" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[2]:1" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_doors_closed" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
@@ -809,8 +1090,8 @@ Hints:
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_doors_closed" message_name_when_left=""
-			commands_to_exec_when_fired="sim/flight_controls/door_close_2" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="rotorsim/ec135/crew[1]:1" dataref_to_modify_when_left=""  />
+			commands_to_exec_when_fired="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			dataref_to_modify_when_fired="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 	</leg_2_triggers_dropoff>
 
@@ -857,39 +1138,11 @@ Hints:
 		</shared_variables>
 	</embedded_scripts>
 
-	<loc_hospitals>
-		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
-		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSGS"/>
-		<point lat="46.52458" long="6.64096" template="land" radius_mt="80" loc_desc="Helipad, Lausanne CHUV / LSHL"/>
-		<point lat="46.38034" long="6.92115" template="land" radius_mt="80" loc_desc="Helipad, Rennaz Hospital / LSHR"/>
-	</loc_hospitals>
-
-	<loc_hospitals_pickup>
-		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
-		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
-		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
-		<point lat="46.07837" long="7.14578" template="land" radius_mt="80" loc_desc="Helipad, Sembrancher / LSUS"/>
-		<point lat="46.07837" long="7.14578" template="land" radius_mt="80" loc_desc="Helipad, Sembrancher / LSUS"/>
-		<point lat="46.07837" long="7.14578" template="land" radius_mt="80" loc_desc="Helipad, Sembrancher / LSUS"/>
-		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSGS"/>
-		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSGS"/>
-		<point lat="46.01356" long="7.48465" template="land" radius_mt="80" loc_desc="Helipad, Arolla / LSOA"/>
-		<point lat="46.28417" long="7.46572" template="land" radius_mt="80" loc_desc="Helipad, Chermignon / LSVI"/>
-	</loc_hospitals_pickup>
-
-	<loc_hospitals_dropoff>
-		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital, Sion / LSGS"/>
-		<point lat="46.52458" long="6.64096" template="land" radius_mt="80" loc_desc="Helipad, Lausanne CHUV / LSHL"/>
-		<point lat="46.38034" long="6.92115" template="land" radius_mt="80" loc_desc="Helipad, Rennaz Hospital / LSHR"/>
-	</loc_hospitals_dropoff>
-
-	<loc_homebase>
-		<point lat="46.22168" long="7.34633" template="land" radius_mt="80" loc_desc="LSGS Air-Glaciers Base, Sion"/>
-	</loc_homebase>
+	%locations%
 
 	<object_templates>
 		<!-- markers -->
-		<obj3d  name="marker" file_name="marker_five_parts_02.obj" />
+		<obj3d  name="marker" file_name="../../random/obj/marker_five_parts_02.obj" />
 		<!-- cars -->
 		<obj3d  name="ambulance" file_name="" random_tag="ambulance_select"   />
 		<obj3d  name="random_thing" file_name="" random_tag="clutter"  />
@@ -954,14 +1207,12 @@ Hints:
 	</blank>
 
 	<ambulance_select>
-<!--
-		<obj3d  name="ambulance1" is_virtual_b="yes" file_name="RescueX/cars/RTW_01.obj" />
-		<obj3d  name="ambulance2" is_virtual_b="yes" file_name="RescueX/cars/RTW_02.obj" />
-		<obj3d  name="ambulance3" is_virtual_b="yes" file_name="RescueX/cars/RTW_03.obj" />
-		<obj3d  name="ambulance4" is_virtual_b="yes" file_name="RescueX/cars/RTW_04.obj" />
--->
-		<obj3d  name="ambulance5" file_name="car_ambulance.obj" />
-		<obj3d  name="ambulance6" file_name="USAmbulance.obj" />
+		<obj3d  name="ambulance1" is_virtual_b="yes" file_name="RescueX/cars/RTW_DRK_Bayern.obj" />
+		<obj3d  name="ambulance2" is_virtual_b="yes" file_name="RescueX/cars/RTW_ASB_1.obj" />
+		<obj3d  name="ambulance3" is_virtual_b="yes" file_name="RescueX/cars/RTW_ASB_2.obj" />
+		<obj3d  name="ambulance4" is_virtual_b="yes" file_name="RescueX/cars/RTW_FEU_GUT.obj" />
+		<obj3d  name="ambulance5" file_name="../../random/obj/car_ambulance.obj" />
+		<obj3d  name="ambulance6" file_name="../../random/obj/USAmbulance.obj" />
 		<obj3d  name="ambulance7" is_virtual_b="yes" file_name="CDB-Library/Airport/GSE/ambulance/car_ambulance1.obj" />
 		<obj3d  name="ambulance8" is_virtual_b="yes" file_name="CDB-Library/Airport/GSE/ambulance/car_ambulance2.obj" />
 		<obj3d  name="ambulance9" is_virtual_b="yes" file_name="CDB-Library/Airport/GSE/ambulance/car_ambulance3.obj" />
@@ -1376,12 +1627,12 @@ Hints:
 		<mix track_type="text"  mute_xplane_narrator="" hide_text="" override_seconds_to_display_text="" override_seconds_calc_per_line="" mxpad_label="comm" mxpad_label_color="yellow" />
 	</message>
 	<end_mission>
-		<success_image file_name="success.png"  />
+		<success_image file_name="../../random/briefer/success.png"  />
 		<success_msg >
 			<![CDATA[Well done pilot! See you next time!]]>
 		</success_msg>
 		<success_sound sound_file="" sound_vol="" />
-		<fail_image file_name="fail.png"  />
+		<fail_image file_name="../../random/briefer/fail.png"  />
 		<fail_msg >
 			<![CDATA[You failed!]]>
 		</fail_msg>
