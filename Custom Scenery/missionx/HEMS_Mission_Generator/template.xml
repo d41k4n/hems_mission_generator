@@ -1593,7 +1593,7 @@
 	</opt>
 	<opt name="Rega1_LSMD_Dübendorf_EC135">
 		<info title="HEMS mission for Rega 1 EC135 out of LSMD Dübendorf" mission_image_file_name="HMG_Rega1.png" plane_desc="Rotorsim EC135 V5" short_desc="
-			Homebase: LSMD,  Rega 1 helipad (lat:47.39612 lon:8.63762) 
+			Homebase: LSMD, Rega 1 helipad (lat:47.39612 lon:8.63762) 
 			Aircraft: Rotorsim EC135 V5
 
 			Please make sure your aircraft is parked and ready before starting the mission. 
@@ -1701,11 +1701,9 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%base_info%" replace_with="includes/base_info_Rega5.xml"/>
 	</opt>
-	<opt name="Rega1_LSMD_Dübendorf
-	
-	45">
+	<opt name="Rega1_LSMD_Dübendorf_H145">
 		<info title="HEMS mission for Rega 1 H145 out of LSMD Dübendorf" mission_image_file_name="HMG_Rega1.png" plane_desc="RVLC-Entwicklung H145 Rescue Version v3.1" short_desc="
-			Homebase: LSMD,  Rega 1 helipad (lat:47.39612 lon:8.63762) 
+			Homebase: LSMD, Rega 1 helipad (lat:47.39612 lon:8.63762) 
 			Aircraft: VLC-Entwicklung H145 Rescue Version v3.1
 
 			Please make sure your aircraft is parked and ready before starting the mission. 
