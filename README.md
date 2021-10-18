@@ -1,6 +1,7 @@
 
 
 
+
 # HEMS Mission Generator
 A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator package for the [X-Plane](https://www.x-plane.com) flight simulator including crew intercom simulation and automatic animations (doors, boom, winch, cargo, boarding/unboarding etc.).
 
@@ -74,18 +75,17 @@ Note that only a _port-side_ mounted hoist is supported for hover missions or ot
 
 Installation involves copying files into the following folders within X-Plane's home directory:
 ```
+./Custom Scenery/missionx/HEMS_Mission_Generator
+./Custom Scenery/CH_Hospitals
+./Custom Scenery/helipad_lib
 ./Aircraft/Helicopters/EC 135 V5 EMS
 ./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1
 ./Aircraft/_slingload_objects
-./Custom Scenery/CH_Hospitals
-./Custom Scenery/helipad_lib
-./Custom Scenery/missionx/random
 ./Resources/plugins/FlyWithLua/Scripts
 ./Resources/plugins/FlyWithLua/Modules
-./Resources/plugins/missionx/templates
 ./Resources/plugins/HSL
 ```
-To be on the safe side consider making backup copies of these before proceeding.
+To be on the safe side consider making backup copies of these folders before proceeding.
 
 Since the package relies on certain X-Plane core assets that cannot be re-distributed the installation process may be a bit more involved depending on the chosen installation method as provided below.
 
@@ -160,17 +160,18 @@ To do so proceed as follows:
 
 ### Starting a mission
 
-Starting missions is done by selecting one of the provided mission templates through the Mission-X UI:
+Starting missions is done by selecting the provided mission template through the Mission-X UI:
 
 1. In the X-Plane menu select `Plugins -> Mission-X vx.x.xxx.x`
 2. Click on `Templates`
-3. Select any of the "Random HEMS Mission Generator" template icons
+3. Select the "HEMS Mission Generator" template icon
 4. Read the template description carefully and make sure that 
-	- you have selected the appropriate helicopter model as indicated (use port-side hoist configuration for hover missions)
+	- you have selected the desired option for the combination of location and helicopter from the dropdown
+	- you have configured your flight to use the appropriate helicopter model as indicated (use port-side hoist configuration for hover missions)
 	- you are positioned within 80m of the indicated home base coordinates (this will also be evaluated as your last waypoint or the mission won't terminate)
 5. Click on `Generate Mission from Template`
 6. Wait for the actual mission to be generated (a blue button labeled `>> Start mission <<` will appear)
-7. Read again the template description as it will contain updated information about your mission
+7. Read again the template description as it will now contain the actual mission briefing
 8. When ready, click  `>> Start mission <<` 
 9. Listen for audio messages containing status information and/or instructions as the mission progresses
 10. Have fun!
