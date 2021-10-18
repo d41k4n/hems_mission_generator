@@ -670,7 +670,7 @@
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_patient_on" message_name_when_left=""
 			commands_to_exec_when_fired="%leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired%" commands_to_exec_when_left=""
-			dataref_to_modify_when_fired="%leg_1_triggers_patient_boarding-trig_1_patient_on_open-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
+			dataref_to_modify_when_fired="%leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_crew_on" type="rad" enabled="yes" >
 			<conditions plane_on_ground="yes" cond_script="" />
