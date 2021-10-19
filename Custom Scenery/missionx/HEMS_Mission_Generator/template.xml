@@ -60,7 +60,7 @@
 	<medevac_hover_set is_set_of_flight_legs="yes" >
 		<!-- Road accident, mountain accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
-			<desc>Primary mission: Search and Rescue. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
+			<desc>Extraction of an injured person by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=5-30" override_trigger_name="trig_hover_goal_1_target_1"/>
 			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
@@ -73,7 +73,7 @@
 
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
-			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=5-30" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
@@ -88,7 +88,6 @@
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
-			<!-- <dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
@@ -98,9 +97,8 @@
 	<medevac_land_set is_set_of_flight_legs="yes" >
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
-			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
+			<desc>Extraction of an injured person. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
-			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
 			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=5-30" override_trigger_name="trig_land_goal_1_target_1" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -112,7 +110,7 @@
 
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
-			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=5-30" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
@@ -127,7 +125,6 @@
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
-			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
@@ -137,9 +134,8 @@
 	<medevac_hospital_set is_set_of_flight_legs="yes" >
 		<!-- Hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
-			<desc>Primary mission: Patient transfer. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
+			<desc>Urgent hospital transfer of a patient. Pickup location: {navaid_loc_desc}. Helipad coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
-			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
 			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup" override_trigger_name="trig_land_goal_1_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -150,7 +146,7 @@
 
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
-			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="xy" location_value="tag=loc_hospitals_dropoff|nm_between=5-60" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
@@ -165,7 +161,6 @@
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
-			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
@@ -175,9 +170,8 @@
 	<medevac_hospital_germany_set is_set_of_flight_legs="yes" >
 		<!-- Pickup hospital -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
-			<desc>Primary mission: Patient transfer. Location: {navaid_loc_desc}. Coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
+			<desc>Urgent hospital transfer of a patient. Location: {navaid_loc_desc}. Helipad coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
-			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
 			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup_germany" override_trigger_name="trig_land_goal_1_target_1"  />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -188,7 +182,7 @@
 
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
-			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="xy" location_value="tag=loc_hospitals_dropoff_germany|nm_between=10-30" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
@@ -203,7 +197,6 @@
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
-			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
@@ -213,7 +206,7 @@
 	<medevac_hover_ski_osm_set is_set_of_flight_legs="yes" >
 		<!-- Ski accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
-			<desc>Primary mission: Skiing accident. Location: {navaid_loc_desc}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
+			<desc>Extraction of an injured skier by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<expected_location location_type="webosm" location_value="tag=webosm_piste_filter|nm_between=5-30|keyname=piste:name|keydesc=piste:name|webosm_optimize=n" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
 			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
@@ -226,7 +219,7 @@
 
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
-			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-30" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
@@ -241,7 +234,6 @@
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
-			<!-- <dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
@@ -251,7 +243,7 @@
 	<medevac_hover_hiker_osm_set is_set_of_flight_legs="yes" >
 		<!-- Hiking accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
-			<desc>Primary mission: Hiking accident. Location: {navaid_loc_desc}. Landing at destination not possible. Route has been uploaded to your FMS. Good flight.</desc>
+			<desc>Extraction of an injured hiker by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<expected_location location_type="webosm" location_value="tag=webosm_trail_filter|nm_between=5-30|keyname=name|keydesc=name|webosm_optimize=y" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
 			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
@@ -264,7 +256,7 @@
 
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
-			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-30" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
@@ -279,7 +271,6 @@
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
-			<!-- <dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
@@ -289,9 +280,8 @@
 	<medevac_road_osm_set is_set_of_flight_legs="yes" >
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
-			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Route has been uploaded to your FMS. Good flight.</desc>
+			<desc>Extraction of an injured person due to a traffic accident. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
-			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
 			<expected_location location_type="webosm" location_value="tag=webosm_road_filter|nm_between=5-30|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" max_slope_to_land="12" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -303,7 +293,7 @@
 
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
-			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=5-30" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
@@ -318,7 +308,6 @@
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
-			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
@@ -328,9 +317,8 @@
 	<medevac_parking_osm_set is_set_of_flight_legs="yes" >
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
-			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Route has been uploaded to your FMS. Good flight.</desc>
+			<desc>Extraction of an injured person from a parking area. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
-			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
 			<expected_location location_type="webosm" location_value="tag=webosm_parking_filter|nm_between=5-30|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3"/>
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -342,7 +330,7 @@
 
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
-			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=5-30" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
@@ -357,7 +345,6 @@
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
-			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
@@ -367,9 +354,8 @@
 	<medevac_pitch_osm_set is_set_of_flight_legs="yes" >
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
-			<desc>Primary mission: Patient extraction. Location: {navaid_loc_desc}. Route has been uploaded to your FMS. Good flight.</desc>
+			<desc>Extraction of an injured person from an outdoor sports pitch. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="ec135/hoist/in:5,FlyWithLua/hoist/winch_release,HSL/Sling_Disable" />
-			<!-- Location probabilities: Accidents=4/5, Hospitals=1/5 -->
 			<expected_location location_type="webosm" location_value="tag=webosm_pitches_filter|nm_between=5-30|keyname=name|keydesc=name|webosm_optimize=n" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -381,7 +367,7 @@
 
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
-			<desc>Next waypoint: {navaid_loc_desc}.</desc>
+			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=5-30" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
@@ -396,7 +382,6 @@
 			<desc>Return to base: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
-			<!-- <dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="5nm_alert" length_mt="9260"/> -->
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
