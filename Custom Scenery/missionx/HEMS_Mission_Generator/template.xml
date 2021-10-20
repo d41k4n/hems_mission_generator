@@ -1365,7 +1365,6 @@
 			Further instructions will be provided after the mission is started. 
 
 			Good luck!"/>
-		<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-AirGlaciers_Sion.xml"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
@@ -1422,7 +1421,6 @@
 			Further instructions will be provided after the mission is started. 
 
 			Good luck!"/>
-		<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-AirZermatt_Zermatt.xml"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
@@ -1480,7 +1478,6 @@
 			Good luck!"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/empty.xml"/>
-		<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-Lions1.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
@@ -1536,7 +1533,6 @@
 			Good luck!"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
-		<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-Rega5.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
 		<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/content-medevac_hover_hiker_osm.xml"/>
 		<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
@@ -1590,7 +1586,6 @@
 			Good luck!"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
-		<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-Rega1.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
 		<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/content-medevac_hover_hiker_osm.xml"/>
 		<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
@@ -1646,7 +1641,6 @@
 			Good luck!"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
-		<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-Rega5.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
 		<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/content-medevac_hover_hiker_osm.xml"/>
 		<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
@@ -1700,7 +1694,6 @@
 			Good luck!"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
-		<find_replace find="%mission_info-mission_image_file_name%" replace_with="includes/mission_info-mission_image_file_name-Rega1.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
 		<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/content-medevac_hover_hiker_osm.xml"/>
 		<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
