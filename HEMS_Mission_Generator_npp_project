@@ -105,10 +105,6 @@
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_Lions1.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_Rega1.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_Rega5.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\mission_info-mission_image_file_name_AirGlaciers_Sion.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\mission_info-mission_image_file_name_Lions1.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\mission_info-mission_image_file_name_Rega1.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\mission_info-mission_image_file_name_Rega5.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\webosm_filters_AirGlaciers_Sion.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\webosm_filters_AirZermatt_Zermatt.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\webosm_filters_Lions1.xml" />
