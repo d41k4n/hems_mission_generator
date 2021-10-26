@@ -155,6 +155,43 @@ Starting missions is done by selecting the provided mission template through the
 ### Hints
 
 #### General
+- Before starting your first mission it might be a good idea to verify all included scenery is installed correctly by visually inspecting the heliport locations. There are ramp starts provided at each of them so it's possible to start flights there. The list of currently provided heliports is the following:
+
+  |ICAO|ID|Name
+  |--|--|--|
+  |LSKB|LSKB|[H] Kantonsspital Baden
+   |LSCB|LSCB|[H] Regionalspital Bülach
+  |LSHF|LSHF|[H] Kantonsspital Frauenfeld
+  |LSKI|XLS000S|[H] Regionalspital Surselva Ilanz
+  |LSKL|LSKL|[H] Regionalspital Limmattal Schlieren
+  |LSXM|LSXM|[H] Klinik Gut St.Moritz
+  |LSHT|XLS000J|[H] Regionalspital Thusis
+  |LSKS|LSKS|[H] Regionalspital Unterengadin Scuol
+  |LSKZ|LSKZ|[H] Kantonsspital Zug
+  |LSKT|LSKT|[H] Stadtspital Zürich Triemli
+  |LSHA|XLS000D|[H] Kantonsspital Aarau
+  |LSHB|LSHB|[H] Universitätsspital Basel
+  |LSHC|XLS000G|[H] Kantonsspital Graubünden Chur
+  |LSHD|XLS000F|[H] Regionalspital Davos
+  |LSHF|XLS0015|[H] Kantonsspital Uri
+  |LSHG|XLS0010|[H] Kantonsspital St.Gallen
+  |LSHI|LSHI|[H] Universitätsspital Insel Bern
+  |LSHJ|XLS000P|[H] Kinderspital Zurich
+  |LSHL|LSHL|[H] Kantonsspital Luzern
+  |LSHO|LSHO|[H] Ospedale regionale di Bellinzona e valli
+  |LSHQ|LSHQ|[H] Kantonsspital Glarus
+  |LSHR|LSHR|[H] Ospedale regionale di Locarno
+  |LSHS|XLS000V|[H] Hopital de Sion
+  |LSHT|XLSZ1|[H] Ospedale regionale di Lugano
+  |LSHV|LSHV|[H] Centre hospitalier universitaire vaudois
+  |LSHW|XLS000Y|[H] Kantonsspital Winterthur
+  |LSHZ|XLS000W|[H] Universitätsspital Zürich
+  |LSHP|XLS000U|[H] Spital Visp
+  |LSUS|LSUS|[H] Urgence Sembrancher
+  |LSOC|LSOC|[H] Chermignon
+  |LSVI|LSOA|[H] Arolla
+  |LSCR|LSCR|[H] Centre hospitalier de Rennaz
+
 - It's important to follow the instructions provided during flight and wait with proceeding to the next waypoint of the generated flight plan until you are instructed to do so. Aborting/skipping any intermediate tasks will cause the mission not to progress correctly.
 
 #### Navigation
