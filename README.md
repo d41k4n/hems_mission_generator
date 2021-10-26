@@ -3,6 +3,7 @@
 
 
 
+
 # HEMS Mission Generator
 A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator package for the [X-Plane](https://www.x-plane.com) flight simulator including crew intercom simulation and automatic animations (doors, boom, winch, cargo, boarding/unboarding etc.).
 
@@ -211,6 +212,7 @@ Starting missions is done by selecting the provided mission template through the
 - Keep lowering the winch until you hear/read the message "Stop winch!". You might have to keep extending the rope beyond the current height above ground in order to provide some extra slack (e.g. to compensate for horizontal and/or vertical drift).
 - Start raising the winch when you hear/read message "Start raising winch carefully".
 - If you hear/read the message "Get back into position!" that means you have strayed too far from the hover target (> 30m horizontally, >150ft vertically). Correct your position using the accident scene mission objects as a visual reference.
+- Crew will report the hook's distance from ground at intervals of 10, 5, 4, 3, 2 and 1 meters (same for the distance from helicopter while retrieving the attached load)
 
 ### Troubleshooting
 
