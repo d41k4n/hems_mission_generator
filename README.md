@@ -129,10 +129,17 @@ In order to optimize mission creation in Mission-X for the general area of Switz
 
 To do so proceed as follows:
 
-1. In the X-Plane menu select Plugins -> Mission-X vx.x.xxx.x
-2. Click on `Setup`
-3. Locate section `OVERPASS settings`
-4. Replace the value for `Overpass URL` with `https://overpass.osm.ch/api/interpreter`
+1. Open file `./Resources/plugins/missionx/missionx.cfg` in a text editor
+2. After the line containing `<overpass>` insert the following 2 lines:
+   ```
+       <url>https://overpass.osm.ch/api/interpreter</url>
+   <!--
+   ```
+3. Before the line containing `</overpass>` insert the following line:
+   ```
+   -->
+   ```
+4. Save the file
 
 ### Starting a mission
 
@@ -216,3 +223,4 @@ The following third party assets were used (and adapted where necessary) with ki
  - Parts of "HeliAlpes Swiss Pack" scenery by [marc1227](https://forums.x-plane.org/index.php?/profile/398981-marc1227/) 
  - Parts of "CH HEMS HeliPack 2016 A" for FSX by Pascal Küffer
  - Selected X-Plane core textures by Laminar Research / Austin Meyer
+
