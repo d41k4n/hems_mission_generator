@@ -7,9 +7,9 @@ FLOORS_MIN 3
 FLOORS_MAX 33
 GRADED
 SHADER_WALL
-TEXTURE ../textures_US_urban_high\UrbanHighFac1_ALB.png
-TEXTURE_NORMAL 1.0 ../textures_US_urban_high\UrbanHighFac1_NML.png
-TEXTURE_LIT ../textures_US_urban_high\UrbanHighFac1_LIT.png
+TEXTURE ../textures/UrbanHighFac1_ALB.png
+TEXTURE_NORMAL 1.0 ../textures/UrbanHighFac1_NML.png
+TEXTURE_LIT ../textures/UrbanHighFac1_LIT.png
 TWO_SIDED 0
 NORMAL_METALNESS 
 #SHADER_ROOF
