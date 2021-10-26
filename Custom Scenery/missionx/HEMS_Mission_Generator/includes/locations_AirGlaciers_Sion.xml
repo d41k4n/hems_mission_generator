@@ -1,0 +1,29 @@
+	<loc_hospitals>
+		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
+		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSGS"/>
+		<point lat="46.52458" long="6.64096" template="land" radius_mt="80" loc_desc="Helipad, Lausanne CHUV / LSHL"/>
+		<point lat="46.38034" long="6.92115" template="land" radius_mt="80" loc_desc="Helipad, Rennaz Hospital / LSHR"/>
+	</loc_hospitals>
+
+	<loc_hospitals_pickup>
+		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
+		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
+		<point lat="46.28772" long="7.88434" template="land" radius_mt="80" loc_desc="Helipad, Visp Hospital / LSHP"/>
+		<point lat="46.07837" long="7.14578" template="land" radius_mt="80" loc_desc="Helipad, Sembrancher / LSUS"/>
+		<point lat="46.07837" long="7.14578" template="land" radius_mt="80" loc_desc="Helipad, Sembrancher / LSUS"/>
+		<point lat="46.07837" long="7.14578" template="land" radius_mt="80" loc_desc="Helipad, Sembrancher / LSUS"/>
+		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSGS"/>
+		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSGS"/>
+		<point lat="46.01356" long="7.48465" template="land" radius_mt="80" loc_desc="Helipad, Arolla / LSVI"/>
+		<point lat="46.28417" long="7.46572" template="land" radius_mt="80" loc_desc="Helipad, Chermignon / LSOC"/>
+	</loc_hospitals_pickup>
+
+	<loc_hospitals_dropoff>
+		<point lat="46.23448" long="7.38711" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital, Sion / LSGS"/>
+		<point lat="46.52458" long="6.64096" template="land" radius_mt="80" loc_desc="Helipad, Lausanne CHUV / LSHL"/>
+		<point lat="46.38034" long="6.92115" template="land" radius_mt="80" loc_desc="Helipad, Rennaz Hospital / LSHR"/>
+	</loc_hospitals_dropoff>
+
+	<loc_homebase>
+		<point lat="46.22168" long="7.34633" template="land" radius_mt="80" loc_desc="LSGS Air-Glaciers Base, Sion"/>
+	</loc_homebase>

@@ -1,11 +1,13 @@
 
 
 
+
+
 # HEMS Mission Generator
 A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator package for the [X-Plane](https://www.x-plane.com) flight simulator including crew intercom simulation and automatic animations (doors, boom, winch, cargo, boarding/unboarding etc.).
 
 ### How does it work?
-The mission generator uses random mission templates which are processed by the [Mission-X](https://forums.x-plane.org/index.php?/files/file/41874-mission-x/) plugin for creating random but plausible rescue scenarios. Mission goals and accident locations are computed dynamically based on distance, terrain features (slope, surface), annotated vector data obtained from the live OpenStreetMap database (roads, trails, pistes, outdoor pitches/parkings and administrative boundaries) and augmented with real historical traffic accident open data (where available). Rescue locations are populated with plausible objects to make them recognizable from the air. Mission types include patient extractions (by either landing at or hovering over designated accident locations) and hospital transfers. Crew interaction during hovering (winch ops) is partially automated and simulated (attach/detach payload, boom operation, payload and hover position advisories). Location of patient drop-off is calculated to give a plausible travel distance (e.g. closest hospital up to a maximum, but not too close). Mission progress and instructions are communicated over audio (TTS).
+The mission generator uses a mission template which is processed by the [Mission-X](https://forums.x-plane.org/index.php?/files/file/41874-mission-x/) plugin for creating random but plausible rescue scenarios. Mission goals and accident locations are computed dynamically based on distance, terrain features (slope, surface), annotated vector data obtained from the live OpenStreetMap database (roads, trails, pistes, outdoor pitches/parkings and administrative boundaries) and augmented with real historical traffic accident open data (where available). Rescue locations are populated with plausible objects to make them recognizable from the air. Mission types include patient extractions (by either landing at or hovering over designated accident locations) and hospital transfers. Crew interaction during hovering (winch ops) is partially automated and simulated (attach/detach payload, boom operation, payload and hover position advisories). Location of patient drop-off is calculated to give a plausible travel distance (e.g. closest hospital up to a maximum, but not too close). Mission progress and instructions are communicated over audio (TTS).
 
 ### What's included?
 The package basically includes the following:
@@ -53,16 +55,6 @@ Note that only a _port-side_ mounted hoist is supported for hover missions or ot
 	 -  [EC 135 v5 EMS](https://rotorsim.de/download-ec-135-v5/download/5-ec-135/14-ec-135-v5-ems) installed under `./Aircraft/Helicopters/EC 145 V5 EMS`
 	 -  [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) installed under `./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1`
  - Scenery libraries: [RescueX](https://www.rotorsim.de/component/jdownloads/download/4-andere/9-rescuex?Itemid=3111), [3D People](https://forums.x-plane.org/index.php?/files/file/26611-3d-people-library/), [R2](http://r2.xpl.cz/), [OpenSceneryX](https://www.opensceneryx.com/), [MisterX](https://forums.x-plane.org/index.php?/files/file/28167-misterx-library-and-static-aircraft-extension/), [CDB](https://forums.x-plane.org/index.php?/files/file/27907-cdb-library/), [RuScenery](http://ruscenery.x-air.ru/), [Handy Objects](https://forums.x-plane.org/index.php?/files/file/24261-the-handy-objects-library/), [NZ Pro Scenery - Overlay](http://www.alpilotx.net/downloads/x-plane-10-new-zealand-pro/#Download)
-	 - Make sure the libraries are installed using their _unaltered default folder names_ or otherwise objects might not be loaded properly i.e.
-
-			./Custom Scenery/CDB-Library
-			./Custom Scenery/pm_library
-			./Custom Scenery/RescueX_Lib
-			./Custom Scenery/3D_people_library
-			./Custom Scenery/R2_Library
-			./Custom Scenery/MisterX_Library
-			./Custom Scenery/OpenSceneryX
-			./Custom Scenery/zzz_new_zealand_overlay
 
 ### Recommended free custom airport scenery
 
@@ -74,24 +66,26 @@ Note that only a _port-side_ mounted hoist is supported for hover missions or ot
 
 Installation involves copying files into the following folders within X-Plane's home directory:
 ```
+./Custom Scenery/missionx/HEMS_Mission_Generator
+./Custom Scenery/CH_Hospitals
+./Custom Scenery/helipad_lib
 ./Aircraft/Helicopters/EC 135 V5 EMS
 ./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1
 ./Aircraft/_slingload_objects
-./Custom Scenery/CH_Hospitals
-./Custom Scenery/helipad_lib
-./Custom Scenery/missionx/random
 ./Resources/plugins/FlyWithLua/Scripts
 ./Resources/plugins/FlyWithLua/Modules
-./Resources/plugins/missionx/templates
 ./Resources/plugins/HSL
 ```
-To be on the safe side consider making backup copies of these before proceeding.
+To be on the safe side consider making backup copies of these folders before proceeding.
 
-Since the package relies on certain X-Plane core assets that cannot be re-distributed the installation process may be a bit more involved depending on the chosen installation method as provided below.
+#### Zip file method
+
+ 1. Download the [current master branch as a zip file](https://github.com/d41k4n/hems_mission_generator/archive/refs/heads/master.zip)
+ 2. Unzip the contents of the zipped folder "hems_mission_generator_master" directly into X-Plane's home folder overwriting any existing files (don't unzip the folder "hems_mission_generator_master" itself!).
 
 #### Git clone method
 
-This method is the easiest but requires an installed [Git client](https://git-scm.com/downloads) so that the `git` command is available on the command line. To verify open a command terminal and execute the following command:
+This method requires an installed [Git client](https://git-scm.com/downloads) so that the `git` command is available on the command line. To verify open a command terminal and execute the following command:
 
     git --version
 
@@ -103,7 +97,6 @@ By following the instructions below the master branch of this Github repository 
  3. Execute the following commands in sequence:
 
 		git init
-		git config core.symlinks true
 		git remote add origin https://github.com/d41k4n/hems_mission_generator.git
 		git fetch
 		git reset origin/master
@@ -119,23 +112,6 @@ git reset --hard HEAD
 
  1. Download the [current master branch as a zip file](https://github.com/d41k4n/hems_mission_generator/archive/refs/heads/master.zip)
  2. Unzip the contents of the zipped folder "hems_mission_generator_master" directly into X-Plane's home folder overwriting any existing files (don't unzip the folder "hems_mission_generator_master" itself!).
- 3. Within folder `./Custom Scenery/CH_Heliports` find and replace all file occurrences like
-
-		*/apt_lights.png
-		*/apt_lights_LIT.png
-        
-	with either copies or symbolic links to the same-name core assets within X-Plane's home folder i.e.
-
-		./Resources/default scenery/sim objects/apt_lights/apt_lights.png
-		./Resources/default scenery/sim objects/apt_lights/apt_lights_LIT.png
-
- 4. Finally, replace file
-
-		./Custom Scenery/heliport_lib/textures
-
-	with either a copy or a symbolic link to the core asset folder within X-Plane's home folder i.e.
-
-		./Resources/default scenery/1000 autogen/US/urban_high/textures
 		
 ### Suggested controller setup
 
@@ -153,24 +129,32 @@ In order to optimize mission creation in Mission-X for the general area of Switz
 
 To do so proceed as follows:
 
-1. In the X-Plane menu select Plugins -> Mission-X vx.x.xxx.x
-2. Click on `Setup`
-3. Locate section `OVERPASS settings`
-4. Replace the value for `Overpass URL` with `https://overpass.osm.ch/api/interpreter`
+1. Open file `./Resources/plugins/missionx/missionx.cfg` in a text editor
+2. After the line containing `<overpass>` insert the following 2 lines:
+   ```
+       <url>https://overpass.osm.ch/api/interpreter</url>
+   <!--
+   ```
+3. Before the line containing `</overpass>` insert the following line:
+   ```
+   -->
+   ```
+4. Save the file
 
 ### Starting a mission
 
-Starting missions is done by selecting one of the provided mission templates through the Mission-X UI:
+Starting missions is done by selecting the provided mission template through the Mission-X UI:
 
 1. In the X-Plane menu select `Plugins -> Mission-X vx.x.xxx.x`
 2. Click on `Templates`
-3. Select any of the "Random HEMS Mission Generator" template icons
+3. Select the "HEMS Mission Generator" template icon
 4. Read the template description carefully and make sure that 
-	- you have selected the appropriate helicopter model as indicated (use port-side hoist configuration for hover missions)
+	- you have selected the desired option for the combination of location and helicopter from the dropdown
+	- you have configured your flight to use the appropriate helicopter model as indicated (use port-side hoist configuration for hover missions)
 	- you are positioned within 80m of the indicated home base coordinates (this will also be evaluated as your last waypoint or the mission won't terminate)
 5. Click on `Generate Mission from Template`
 6. Wait for the actual mission to be generated (a blue button labeled `>> Start mission <<` will appear)
-7. Read again the template description as it will contain updated information about your mission
+7. Read again the template description as it will now contain the actual mission briefing
 8. When ready, click  `>> Start mission <<` 
 9. Listen for audio messages containing status information and/or instructions as the mission progresses
 10. Have fun!
@@ -178,6 +162,43 @@ Starting missions is done by selecting one of the provided mission templates thr
 ### Hints
 
 #### General
+- Before starting your first mission it might be a good idea to verify all included scenery is installed correctly by visually inspecting the heliport locations. There are ramp starts provided at each of them so it's possible to start flights there. The list of currently provided heliports is the following:
+
+  |ICAO|ID|Name
+  |--|--|--|
+  |LSKB|LSKB|[H] Kantonsspital Baden
+   |LSCB|LSCB|[H] Regionalspital Bülach
+  |LSHF|LSHF|[H] Kantonsspital Frauenfeld
+  |LSKI|XLS000S|[H] Regionalspital Surselva Ilanz
+  |LSKL|LSKL|[H] Regionalspital Limmattal Schlieren
+  |LSXM|LSXM|[H] Klinik Gut St.Moritz
+  |LSHT|XLS000J|[H] Regionalspital Thusis
+  |LSKS|LSKS|[H] Regionalspital Unterengadin Scuol
+  |LSKZ|LSKZ|[H] Kantonsspital Zug
+  |LSKT|LSKT|[H] Stadtspital Zürich Triemli
+  |LSHA|XLS000D|[H] Kantonsspital Aarau
+  |LSHB|LSHB|[H] Universitätsspital Basel
+  |LSHC|XLS000G|[H] Kantonsspital Graubünden Chur
+  |LSHD|XLS000F|[H] Regionalspital Davos
+  |LSHF|XLS0015|[H] Kantonsspital Uri
+  |LSHG|XLS0010|[H] Kantonsspital St.Gallen
+  |LSHI|LSHI|[H] Universitätsspital Insel Bern
+  |LSHJ|XLS000P|[H] Kinderspital Zurich
+  |LSHL|LSHL|[H] Kantonsspital Luzern
+  |LSHO|LSHO|[H] Ospedale regionale di Bellinzona e valli
+  |LSHQ|LSHQ|[H] Kantonsspital Glarus
+  |LSHR|LSHR|[H] Ospedale regionale di Locarno
+  |LSHS|XLS000V|[H] Hopital de Sion
+  |LSHT|XLSZ1|[H] Ospedale regionale di Lugano
+  |LSHV|LSHV|[H] Centre hospitalier universitaire vaudois
+  |LSHW|XLS000Y|[H] Kantonsspital Winterthur
+  |LSHZ|XLS000W|[H] Universitätsspital Zürich
+  |LSHP|XLS000U|[H] Spital Visp
+  |LSUS|LSUS|[H] Urgence Sembrancher
+  |LSOC|LSOC|[H] Chermignon
+  |LSVI|LSOA|[H] Arolla
+  |LSCR|LSCR|[H] Centre hospitalier de Rennaz
+
 - It's important to follow the instructions provided during flight and wait with proceeding to the next waypoint of the generated flight plan until you are instructed to do so. Aborting/skipping any intermediate tasks will cause the mission not to progress correctly.
 
 #### Navigation
@@ -201,3 +222,5 @@ The following third party assets were used (and adapted where necessary) with ki
  - Slingload objects by [X-Alberto](https://forums.x-plane.org/index.php?/profile/14984-x-alberto/)
  - Parts of "HeliAlpes Swiss Pack" scenery by [marc1227](https://forums.x-plane.org/index.php?/profile/398981-marc1227/) 
  - Parts of "CH HEMS HeliPack 2016 A" for FSX by Pascal Küffer
+ - Selected X-Plane core textures by Laminar Research / Austin Meyer
+

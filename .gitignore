@@ -18,6 +18,11 @@ Custom Scenery/*
 !Custom Scenery/heliport_lib
 !Custom Scenery/CH_Hospitals
 Custom Scenery/missionx/*
+!Custom Scenery/missionx/HEMS_Mission_Generator
+!Custom Scenery/missionx/HEMS_Mission_Generator/**
+Custom Scenery/missionx/HEMS_Mission_Generator/briefer/*raw.jpg
+Custom Scenery/missionx/HEMS_Mission_Generator/briefer/*.xml
+Custom Scenery/missionx/HEMS_Mission_Generator/*work.t
 !Custom Scenery/missionx/random
 Custom Scenery/missionx/random/*
 !Custom Scenery/missionx/random/HMG_winch.bas
