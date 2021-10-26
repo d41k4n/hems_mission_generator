@@ -1400,11 +1400,15 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-ec135.xml"/>
-		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%base_info%" replace_with="includes/base_info_AirGlaciers.xml"/>
@@ -1455,11 +1459,15 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-ec135.xml"/>
-		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%base_info%" replace_with="includes/base_info_AirZermatt.xml"/>
@@ -1510,11 +1518,15 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-ec135.xml"/>
-		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%base_info%" replace_with="includes/base_info_Lions1.xml"/>
@@ -1563,11 +1575,15 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-ec135.xml"/>
-		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%base_info%" replace_with="includes/base_info_Rega5.xml"/>
@@ -1618,11 +1634,15 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-ec135.xml"/>
-		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%base_info%" replace_with="includes/base_info_Rega1.xml"/>
@@ -1671,11 +1691,15 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-h145.xml"/>
-		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-h145.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-h145.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired-h145.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-h145.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired-h145.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%base_info%" replace_with="includes/base_info_Rega5.xml"/>
@@ -1726,11 +1750,15 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-h145.xml"/>
-		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-h145.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-h145.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired-h145.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-h145.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired-h145.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%base_info%" replace_with="includes/base_info_Rega1.xml"/>
