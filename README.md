@@ -2,6 +2,7 @@
 
 
 
+
 # HEMS Mission Generator
 A HEMS (**H**elicopter **E**mergency **M**edical **S**ervice) random mission generator package for the [X-Plane](https://www.x-plane.com) flight simulator including crew intercom simulation and automatic animations (doors, boom, winch, cargo, boarding/unboarding etc.).
 
@@ -77,11 +78,14 @@ Installation involves copying files into the following folders within X-Plane's 
 ```
 To be on the safe side consider making backup copies of these folders before proceeding.
 
-Since the package relies on certain X-Plane core assets that cannot be re-distributed the installation process may be a bit more involved depending on the chosen installation method as provided below.
+#### Zip file method
+
+ 1. Download the [current master branch as a zip file](https://github.com/d41k4n/hems_mission_generator/archive/refs/heads/master.zip)
+ 2. Unzip the contents of the zipped folder "hems_mission_generator_master" directly into X-Plane's home folder overwriting any existing files (don't unzip the folder "hems_mission_generator_master" itself!).
 
 #### Git clone method
 
-This method is the easiest but requires an installed [Git client](https://git-scm.com/downloads) so that the `git` command is available on the command line. To verify open a command terminal and execute the following command:
+This method requires an installed [Git client](https://git-scm.com/downloads) so that the `git` command is available on the command line. To verify open a command terminal and execute the following command:
 
     git --version
 
@@ -93,7 +97,6 @@ By following the instructions below the master branch of this Github repository 
  3. Execute the following commands in sequence:
 
 		git init
-		git config core.symlinks true
 		git remote add origin https://github.com/d41k4n/hems_mission_generator.git
 		git fetch
 		git reset origin/master
@@ -109,23 +112,6 @@ git reset --hard HEAD
 
  1. Download the [current master branch as a zip file](https://github.com/d41k4n/hems_mission_generator/archive/refs/heads/master.zip)
  2. Unzip the contents of the zipped folder "hems_mission_generator_master" directly into X-Plane's home folder overwriting any existing files (don't unzip the folder "hems_mission_generator_master" itself!).
- 3. Within folder `./Custom Scenery/CH_Heliports` find and replace all file occurrences like
-
-		*/apt_lights.png
-		*/apt_lights_LIT.png
-        
-	with either copies or symbolic links to the same-name core assets within X-Plane's home folder i.e.
-
-		./Resources/default scenery/sim objects/apt_lights/apt_lights.png
-		./Resources/default scenery/sim objects/apt_lights/apt_lights_LIT.png
-
- 4. Finally, replace file
-
-		./Custom Scenery/heliport_lib/textures
-
-	with either a copy or a symbolic link to the core asset folder within X-Plane's home folder i.e.
-
-		./Resources/default scenery/1000 autogen/US/urban_high/textures
 		
 ### Suggested controller setup
 
@@ -192,3 +178,4 @@ The following third party assets were used (and adapted where necessary) with ki
  - Slingload objects by [X-Alberto](https://forums.x-plane.org/index.php?/profile/14984-x-alberto/)
  - Parts of "HeliAlpes Swiss Pack" scenery by [marc1227](https://forums.x-plane.org/index.php?/profile/398981-marc1227/) 
  - Parts of "CH HEMS HeliPack 2016 A" for FSX by Pascal Küffer
+ - Selected X-Plane core textures by Laminar Research / Austin Meyer
