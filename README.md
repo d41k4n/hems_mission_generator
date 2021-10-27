@@ -196,6 +196,7 @@ Starting missions is done by selecting the provided mission template through the
   |LSCR|LSCR|[H] Centre hospitalier de Rennaz
 
 - It's important to follow the instructions provided during flight and wait with proceeding to the next waypoint of the generated flight plan until you are instructed to do so. Aborting/skipping any intermediate tasks will cause the mission not to progress correctly.
+- There are no strict time limits for completing any of the flight legs and tasks.
 
 #### Navigation
 - A flight plan containing the minimal set of mandatory waypoints is auto-generated and will be loaded into the GPS/FMS at mission start. Reaching of these waypoints (within a radius of 80m) is evaluated by the mission script.
