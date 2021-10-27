@@ -92,7 +92,7 @@ This method requires an installed [Git client](https://git-scm.com/downloads) so
 
 It should output the Git version on the console. If not that means your Git client was not installed correctly.
 
-By following the instructions below the master branch of this Github repository will be checked out ("cloned") locally into the existing X-Plane home folder overwriting any existing files. It assumes there is no pre-existing folder named `.git` inside your X-Plane home folder. The Git client will then take care of creating required symbolic links automatically and everything should _just work_&trade;.
+By following the instructions below the master branch of this Github repository will be checked out ("cloned") locally into the existing X-Plane home folder overwriting any existing files. It assumes there is no pre-existing folder named `.git` inside your X-Plane home folder.
 
  1. Open a command terminal inside X-Plane's home folder
  3. Execute the following commands in sequence:
