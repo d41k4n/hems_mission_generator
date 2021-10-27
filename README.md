@@ -109,11 +109,6 @@ git fetch
 git reset --hard HEAD
 ```
 
-#### Zip file method
-
- 1. Download the [current master branch as a zip file](https://github.com/d41k4n/hems_mission_generator/archive/refs/heads/master.zip)
- 2. Unzip the contents of the zipped folder "hems_mission_generator_master" directly into X-Plane's home folder overwriting any existing files (don't unzip the folder "hems_mission_generator_master" itself!).
-		
 ### Suggested controller setup
 
 For best experience during hover missions it is recommended to assign the following commands to some physical controllers (e.g. joystick buttons):
