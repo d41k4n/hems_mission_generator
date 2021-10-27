@@ -108,6 +108,10 @@ To update (or reinstall) the latest version simply execute the following command
 git fetch
 git reset --hard HEAD
 ```
+#### Check scenery order
+
+To be on the safe side make sure the scenery pack `CH_Hospitals` is given highest priority in `scenery_packs.ini`.
+The scenery packs `missionx` and `heliport_lib` do not require any special priority and can be placed anywhere in `scenery_packs.ini`.
 
 ### Suggested controller setup
 
