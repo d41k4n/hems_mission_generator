@@ -35,9 +35,14 @@
 		Further instructions will be provided after the mission is generated. 
 		
 		Good luck!"
-	/>
+	>
+		<overpass>
+			<url>https://overpass.osm.ch/api/interpreter</url>
+		</overpass>
+	</mission_info>
 
 	<content>
+		%content-medevac_hover_test%
 		%content-medevac_hover%
 		%content-medevac_land%
 		%content-medevac_hover_ski_osm%
@@ -55,13 +60,50 @@
 	<!-- [plane | xy] {element name that holds points} -->
 	<briefer_and_start_location location_type="plane" start_cold_and_dark="yes" />
 
-	%datarefs_start_cold_and_dark%
+	<datarefs_start_cold_and_dark>%datarefs_start_cold_and_dark%,sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0</datarefs_start_cold_and_dark>
+
+	<medevac_hover_test_set is_set_of_flight_legs="yes" >
+		<!-- Road accident, mountain accident -->
+		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
+			<desc>Extraction of an injured person by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
+			<expected_location location_type="xy" location_value="tag=loc_acc_test|nm_between=2-30" override_trigger_name="trig_hover_goal_1_target_1"/>
+			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="3000">Establish visual on target area and reduce speed.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" length_mt="1000">Crew standby for hover. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Hospital -->
+		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
+			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
+			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-30" override_trigger_name="trig_hover_goal_2_target_1" />
+			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+
+		<!-- Homebase -->
+		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
+			<desc>Return to base: {navaid_loc_desc}.</desc>
+			<fire_commands_at_leg_start commands="" />
+			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
+			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="1000">On final. Wind check.</dynamic_message>
+		</leg>
+	</medevac_hover_test_set>
 
 	<medevac_hover_set is_set_of_flight_legs="yes" >
 		<!-- Road accident, mountain accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
 			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=5-30" override_trigger_name="trig_hover_goal_1_target_1"/>
 			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
@@ -74,7 +116,7 @@
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=5-30" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -98,7 +140,7 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />			
 			<expected_location location_type="xy" location_value="tag=loc_acc|nm_between=5-30" override_trigger_name="trig_land_goal_1_target_1" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -135,7 +177,7 @@
 		<!-- Hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Urgent hospital transfer of a patient. Pickup location: {navaid_loc_desc}. Helipad coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
 			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup" override_trigger_name="trig_land_goal_1_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -171,7 +213,7 @@
 		<!-- Pickup hospital -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Urgent hospital transfer of a patient. Location: {navaid_loc_desc}. Helipad coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
 			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup_germany" override_trigger_name="trig_land_goal_1_target_1"  />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -207,7 +249,7 @@
 		<!-- Ski accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured skier by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
 			<expected_location location_type="webosm" location_value="tag=webosm_piste_filter|nm_between=5-30|keyname=piste:name|keydesc=piste:name|webosm_optimize=n" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
 			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
@@ -220,7 +262,7 @@
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-30" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -244,7 +286,7 @@
 		<!-- Hiking accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured hiker by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
 			<expected_location location_type="webosm" location_value="tag=webosm_trail_filter|nm_between=5-30|keyname=name|keydesc=name|webosm_optimize=y" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
 			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
@@ -257,7 +299,7 @@
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|nm_between=2-30" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -281,7 +323,7 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person due to a traffic accident. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
 			<expected_location location_type="webosm" location_value="tag=webosm_road_filter|nm_between=5-30|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" max_slope_to_land="12" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -318,7 +360,7 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person from a parking area. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
 			<expected_location location_type="webosm" location_value="tag=webosm_parking_filter|nm_between=5-30|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3"/>
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -355,7 +397,7 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person from an outdoor sports pitch. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			%fire_commands_at_leg_start%
+			<fire_commands_at_leg_start commands="%fire_commands_at_leg_start%,FlyWithLua/hoist/winch_remove_patient,FlyWithLua/hoist/winch_release" />
 			<expected_location location_type="webosm" location_value="tag=webosm_pitches_filter|nm_between=5-30|keyname=name|keydesc=name|webosm_optimize=n" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -1365,6 +1407,7 @@
 			Further instructions will be provided after the mission is started. 
 
 			Good luck!"/>
+		<find_replace find="%content-medevac_hover_test%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
@@ -1425,6 +1468,7 @@
 			Further instructions will be provided after the mission is started. 
 
 			Good luck!"/>
+		<find_replace find="%content-medevac_hover_test%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
@@ -1484,6 +1528,7 @@
 			Further instructions will be provided after the mission is started. 
 
 			Good luck!"/>
+		<find_replace find="%content-medevac_hover_test%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/empty.xml"/>
@@ -1543,6 +1588,7 @@
 			Further instructions will be provided after the mission is started. 
 
 			Good luck!"/>
+		<find_replace find="%content-medevac_hover_test%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
@@ -1600,6 +1646,7 @@
 			Further instructions will be provided after the mission is started. 
 
 			Good luck!"/>
+		<find_replace find="%content-medevac_hover_test%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
@@ -1659,6 +1706,7 @@
 			Further instructions will be provided after the mission is started. 
 
 			Good luck!"/>
+		<find_replace find="%content-medevac_hover_test%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
@@ -1716,6 +1764,7 @@
 			Further instructions will be provided after the mission is started. 
 
 			Good luck!"/>
+		<find_replace find="%content-medevac_hover_test%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
 		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
@@ -1762,5 +1811,65 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%base_info%" replace_with="includes/base_info_Rega1.xml"/>
+	</opt>
+	<opt name="Rega5_LSXU_Untervaz_EC135_TEST">
+		<info title="HEMS mission for Rega 5 EC135 out of LSXU Untervaz - DEBUG ONLY" mission_image_file_name="HMG_Rega5.png" plane_desc="Rotorsim EC135 V5" short_desc="
+			*** THIS IS A STATIC TEST MISSION - USE FOR DEBUGGING PURPOSES ONLY ***
+
+			Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090) 
+			Aircraft: Rotorsim EC135 V5
+
+			Please make sure your aircraft is parked and ready before starting the mission. 
+
+			Each mission ends successfully with you returning safely to your homebase.
+
+			Further instructions will be provided after the mission is started. 
+
+			Good luck!"/>
+		<find_replace find="%content-medevac_hover_test%" replace_with="includes/content-medevac_hover_test.xml"/>
+		<find_replace find="%content-medevac_hover%" replace_with="includes/empty.xml"/>
+		<find_replace find="%content-medevac_land%" replace_with="includes/empty.xml"/>
+		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/empty.xml"/>
+		<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/empty.xml"/>
+		<find_replace find="%content-medevac_road_osm%" replace_with="includes/empty.xml"/>
+		<find_replace find="%content-medevac_parking_osm%" replace_with="includes/empty.xml"/>
+		<find_replace find="%content-medevac_pitch_osm%" replace_with="includes/empty.xml"/>
+		<find_replace find="%content-medevac_hospital%" replace_with="includes/empty.xml"/>
+		<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/empty.xml"/>
+		<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-ec135.xml"/>
+		<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-ec135.xml"/>
+		<find_replace find="%locations%" replace_with="includes/locations_Rega5.xml"/>
+		<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_Rega5.xml"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_open-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_off_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%base_info%" replace_with="includes/base_info_Rega5.xml"/>
 	</opt>
 </REPLACE_OPTIONS>

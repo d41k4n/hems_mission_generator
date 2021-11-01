@@ -607,6 +607,10 @@
 		<point lat="46.7158333" long="9.99638889" template="hover" radius_mt="80" loc_desc="7542 Susch, Switzerland, Search and Rescue"/>
 	</loc_acc>
 
+	<loc_acc_test>
+		<point lat="46.896172" long="9.582361" template="hover" radius_mt="80" loc_desc="Baholz, 7202 Says, Switzerland, Winch training location"/>
+	</loc_acc_test>
+
 	<loc_hospitals>
 		<point lat="46.86317" long="9.54002" template="land" radius_mt="80" loc_desc="Helipad, Graubünden Kantonsspital, Chur / LSHC"/>
 		<point lat="46.69698" long="9.43650" template="land" radius_mt="80" loc_desc="Helipad, Thusis Spital / LSHT"/>
