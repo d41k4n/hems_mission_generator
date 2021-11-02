@@ -311,7 +311,7 @@ end
 
 function remove_patient()
 	print("Hoist: Removing patient from winch cargo")
-	cargo_mass = 0
+	cargo_mass = 0.1 -- Should not be zero as otherwise it will disable physics
 end
 
 do_sometimes("monitor()")
