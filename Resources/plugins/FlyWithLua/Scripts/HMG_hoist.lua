@@ -1,11 +1,11 @@
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 -- Script: Hoist.
--- Version: 0.1.0
--- Build:   09-08-2019
+-- Version: 0.3.1
+-- Build:   31-10-2021
 -- Henry Favretto
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 -- Description:
--- Display and control rope length.
+-- Display and control hoist parameters.
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 -- require("graphics")
@@ -38,10 +38,12 @@ local init_completed = false
 local is_rotorsim = false
 local tween = require 'tween'
 
+-- Port-side winch positions for H145 model by VLC-Entwicklung
 local winch_position_retracted = {-0.920000, 0.617768, -1.588976}
 local winch_position_extended = {-1.738400, 0.617768, -1.283000}
-local cw_hook = {0.9, 0.9, 0.9}
-local cw_cargo = {0.6, 0.6, 0.6}
+
+-- local cw_hook = {0.9, 0.9, 0.9}
+-- local cw_cargo = {0.6, 0.6, 0.6}
 
 hold_down = false
 hold_up = false
@@ -53,13 +55,12 @@ local rope_speed_min = 0.3
 local rope_accel = 0.001
 local rope_near = 2
 local winch_duration = 5
-local cargo_size_connected = {1, 1, 1.8}
-local cargo_size_released = {0.2, 0.2, 0.2}
-local cargo_mass_crew = 90
-local cargo_mass_patient = 85
-local cargo_mass_empty = 2.5
-local cargo_height_crew = 1.1
-local cargo_height_empty = 0.35
+-- local cargo_size_connected = {1, 1, 1.8}
+-- local cargo_size_released = {0.2, 0.2, 0.2}
+local cargo_mass_patient = 90
+-- local cargo_mass_empty = 2.5
+-- local cargo_height_crew = 1.1
+-- local cargo_height_empty = 0.35
 
 local winch_tween = tween.new(winch_duration, winch_position_extended, winch_position_retracted, tween.easing.quad)
 
@@ -82,11 +83,14 @@ function monitor()
 		if specific_datarefs_exist() then
 			dataref("RopeLength", "HSL/Rope/RopeLengthNormal", "writable")
 			dataref("cargo_mass", "HSL/Cargo/Mass", "writable")
+			dataref("hook_connected", "HSL/Hook/Connected", "readonly")
+			dataref("cargo_connected", "HSL/Cargo/Connected", "readonly")
 			dataref("cargo_height", "HSL/Cargo/Height" , "writable")
+			dataref("rope_force_scalar", "HSL/Calculated/RopeForceScalar", "readonly")
 			winch_position_ref = XPLMFindDataRef("HSL/Winch/VectorWinchPosition")
 			winch_pos = XPLMGetDatavf(winch_position_ref, 0, 3)
-			cargo_size_ref = XPLMFindDataRef("HSL/Cargo/Size")
-			cw_cargo_ref  = XPLMFindDataRef("HSL/Cargo/CWFront")
+			-- cargo_size_ref = XPLMFindDataRef("HSL/Cargo/Size")
+			-- cw_cargo_ref  = XPLMFindDataRef("HSL/Cargo/CWFront")
 			if XPLMFindDataRef("rotorsim/ec135/hoist_angle") ~= nil then
 				is_rotorsim = true
 				dataref("winch_angle", "rotorsim/ec135/hoist_angle", "readonly")
@@ -112,8 +116,10 @@ function monitor()
 	end
 end
 
-function round(num, numDecimalPlaces)
-  return tonumber(string.format("%." .. (numDecimalPlaces or 0) .. "f", num))
+function round(number, precision)
+   local fmtStr = string.format('%%0.%sf',precision)
+   number = string.format(fmtStr,number)
+   return number
 end
 
 function hoist_op()
@@ -124,7 +130,7 @@ function hoist_op()
 				rope_speed = rope_speed + rope_accel
 			end
 			RopeLength = RopeLengthDisplay + (dt * rope_speed)
-		elseif hold_up and RopeLength > 0.1 then
+		elseif hold_up and RopeLength > 0.32 then
 			RopeLengthDisplay = RopeLength
 			if RopeLength<rope_near and rope_speed > rope_speed_min then
 				rope_speed = rope_speed - rope_accel
@@ -177,18 +183,21 @@ function hoist_on_build(hoist_wnd, x, y)
 	winch_position_current = XPLMGetDatavf(winch_position_ref, 0, 3)
 	imgui.TextUnformatted("Winch Position (xyz):  ")
 	imgui.SameLine()
-	imgui.TextUnformatted("[" .. round(winch_position_current[0],2) .. " ")
+	imgui.TextUnformatted("[" .. round(winch_position_current[0],3) .. " ")
 	imgui.SameLine()
-	imgui.TextUnformatted(round(winch_position_current[1],2) .. " ")
+	imgui.TextUnformatted(round(winch_position_current[1],3) .. " ")
 	imgui.SameLine()
-	imgui.TextUnformatted(round(winch_position_current[2],2) .. "]")
+	imgui.TextUnformatted(round(winch_position_current[2],3) .. "]")
+	imgui.TextUnformatted("Rope force (Nm):  ")
+	imgui.SameLine()
+	imgui.TextUnformatted(round(rope_force_scalar,2))
 end
 
 hoist_wnd = nil
 
 function hoist_show_wnd()
-    hoist_wnd = float_wnd_create(330, 100, 1, true)
-    float_wnd_set_title(hoist_wnd, "Hoist v0.3.0")
+    hoist_wnd = float_wnd_create(330, 120, 1, true)
+    float_wnd_set_title(hoist_wnd, "Hoist v0.3.1")
     float_wnd_set_imgui_builder(hoist_wnd, "hoist_on_build")
 end
 
@@ -256,7 +265,7 @@ end
 
 function connect_winch()
 	print("Hoist: Connecting winch")
-    --cargo_mass = cargo_mass_crew
+    cargo_mass = 0 -- Set to zero as crew mass is already modeled as the hook mass in HSL.ini
 	--cargo_height = cargo_height_crew
 	command_once("HSL/Sling_Enable")
 	-- Set cargo size
@@ -296,13 +305,13 @@ end
 
 function add_patient()
 	print("Hoist: Adding patient to winch cargo")
-	cargo_mass = cargo_mass_crew + cargo_mass_patient
+	cargo_mass = cargo_mass_patient
 	command_once("HSL/Load_Connect")
 end
 
 function remove_patient()
 	print("Hoist: Removing patient from winch cargo")
-	cargo_mass = cargo_mass_crew
+	cargo_mass = 0.1 -- Should not be zero as otherwise it will disable physics
 end
 
 do_sometimes("monitor()")
