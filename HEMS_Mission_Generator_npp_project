@@ -27,6 +27,7 @@
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\content-medevac_hover.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\content-medevac_hover_hiker_osm.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\content-medevac_hover_ski_osm.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\content-medevac_hover_test.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\content-medevac_land.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\content-medevac_parking_osm.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\content-medevac_pitch_osm.xml" />
