@@ -55,8 +55,8 @@
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_1_triggers_patient_boarding-trig_1_doors_open-dataref_to_modify_when_fired-h145.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired-ec135.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired-h145.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_1_triggers_patient_boarding-trig_1_patient_on_open-dataref_to_modify_when_fired-ec135.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_1_triggers_patient_boarding-trig_1_patient_on_open-dataref_to_modify_when_fired-h145.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired-ec135.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired-h145.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired-ec135.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired-h145.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml" />
