@@ -167,7 +167,7 @@ Starting missions is done by selecting the provided mission template through the
   |LSHF|XLS0015|[H] Kantonsspital Uri
   |LSHG|XLS0010|[H] Kantonsspital St.Gallen
   |LSHI|LSHI|[H] Universitätsspital Insel Bern
-  |LSHJ|XLS000P|[H] Kinderspital Zurich
+  |LSHJ|XLS000P|[H] Kinderspital Zürich
   |LSHL|LSHL|[H] Kantonsspital Luzern
   |LSHO|LSHO|[H] Ospedale regionale di Bellinzona e valli
   |LSHQ|LSHQ|[H] Kantonsspital Glarus
