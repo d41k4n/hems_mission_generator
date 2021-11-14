@@ -54,6 +54,7 @@ local rope_speed_max = 0.5
 local rope_speed_min = 0.3
 local rope_accel = 0.001
 local rope_near = 2
+local rope_length_init = 0.31
 local winch_duration = 5
 -- local cargo_size_connected = {1, 1, 1.8}
 -- local cargo_size_released = {0.2, 0.2, 0.2}
@@ -289,6 +290,7 @@ function release_winch()
 	--cargo_mass = cargo_mass_empty
 	--cargo_height = cargo_height_empty
 	command_once("HSL/Sling_Disable")
+	RopeLength = rope_length_init
 	-- cargo_size = XPLMGetDatavf(cargo_size_ref, 0, 3)
 	--local cargo_size_target = XPLMGetDatavf(cargo_size_ref, 0, 3)
 	--cargo_size_target[0] = cargo_size_released[1]
