@@ -1425,7 +1425,7 @@
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
@@ -1485,7 +1485,7 @@
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
@@ -1545,7 +1545,7 @@
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
@@ -1605,7 +1605,7 @@
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
@@ -1663,7 +1663,7 @@
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
@@ -1723,7 +1723,7 @@
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-h145.xml"/>
-		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-h145"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-h145.xml"/>
@@ -1781,7 +1781,7 @@
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-h145.xml"/>
-		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-h145"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-h145.xml"/>
@@ -1843,7 +1843,7 @@
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135"/>
+		<find_replace find="%leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_start_winch_down-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_patient-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_onboard_crew-dataref_to_modify_when_fired-ec135.xml"/>
