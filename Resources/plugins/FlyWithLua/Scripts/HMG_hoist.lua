@@ -1,8 +1,8 @@
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
--- Script: Hoist.
--- Version: 0.3.1
--- Build:   31-10-2021
--- Henry Favretto
+-- Script: Hoist
+-- Version: 0.3.2
+-- Date: 20-11-2021
+-- Author: Henry Favretto
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 -- Description:
 -- Display and control hoist parameters.
@@ -54,12 +54,12 @@ local rope_speed_max = 0.5
 local rope_speed_min = 0.3
 local rope_accel = 0.001
 local rope_near = 2
-local rope_length_init = 0.31
+local rope_length_init = 0.319
 local winch_duration = 5
 -- local cargo_size_connected = {1, 1, 1.8}
 -- local cargo_size_released = {0.2, 0.2, 0.2}
 local cargo_mass_patient = 90
--- local cargo_mass_empty = 2.5
+local cargo_mass_empty = 0.1 -- Should not be zero as otherwise it will disable physics
 -- local cargo_height_crew = 1.1
 -- local cargo_height_empty = 0.35
 
@@ -198,7 +198,7 @@ hoist_wnd = nil
 
 function hoist_show_wnd()
     hoist_wnd = float_wnd_create(330, 120, 1, true)
-    float_wnd_set_title(hoist_wnd, "Hoist v0.3.1")
+    float_wnd_set_title(hoist_wnd, "Hoist v0.3.2")
     float_wnd_set_imgui_builder(hoist_wnd, "hoist_on_build")
 end
 
@@ -285,12 +285,11 @@ function connect_winch()
 
 end
 
-function release_winch()
-	print("Hoist: Releasing winch")
+function disable_winch()
+	print("Hoist: Disabling winch")
 	--cargo_mass = cargo_mass_empty
 	--cargo_height = cargo_height_empty
 	command_once("HSL/Sling_Disable")
-	RopeLength = rope_length_init
 	-- cargo_size = XPLMGetDatavf(cargo_size_ref, 0, 3)
 	--local cargo_size_target = XPLMGetDatavf(cargo_size_ref, 0, 3)
 	--cargo_size_target[0] = cargo_size_released[1]
@@ -313,7 +312,13 @@ end
 
 function remove_patient()
 	print("Hoist: Removing patient from winch cargo")
-	cargo_mass = 0.1 -- Should not be zero as otherwise it will disable physics
+	cargo_mass = cargo_mass_empty
+end
+
+function reset_winch()
+	print("Hoist: Resetting winch")
+	cargo_mass = cargo_mass_empty
+    RopeLength = rope_length_init
 end
 
 do_sometimes("monitor()")
@@ -322,11 +327,12 @@ do_every_frame ("hoist_op()")
 -- make a switchable menu entry , default is on
 add_macro("Hoist Window: open/close", "hoist_show_wnd()", "hoist_hide_wnd()", "deactivate")
 create_command("FlyWithLua/hoist/show_toggle", "Open/close hoist window", "toggle_hoist_window()", "", "")
+create_command("FlyWithLua/hoist/winch_reset", "Reset winch", "reset_winch()", "", "")
 create_command("FlyWithLua/hoist/winch_down", "Lower winch", "", "hold_down = true", "hold_down = false")
 create_command("FlyWithLua/hoist/winch_up", "Raise winch", "", "hold_up = true", "hold_up = false")
 create_command("FlyWithLua/hoist/winch_retract", "Retract winch", "retract_winch()", "", "")
 create_command("FlyWithLua/hoist/winch_extend", "Extend winch", "extend_winch()", "", "")
 create_command("FlyWithLua/hoist/winch_connect", "Connect winch", "connect_winch()", "", "")
-create_command("FlyWithLua/hoist/winch_release", "Release winch", "release_winch()", "", "")
+create_command("FlyWithLua/hoist/winch_disable", "Disable winch", "disable_winch()", "", "")
 create_command("FlyWithLua/hoist/winch_add_patient", "Add patient to winch cargo", "add_patient()", "", "")
 create_command("FlyWithLua/hoist/winch_remove_patient", "Remove patient from winch cargo", "remove_patient()", "", "")
