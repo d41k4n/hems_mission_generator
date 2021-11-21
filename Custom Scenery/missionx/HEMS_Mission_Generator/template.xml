@@ -1813,8 +1813,8 @@
 		<find_replace find="%base_info%" replace_with="includes/base_info_Rega1.xml"/>
 	</opt>
 	<opt name="Rega5_LSXU_Untervaz_EC135_TEST">
-		<info title="HEMS mission for Rega 5 EC135 out of LSXU Untervaz - DEBUG ONLY" mission_image_file_name="HMG_Rega5.png" plane_desc="Rotorsim EC135 V5" short_desc="
-			*** THIS IS A STATIC TEST MISSION - USE FOR DEBUGGING PURPOSES ONLY ***
+		<info title="HEMS TEST mission for Rega 5 EC135 out of LSXU Untervaz" mission_image_file_name="HMG_Rega5.png" plane_desc="Rotorsim EC135 V5" short_desc="
+			*** THIS MISSION USES A PREDEFINED DESTINATION LOCATED NEARBY (<2NM) - USE FOR TRAINING OR TESTING PURPOSES ***
 
 			Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090) 
 			Aircraft: Rotorsim EC135 V5
