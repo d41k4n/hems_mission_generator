@@ -1614,6 +1614,8 @@
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired-ec135.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
@@ -1732,6 +1734,8 @@
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_open-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_off-dataref_to_modify_when_fired-h145.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired-h145.xml"/>
+		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_crew_on-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired-h145.xml"/>
