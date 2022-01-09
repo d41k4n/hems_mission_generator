@@ -16,7 +16,6 @@ define_shared_DataRef("hoist/rope_length", "Float")
 
 dataref("dt", "sim/time/framerate_period", "readonly")
 dataref("agl", "sim/flightmodel/position/y_agl", "readonly")
-dataref("custom_slider_on_5", "sim/cockpit2/switches/custom_slider_on", "writable", 5)
 dataref("ground_contact", "hoist/ground_contact", "writable")
 dataref("is_up", "hoist/is_up", "writable")
 dataref("rope_length", "hoist/rope_length", "writable")
@@ -243,7 +242,7 @@ function retract_winch()
 		print(winch_pos[2] .. " -> " .. winch_pos_target[2])
 		winch_tween = tween.new(winch_duration, winch_pos, winch_pos_target, tween.easing.inOutQuad)
 		winch_stopped = false
-		custom_slider_on_5=0
+		set_array("sim/cockpit2/switches/custom_slider_on",5,0)
 	end
 end
 
@@ -260,7 +259,7 @@ function extend_winch()
 		print(winch_pos[2] .. " -> " .. winch_pos_target[2])
 		winch_tween = tween.new(winch_duration, winch_pos, winch_pos_target, tween.easing.inOutQuad)
 		winch_stopped = false
-		custom_slider_on_5=1
+		set_array("sim/cockpit2/switches/custom_slider_on",5,1)
 	end
 end
 
