@@ -4,7 +4,7 @@
 #
 */
 
-#define VERSION "0.1.3"
+#define VERSION "0.1.4"
 
 #ifdef _WIN32
  #include <windows.h>
@@ -28,13 +28,15 @@
 #define XSCENERYDIR "./Custom Scenery"         /* where to look for orthos */
 
 const char *keywords[] = {
-	"spital","clinic","medic","klinik","krankenhaus","christoph","christophorus"," sar ",
-	" lrz ", " khk ", " kh "," hems "," rega ","ospedale","health","rescue","rettung","samu",
+	"spital","clinic","medic","klinik","krankenhaus","christoph"," sar "," lrz ", 
+	" khk ", " kh "," hems "," rega ","ospedale","health","rescue","rettung","samu",
 	"lifeliner"
 };
 
 int debug = 0;
 char *words[MAX_WRD];
+char lat_filter[MAX_TXT];
+char lon_filter[MAX_TXT];
 
 /*-----------------------------------------------------------------*/
 
@@ -152,11 +154,15 @@ int scanHelis() {
                         if ( lat[0] == '0' ) rmZeros(lat); /* remove leading 0 */
                         if ( lon[0] == '0' ) rmZeros(lon);
 
-                        if ( debug ) {
-                           printf("%s %s %s\n",lon,lat,name);
-                        } else {
-                           printf("<point lat=\"%s\" long=\"%s\" template=\"land\" radius_mt=\"80\" loc_desc=\"%s\"/>\n",lat,lon,name);
-                        }
+                        if ( (lat_filter[0] == '\0' || ! strncmp(lat,lat_filter,strlen(lat_filter))) && 
+                              (lon_filter[0] == '\0' || ! strncmp(lon,lon_filter,strlen(lon_filter))) ) {
+
+                           if ( debug ) {
+                              printf("%s %s %s\n",lon,lat,name);
+                           } else {
+                              printf("<point lat=\"%s\" long=\"%s\" template=\"land\" radius_mt=\"80\" loc_desc=\"%s\"/>\n",lat,lon,name);
+                           }
+			}
                      }
                   }
                }
@@ -175,11 +181,24 @@ int main(int argc, char **argv) {
 
    char tmp[256];
 
-   if ( argc > 1 && ! strcmp(argv[1],"debug") ) {
-      debug = 1;
-   }
+   lat_filter[0] = '\0';
+   lon_filter[0] = '\0';
 
    printf("heliscan - %s\n",VERSION);
+
+   if ( argc > 1 ) {
+       if ( ! strcmp(argv[1],"debug") ) {
+         debug = 1;
+       } else {
+          strcpy(lat_filter,argv[1]);
+          printf("using lat_filter %s\n",lat_filter);
+          if (  argc > 2 ) {
+             strcpy(lon_filter,argv[2]);
+             printf("using lon_filter %s\n",lon_filter);
+          }
+       }
+   }
+
 
    printf ("scanning for heli ports ...\n");
 
