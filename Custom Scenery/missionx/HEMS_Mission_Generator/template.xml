@@ -1419,8 +1419,8 @@
 		<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/empty.xml"/>
 		<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-ec135.xml"/>
 		<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-ec135.xml"/>
-		<find_replace find="%locations%" replace_with="includes/locations_AirGlaciers_Sion.xml"/>
-		<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_AirGlaciers_Sion.xml"/>
+		<find_replace find="%locations%" replace_with="includes/locations_AirGlaciers-Sion.xml"/>
+		<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_AirGlaciers-Sion.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
@@ -1480,8 +1480,8 @@
 		<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/empty.xml"/>
 		<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-ec135.xml"/>
 		<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-ec135.xml"/>
-		<find_replace find="%locations%" replace_with="includes/locations_AirZermatt_Zermatt.xml"/>
-		<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_AirZermatt_Zermatt.xml"/>
+		<find_replace find="%locations%" replace_with="includes/locations_AirZermatt-Zermatt.xml"/>
+		<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_AirZermatt-Zermatt.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_deploy_crew-dataref_to_modify_when_fired-ec135.xml"/>
