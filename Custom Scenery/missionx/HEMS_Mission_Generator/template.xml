@@ -1454,7 +1454,8 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%base_info%" replace_with="includes/base_info_AirGlaciers.xml"/>
+		<find_replace find="%base_info%" replace_with="Homebase: LSGS, Sion, pad #6 (lat: 46.22168, lon: 7.34633)
+Aircraft: Rotorsim EC135 V5"/>
 	</opt>
 	<opt name="AirZermatt_LSEZ_Zermatt_EC135">
 		<info title="HEMS mission for Air Zermatt EC135 out of LSEZ Zermatt" mission_image_file_name="HMG_AirZermatt-Zermatt.png" plane_desc="Rotorsim EC135 V5" short_desc="
@@ -1514,7 +1515,8 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%base_info%" replace_with="includes/base_info_AirZermatt.xml"/>
+		<find_replace find="%base_info%" replace_with="Homebase: LSEZ, Zermatt heliport (lat: 46.02939, lon: 7.75330)
+Aircraft: Rotorsim EC135 V5"/>
 	</opt>
 	<opt name="Lions1_LSZF_Birrfeld_EC135">
 		<info title="HEMS mission for Lions 1 EC135 out of LSZF Birrfeld" mission_image_file_name="HMG_Lions1.png" plane_desc="Rotorsim EC135 V5" short_desc="
@@ -1574,7 +1576,8 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%base_info%" replace_with="includes/base_info_Lions1.xml"/>
+		<find_replace find="%base_info%" replace_with="Homebase: LSZF, LIONS1 heliport (lat: 47.44429142, lon: 8.23366269)
+Aircraft: Rotorsim EC135 V5"/>
 	</opt>
 	<opt name="Rega5_LSXU_Untervaz_EC135">
 		<info title="HEMS mission for Rega 5 EC135 out of LSXU Untervaz" mission_image_file_name="HMG_Rega5.png" plane_desc="Rotorsim EC135 V5" short_desc="
@@ -1634,7 +1637,8 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%base_info%" replace_with="includes/base_info_Rega5.xml"/>
+		<find_replace find="%base_info%" replace_with="Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
+Aircraft: Rotorsim EC135 V5"/>
 	</opt>
 	<opt name="Rega1_LSMD_Dübendorf_EC135">
 		<info title="HEMS mission for Rega 1 EC135 out of LSMD Dübendorf" mission_image_file_name="HMG_Rega1.png" plane_desc="Rotorsim EC135 V5" short_desc="
@@ -1694,7 +1698,8 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%base_info%" replace_with="includes/base_info_Rega1.xml"/>
+		<find_replace find="%base_info%" replace_with="Homebase: LSMD, Rega 1 helipad (lat: 47.39612, lon: 8.63762)
+Aircraft: Rotorsim EC135 V5"/>
 	</opt>
 	<opt name="Rega5_LSXU_Untervaz_H145">
 		<info title="HEMS mission for Rega 5 H145 out of LSXU Untervaz" mission_image_file_name="HMG_Rega5.png" plane_desc="VLC-Entwicklung H145 Rescue Version v3.1" short_desc="
@@ -1754,7 +1759,8 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-h145.xml"/>
-		<find_replace find="%base_info%" replace_with="includes/base_info_Rega5.xml"/>
+		<find_replace find="%base_info%" replace_with="Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
+Aircraft: Rotorsim EC135 V5"/>
 	</opt>
 	<opt name="Rega1_LSMD_Dübendorf_H145">
 		<info title="HEMS mission for Rega 1 H145 out of LSMD Dübendorf" mission_image_file_name="HMG_Rega1.png" plane_desc="RVLC-Entwicklung H145 Rescue Version v3.1" short_desc="
@@ -1814,7 +1820,8 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-h145.xml"/>
-		<find_replace find="%base_info%" replace_with="includes/base_info_Rega1.xml"/>
+		<find_replace find="%base_info%" replace_with="Homebase: LSMD, Rega 1 helipad (lat: 47.39612, lon: 8.63762)
+Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 	</opt>
 	<opt name="Rega5_LSXU_Untervaz_EC135_TEST">
 		<info title="HEMS TEST mission for Rega 5 EC135 out of LSXU Untervaz" mission_image_file_name="HMG_Rega5.png" plane_desc="Rotorsim EC135 V5" short_desc="
@@ -1874,7 +1881,8 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-ec135.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-ec135.xml"/>
-		<find_replace find="%base_info%" replace_with="includes/base_info_Rega5.xml"/>
+		<find_replace find="%base_info%" replace_with="Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
+Aircraft: Rotorsim EC135 V5"/>
 	</opt>
 	<opt name="Rega5_LSXU_Untervaz_H145_TEST">
 		<info title="HEMS TEST mission for Rega 5 H145 out of LSXU Untervaz" mission_image_file_name="HMG_Rega5.png" plane_desc="RVLC-Entwicklung H145 Rescue Version v3.1" short_desc="
@@ -1934,6 +1942,7 @@
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_crew_on_winch_op-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-commands_to_exec_when_fired-h145.xml"/>
 		<find_replace find="%leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired%" replace_with="includes/leg_2_triggers_dropoff-trig_2_doors_closed-dataref_to_modify_when_fired-h145.xml"/>
-		<find_replace find="%base_info%" replace_with="includes/base_info_Rega5.xml"/>
+		<find_replace find="%base_info%" replace_with="Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
+Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 	</opt>
 </REPLACE_OPTIONS>
