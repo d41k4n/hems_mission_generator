@@ -1,0 +1,19 @@
+        <webosm_piste_filter>
+                <filter>(way['piste:type']({{bbox}});relation['piste:type']({{bbox}}););out;</filter>
+        </webosm_piste_filter>
+
+        <webosm_trail_filter>
+                <filter>(way[highway=track]({{bbox}});way[highway=path]({{bbox}});relation[highway=track]({{bbox}});relation[highway=path]({{bbox}}););out;</filter>
+        </webosm_trail_filter>
+
+        <webosm_road_filter>
+                <filter>(way[highway=primary]({{bbox}});way[highway=secondary]({{bbox}});way[highway=tertiary]({{bbox}});way[highway=residential]({{bbox}});way[highway=service]({{bbox}});way[highway=living_street]({{bbox}}););out;</filter>
+        </webosm_road_filter>
+
+        <webosm_parking_filter>
+                <filter>way["parking"="surface"][!"building"](if:is_closed()%26%26length()>100)({{bbox}});out+center;</filter>
+        </webosm_parking_filter>
+
+        <webosm_pitches_filter>
+                <filter>way["leisure"="pitch"][!"building"](if:is_closed()%26%26length()>100)({{bbox}});way._["sport"!="tennis"]({{bbox}});way._["sport"!~"shooting.*"]({{bbox}});out+center;</filter>
+        </webosm_pitches_filter>
