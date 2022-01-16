@@ -1,0 +1,77 @@
+
+der "setup" folder sollte unter "..../Custom Scenery/missionx/HEMS_Mission_Generator/" liegen
+
+das "hmg_admin.lua" script natürlich under "..../Resources/plugins/FlyWithLua/Scripts" . wenn es gestartet wird, wird das macro "gen HMG template" erstellt.
+
+im admin folder gibt es das "sites.cfg", in dem die verschiedenen ... tja wie nenne ich das... mission-bases .. definiert werden.
+
+z.B.
+
+	name AirGlaciers_LSGS_Sion_EC135
+	title HEMS mission for Air Glaciers EC135 out of LSGS Sion
+	plane ec135
+	base AirGlaciers-Sion
+	home LSGS, Sion, pad #6 (lat: 46.22168, lon: 7.34633)
+	overpass https://overpass.osm.ch/api/interpreter
+
+dazu gibt es die datei "sites.in" .. die als "template-template" dient.
+
+das script erstellt dann aus der sites.cfg eine "01_locations" datei die dann so aussieht:
+
+	- EXNUERT, RMK Nuertingen (lat: 48.63046, lon: 9.35644)
+	- EXSHD, RMK Schorndorf (lat: 48.79680, lon: 9.52965)
+	- EXWND, RMK Winnenden (lat: 48.63046, lon: 9.35644)
+	- LSEZ, Zermatt heliport (lat: 46.02939, lon: 7.75330)
+	- LSGS, Sion, pad #6 (lat: 46.22168, lon: 7.34633)
+	- LSMD, Rega 1 helipad (lat: 47.39612, lon: 8.63762)
+	- LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
+	- LSZF, LIONS1 heliport (lat: 47.44429142, lon: 8.23366269)
+	- XED7T, Christoph 14 Traunstein (lat: 47.87400, lon: 12.63100)
+
+diese wird dann später im oberen teil der template.xml zu sehen sein.
+
+und aus der "sites.in" und "sites.cfg" erstellt das script eine "03_replace" datei
+
+diese enthält dann all die zeilen die zwischen den tags <REPLACE_OPTIONS> und </REPLACE_OPTIONS> stehen müssen.
+
+am ende werden alle 0* dateien zusammen gehängt und in der template.xml abgelegt. das ist auch der moment an dem die
+"feature" filter angewendet werden und quasi optional ein "post-processing" erfolgt.
+
+
+wichtig ist, dass das naming der "locations_*" und "webosm_filters_*" dateien dem "base" namen in der sites.cfg entsprechen müssen.
+
+also auf "_" und "-" achten und ggf. bestehende dateien entsprechend anpassen.
+
+"plane" wir über eine lookup-table an den erforderlichen stellen erweitert:
+
+	local acf_txt = {
+   		ec135="Rotorsim EC135 V5",
+   		h145="VLC-Entwicklung H145 Rescue Version v3.1",
+   		h145f="XFER (Fraxy) H145"
+	}
+
+ 
+für die TEST profile brauche ich auch noch ein lösung. wahrscheinlich wird es auf unterschiedliche ".in" files hinauslaufen.
+
+
+auf unix/linux/macos kann man auch ohne LUA das template.xml erstellen. einfach das script "./mk_all"  aufrufen.
+
+	[dbook] ./mk_all
+	locations..
+	replace..
+	template..
+	[dbook]
+
+dabei wird das script "im admin" !! folder abgelegt.  
+
+
+!!!! das LUA script überschreibt das template.xml im "missionx/HEMS_Mission_Generator"  folder !! 
+
+danach einmal ins "missionx" setup und zurück gehen. dadurch werden die templates neu gelesen 
+und man muss nicht X-Plane neu starten. aber das wirst du sicher schon wissen.
+
+
+
+
+
+

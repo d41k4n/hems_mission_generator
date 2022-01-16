@@ -2,6 +2,7 @@ Resources/plugins/FlyWithLua/*
 !Resources/plugins/FlyWithLua/Scripts
 Resources/plugins/FlyWithLua/Scripts/*
 !Resources/plugins/FlyWithLua/Scripts/HMG_hoist.lua
+!Resources/plugins/FlyWithLua/Scripts/HMG_admin.lua
 !Resources/plugins/FlyWithLua/Modules
 Resources/plugins/FlyWithLua/Modules/*
 !Resources/plugins/FlyWithLua/Modules/tween.lua
@@ -51,3 +52,8 @@ earth.wed.bak.xml
 validation_report.txt
 summary.txt
 apt.cache
+Custom Scenery/missionx/HEMS_Mission_Generator/setup/mk_*
+Custom Scenery/missionx/HEMS_Mission_Generator/setup/01_locations
+Custom Scenery/missionx/HEMS_Mission_Generator/setup/03_replace
+Custom Scenery/missionx/HEMS_Mission_Generator/setup/fix_*
+Custom Scenery/missionx/HEMS_Mission_Generator/setup/template.xml

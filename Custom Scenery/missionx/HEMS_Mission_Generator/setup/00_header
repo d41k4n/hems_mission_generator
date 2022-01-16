@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE version="301" plane_type="helos">
+	<!-- HEMS Random mission generator template
+	     using the MissionX plugin by snagar
+		 Version 1.0
+	-->
+
+	<mission_info 
+		mission_image_file_name="HMG_template.png" 
+		template_image_file_name="HMG_template.png" 
+		written_by="Daikan" 
+		plane_desc="Helicopter" 
+		estimate_time="~45 Minutes." 
+		difficulty="Medium" 
+		other_settings="" 
+		weather_settings="By Simmer" 
+		scenery_settings="RescueX, R2, PM, OpenSceneryX, MisterX, 3D People, CDB, NZ Pro" 
+		short_desc="Hello Pilot,
+		
+		This random mission template will generate a MEDEVAC mission that may consist of an emergency extraction from an accident scene or hospital - either by winch or by landing. 
+		
+		Pick your desired starting location and helicopter from the available options in the dropdown above.
+		
+		Make sure your helicopter is positioned according to your chosen option and in a parked state (cold and dark) before proceeding with generating the mission.
+		
+		Note: Your aircraft MUST be positioned within 80m of any of the following locations:
