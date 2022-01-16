@@ -1,9 +1,9 @@
 
 der "setup" folder sollte unter "..../Custom Scenery/missionx/HEMS_Mission_Generator/" liegen
 
-das "hmg_admin.lua" script natürlich under "..../Resources/plugins/FlyWithLua/Scripts" . wenn es gestartet wird, wird das macro "gen HMG template" erstellt.
+das "hmg_setup.lua" script natürlich under "..../Resources/plugins/FlyWithLua/Scripts" . wenn es gestartet wird, wird das macro "gen HMG template" erstellt.
 
-im admin folder gibt es das "sites.cfg", in dem die verschiedenen ... tja wie nenne ich das... mission-bases .. definiert werden.
+im setup folder gibt es das "sites.cfg", in dem die verschiedenen ... tja wie nenne ich das... mission-bases .. definiert werden.
 
 z.B.
 
@@ -62,7 +62,7 @@ auf unix/linux/macos kann man auch ohne LUA das template.xml erstellen. einfach 
 	template..
 	[dbook]
 
-dabei wird das script "im admin" !! folder abgelegt.  
+dabei wird das script "im setup" !! folder abgelegt.  
 
 
 !!!! das LUA script überschreibt das template.xml im "missionx/HEMS_Mission_Generator"  folder !! 

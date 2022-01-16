@@ -1,7 +1,7 @@
 --
 -- script to build a new HMG template.xml
 --
--- v0.8 
+-- v0.9 
 --
 
 local acf_txt = {
@@ -17,11 +17,11 @@ local xhome      = {}
 local xoverpass  = {}
  
 local hmg_dir      = SCRIPT_DIRECTORY .. "../../../../Custom Scenery/missionx/HEMS_Mission_Generator"
-local admin_dir    = hmg_dir   .. "/admin"
+local setup_dir    = hmg_dir   .. "/setup"
 local template_xml = hmg_dir   .. "/template.xml"
-local sites_out    = admin_dir .. "/03_replace"
-local sites_in     = admin_dir .. "/sites.in"
-local sites_cfg    = admin_dir .. "/sites.cfg"
+local sites_out    = setup_dir .. "/03_replace"
+local sites_in     = setup_dir .. "/sites.in"
+local sites_cfg    = setup_dir .. "/sites.cfg"
 
 
 local template = {}
@@ -39,7 +39,7 @@ end
 function printData()
   local k,v
   for k,v in pairs(xtitle) do
-    print("HMG-admin: "..k)
+    print("HMG-setup: "..k)
     print("   " .. xtitle[k])
     print("   " .. xbase[k])
     print("   " .. xhome[k])
@@ -50,7 +50,7 @@ end
 
 function genLocations()
   local k,v
-  local fname = admin_dir .. "/01_locations"
+  local fname = setup_dir .. "/01_locations"
   local outfile = io.open(fname,"w")
   local t = {} 
   local t2 = {}
@@ -229,7 +229,7 @@ function readConfig()
       end
     end
   else
-    print("HMG-admin: cannot open site.cfg")
+    print("HMG-setup: cannot open site.cfg")
   end
 end
 
@@ -238,10 +238,10 @@ end
 ---
 function makeTemplate()
   template = {}
-  readFile(admin_dir .. "/00_header")
-  readFile(admin_dir .. "/01_locations")
-  readFile(admin_dir .. "/02_missions")
-  readFile(admin_dir .. "/03_replace")
+  readFile(setup_dir .. "/00_header")
+  readFile(setup_dir .. "/01_locations")
+  readFile(setup_dir .. "/02_missions")
+  readFile(setup_dir .. "/03_replace")
 
   -- optional fixes
   fixWaiting()
