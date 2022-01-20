@@ -1,7 +1,7 @@
 --
 -- script to build a new HMG template.xml
 --
--- v0.9 
+-- v1.0 
 --
 
 local acf_txt = {
@@ -10,11 +10,25 @@ local acf_txt = {
    h145f  = "XFER (Fraxy) H145"
 }
 
+local contents = {
+   hover             = "content-medevac_hover",
+   hover_hiker       = "content-medevac_hover_hiker_osm",
+   hover_ski         = "content-medevac_hover_ski_osm",
+   hover_test        = "content-medevac_hover_test",
+   hospital          = "content-medevac_hospital",
+   hospital_germany  = "content-medevac_hospital_germany",
+   land              = "content-medevac_land",
+   parking           = "content-medevac_parking_osm",
+   pitch             = "content-medevac_pitch_osm",
+   road              = "content-medevac_road_osm"
+}
+
 local xtitle     = {}
 local xplane     = {}
 local xbase      = {}
 local xhome      = {}
 local xoverpass  = {}
+local xcontent   = {}
  
 local hmg_dir      = SCRIPT_DIRECTORY .. "../../../../Custom Scenery/missionx/HEMS_Mission_Generator"
 local setup_dir    = hmg_dir   .. "/setup"
@@ -161,12 +175,20 @@ function applyReplace(name)
   local xo = xoverpass[name]
   local xi = "HMG_"..xb..".png"
   local xa = acf_txt[xp]
+  local xc = "\n"
 
   if ( file_exists(hmg_dir .. "/includes/webosm_filters_"..xbase[name]..".xml") ) then
      xw = xb
   else
      xw = "default"      -- use default webosm_filter if no file exists
   end
+
+  -- build "my content" table
+  local myContent = {}
+  for w in string.gmatch(xcontent[name], "[%w_]+") do
+    myContent[w] = 1
+  end
+  
 
   for k,v in ipairs(template) do
     t = string.gsub(v,"%%NAME%%",name)
@@ -180,6 +202,13 @@ function applyReplace(name)
     t = string.gsub(t,"%%INFO%%","Homebase: "..xh.."\nAircraft: "..xa)
     t = string.gsub(t,"%%WEBOSM%%",xw)
 
+    for idx, val in pairs(contents) do
+       if ( myContent[idx] == 1 ) then
+          t = string.gsub(t,"%%"..idx.."%%",val)
+       else
+          t = string.gsub(t,"%%"..idx.."%%","empty")  -- add empty.xml for anything else
+       end
+    end 
     template[k] = t
   end
 end
@@ -188,11 +217,7 @@ function readConfig()
   local fname = sites_cfg
   local infile = io.open(fname,"r")
   local name
-  local title
-  local plane
-  local base
-  local home
-  local overpass
+
 
   if ( infile ~= nil ) then
 
@@ -203,38 +228,40 @@ function readConfig()
     io.close(infile)
 
     for index, value in ipairs(fileContent) do
+      if ( not value:match('^#') ) then         -- skip comment lines
 
-      if ( string.find(value,"name ",1) ) then
-        name = string.sub(value,6) 
+        if ( string.find(value,"name ",1) ) then
+          name = string.sub(value,6) 
+          xcontent[name] = ""
+  
+        elseif ( string.find(value,"title ",1) ) then
+          xtitle[name] = string.sub(value,7) 
+  
+        elseif ( string.find(value,"plane ",1) ) then
+          xplane[name] = string.sub(value,7)
+  
+        elseif ( string.find(value,"base ",1) ) then
+          xbase[name] = string.sub(value,6)
+   
+        elseif ( string.find(value,"home ",1) ) then
+          xhome[name] = string.sub(value,6)
+   
+        elseif ( string.find(value,"overpass ",1) ) then
+          xoverpass[name] = string.sub(value,10)
+   
+        elseif ( string.find(value,"content ",1) ) then
+          xcontent[name] = string.sub(value,9) 
+        end
 
-      elseif ( string.find(value,"title ",1) ) then
-        title = string.sub(value,7) 
-        xtitle[name] = title
-
-      elseif ( string.find(value,"plane ",1) ) then
-        plane = string.sub(value,7) 
-        xplane[name] = plane
-
-      elseif ( string.find(value,"base ",1) ) then
-        base = string.sub(value,6) 
-        xbase[name] = base
- 
-      elseif ( string.find(value,"home ",1) ) then
-        home = string.sub(value,6) 
-        xhome[name] = home
- 
-      elseif ( string.find(value,"overpass ",1) ) then
-        overpass = string.sub(value,10) 
-        xoverpass[name] = overpass
       end
     end
   else
-    print("HMG-setup: cannot open site.cfg")
+    print("HMG-setup: cannot open sites.cfg")
   end
 end
 
 --
--- contact all 4 files together and make the template.xml
+-- concat all 4 files together and make the template.xml
 ---
 function makeTemplate()
   template = {}
@@ -244,9 +271,9 @@ function makeTemplate()
   readFile(setup_dir .. "/03_replace")
 
   -- optional fixes
-  fixWaiting()
-  fixNavaids()
-  fixDistance()
+  -- fixWaiting()
+  -- fixNavaids()
+  -- fixDistance()
 
   writeFile(template_xml)
 end
