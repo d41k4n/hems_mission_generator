@@ -16,13 +16,9 @@
         <Folder name="Custom Scenery">
             <Folder name="missionx">
                 <Folder name="HEMS_Mission_Generator">
+                    <File name="Custom Scenery\missionx\HEMS_Mission_Generator\HMG_winch.bas" />
+                    <File name="Custom Scenery\missionx\HEMS_Mission_Generator\template.xml" />
                     <Folder name="includes">
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\base_info_AirGlaciers.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\base_info_AirZermatt.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\base_info_Lions1.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\base_info_Rega1.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\base_info_Rega5.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\content-medevac_hover_test.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\content-medevac_hospital.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\content-medevac_hospital_germany.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\content-medevac_hover.xml" />
@@ -102,19 +98,29 @@
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired-h145.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-ec135.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired-h145.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_AirGlaciers_Sion.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_AirZermatt_Zermatt.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_AirGlaciers-Sion.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_AirZermatt-Zermatt.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_CH14-Traunstein.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_Lions1.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_Rega1.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_Rega5.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\webosm_filters_AirGlaciers_Sion.xml" />
-                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\webosm_filters_AirZermatt_Zermatt.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_RMK-Nuertingen.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_RMK-Schorndorf.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\locations_RMK-Winnenden.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\webosm_filters_AirGlaciers-Sion.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\webosm_filters_AirZermatt-Zermatt.xml" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\webosm_filters_default.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\webosm_filters_Lions1.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\webosm_filters_Rega1.xml" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\includes\webosm_filters_Rega5.xml" />
                     </Folder>
-                    <File name="Custom Scenery\missionx\HEMS_Mission_Generator\HMG_winch.bas" />
-                    <File name="Custom Scenery\missionx\HEMS_Mission_Generator\template.xml" />
+                    <Folder name="setup">
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\setup\00_header" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\setup\02_missions" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\setup\README" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\setup\sites.cfg" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\setup\sites.in" />
+                    </Folder>
                 </Folder>
             </Folder>
         </Folder>
@@ -125,10 +131,11 @@
                     <File name="Resources\plugins\HSL\Stretcher.ini" />
                 </Folder>
                 <Folder name="FlyWithLua">
-                    <File name="Resources\plugins\FlyWithLua\Scripts\HMG_hoist.lua" />
                     <Folder name="modules">
                         <File name="Resources\plugins\FlyWithLua\Modules\tween.lua" />
                     </Folder>
+                    <File name="Resources\plugins\FlyWithLua\Scripts\HMG_hoist.lua" />
+                    <File name="Resources\plugins\FlyWithLua\Scripts\HMG_setup.lua" />
                 </Folder>
             </Folder>
         </Folder>
