@@ -29,7 +29,7 @@
 	<!-- [plane | xy] {element name that holds points} -->
 	<briefer_and_start_location location_type="plane" start_cold_and_dark="yes" />
 
-	<datarefs_start_cold_and_dark>sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0,%datarefs_start_cold_and_dark%</datarefs_start_cold_and_dark>
+	<datarefs_start_cold_and_dark>sim/flightmodel/misc/jett_len:0,sim/aircraft/overflow/acf_jett_is_slung:0,HSL/Hook/Mass:90,%datarefs_start_cold_and_dark%</datarefs_start_cold_and_dark>
 
 	<medevac_hover_test_set is_set_of_flight_legs="yes" >
 		<!-- Road accident, mountain accident -->
