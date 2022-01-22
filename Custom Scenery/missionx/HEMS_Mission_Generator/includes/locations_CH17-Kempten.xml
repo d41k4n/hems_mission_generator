@@ -1,0 +1,24 @@
+	<loc_hospitals>
+		<point lat="47.78799449" long="9.62107788" template="land" radius_mt="80" loc_desc="EXRAV [H] Klinik Ravensburg"/>
+		<point lat="47.73187740" long="10.30253719" template="land" radius_mt="80" loc_desc="EXKE [H] Klinikum Kempten"/>
+		<point lat="48.79680864" long="9.52965553" template="land" radius_mt="80" loc_desc="EXSHD [H] RMK Klinik Schorndorf"/>
+		<point lat="48.63046412" long="9.35644888" template="land" radius_mt="80" loc_desc="EXNUERT [H] Medius Klinik Nuertingen"/>
+	</loc_hospitals>
+
+	<loc_hospitals_pickup>
+		<point lat="47.78799449" long="9.62107788" template="land" radius_mt="80" loc_desc="EXRAV [H] Klinik Ravensburg"/>
+		<point lat="47.73187740" long="10.30253719" template="land" radius_mt="80" loc_desc="EXKE [H] Klinikum Kempten"/>
+		<point lat="48.79680864" long="9.52965553" template="land" radius_mt="80" loc_desc="EXSHD [H] RMK Klinik Schorndorf"/>
+		<point lat="48.63046412" long="9.35644888" template="land" radius_mt="80" loc_desc="EXNUERT [H] Medius Klinik Nuertingen"/>
+	</loc_hospitals_pickup>
+
+	<loc_hospitals_dropoff>
+		<point lat="47.78799449" long="9.62107788" template="land" radius_mt="80" loc_desc="EXRAV [H] Klinik Ravensburg"/>
+		<point lat="47.73187740" long="10.30253719" template="land" radius_mt="80" loc_desc="EXKE [H] Klinikum Kempten"/>
+		<point lat="48.79680864" long="9.52965553" template="land" radius_mt="80" loc_desc="EXSHD [H] RMK Klinik Schorndorf"/>
+		<point lat="48.63046412" long="9.35644888" template="land" radius_mt="80" loc_desc="EXNUERT [H] Medius Klinik Nuertingen"/>
+	</loc_hospitals_dropoff>
+
+	<loc_homebase>
+		<point lat="47.69137431" long="10.34014720" template="land" radius_mt="80" loc_desc="EX17 [H] Christoph 17 Kempten"/>
+	</loc_homebase>
