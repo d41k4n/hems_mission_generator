@@ -4,7 +4,7 @@
 #
 */
 
-#define VERSION "0.1.4"
+#define VERSION "0.1.5"
 
 #ifdef _WIN32
  #include <windows.h>
@@ -34,6 +34,9 @@ const char *keywords[] = {
 };
 
 int debug = 0;
+int around = 0;
+int latint = 0;
+int lonint = 0;
 char *words[MAX_WRD];
 char lat_filter[MAX_TXT];
 char lon_filter[MAX_TXT];
@@ -117,6 +120,9 @@ int scanHelis() {
    char lon[MAX_TXT];
    char lat[MAX_TXT];
 
+   int mylat = 0;
+   int mylon = 0;
+
    if ( (d = opendir(XSCENERYDIR)) != NULL) {
       while ((dir = readdir(d)) != NULL) {
          strcpy(apt,XSCENERYDIR);
@@ -154,8 +160,18 @@ int scanHelis() {
                         if ( lat[0] == '0' ) rmZeros(lat); /* remove leading 0 */
                         if ( lon[0] == '0' ) rmZeros(lon);
 
-                        if ( (lat_filter[0] == '\0' || ! strncmp(lat,lat_filter,strlen(lat_filter))) && 
-                              (lon_filter[0] == '\0' || ! strncmp(lon,lon_filter,strlen(lon_filter))) ) {
+                        mylat = atoi(lat);
+                        mylon = atoi(lon);
+
+                        if ( ((lat_filter[0] == '\0' || mylat == latint) &&     /* either match tile exactely */
+                              (lon_filter[0] == '\0' || mylon == lonint)) || 
+ 
+                              ( (around && lat_filter[0] != '\0' && lon_filter[0] != '\0') && (     /* or also show tiles around it */
+                                (mylat == latint-1 && mylon == lonint-1) || (mylat == latint-1 && mylon == lonint  ) ||
+                                (mylat == latint-1 && mylon == lonint+1) || (mylat == latint   && mylon == lonint-1) ||
+                                (mylat == latint   && mylon == lonint+1) || (mylat == latint+1 && mylon == lonint-1) ||
+                                (mylat == latint+1 && mylon == lonint  ) || (mylat == latint+1 && mylon == lonint+1) )
+                                ) ) {
 
                            if ( debug ) {
                               printf("%s %s %s\n",lon,lat,name);
@@ -186,17 +202,33 @@ int main(int argc, char **argv) {
 
    printf("heliscan - %s\n",VERSION);
 
-   if ( argc > 1 ) {
-       if ( ! strcmp(argv[1],"debug") ) {
+   int arg = 1;
+   int coords = 0;
+
+   while (arg < argc) {
+
+      if ( ! strcmp(argv[arg],"debug") ) {
          debug = 1;
-       } else {
-          strcpy(lat_filter,argv[1]);
-          printf("using lat_filter %s\n",lat_filter);
-          if (  argc > 2 ) {
-             strcpy(lon_filter,argv[2]);
-             printf("using lon_filter %s\n",lon_filter);
-          }
-       }
+      } else {
+         if ( ! strcmp(argv[arg],"around") ) {
+            around = 1;
+         } else {
+            if ( coords == 0 ) {
+               strcpy(lat_filter,argv[arg]);
+               printf("using lat_filter %s\n",lat_filter);
+               latint = atoi(lat_filter);
+               coords++;
+            } else {
+               if ( coords == 1 ) {
+                  strcpy(lon_filter,argv[arg]);
+                  printf("using lon_filter %s\n",lon_filter);
+                  lonint = atoi(lon_filter);
+                  coords++;
+               }
+            }
+         }
+      }
+      arg++;
    }
 
 
