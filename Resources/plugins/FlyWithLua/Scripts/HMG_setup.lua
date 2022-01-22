@@ -1,8 +1,12 @@
 --
 -- script to build a new HMG template.xml
 --
--- v1.0 
+-- v1.3
 --
+
+local applyWaitingFix  = true
+local applyNavaidsFix  = true
+local applyDistanceFix = false
 
 local acf_txt = {
    ec135  = "Rotorsim EC135 V5",
@@ -29,6 +33,7 @@ local xbase      = {}
 local xhome      = {}
 local xoverpass  = {}
 local xcontent   = {}
+local xrange     = {}
  
 local hmg_dir      = SCRIPT_DIRECTORY .. "../../../../Custom Scenery/missionx/HEMS_Mission_Generator"
 local setup_dir    = hmg_dir   .. "/setup"
@@ -47,6 +52,7 @@ function initArrays()
   xhome     = {}
   xoverpass = {}
   xtemplate = {}
+  xrange    = {}
   collectgarbage()
 end
 
@@ -59,6 +65,7 @@ function printData()
     print("   " .. xhome[k])
     print("   " .. xplane[k])
     print("   " .. xoverpass[k])
+    print("   " .. xrange[k])	
   end
 end
 
@@ -66,12 +73,12 @@ function genLocations()
   local k,v
   local fname = setup_dir .. "/01_locations"
   local outfile = io.open(fname,"w")
-  local t = {} 
+  local t1 = {} 
   local t2 = {}
   for k,v in pairs(xhome) do
-    t[string.format("- %s\n" , xhome[k])] = 1       -- build assoc array with uniqe home-bases
+    t1[string.format("- %s\n" , val)] = 1       -- build assoc array with uniqe home-bases
   end
-  for k,v in pairs(t) do
+  for k,v in pairs(t1) do
      table.insert(t2,k)                             -- now convert this array into a table
   end
   table.sort(t2)                                    -- no sort this table
@@ -90,6 +97,7 @@ function readFile(f)
 end
 
 function appendFile(f)
+  local k,v
   local outfile = io.open(f,"a")
   for k,v in ipairs(template) do
     outfile:write(string.format("%s\n" , v))
@@ -98,6 +106,7 @@ function appendFile(f)
 end
 
 function writeFile(f)
+  local k,v
   local outfile = io.open(f,"w")
   for k,v in ipairs(template) do
     outfile:write(string.format("%s\n" , v))
@@ -105,12 +114,12 @@ function writeFile(f)
   io.close(outfile)
 end
 
-function readSites()
+function readSitesIn()
   template = {}
   readFile(sites_in)
 end
 
-function writeSites()
+function writeSitesOut()
   appendFile(sites_out)
 end
 
@@ -142,6 +151,7 @@ end
 function fixDistance()
   local k,v
   for k,v in ipairs(template) do
+    print("k = "..k.." v = "..v.."\n")
     v = string.gsub(v,'nm_between=2%-30','nm_between=2%-10')
     v = string.gsub(v,'nm_between=5%-30','nm_between=5%-10')
     v = string.gsub(v,'nm_between=5%-60','nm_between=5%-20')
@@ -173,6 +183,8 @@ function applyReplace(name)
   local xt = xtitle[name]
   local xp = xplane[name]
   local xo = xoverpass[name]
+  local xr1,xr2,xr3,xr4
+  
   local xi = "HMG_"..xb..".png"
   local xa = acf_txt[xp]
   local xc = "\n"
@@ -189,6 +201,22 @@ function applyReplace(name)
     myContent[w] = 1
   end
   
+  if ( xrange[name] == "near" ) then
+    xr1="2-15"
+    xr2="5-15"
+    xr3="5-20"
+    xr4="10-20"
+  elseif ( xrange[name] == "far" ) then
+    xr1="2-40"
+    xr2="5-40"
+    xr3="5-80"
+    xr4="10-50"
+  else
+    xr1="2-30"
+    xr2="5-30"
+    xr3="5-60"
+    xr4="10-30"
+  end
 
   for k,v in ipairs(template) do
     t = string.gsub(v,"%%NAME%%",name)
@@ -201,16 +229,21 @@ function applyReplace(name)
     t = string.gsub(t,"%%IMAGE%%",xi)
     t = string.gsub(t,"%%INFO%%","Homebase: "..xh.."\nAircraft: "..xa)
     t = string.gsub(t,"%%WEBOSM%%",xw)
+    t = string.gsub(t,"%%RANGE1%%",xr1)
+    t = string.gsub(t,"%%RANGE2%%",xr2)
+    t = string.gsub(t,"%%RANGE3%%",xr3)
+    t = string.gsub(t,"%%RANGE4%%",xr4)
 
     for idx, val in pairs(contents) do
-       if ( myContent[idx] == 1 ) then
-          t = string.gsub(t,"%%"..idx.."%%",val)
-       else
-          t = string.gsub(t,"%%"..idx.."%%","empty")  -- add empty.xml for anything else
-       end
+      if ( myContent[idx] == 1 ) then
+        t = string.gsub(t,"%%"..idx.."%%",val)
+      else
+        t = string.gsub(t,"%%"..idx.."%%","empty")  -- add empty.xml for anything else
+      end
     end 
     template[k] = t
   end
+  
 end
 
 function readConfig()
@@ -233,6 +266,7 @@ function readConfig()
         if ( string.find(value,"name ",1) ) then
           name = string.sub(value,6) 
           xcontent[name] = ""
+		  xrange[name] = ""
   
         elseif ( string.find(value,"title ",1) ) then
           xtitle[name] = string.sub(value,7) 
@@ -251,6 +285,10 @@ function readConfig()
    
         elseif ( string.find(value,"content ",1) ) then
           xcontent[name] = string.sub(value,9) 
+
+        elseif ( string.find(value,"range ",1) ) then
+          xrange[name] = string.sub(value,7) 
+
         end
 
       end
@@ -271,10 +309,15 @@ function makeTemplate()
   readFile(setup_dir .. "/03_replace")
 
   -- optional fixes
-  -- fixWaiting()
-  -- fixNavaids()
-  -- fixDistance()
-
+  if ( applyWaitingFix ) then
+    fixWaiting()
+  end
+  if ( applyNavaidsFix ) then
+    fixNavaids()
+  end
+  if ( applyDistanceFix ) then
+    fixDistance()
+  end
   writeFile(template_xml)
 end
 
@@ -293,7 +336,7 @@ function genTemplate()
 
   genLocations()		-- generate sites overview
 
-  os.remove(sites_out)		-- delete old sites.out
+  os.remove(sites_out)	-- delete old sites.out
 
   writeHead()			-- start a new sites.out
 
@@ -304,11 +347,11 @@ function genTemplate()
 
   for k,v in ipairs(t) do
 
-    readSites()			-- do for each mission config
+    readSitesIn()			-- do for each mission config
 
     applyReplace(v)
 
-    writeSites()
+    writeSitesOut()
   end
 
   writeTail()			-- close the sites.out
