@@ -1,23 +1,17 @@
 	<loc_hospitals>
-		<point lat="48.63046" long="9.35644" template="land" radius_mt="80" loc_desc="Helipad, RMK Winnenden / EXWND"/>
-		<point lat="48.79680" long="9.52965" template="land" radius_mt="80" loc_desc="Helipad, RMK Schorndorf / EXSHD"/>
-		<point lat="48.63046" long="9.35644" template="land" radius_mt="80" loc_desc="Helipad, RMK Nuertingen / EXNUERT"/>
-		<point lat="47.87400" long="12.63100" template="land" radius_mt="80" loc_desc="Helipad, Christoph 14 Traunstein / XED7T"/>
+		<point lat="47.86045664" long="12.13221671" template="land" radius_mt="80" loc_desc="EXRO [H] Klinikum Rosenheim"/>
+		<point lat="47.87400" long="12.63100" template="land" radius_mt="80" loc_desc="XED7T Christoph 14 Traunstein"/>
 	</loc_hospitals>
 
 	<loc_hospitals_pickup>
-		<point lat="48.63046" long="9.35644" template="land" radius_mt="80" loc_desc="Helipad, RMK Winnenden / EXWND"/>
-		<point lat="48.79680" long="9.52965" template="land" radius_mt="80" loc_desc="Helipad, RMK Schorndorf / EXSHD"/>
-		<point lat="48.63046" long="9.35644" template="land" radius_mt="80" loc_desc="Helipad, RMK Nuertingen / EXNUERT"/>
+		<point lat="47.86045664" long="12.13221671" template="land" radius_mt="80" loc_desc="EXRO [H] Klinikum Rosenheim"/>
 	</loc_hospitals_pickup>
 
 	<loc_hospitals_dropoff>
-		<point lat="48.63046" long="9.35644" template="land" radius_mt="80" loc_desc="Helipad, RMK Winnenden / EXWND"/>
-		<point lat="48.79680" long="9.52965" template="land" radius_mt="80" loc_desc="Helipad, RMK Schorndorf / EXSHD"/>
-		<point lat="48.63046" long="9.35644" template="land" radius_mt="80" loc_desc="Helipad, RMK Nuertingen / EXNUERT"/>
-		<point lat="47.87400" long="12.63100" template="land" radius_mt="80" loc_desc="Helipad, Christoph 14 Traunstein / XED7T"/>
+		<point lat="47.86045664" long="12.13221671" template="land" radius_mt="80" loc_desc="EXRO [H] Klinikum Rosenheim"/>
+		<point lat="47.87400" long="12.63100" template="land" radius_mt="80" loc_desc="XED7T Christoph 14 Traunstein"/>
 	</loc_hospitals_dropoff>
 
 	<loc_homebase>
-		<point lat="47.87400" long="12.63100" template="land" radius_mt="80" loc_desc="Helipad, Christoph 14 Traunstein / XED7T"/>
+		<point lat="47.87400" long="12.63100" template="land" radius_mt="80" loc_desc="XED7T Christoph 14 Traunstein"/>
 	</loc_homebase>
