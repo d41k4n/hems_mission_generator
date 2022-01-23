@@ -4,8 +4,8 @@
 -- v1.4
 --
 
-local applyWaitingFix  = true
-local applyNavaidsFix  = true
+local applyWaitingFix  = false
+local applyNavaidsFix  = false
 local applyDistanceFix = false
 
 local acf_txt = {
