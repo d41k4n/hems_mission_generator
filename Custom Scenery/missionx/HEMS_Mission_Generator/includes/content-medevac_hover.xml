@@ -1,4 +1,4 @@
-		<medevac_hover min_valid_flight_legs="3" list="medevac_hover_set" plane_type="helos">
+		<medevac_hover min_valid_flight_legs="%min_valid_flight_legs%" list="medevac_hover_set" plane_type="helos">
 
 %base_info%
 Hiking accident: In this mission you will have to fly an HEMS mission to a location on your GPS to assist with a winch-extraction of an injured person followed by safe transfer to designated hospital.

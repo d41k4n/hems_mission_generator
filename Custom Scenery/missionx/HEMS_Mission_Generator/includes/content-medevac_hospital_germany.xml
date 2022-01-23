@@ -1,4 +1,4 @@
-		<medevac_hospital_germany min_valid_flight_legs="3" list="medevac_hospital_germany_set" plane_type="helos">
+		<medevac_hospital_germany min_valid_flight_legs="%min_valid_flight_legs%" list="medevac_hospital_germany_set" plane_type="helos">
 
 %base_info%
 In this mission you will provide cross-border HEMS assistance performing a patient transfer between two hospitals designated on your GPS.

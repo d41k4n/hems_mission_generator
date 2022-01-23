@@ -1,7 +1,7 @@
 --
 -- script to build a new HMG template.xml
 --
--- v1.3
+-- v1.4
 --
 
 local applyWaitingFix  = true
@@ -34,6 +34,7 @@ local xhome      = {}
 local xoverpass  = {}
 local xcontent   = {}
 local xrange     = {}
+local xlegs      = {}
  
 local hmg_dir      = SCRIPT_DIRECTORY .. "../../../../Custom Scenery/missionx/HEMS_Mission_Generator"
 local setup_dir    = hmg_dir   .. "/setup"
@@ -53,19 +54,21 @@ function initArrays()
   xoverpass = {}
   xtemplate = {}
   xrange    = {}
+  xlegs     = {}
   collectgarbage()
 end
 
 function printData()
   local k,v
   for k,v in pairs(xtitle) do
-    print("HMG-setup: "..k)
-    print("   " .. xtitle[k])
-    print("   " .. xbase[k])
-    print("   " .. xhome[k])
-    print("   " .. xplane[k])
-    print("   " .. xoverpass[k])
-    print("   " .. xrange[k])	
+    print("HMG-setup:   "..k)
+    print("   title:    " .. xtitle[k])
+    print("   base:     " .. xbase[k])
+    print("   home:     " .. xhome[k])
+    print("   plane     " .. xplane[k])
+    print("   overpass: " .. xoverpass[k])
+    print("   range:    " .. xrange[k])	
+	print("   legs:     " .. xlegs[k])	
   end
 end
 
@@ -154,7 +157,7 @@ function fixDistance()
     print("k = "..k.." v = "..v.."\n")
     v = string.gsub(v,'nm_between=2%-30','nm_between=2%-10')
     v = string.gsub(v,'nm_between=5%-30','nm_between=5%-10')
-    v = string.gsub(v,'nm_between=5%-60','nm_between=5%-20')
+    v = string.gsub(v,'nm_between=5%-60','nm_between=5%-15')
     template[k] = v
   end
 end
@@ -183,6 +186,7 @@ function applyReplace(name)
   local xt = xtitle[name]
   local xp = xplane[name]
   local xo = xoverpass[name]
+  local xl = xlegs[name]
   local xr1,xr2,xr3,xr4
   
   local xi = "HMG_"..xb..".png"
@@ -233,6 +237,7 @@ function applyReplace(name)
     t = string.gsub(t,"%%RANGE2%%",xr2)
     t = string.gsub(t,"%%RANGE3%%",xr3)
     t = string.gsub(t,"%%RANGE4%%",xr4)
+	t = string.gsub(t,"%%LEGS%%",xl)
 
     for idx, val in pairs(contents) do
       if ( myContent[idx] == 1 ) then
@@ -251,7 +256,6 @@ function readConfig()
   local infile = io.open(fname,"r")
   local name
 
-
   if ( infile ~= nil ) then
 
     local fileContent = {}
@@ -267,6 +271,7 @@ function readConfig()
           name = string.sub(value,6) 
           xcontent[name] = ""
 		  xrange[name] = ""
+		  xlegs[name] = "3"
   
         elseif ( string.find(value,"title ",1) ) then
           xtitle[name] = string.sub(value,7) 
@@ -285,9 +290,12 @@ function readConfig()
    
         elseif ( string.find(value,"content ",1) ) then
           xcontent[name] = string.sub(value,9) 
-
-        elseif ( string.find(value,"range ",1) ) then
+        
+		elseif ( string.find(value,"range ",1) ) then
           xrange[name] = string.sub(value,7) 
+		  
+		elseif ( string.find(value,"legs ",1) ) then
+          xlegs[name] = string.sub(value,6) 
 
         end
 

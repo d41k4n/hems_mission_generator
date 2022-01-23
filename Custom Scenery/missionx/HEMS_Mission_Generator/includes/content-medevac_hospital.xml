@@ -1,4 +1,4 @@
-		<medevac_hospital min_valid_flight_legs="3" list="medevac_hospital_set" plane_type="helos">
+		<medevac_hospital min_valid_flight_legs="%min_valid_flight_legs%" list="medevac_hospital_set" plane_type="helos">
 
 %base_info%
 In this mission you will provide HEMS assistance performing a patient transfer from/to a hospital helipad designated on your GPS.

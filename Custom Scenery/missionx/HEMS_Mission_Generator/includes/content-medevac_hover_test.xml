@@ -1,4 +1,4 @@
-		<medevac_hover min_valid_flight_legs="3" list="medevac_hover_test_set" plane_type="helos">
+		<medevac_hover min_valid_flight_legs="%min_valid_flight_legs%" list="medevac_hover_test_set" plane_type="helos">
 
 %base_info%
 *** THIS IS A STATIC TEST MISSION - USE FOR DEBUGGING PURPOSES ONLY ***

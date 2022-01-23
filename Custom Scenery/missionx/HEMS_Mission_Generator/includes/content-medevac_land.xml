@@ -1,4 +1,4 @@
-		<medevac_land min_valid_flight_legs="3" list="medevac_land_set" plane_type="helos">
+		<medevac_land min_valid_flight_legs="%min_valid_flight_legs%" list="medevac_land_set" plane_type="helos">
 
 %base_info%
 Traffic accident: In this mission you will provide HEMS assistance performing a patient extraction by landing at an accident location designated on your GPS.
