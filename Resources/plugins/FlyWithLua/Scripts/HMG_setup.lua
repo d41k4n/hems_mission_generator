@@ -1,7 +1,7 @@
 --
 -- script to build a new HMG template.xml
 --
--- v1.4
+-- v1.5
 --
 
 local applyWaitingFix  = false
@@ -67,8 +67,8 @@ function printData()
     print("   home:     " .. xhome[k])
     print("   plane     " .. xplane[k])
     print("   overpass: " .. xoverpass[k])
-    print("   range:    " .. xrange[k])	
-	print("   legs:     " .. xlegs[k])	
+    print("   range:    " .. xrange[k])
+    print("   legs:     " .. xlegs[k])
   end
 end
 
@@ -79,7 +79,7 @@ function genLocations()
   local t1 = {} 
   local t2 = {}
   for k,v in pairs(xhome) do
-    t1[string.format("- %s\n" , val)] = 1       -- build assoc array with uniqe home-bases
+    t1[string.format("- %s\n" , v)] = 1       -- build assoc array with uniqe home-bases
   end
   for k,v in pairs(t1) do
      table.insert(t2,k)                             -- now convert this array into a table
@@ -204,7 +204,7 @@ function applyReplace(name)
   for w in string.gmatch(xcontent[name], "[%w_]+") do
     myContent[w] = 1
   end
-  
+
   if ( xrange[name] == "near" ) then
     xr1="2-15"
     xr2="5-15"
@@ -237,7 +237,7 @@ function applyReplace(name)
     t = string.gsub(t,"%%RANGE2%%",xr2)
     t = string.gsub(t,"%%RANGE3%%",xr3)
     t = string.gsub(t,"%%RANGE4%%",xr4)
-	t = string.gsub(t,"%%LEGS%%",xl)
+    t = string.gsub(t,"%%LEGS%%",xl)
 
     for idx, val in pairs(contents) do
       if ( myContent[idx] == 1 ) then
@@ -270,31 +270,31 @@ function readConfig()
         if ( string.find(value,"name ",1) ) then
           name = string.sub(value,6) 
           xcontent[name] = ""
-		  xrange[name] = ""
-		  xlegs[name] = "3"
-  
+          xrange[name] = ""
+          xlegs[name] = "3"
+
         elseif ( string.find(value,"title ",1) ) then
           xtitle[name] = string.sub(value,7) 
-  
+
         elseif ( string.find(value,"plane ",1) ) then
           xplane[name] = string.sub(value,7)
-  
+
         elseif ( string.find(value,"base ",1) ) then
           xbase[name] = string.sub(value,6)
-   
+
         elseif ( string.find(value,"home ",1) ) then
           xhome[name] = string.sub(value,6)
-   
+
         elseif ( string.find(value,"overpass ",1) ) then
           xoverpass[name] = string.sub(value,10)
-   
+
         elseif ( string.find(value,"content ",1) ) then
           xcontent[name] = string.sub(value,9) 
-        
-		elseif ( string.find(value,"range ",1) ) then
+
+        elseif ( string.find(value,"range ",1) ) then
           xrange[name] = string.sub(value,7) 
-		  
-		elseif ( string.find(value,"legs ",1) ) then
+
+        elseif ( string.find(value,"legs ",1) ) then
           xlegs[name] = string.sub(value,6) 
 
         end
