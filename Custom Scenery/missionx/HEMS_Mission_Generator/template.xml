@@ -1702,7 +1702,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-ec135.xml"/>
 		<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-ec135.xml"/>
 		<find_replace find="%locations%" replace_with="includes/locations_CH14-Traunstein.xml"/>
-		<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_default.xml"/>
+		<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_CH14-Traunstein.xml"/>
 		<find_replace find="%mission_range1%" replace_with="nm_between=2-30"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
@@ -1771,7 +1771,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-h145.xml"/>
 		<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-h145.xml"/>
 		<find_replace find="%locations%" replace_with="includes/locations_CH14-Traunstein.xml"/>
-		<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_default.xml"/>
+		<find_replace find="%webosm_filters%" replace_with="includes/webosm_filters_CH14-Traunstein.xml"/>
 		<find_replace find="%mission_range1%" replace_with="nm_between=2-30"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
