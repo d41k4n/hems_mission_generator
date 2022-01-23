@@ -1,4 +1,15 @@
 	<loc_hospitals>
+		<point lat="47.62231002" long="8.20945471" template="land" radius_mt="80" loc_desc="EY98 [H] Spital Waldshut"/>
+		<point lat="48.6905390" long="9.2198872" template="land" radius_mt="80" loc_desc="ED2C [H] Itzehoe Klinikum"/>
+		<point lat="49.4865238" long="8.3892435" template="land" radius_mt="80" loc_desc="EDGL [H] Ludwigshafen Unfallklinik"/>
+		<point lat="49.3203061" long="10.5606754" template="land" radius_mt="80" loc_desc="XED7A [H] Klinikum Ansbach"/>
+		<point lat="49.6597085" long="10.0867170" template="land" radius_mt="80" loc_desc="XED7C [H] Klinik Ochsenfurt"/>
+		<point lat="48.3845038" long="10.8377656" template="land" radius_mt="80" loc_desc="XED7D [H] Klinikum Augsburg"/>
+		<point lat="49.1083600" long="10.7748100" template="land" radius_mt="80" loc_desc="XED7K [H] Klinikum Gunzenhausen"/>
+		<point lat="49.0349099" long="10.9869498" template="land" radius_mt="80" loc_desc="XED7W [H] Klinikum Weissenburg"/>
+		<point lat="49.9718892" long="9.7891829" template="land" radius_mt="80" loc_desc="XED7Y [H] Klinikum Bayreuth"/>
+		<point lat="49.00039119" long="8.37807807" template="land" radius_mt="80" loc_desc="EX43 [H] LRZ Christoph 43 Karlsruhe"/>
+		<point lat="48.06636416" long="8.50062239" template="land" radius_mt="80" loc_desc="EX11 [H] LRZ Christoph 11 Villingen-Schwenningen"/>
 		<point lat="47.78799449" long="9.62107788" template="land" radius_mt="80" loc_desc="EXRAV [H] Klinik Ravensburg"/>
 		<point lat="47.73187740" long="10.30253719" template="land" radius_mt="80" loc_desc="EXKE [H] Klinikum Kempten"/>
 		<point lat="48.79680864" long="9.52965553" template="land" radius_mt="80" loc_desc="EXSHD [H] RMK Klinik Schorndorf"/>
@@ -6,6 +17,17 @@
 	</loc_hospitals>
 
 	<loc_hospitals_pickup>
+		<point lat="47.62231002" long="8.20945471" template="land" radius_mt="80" loc_desc="EY98 [H] Spital Waldshut"/>
+		<point lat="48.6905390" long="9.2198872" template="land" radius_mt="80" loc_desc="ED2C [H] Itzehoe Klinikum"/>
+		<point lat="49.4865238" long="8.3892435" template="land" radius_mt="80" loc_desc="EDGL [H] Ludwigshafen Unfallklinik"/>
+		<point lat="49.3203061" long="10.5606754" template="land" radius_mt="80" loc_desc="XED7A [H] Klinikum Ansbach"/>
+		<point lat="49.6597085" long="10.0867170" template="land" radius_mt="80" loc_desc="XED7C [H] Klinik Ochsenfurt"/>
+		<point lat="48.3845038" long="10.8377656" template="land" radius_mt="80" loc_desc="XED7D [H] Klinikum Augsburg"/>
+		<point lat="49.1083600" long="10.7748100" template="land" radius_mt="80" loc_desc="XED7K [H] Klinikum Gunzenhausen"/>
+		<point lat="49.0349099" long="10.9869498" template="land" radius_mt="80" loc_desc="XED7W [H] Klinikum Weissenburg"/>
+		<point lat="49.9718892" long="9.7891829" template="land" radius_mt="80" loc_desc="XED7Y [H] Klinikum Bayreuth"/>
+		<point lat="49.00039119" long="8.37807807" template="land" radius_mt="80" loc_desc="EX43 [H] LRZ Christoph 43 Karlsruhe"/>
+		<point lat="48.06636416" long="8.50062239" template="land" radius_mt="80" loc_desc="EX11 [H] LRZ Christoph 11 Villingen-Schwenningen"/>
 		<point lat="47.78799449" long="9.62107788" template="land" radius_mt="80" loc_desc="EXRAV [H] Klinik Ravensburg"/>
 		<point lat="47.73187740" long="10.30253719" template="land" radius_mt="80" loc_desc="EXKE [H] Klinikum Kempten"/>
 		<point lat="48.79680864" long="9.52965553" template="land" radius_mt="80" loc_desc="EXSHD [H] RMK Klinik Schorndorf"/>
@@ -13,6 +35,17 @@
 	</loc_hospitals_pickup>
 
 	<loc_hospitals_dropoff>
+		<point lat="47.62231002" long="8.20945471" template="land" radius_mt="80" loc_desc="EY98 [H] Spital Waldshut"/>
+		<point lat="48.6905390" long="9.2198872" template="land" radius_mt="80" loc_desc="ED2C [H] Itzehoe Klinikum"/>
+		<point lat="49.4865238" long="8.3892435" template="land" radius_mt="80" loc_desc="EDGL [H] Ludwigshafen Unfallklinik"/>
+		<point lat="49.3203061" long="10.5606754" template="land" radius_mt="80" loc_desc="XED7A [H] Klinikum Ansbach"/>
+		<point lat="49.6597085" long="10.0867170" template="land" radius_mt="80" loc_desc="XED7C [H] Klinik Ochsenfurt"/>
+		<point lat="48.3845038" long="10.8377656" template="land" radius_mt="80" loc_desc="XED7D [H] Klinikum Augsburg"/>
+		<point lat="49.1083600" long="10.7748100" template="land" radius_mt="80" loc_desc="XED7K [H] Klinikum Gunzenhausen"/>
+		<point lat="49.0349099" long="10.9869498" template="land" radius_mt="80" loc_desc="XED7W [H] Klinikum Weissenburg"/>
+		<point lat="49.9718892" long="9.7891829" template="land" radius_mt="80" loc_desc="XED7Y [H] Klinikum Bayreuth"/>
+		<point lat="49.00039119" long="8.37807807" template="land" radius_mt="80" loc_desc="EX43 [H] LRZ Christoph 43 Karlsruhe"/>
+		<point lat="48.06636416" long="8.50062239" template="land" radius_mt="80" loc_desc="EX11 [H] LRZ Christoph 11 Villingen-Schwenningen"/>
 		<point lat="47.78799449" long="9.62107788" template="land" radius_mt="80" loc_desc="EXRAV [H] Klinik Ravensburg"/>
 		<point lat="47.73187740" long="10.30253719" template="land" radius_mt="80" loc_desc="EXKE [H] Klinikum Kempten"/>
 		<point lat="48.79680864" long="9.52965553" template="land" radius_mt="80" loc_desc="EXSHD [H] RMK Klinik Schorndorf"/>

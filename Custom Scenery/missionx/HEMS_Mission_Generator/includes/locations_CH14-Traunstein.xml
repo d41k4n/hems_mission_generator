@@ -1,13 +1,29 @@
 	<loc_hospitals>
+		<point lat="48.7704806" long="11.3725590" template="land" radius_mt="80" loc_desc="XED7B [H] Klinikum Ingolstadt"/>
+		<point lat="48.0835607" long="11.5599181" template="land" radius_mt="80" loc_desc="XED7H [H] Klinikum München Harlaching"/>
+		<point lat="48.8859243" long="12.5908199" template="land" radius_mt="80" loc_desc="XED7J [H] Klinikum Straubing"/>
+		<point lat="48.1105621" long="11.4652528" template="land" radius_mt="80" loc_desc="XED7M [H] Klinikum München Grosshadern"/>
+		<point lat="48.9870427" long="12.0929457" template="land" radius_mt="80" loc_desc="XED7R [H] Universitätsklinikum Regensburg"/>
 		<point lat="47.86045664" long="12.13221671" template="land" radius_mt="80" loc_desc="EXRO [H] Klinikum Rosenheim"/>
 		<point lat="47.87400" long="12.63100" template="land" radius_mt="80" loc_desc="XED7T Christoph 14 Traunstein"/>
 	</loc_hospitals>
 
 	<loc_hospitals_pickup>
+		<point lat="48.7704806" long="11.3725590" template="land" radius_mt="80" loc_desc="XED7B [H] Klinikum Ingolstadt"/>
+		<point lat="48.0835607" long="11.5599181" template="land" radius_mt="80" loc_desc="XED7H [H] Klinikum München Harlaching"/>
+		<point lat="48.8859243" long="12.5908199" template="land" radius_mt="80" loc_desc="XED7J [H] Klinikum Straubing"/>
+		<point lat="48.1105621" long="11.4652528" template="land" radius_mt="80" loc_desc="XED7M [H] Klinikum München Grosshadern"/>
+		<point lat="48.9870427" long="12.0929457" template="land" radius_mt="80" loc_desc="XED7R [H] Universitätsklinikum Regensburg"/>
 		<point lat="47.86045664" long="12.13221671" template="land" radius_mt="80" loc_desc="EXRO [H] Klinikum Rosenheim"/>
+		<point lat="47.87400" long="12.63100" template="land" radius_mt="80" loc_desc="XED7T Christoph 14 Traunstein"/>
 	</loc_hospitals_pickup>
 
 	<loc_hospitals_dropoff>
+		<point lat="48.7704806" long="11.3725590" template="land" radius_mt="80" loc_desc="XED7B [H] Klinikum Ingolstadt"/>
+		<point lat="48.0835607" long="11.5599181" template="land" radius_mt="80" loc_desc="XED7H [H] Klinikum München Harlaching"/>
+		<point lat="48.8859243" long="12.5908199" template="land" radius_mt="80" loc_desc="XED7J [H] Klinikum Straubing"/>
+		<point lat="48.1105621" long="11.4652528" template="land" radius_mt="80" loc_desc="XED7M [H] Klinikum München Grosshadern"/>
+		<point lat="48.9870427" long="12.0929457" template="land" radius_mt="80" loc_desc="XED7R [H] Universitätsklinikum Regensburg"/>
 		<point lat="47.86045664" long="12.13221671" template="land" radius_mt="80" loc_desc="EXRO [H] Klinikum Rosenheim"/>
 		<point lat="47.87400" long="12.63100" template="land" radius_mt="80" loc_desc="XED7T Christoph 14 Traunstein"/>
 	</loc_hospitals_dropoff>
