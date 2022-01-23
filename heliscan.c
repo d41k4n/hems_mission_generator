@@ -4,12 +4,13 @@
 #
 */
 
-#define VERSION "0.1.5"
+#define VERSION "0.1.6"
 
 #ifdef _WIN32
  #include <windows.h>
  #include <process.h>
  #include "dirent.h"
+ #include <locale.h>
 #else
  #include <libgen.h>
  #include <unistd.h>
@@ -199,6 +200,10 @@ int main(int argc, char **argv) {
 
    lat_filter[0] = '\0';
    lon_filter[0] = '\0';
+
+#ifdef _WIN32
+   setlocale(LC_ALL,".UTF8");   
+#endif
 
    printf("heliscan - %s\n",VERSION);
 
