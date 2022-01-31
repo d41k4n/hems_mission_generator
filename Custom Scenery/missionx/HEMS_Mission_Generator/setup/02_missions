@@ -35,7 +35,7 @@
 		<!-- Road accident, mountain accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Winch_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="xy" location_value="tag=loc_acc_test|nm_between=2-25" override_trigger_name="trig_hover_goal_1_target_1"/>
 			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
@@ -72,7 +72,7 @@
 		<!-- Road accident, mountain accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Winch_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="xy" location_value="tag=loc_acc|%mission_range2%" override_trigger_name="trig_hover_goal_1_target_1"/>
 			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
@@ -109,7 +109,7 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />			
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Accident_Scene,%fire_commands_at_leg_start%" />			
 			<expected_location location_type="xy" location_value="tag=loc_acc|%mission_range2%" override_trigger_name="trig_land_goal_1_target_1" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -218,7 +218,7 @@
 		<!-- Ski accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured skier by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Winch_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="webosm" location_value="tag=webosm_piste_filter|%mission_range2%|keyname=piste:name|keydesc=piste:name|webosm_optimize=n" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
 			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
@@ -255,7 +255,7 @@
 		<!-- Hiking accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured hiker by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Hiker_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="webosm" location_value="tag=webosm_trail_filter|%mission_range2%|keyname=name|keydesc=name|webosm_optimize=y" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
 			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
@@ -292,7 +292,7 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person due to a traffic accident. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Accident_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="webosm" location_value="tag=webosm_road_filter|%mission_range2%|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" max_slope_to_land="12" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -329,7 +329,7 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person from a parking area. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Accident_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="webosm" location_value="tag=webosm_parking_filter|%mission_range2%|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3"/>
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -366,7 +366,7 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person from an outdoor sports pitch. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Hiker_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="webosm" location_value="tag=webosm_pitches_filter|%mission_range2%|keyname=name|keydesc=name|webosm_optimize=n" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" />
 			<display_object_set random_tag="object_sets" set_name="medevac" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
@@ -512,7 +512,7 @@
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_pickup_patient" 
 					 message_name_when_left="msg_1_leaving_position"
-					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_add_patient" 
+					 commands_to_exec_when_fired="FlyWithLua/hoist/winch_add_patient,sceneMgr/unload_Patient" 
 					 commands_to_exec_when_left=""
 					 dataref_to_modify_when_fired="" 
 					 dataref_to_modify_when_left=""  
@@ -568,7 +568,7 @@
 			<outcome message_name_when_fired="msg_1_close_door" 
 					 message_name_when_left=""
 					 commands_to_exec_when_fired="%leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired%" 
-					 commands_to_exec_when_left=""
+					 commands_to_exec_when_left="sceneMgr/unload_Scene"
 					 dataref_to_modify_when_fired="" 
 					 dataref_to_modify_when_left=""  
 			/>
@@ -665,7 +665,7 @@
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_patient_on" message_name_when_left=""
-			commands_to_exec_when_fired="%leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			commands_to_exec_when_fired="sceneMgr/unload_Patient,%leg_1_triggers_patient_boarding-trig_1_patient_on-commands_to_exec_when_fired%" commands_to_exec_when_left=""
 			dataref_to_modify_when_fired="%leg_1_triggers_patient_boarding-trig_1_patient_on-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_1_crew_on" type="rad" enabled="yes" >
@@ -685,7 +685,7 @@
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_doors_closed" message_name_when_left=""
-			commands_to_exec_when_fired="%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			commands_to_exec_when_fired="sceneMgr/unload_Scene,%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" commands_to_exec_when_left=""
 			dataref_to_modify_when_fired="%leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 	</leg_1_triggers_patient_boarding>

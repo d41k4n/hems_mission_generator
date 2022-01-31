@@ -1,8 +1,7 @@
 Resources/plugins/FlyWithLua/*
 !Resources/plugins/FlyWithLua/Scripts
 Resources/plugins/FlyWithLua/Scripts/*
-!Resources/plugins/FlyWithLua/Scripts/HMG_hoist.lua
-!Resources/plugins/FlyWithLua/Scripts/HMG_setup.lua
+!Resources/plugins/FlyWithLua/Scripts/HMG_*.lua
 !Resources/plugins/FlyWithLua/Modules
 Resources/plugins/FlyWithLua/Modules/*
 !Resources/plugins/FlyWithLua/Modules/tween.lua
