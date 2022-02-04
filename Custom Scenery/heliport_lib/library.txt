@@ -4,4 +4,4 @@ LIBRARY
 
 EXPORT heliport_lib/uh_modern05_autogen.fac US/uh_modern05_autogen.fac
 EXPORT heliport_lib/uh_modern07_autogen.fac US/uh_modern07_autogen.fac
-EXPORT heliport_lib/helo-marshaller_15m.obj people/helo-marshaller_15m
+EXPORT heliport_lib/helo-marshaller_15m.obj people/helo-marshaller_15m.obj
