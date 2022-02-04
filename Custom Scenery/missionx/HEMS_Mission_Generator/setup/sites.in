@@ -1,4 +1,4 @@
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="%NAME%">
 		<info title="%TITLE%" mission_image_file_name="%IMAGE%" plane_desc="%PLANE_DESC%" short_desc="
 			Homebase: %HOME%

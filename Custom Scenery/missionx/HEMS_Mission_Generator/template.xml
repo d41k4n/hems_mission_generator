@@ -43,7 +43,7 @@
 			<url>%overpass-server%</url>
 		</overpass>
 	</mission_info>
-        <!-- 02_mission v1.4 -->
+        <!-- 02_mission v1.05 -->
 	<content>
 		%content-medevac_hover_test%
 		%content-medevac_hover%
@@ -71,7 +71,7 @@
 			<desc>Extraction of an injured person by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
 			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Winch_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="xy" location_value="tag=loc_acc_test|nm_between=2-25" override_trigger_name="trig_hover_goal_1_target_1"/>
-			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<!-- display_object_set random_tag="object_sets" set_name="medevac_slope" /-->
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -94,7 +94,7 @@
 		<!-- Homebase -->
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Base_Scene" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -106,9 +106,9 @@
 		<!-- Road accident, mountain accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Winch_Scene,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="sceneMgr/unload_All,FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Winch_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="xy" location_value="tag=loc_acc|%mission_range2%" override_trigger_name="trig_hover_goal_1_target_1"/>
-			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<!-- display_object_set random_tag="object_sets" set_name="medevac_slope" /-->
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -119,7 +119,7 @@
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Dropoff_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -131,7 +131,7 @@
 		<!-- Homebase -->
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Base_Scene" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -143,9 +143,9 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Accident_Scene,%fire_commands_at_leg_start%" />			
+			<fire_commands_at_leg_start commands="sceneMgr/unload_All,FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Accident_Scene,%fire_commands_at_leg_start%" />			
 			<expected_location location_type="xy" location_value="tag=loc_acc|%mission_range2%" override_trigger_name="trig_land_goal_1_target_1" />
-			<display_object_set random_tag="object_sets" set_name="medevac" />
+			<!-- display_object_set random_tag="object_sets" set_name="medevac" /-->
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
@@ -156,7 +156,7 @@
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -168,7 +168,7 @@
 		<!-- Homebase -->
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Base_Scene" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -180,7 +180,7 @@
 		<!-- Hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Urgent hospital transfer of a patient. Pickup location: {navaid_loc_desc}. Helipad coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="sceneMgr/unload_All,FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Pickup_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup" override_trigger_name="trig_land_goal_1_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -192,7 +192,7 @@
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
 			<expected_location location_type="xy" location_value="tag=loc_hospitals_dropoff|%mission_range3%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -204,7 +204,7 @@
 		<!-- Homebase -->
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Base_Scene" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -216,7 +216,7 @@
 		<!-- Pickup hospital -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Urgent hospital transfer of a patient. Location: {navaid_loc_desc}. Helipad coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="sceneMgr/unload_All,FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
 			<expected_location location_type="xy" location_value="tag=loc_hospitals_pickup_germany" override_trigger_name="trig_land_goal_1_target_1"  />
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -240,7 +240,7 @@
 		<!-- Homebase -->
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Base_Scene" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -252,9 +252,9 @@
 		<!-- Ski accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured skier by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Winch_Scene,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="sceneMgr/unload_All,FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Winch_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="webosm" location_value="tag=webosm_piste_filter|%mission_range2%|keyname=piste:name|keydesc=piste:name|webosm_optimize=n" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
-			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<!-- display_object_set random_tag="object_sets" set_name="medevac_slope" /-->
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -265,7 +265,7 @@
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Dropoff_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -277,7 +277,7 @@
 		<!-- Homebase -->
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Base_Scene" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -289,9 +289,9 @@
 		<!-- Hiking accident -->
 		<leg template="hover" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured hiker by winch. Location: {navaid_loc_desc}. Target coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Hiker_Scene,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="sceneMgr/unload_All,FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Winch_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="webosm" location_value="tag=webosm_trail_filter|%mission_range2%|keyname=name|keydesc=name|webosm_optimize=y" force_sloped_terrain="3" max_slope_to_land="14" override_trigger_name="trig_hover_goal_1_target_1"/>
-			<display_object_set random_tag="object_sets" set_name="medevac_slope" />
+			<!-- display_object_set random_tag="object_sets" set_name="medevac_slope" /-->
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_winch_ops" add_triggers_from_template="leg_1_triggers_winch_ops" add_messages_from_template="leg_1_msgs_winch_ops" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_1_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -302,7 +302,7 @@
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Dropoff_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -314,7 +314,7 @@
 		<!-- Homebase -->
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Base_Scene" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_hover_goal_3_target_1" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -326,9 +326,9 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person due to a traffic accident. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Accident_Scene,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="sceneMgr/unload_All,FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Accident_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="webosm" location_value="tag=webosm_road_filter|%mission_range2%|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" max_slope_to_land="12" />
-			<display_object_set random_tag="object_sets" set_name="medevac" />
+			<!-- display_object_set random_tag="object_sets" set_name="medevac" /-->
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
@@ -339,7 +339,7 @@
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -351,7 +351,7 @@
 		<!-- Homebase -->
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Base_Scene" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -363,9 +363,9 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person from a parking area. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Accident_Scene,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="sceneMgr/unload_All,FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Rescue_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="webosm" location_value="tag=webosm_parking_filter|%mission_range2%|keyname=name|keydesc=name|webosm_optimize=y" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3"/>
-			<display_object_set random_tag="object_sets" set_name="medevac" />
+			<!-- display_object_set random_tag="object_sets" set_name="medevac" /-->
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
@@ -376,7 +376,7 @@
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -388,7 +388,7 @@
 		<!-- Homebase -->
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Base_Scene" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -400,9 +400,9 @@
 		<!-- Accident or hospital transfer -->
 		<leg template="land" name="leg_1_target" pick_location_based_on_same_template_b="true" disable_auto_message_b="true">
 			<desc>Extraction of an injured person from an outdoor sports pitch. Location: {navaid_loc_desc}. Landing area coordinates: {navaid_lat}, {navaid_lon}. Route has been uploaded to your FMS. Good flight.</desc>
-			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Hiker_Scene,%fire_commands_at_leg_start%" />
+			<fire_commands_at_leg_start commands="sceneMgr/unload_All,FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Rescue_Scene,%fire_commands_at_leg_start%" />
 			<expected_location location_type="webosm" location_value="tag=webosm_pitches_filter|%mission_range2%|keyname=name|keydesc=name|webosm_optimize=n" override_trigger_name="trig_land_goal_1_target_1" force_leveled_terrain="3" />
-			<display_object_set random_tag="object_sets" set_name="medevac" />
+			<!-- display_object_set random_tag="object_sets" set_name="medevac" /-->
 			<special_leg_directives add_tasks_from_template="leg_1_tasks_patient_boarding" add_triggers_from_template="leg_1_triggers_patient_boarding" add_messages_from_template="leg_1_msgs_patient_boarding" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_1_target_1" message_name_to_call="2nm_alert"length_mt="3704"/>
@@ -413,7 +413,7 @@
 		<!-- Hospital -->
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
 			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
@@ -425,7 +425,7 @@
 		<!-- Homebase -->
 		<leg template="land" name="leg_3_rtb" disable_auto_message_b="true">
 			<desc>Return to base: {navaid_loc_desc}.</desc>
-			<fire_commands_at_leg_start commands="" />
+			<fire_commands_at_leg_start commands="sceneMgr/add_Base_Scene" />
 			<expected_location location_type="xy" location_value="tag=loc_homebase" expected_land_on="any" override_trigger_name="trig_land_goal_3_target_1" />
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_3_target_1" length_mt="2000">Look out for helipad and prepare for landing.</dynamic_message>
@@ -602,7 +602,7 @@
 			<outcome message_name_when_fired="msg_1_close_door" 
 					 message_name_when_left=""
 					 commands_to_exec_when_fired="%leg_1_triggers_winch_ops-trig_1_close_door-commands_to_exec_when_fired%" 
-					 commands_to_exec_when_left="sceneMgr/unload_Scene"
+					 commands_to_exec_when_left=""
 					 dataref_to_modify_when_fired="" 
 					 dataref_to_modify_when_left=""  
 			/>
@@ -719,7 +719,7 @@
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_1_doors_closed" message_name_when_left=""
-			commands_to_exec_when_fired="sceneMgr/unload_Scene,%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			commands_to_exec_when_fired="%leg_1_triggers_patient_boarding-trig_1_doors_closed-commands_to_exec_when_fired%" commands_to_exec_when_left=""
 			dataref_to_modify_when_fired="%leg_1_triggers_patient_boarding-trig_1_doors_closed-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 	</leg_1_triggers_patient_boarding>
@@ -808,7 +808,7 @@
 				<point lat="" long="" />
 			</loc_and_elev_data>
 			<outcome message_name_when_fired="msg_2_patient_off" message_name_when_left=""
-			commands_to_exec_when_fired="%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" commands_to_exec_when_left=""
+			commands_to_exec_when_fired="sceneMgr/unload_Patient,%leg_2_triggers_dropoff-trig_2_patient_off-commands_to_exec_when_fired%" commands_to_exec_when_left=""
 			dataref_to_modify_when_fired="%leg_2_triggers_dropoff-trig_2_patient_off-dataref_to_modify_when_fired%" dataref_to_modify_when_left=""  />
 		</trigger>
 		<trigger name="trig_2_crew_on_winch_op" type="rad" enabled="yes" >
@@ -888,438 +888,6 @@
 
 	%locations%
 
-	<object_templates>
-		<!-- markers -->
-		<obj3d  name="marker" file_name="../../random/obj/marker_five_parts_02.obj" />
-		<!-- cars -->
-		<obj3d  name="ambulance" file_name="" random_tag="ambulance_select"   />
-		<obj3d  name="random_thing" file_name="" random_tag="clutter"  />
-	</object_templates>
-
-	<object_sets>
-		<medevac>
-			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
-			<display_object  name="random_ambulance" file_name=""  random_tag="ambulance_select"  random_water_tag="water_replace_ambulance"    limit_to_terrain_slope="20" />
-			<display_object  name="random_car"       file_name=""  random_tag="crashed_car"       relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="something_in_water" limit_to_terrain_slope="20" />
-			<display_object  name="random_sign"      file_name=""  random_tag="clutter"           relative_pos_bearing_deg_distance_mt="180|10" random_water_tag="blank" />
-		</medevac>
-		<medevac>
-			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
-			<display_object  name="random_police_car" file_name=""    random_tag="police_car"         random_water_tag="water_replace_ambulance"    limit_to_terrain_slope="20" />
-			<display_object  name="random_car"        file_name=""    random_tag="crashed_car"        relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="something_in_water" limit_to_terrain_slope="20" />
-			<display_object  name="random_police01"   file_name=""    random_tag="policeman"          relative_pos_bearing_deg_distance_mt="360|5"  random_water_tag="blank" limit_to_terrain_slope="" />
-			<display_object  name="random_police02"   file_name=""    random_tag="policeman"          relative_pos_bearing_deg_distance_mt="345|5"  random_water_tag="blank" limit_to_terrain_slope="" />
-			<display_object  name="random_person1"    file_name=""    random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="10|10"  random_water_tag="blank" limit_to_terrain_slope="" />
-			<display_object  name="random_person2"    file_name=""    random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="15|10"  random_water_tag="blank" limit_to_terrain_slope="" />
-			<display_object  name="random_sign"       file_name=""    random_tag="clutter"            relative_pos_bearing_deg_distance_mt="180|10" random_water_tag="blank" />
-		</medevac>
-		<medevac>
-			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
-			<display_object  name="random_person1"   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="10|10"  random_water_tag="blank" limit_to_terrain_slope="" />
-			<display_object  name="random_person2"   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="12|10"  random_water_tag="blank" limit_to_terrain_slope="" />
-			<display_object  name="random_person3"   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="10|8"   random_water_tag="blank" limit_to_terrain_slope="" optional="45%" />
-			<display_object  name="random_person4"   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="15|10"  random_water_tag="blank" limit_to_terrain_slope="" optional="35%" />
-			<display_object  name="random_ambulance" random_tag="ambulance_select"  random_water_tag="water_replace_ambulance"    limit_to_terrain_slope="20" />
-			<display_object  name="aider01"          random_tag="push_wheelchair"    relative_pos_bearing_deg_distance_mt="45|05"  random_water_tag="blank" limit_to_terrain_slope="20" />
-			<display_object  name="wheelchair01"      random_tag="wheelchairs"        relative_pos_bearing_deg_distance_mt="46|05"  random_water_tag="blank" limit_to_terrain_slope="20" />
-			<display_object  name="random_car"       random_tag="crashed_car"       relative_pos_bearing_deg_distance_mt="360|10" random_water_tag="something_in_water" limit_to_terrain_slope="20" />
-			<display_object  name="random_sign"      random_tag="clutter"           relative_pos_bearing_deg_distance_mt="180|10" random_water_tag="blank" />
-			<display_object  name="firetruck01"      random_tag="firetruck"         relative_pos_bearing_deg_distance_mt="270|5"  random_water_tag="blank" />
-			<display_object  name="fireman01"        random_tag="fireman"           relative_pos_bearing_deg_distance_mt="295|4"  random_water_tag="blank" />
-		</medevac>
-		<medevac_slope>
-			<!-- <display_object  name="marker"          replace_elev_above_ground_ft="60" /> -->
-			<display_object  name="random_person1"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="0|1"   random_water_tag="water_replace_ambulance" />
-			<display_object  name="random_person2"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="45|1"   random_water_tag="something_in_water" optional="50%"/>
-			<display_object  name="random_person3"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="90|1"   random_water_tag="blank" optional="50%"/>
-			<display_object  name="random_person4"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="135|1"   random_water_tag="blank" optional="50%"/>
-			<display_object  name="random_person5"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="180|1"   random_water_tag="blank" optional="50%"/>
-			<display_object  name="random_person6"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="225|1"   random_water_tag="blank" optional="50%"/>
-			<display_object  name="random_person7"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="270|1"   random_water_tag="blank" optional="50%"/>
-			<display_object  name="random_person8"  file_name=""   random_tag="people_at_location" relative_pos_bearing_deg_distance_mt="315|1"   random_water_tag="blank" />
-			<display_object  name="clutter1"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="0|3"   random_water_tag="blank" optional="30%"/>
-			<display_object  name="clutter2"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="45|3"   random_water_tag="blank" optional="30%"/>
-			<display_object  name="clutter3"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="90|3"   random_water_tag="blank" optional="30%"/>
-			<display_object  name="clutter4"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="135|3"   random_water_tag="blank" optional="30%"/>
-			<display_object  name="clutter5"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="180|3"   random_water_tag="blank" optional="30%"/>
-			<display_object  name="clutter6"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="225|3"   random_water_tag="blank" optional="30%"/>
-			<display_object  name="clutter7"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="270|3"   random_water_tag="blank" optional="30%"/>
-			<display_object  name="clutter8"  file_name=""   random_tag="clutter" relative_pos_bearing_deg_distance_mt="315|3"   random_water_tag="blank" optional="30%"/>
-		</medevac_slope>
-	</object_sets>
-
-	<!-- the name attribute is not important -->
-	<blank>
-		<obj3d  name="blank" file_name="" />
-		<!-- disable 3D Object -->
-	</blank>
-
-	<ambulance_select>
-		<obj3d  name="ambulance1" is_virtual_b="yes" file_name="RescueX/cars/RTW_DRK_Bayern.obj" />
-		<obj3d  name="ambulance2" is_virtual_b="yes" file_name="RescueX/cars/RTW_ASB_1.obj" />
-		<obj3d  name="ambulance3" is_virtual_b="yes" file_name="RescueX/cars/RTW_ASB_2.obj" />
-		<obj3d  name="ambulance4" is_virtual_b="yes" file_name="RescueX/cars/RTW_FEU_GUT.obj" />
-		<obj3d  name="ambulance5" file_name="../../random/obj/car_ambulance.obj" />
-		<obj3d  name="ambulance6" file_name="../../random/obj/USAmbulance.obj" />
-		<obj3d  name="ambulance7" is_virtual_b="yes" file_name="CDB-Library/Airport/GSE/ambulance/car_ambulance1.obj" />
-		<obj3d  name="ambulance8" is_virtual_b="yes" file_name="CDB-Library/Airport/GSE/ambulance/car_ambulance2.obj" />
-		<obj3d  name="ambulance9" is_virtual_b="yes" file_name="CDB-Library/Airport/GSE/ambulance/car_ambulance3.obj" />
-		<obj3d  name="ambulance10" is_virtual_b="yes" file_name="pm_library/UK_Ambulance.obj" />
-	</ambulance_select>
-
-	<police_car>
-<!--
-		<obj3d  name="police01" is_virtual_b="yes" file_name="RescueX/cars/Polizei_FuStw_01.obj" />
--->
-		<obj3d  name="police02" is_virtual_b="yes" file_name="RescueX/cars/Polizei_FuStw_01_lit.obj" />
-		<obj3d  name="police03" is_virtual_b="yes" file_name="RescueX/cars/Polizei_FuStw_01_lit_open.obj" />
-		<obj3d  name="police04" is_virtual_b="yes" file_name="RescueX/cars/FW_FF_Stuehlingen_RW1_open.obj" />
-	</police_car>
-
-	<policeman>
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman_1.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman_1_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman4.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman5.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman6.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman7.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman8.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/policeman_motorcyclist.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/police.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/police_officer.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/sheriff.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/sheriff_walking.obj" />
-	</policeman>
-
-	<crashed_car>
-		<obj3d  name="car01" is_virtual_b="yes" file_name="RescueX/cars/NEF_Passat_sb1099.obj" />
-		<obj3d  name="car02" is_virtual_b="yes" file_name="RescueX/cars/Crashed_CLK.obj" />
-		<obj3d  name="car03" is_virtual_b="yes" file_name="RescueX/cars/Crashed_CLK.obj" />
-		<obj3d  name="car04" is_virtual_b="yes" file_name="RescueX/cars/Crashed_CLK.obj" />
-	</crashed_car>
-
-	<wheelchairs>
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/wheelchair.obj" />
-	</wheelchairs>
-
-	<push_wheelchair>
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_push_wheelchair.obj" />
-	</push_wheelchair>
-
-	<cars>
-		<obj3d  name="car01" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_alto.obj"/>
-		<obj3d  name="car02" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_daihatsu_tanto.obj"/>
-		<obj3d  name="car03" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_Datsun_620-73.obj"/>
-		<obj3d  name="car04" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_datsunGO.obj"/>
-		<obj3d  name="car05" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_datsunGOPlus.obj"/>
-		<obj3d  name="car06" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_fordRangerWhite.obj"/>
-		<obj3d  name="car07" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_gmc_airport.obj"/>
-		<obj3d  name="car08" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_gmc_old.obj"/>
-		<obj3d  name="car09" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_KiaSuv.obj"/>
-		<obj3d  name="car10" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_LandRover107.obj"/>
-		<obj3d  name="car11" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_lexus.obj"/>
-		<obj3d  name="car12" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_mitshubishiTbox.obj"/>
-		<obj3d  name="car13" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_mitsubishi_pack.obj"/>
-		<obj3d  name="car14" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_nissanStanzaWG.obj"/>
-		<obj3d  name="car15" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_old_pickup.obj"/>
-		<obj3d  name="car16" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_Pajero.obj"/>
-		<obj3d  name="car17" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_peugeotrossa.obj"/>
-		<obj3d  name="car18" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_postTruck.obj"/>
-		<obj3d  name="car19" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_sinca.obj"/>
-		<obj3d  name="car20" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_subaru_wagon.obj"/>
-		<obj3d  name="car21" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_suzuki_cappuccino.obj"/>
-		<obj3d  name="car22" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_suzukiCarry.obj"/>
-		<obj3d  name="car23" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_SuzukiCarry_pickup.obj"/>
-		<obj3d  name="car24" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_SuzukiCarry2.obj"/>
-		<obj3d  name="car25" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_toyota_camry.obj"/>
-		<obj3d  name="car26" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_toyota_corolla.obj"/>
-		<obj3d  name="car27" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_toyota_corolla_old.obj"/>
-		<obj3d  name="car28" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_toyotaRed_old_pickup.obj"/>
-		<obj3d  name="car29" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/car_toyotaTacoma.obj"/>
-		<obj3d  name="car30" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/CDBambassador_carblack.obj"/>
-		<obj3d  name="car31" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/CDBcar_van.obj"/>
-		<obj3d  name="car32" is_virtual_b="yes" file_name="RescueX/cars/CamiDeBellis/CDBhummer.obj"/>
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/avia.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/bus_mhd.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/bus_2.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/DAF55.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/s105-red.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/s105-blue.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/s105-green.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/skoda_favorit_blue.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/skoda_favorit_red.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/skoda_favorit_white.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/skoda_favorit_yellow.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/T815.obj" />
-		<!-- truck -->
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/doprava/vozidla/z7745.obj" />
-		<!-- traktor -->
-	</cars>
-
-	<clutter>
-		<obj3d  name="sign01" is_virtual_b="yes" file_name="RescueX/objects/OBJ_Faltdreieck.obj"/>
-		<obj3d  name="sign02" is_virtual_b="yes" file_name="RescueX/objects/OBJ_Faltdreieck_Leuchte.obj"/>
-		<obj3d  name="sign03" is_virtual_b="yes" file_name="RescueX/objects/OBJ_Leuchte.obj"/>
-		<!-- obj3d  name="sign04_blank" file_name=""/ -->
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/kuzel_cerveny.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/kuzel_modry.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/oznaceni_letiste.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/oznaceni_letiste_dlouhe.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/sudy_CB_letiste.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/sudy_letiste.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/kuzely_cervene.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/kuzely_modre.obj" />
-		<obj3d  name="r2lib" is_virtual_b="yes" file_name="R2_Library/letiste/doplnky/znaceni_letiste_prkna.obj" />
-	</clutter>
-
-	<people_aiders>
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/first_aider.obj" />
-	</people_aiders>
-
-	<people_at_location>
-		<!-- People -->
-		<obj3d  name="hicker01" is_virtual_b="yes" file_name="MisterX_Library/People/Airport_Worker_4.obj" />
-		<obj3d  name="hicker02" is_virtual_b="yes" file_name="MisterX_Library/People/Man_Shirt_1.obj" />
-		<obj3d  name="hicker03" is_virtual_b="yes" file_name="MisterX_Library/People/Man_Shirt_2.obj" />
-		<obj3d  name="Woman01" is_virtual_b="yes" file_name="MisterX_Library/People/Woman_1.obj" />
-		<obj3d  name="Woman02" is_virtual_b="yes" file_name="MisterX_Library/People/Woman_4.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/biker2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/biker3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/biker.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/boy_shouting.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/boy_sitting.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/business_woman.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/child.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_female_a1.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_female_a2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_female_a3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_a1.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_a2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_a3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_b1.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_b2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Crew_male_b3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/cyclist.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/cyclist_standing.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/dog_handler.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/door_supervisor.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm10.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm10_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm11.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm11_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm1.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm1_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm2_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm2_with_spade.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm3_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm4.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm4_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm5.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm5_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm6.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm6_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm6_with_hay_fork.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm7.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm7_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm7_with_scythe.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm8.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm8_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm9.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/farm9_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/female1.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/female2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/female3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/girl_sitting_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_female1.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_female2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_female3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_10.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_10_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_1.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_male1.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_4.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/ground_crew_male_security.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_with_extinguisher.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_with_toolbox_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Ground_crew_with_toolbox.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Male_with_jerry_can.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_1_sport.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_arms_crossed.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_baseball_cap.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_blue_shirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_blue_T_shirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_bodyguard.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_brown_suit.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_brown_top.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_camo_trousers.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_casual.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_check_shirt2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_check_shirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_cloth_cap.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_cool_dude.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_green_shirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_green_tshirt2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_green_tshirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Man_grey_coat.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_grey_jumper.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_grey_shirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_greytop.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_hand_in_pocket.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_hawaiin_shirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_holding_elbow.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_jeans.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_mobile_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_mobile.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_odd_hat.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_old_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_old.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_overcoat.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_purple_shirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_red_tshirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_running.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_sfpd.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_shirt_jeans.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_smiling.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_10.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_11.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_12.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_13.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_14.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_15.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_16.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_17.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_18.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_19.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_20.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_21.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_22.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_23.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_24.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_25.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_26.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_27.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_28.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_29.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_30.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_31.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_32.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_33.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_34.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_35.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_36.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_37.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_4.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_5.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_6.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_7.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_8.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing_9.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_standing.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_striped_jacket.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_striped_shirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_tatoo.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_tattoo2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_walking_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_walking_37.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_walking_3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_white_shirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_with_beard.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_with_mobile.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_with_sunglasses.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_woollen_hat.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_yellow.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/mechanic.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/stewardess_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/stewardess.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/teenager_sitting2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/teenager_sitting.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/teenager_standing.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/teenager_with_dog.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/watchman.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_5.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_backpack.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_black_skirt.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_black_skirt_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_brown_shoulder_bag.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_business.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_checking_in.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_chinese_top.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_denim.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_flowerytop.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_hand_on_hip.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_jeans_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_pony_tail.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_purple_top.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_reclining.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing10.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing11.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing12.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing14.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing4.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing5.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing7.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing8.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing9.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_standing.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_walking2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_walking_brown.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_walking_dog.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_yellow_top.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/worker.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/workers_manhole.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/worker_stop_sign.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/worker_walking_2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/worker_walking.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/worker_waving.obj" />
-	</people_at_location>
-
-	<fireman>
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/fireman2.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/fireman3.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/fireman4.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/Fireman.obj" />
-	</fireman>
-
-	<water_replace_ambulance>
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/fishing/10.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/canoes_kayaks/3.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/canoes_kayaks/4.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/canoes_kayaks/6.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/fishing/11.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/fishing/9.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/sail/10.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/sail/11.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/sail/13.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/sail/9.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/tour/1.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/tour/2.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="opensceneryx/objects/vehicles/boats_ships/tour/3.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="MisterX_Library/Vehicles/Boats/Yacht_1.obj" />
-		<obj3d  name="boat01" is_virtual_b="yes" file_name="MisterX_Library/Vehicles/Boats/Fishing_Boat_1.obj" />
-	</water_replace_ambulance>
-
-	<something_in_water>
-		<!-- People -->
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/man_swimming.obj" />
-		<obj3d  name="person01" is_virtual_b="yes" file_name="3D_people_library/woman_bikini.obj" />
-	</something_in_water>
 
 	<!-- inventory items to pick randomly from -->
 	<item_blueprints>
@@ -1398,7 +966,7 @@
 </MAPPING>
 
 <REPLACE_OPTIONS>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="AirGlaciers_LSGS_Sion_EC135">
 		<info title="HEMS mission for Air Glaciers EC135 out of LSGS Sion" mission_image_file_name="HMG_AirGlaciers-Sion.png" plane_desc="Rotorsim EC135 V5" short_desc="
 			Homebase: LSGS, Sion, pad #6 (lat: 46.22168, lon: 7.34633)
@@ -1467,7 +1035,7 @@
 		<find_replace find="%base_info%" replace_with="Homebase: LSGS, Sion, pad #6 (lat: 46.22168, lon: 7.34633)
 Aircraft: Rotorsim EC135 V5"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="AirGlaciers_LSGS_Sion_H145">
 		<info title="HEMS mission for Air Glaciers H145 out of LSGS Sion" mission_image_file_name="HMG_AirGlaciers-Sion.png" plane_desc="VLC-Entwicklung H145 Rescue Version v3.1" short_desc="
 			Homebase: LSGS, Sion, pad #6 (lat: 46.22168, lon: 7.34633)
@@ -1536,7 +1104,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%base_info%" replace_with="Homebase: LSGS, Sion, pad #6 (lat: 46.22168, lon: 7.34633)
 Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="AirZermatt_LSEZ_Zermatt_EC135">
 		<info title="HEMS mission for Air Zermatt EC135 out of LSEZ Zermatt" mission_image_file_name="HMG_AirZermatt-Zermatt.png" plane_desc="Rotorsim EC135 V5" short_desc="
 			Homebase: LSEZ, Zermatt heliport (lat: 46.02939, lon: 7.75330)
@@ -1605,7 +1173,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%base_info%" replace_with="Homebase: LSEZ, Zermatt heliport (lat: 46.02939, lon: 7.75330)
 Aircraft: Rotorsim EC135 V5"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="AirZermatt_LSEZ_Zermatt_H145">
 		<info title="HEMS mission for Air Zermatt H145 out of LSEZ Zermatt" mission_image_file_name="HMG_AirZermatt-Zermatt.png" plane_desc="VLC-Entwicklung H145 Rescue Version v3.1" short_desc="
 			Homebase: LSEZ, Zermatt heliport (lat: 46.02939, lon: 7.75330)
@@ -1674,7 +1242,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%base_info%" replace_with="Homebase: LSEZ, Zermatt heliport (lat: 46.02939, lon: 7.75330)
 Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="CH14_XED7T_Traunstein_EC135">
 		<info title="HEMS mission for Christoph 14 EC135 out of Hospital Traunstein" mission_image_file_name="HMG_CH14-Traunstein.png" plane_desc="Rotorsim EC135 V5" short_desc="
 			Homebase: XED7T, Christoph 14 Traunstein (lat: 47.87400, lon: 12.63100)
@@ -1743,7 +1311,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%base_info%" replace_with="Homebase: XED7T, Christoph 14 Traunstein (lat: 47.87400, lon: 12.63100)
 Aircraft: Rotorsim EC135 V5"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="CH14_XED7T_Traunstein_H145">
 		<info title="HEMS mission for Christoph 14 H145 out of Hospital Traunstein" mission_image_file_name="HMG_CH14-Traunstein.png" plane_desc="VLC-Entwicklung H145 Rescue Version v3.1" short_desc="
 			Homebase: XED7T, Christoph 14 Traunstein (lat: 47.87400, lon: 12.63100)
@@ -1812,7 +1380,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%base_info%" replace_with="Homebase: XED7T, Christoph 14 Traunstein (lat: 47.87400, lon: 12.63100)
 Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="CH17_EX17_Kempten_EC135">
 		<info title="HEMS mission for Christoph 17 EC135 out of EX17 Kempten" mission_image_file_name="HMG_CH17-Kempten.png" plane_desc="Rotorsim EC135 V5" short_desc="
 			Homebase: EX17, Christoph 17 Kempten (lat: 47.69137 lon: 10.34014)
@@ -1881,7 +1449,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%base_info%" replace_with="Homebase: EX17, Christoph 17 Kempten (lat: 47.69137 lon: 10.34014)
 Aircraft: Rotorsim EC135 V5"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="CH17_EX17_Kempten_H145">
 		<info title="HEMS mission for Christoph 17 H145 out of EX17 Kempten" mission_image_file_name="HMG_CH17-Kempten.png" plane_desc="VLC-Entwicklung H145 Rescue Version v3.1" short_desc="
 			Homebase: EX17, Christoph 17 Kempten (lat: 47.69137 lon: 10.34014)
@@ -1950,7 +1518,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%base_info%" replace_with="Homebase: EX17, Christoph 17 Kempten (lat: 47.69137 lon: 10.34014)
 Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="CH22_EX22_Ulm_EC135">
 		<info title="HEMS mission for Christoph 22 EC135 out of EX22 Ulm" mission_image_file_name="HMG_CH22-Ulm.png" plane_desc="Rotorsim EC135 V5" short_desc="
 			Homebase: EX22, Christoph 22 Ulm (lat: 48.42667 lon: 9.94583)
@@ -2019,7 +1587,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%base_info%" replace_with="Homebase: EX22, Christoph 22 Ulm (lat: 48.42667 lon: 9.94583)
 Aircraft: Rotorsim EC135 V5"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="CH22_EX22_Ulm_H145">
 		<info title="HEMS mission for Christoph 22 H145 out of EX22 Ulm" mission_image_file_name="HMG_CH22-Ulm.png" plane_desc="VLC-Entwicklung H145 Rescue Version v3.1" short_desc="
 			Homebase: EX22, Christoph 22 Ulm (lat: 48.42667 lon: 9.94583)
@@ -2088,7 +1656,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%base_info%" replace_with="Homebase: EX22, Christoph 22 Ulm (lat: 48.42667 lon: 9.94583)
 Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="Lions1_LSZF_Birrfeld_EC135">
 		<info title="HEMS mission for Lions 1 EC135 out of LSZF Birrfeld" mission_image_file_name="HMG_Lions1.png" plane_desc="Rotorsim EC135 V5" short_desc="
 			Homebase: LSZF, LIONS1 heliport (lat: 47.44429142, lon: 8.23366269)
@@ -2157,7 +1725,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%base_info%" replace_with="Homebase: LSZF, LIONS1 heliport (lat: 47.44429142, lon: 8.23366269)
 Aircraft: Rotorsim EC135 V5"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="Lions1_LSZF_Birrfeld_H145">
 		<info title="HEMS mission for Lions 1 H145 out of LSZF Birrfeld" mission_image_file_name="HMG_Lions1.png" plane_desc="VLC-Entwicklung H145 Rescue Version v3.1" short_desc="
 			Homebase: LSZF, LIONS1 heliport (lat: 47.44429142, lon: 8.23366269)
@@ -2226,7 +1794,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%base_info%" replace_with="Homebase: LSZF, LIONS1 heliport (lat: 47.44429142, lon: 8.23366269)
 Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="Rega1_LSMD_Dübendorf_EC135">
 		<info title="HEMS mission for Rega 1 EC135 out of LSMD Dübendorf" mission_image_file_name="HMG_Rega1.png" plane_desc="Rotorsim EC135 V5" short_desc="
 			Homebase: LSMD, Rega 1 helipad (lat: 47.39612, lon: 8.63762)
@@ -2295,7 +1863,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%base_info%" replace_with="Homebase: LSMD, Rega 1 helipad (lat: 47.39612, lon: 8.63762)
 Aircraft: Rotorsim EC135 V5"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="Rega1_LSMD_Dübendorf_H145">
 		<info title="HEMS mission for Rega 1 H145 out of LSMD Dübendorf" mission_image_file_name="HMG_Rega1.png" plane_desc="VLC-Entwicklung H145 Rescue Version v3.1" short_desc="
 			Homebase: LSMD, Rega 1 helipad (lat: 47.39612, lon: 8.63762)
@@ -2364,7 +1932,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%base_info%" replace_with="Homebase: LSMD, Rega 1 helipad (lat: 47.39612, lon: 8.63762)
 Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="Rega5_LSXU_Untervaz_EC135">
 		<info title="HEMS mission for Rega 5 EC135 out of LSXU Untervaz" mission_image_file_name="HMG_Rega5.png" plane_desc="Rotorsim EC135 V5" short_desc="
 			Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
@@ -2433,7 +2001,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%base_info%" replace_with="Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
 Aircraft: Rotorsim EC135 V5"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="Rega5_LSXU_Untervaz_EC135_TEST">
 		<info title="HEMS test mission for Rega 5 EC135 out of LSXU Untervaz" mission_image_file_name="HMG_Rega5.png" plane_desc="Rotorsim EC135 V5" short_desc="
 			Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
@@ -2502,7 +2070,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%base_info%" replace_with="Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
 Aircraft: Rotorsim EC135 V5"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="Rega5_LSXU_Untervaz_H145">
 		<info title="HEMS mission for Rega 5 H145 out of LSXU Untervaz" mission_image_file_name="HMG_Rega5.png" plane_desc="VLC-Entwicklung H145 Rescue Version v3.1" short_desc="
 			Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
@@ -2571,7 +2139,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%base_info%" replace_with="Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
 Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 	</opt>
-	<!-- sites.in v1.4 -->
+	<!-- sites.in v1.04 -->
 	<opt name="Rega5_LSXU_Untervaz_H145_TEST">
 		<info title="HEMS test mission for Rega 5 H145 out of LSXU Untervaz" mission_image_file_name="HMG_Rega5.png" plane_desc="VLC-Entwicklung H145 Rescue Version v3.1" short_desc="
 			Homebase: LSXU, Rega 5 heliport (lat: 46.91287, lon: 9.55090)
