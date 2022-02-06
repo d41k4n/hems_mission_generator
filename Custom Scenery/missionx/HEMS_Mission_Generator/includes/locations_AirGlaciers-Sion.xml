@@ -3,6 +3,7 @@
 		<point lat="46.23445" long="7.38775" template="land" radius_mt="80" loc_desc="Helipad, Sion Hospital / LSHS"/>
 		<point lat="46.52458" long="6.64096" template="land" radius_mt="80" loc_desc="Helipad, Lausanne CHUV / LSHL"/>
 		<point lat="46.38034" long="6.92115" template="land" radius_mt="80" loc_desc="Helipad, Rennaz Hospital / LSHR"/>
+		<point lat="46.07837" long="7.14578" template="land" radius_mt="80" loc_desc="Helipad, Sembrancher / LSUS"/>
 	</loc_hospitals>
 
 	<loc_hospitals_pickup>
