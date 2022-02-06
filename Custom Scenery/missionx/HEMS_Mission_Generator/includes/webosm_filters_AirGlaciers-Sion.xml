@@ -1,9 +1,49 @@
 	<webosm_piste_filter>
-		<filter>(way['piste:type'](area:3601686699)({{bbox}});relation['piste:type'](area:3601686699)({{bbox}}););out;</filter>
+		<filter>(way['piste:type'](area:3600365577)({{bbox}});way['piste:type'](area:3601686701)({{bbox}});way['piste:type'](area:3601686702)({{bbox}});way['piste:type'](area:3601686704)({{bbox}});way['piste:type'](area:3601686706)({{bbox}});way['piste:type'](area:3601686707)({{bbox}});way['piste:type'](area:3601686709)({{bbox}});way['piste:type'](area:3601686710)({{bbox}});way['piste:type'](area:3601686712)({{bbox}});way['piste:type'](area:3601698882)({{bbox}}););out;</filter>
+<!--
+(
+  way['piste:type'](area:3600365577)({{bbox}});
+  way['piste:type'](area:3601686701)({{bbox}});
+  way['piste:type'](area:3601686702)({{bbox}});
+  way['piste:type'](area:3601686704)({{bbox}});
+  way['piste:type'](area:3601686706)({{bbox}});
+  way['piste:type'](area:3601686707)({{bbox}});
+  way['piste:type'](area:3601686709)({{bbox}});
+  way['piste:type'](area:3601686710)({{bbox}});
+  way['piste:type'](area:3601686712)({{bbox}});
+  way['piste:type'](area:3601698882)({{bbox}});
+);
+out;
+-->
 	</webosm_piste_filter>
 
 	<webosm_trail_filter>
-		<filter>(way[highway=track](area:3601686699)({{bbox}});way[highway=path](area:3601686699)({{bbox}});relation[highway=track](area:3601686699)({{bbox}});relation[highway=path](area:3601686699)({{bbox}}););out;</filter>
+		<filter>(way[highway=track](area:3600365577)({{bbox}});way[highway=track](area:3601686701)({{bbox}});way[highway=track](area:3601686702)({{bbox}});way[highway=track](area:3601686704)({{bbox}});way[highway=track](area:3601686706)({{bbox}});way[highway=track](area:3601686707)({{bbox}});way[highway=track](area:3601686709)({{bbox}});way[highway=track](area:3601686710)({{bbox}});way[highway=track](area:3601686712)({{bbox}});way[highway=track](area:3601698882)({{bbox}});way[highway=path](area:3600365577)({{bbox}});way[highway=path](area:3601686701)({{bbox}});way[highway=path](area:3601686702)({{bbox}});way[highway=path](area:3601686704)({{bbox}});way[highway=path](area:3601686706)({{bbox}});way[highway=path](area:3601686707)({{bbox}});way[highway=path](area:3601686709)({{bbox}});way[highway=path](area:3601686710)({{bbox}});way[highway=path](area:3601686712)({{bbox}});way[highway=path](area:3601698882)({{bbox}}););out;</filter>
+<!--
+(
+  way[highway=track](area:3600365577)({{bbox}});
+  way[highway=track](area:3601686701)({{bbox}});
+  way[highway=track](area:3601686702)({{bbox}});
+  way[highway=track](area:3601686704)({{bbox}});
+  way[highway=track](area:3601686706)({{bbox}});
+  way[highway=track](area:3601686707)({{bbox}});
+  way[highway=track](area:3601686709)({{bbox}});
+  way[highway=track](area:3601686710)({{bbox}});
+  way[highway=track](area:3601686712)({{bbox}});
+  way[highway=track](area:3601698882)({{bbox}});
+  way[highway=path](area:3600365577)({{bbox}});
+  way[highway=path](area:3601686701)({{bbox}});
+  way[highway=path](area:3601686702)({{bbox}});
+  way[highway=path](area:3601686704)({{bbox}});
+  way[highway=path](area:3601686706)({{bbox}});
+  way[highway=path](area:3601686707)({{bbox}});
+  way[highway=path](area:3601686709)({{bbox}});
+  way[highway=path](area:3601686710)({{bbox}});
+  way[highway=path](area:3601686712)({{bbox}});
+  way[highway=path](area:3601698882)({{bbox}});
+);
+out;
+-->
 	</webosm_trail_filter>
 
 	<webosm_road_filter>
