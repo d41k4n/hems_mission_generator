@@ -1,5 +1,5 @@
 	<webosm_piste_filter>
-		<filter>area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);way["piste:type"](area)({{bbox}});out</filter>
+		<filter>area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);way["piste:type"](area)({{bbox}});out;</filter>
 <!--
 area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);
 way["piste:type"](area)({{bbox}});
@@ -8,7 +8,7 @@ out;
 	</webosm_piste_filter>
 
 	<webosm_trail_filter>
-		<filter>area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);way[highway~"(track|path)"](area)({{bbox}});out</filter>
+		<filter>area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);way[highway~"(track|path)"](area)({{bbox}});out;</filter>
 <!--
 area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);
 way[highway~"(track|path)"](area)({{bbox}});
@@ -17,7 +17,7 @@ out;
 	</webosm_trail_filter>
 
 	<webosm_road_filter>
-		<filter>area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);way[highway~'(motorway|primary|secondary|tertiary|residential|service|living_street)'](area)({{bbox}});out</filter>
+		<filter>area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);way[highway~'(motorway|primary|secondary|tertiary|residential|service|living_street)'](area)({{bbox}});out;</filter>
 <!--
 area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);
 way[highway~'(motorway|primary|secondary|tertiary|residential|service|living_street)'](area)({{bbox}});
@@ -26,7 +26,7 @@ out;
 	</webosm_road_filter>
 
 	<webosm_parking_filter>
-		<filter>area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);way[parking=surface][!building](if:is_closed()%26%26length()>100)(area)({{bbox}});out center</filter>
+		<filter>area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);way[parking=surface][!building](if:is_closed()%26%26length()>100)(area)({{bbox}});out+center;</filter>
 <!--
 area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);
 way[parking=surface][!building](if:is_closed()&&length()>100)(area)({{bbox}});
@@ -35,7 +35,7 @@ out center;
 	</webosm_parking_filter>
 
 	<webosm_pitches_filter>
-		<filter>area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);way["leisure"="pitch"][!"building"](if:is_closed()%26%26length()>100)(area)({{bbox}});way._["sport"!="tennis"]({{bbox}});way._["sport"!~"shooting.*"]({{bbox}});out center</filter>
+		<filter>area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);way["leisure"="pitch"][!"building"](if:is_closed()%26%26length()>100)(area)({{bbox}});way._["sport"!="tennis"]({{bbox}});way._["sport"!~"shooting.*"]({{bbox}});out+center;</filter>
 <!--
 area(id:3600365577,3601686701,3601686702,3601686704,3601686706,3601686707,3601686709,3601686710,3601686712,3601698882);
 way["leisure"="pitch"][!"building"](if:is_closed()&&length()>100)(area)({{bbox}});
