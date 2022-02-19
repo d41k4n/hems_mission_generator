@@ -222,7 +222,7 @@ LIGHT_NAMED	inset_heli_g	  -5.2376   20.0000   -4.7104
 LIGHT_NAMED	inset_heli_g	  -5.2567   20.0000   -1.0946	
 LIGHT_NAMED	inset_heli_g	   1.3840   20.0000   -4.6799	
 TRIS	0 264
-ATTR_hard_deck
+ATTR_hard
 TRIS	264 27
 
 # Built with SketchUp 17.2.2555. Exported with SketchUp2XPlane 1.70.
