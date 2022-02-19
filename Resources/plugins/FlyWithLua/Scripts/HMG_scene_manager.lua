@@ -3,15 +3,15 @@
 --
 -- inspired by XPJavelin's 'Simple and Nice Loading Equipment'
 --
-version = "0.36"
+version = "0.37"
 
 local logLevel = 1
 
 local hasMissionX = false
 if ( XPLMFindDataRef("xpshared/target/lat") ~= nil )then    -- missionX plugin loaded ?
-  dataref("mx_lat","xpshared/target/lat","readonly")
-  dataref("mx_lon","xpshared/target/lon","readonly")
-  hasMissionX = true
+   dataref("mx_lat","xpshared/target/lat","readonly")
+   dataref("mx_lon","xpshared/target/lon","readonly")
+   hasMissionX = true
 end
 
 local hmg_dir      = SCRIPT_DIRECTORY .. "../../../../Custom Scenery/missionx/HEMS_Mission_Generator"
@@ -30,6 +30,9 @@ dataref("scenemgr_hdg","sceneMgr/hdg","readonly")
 dataref("scenemgr_message","sceneMgr/message","readonly",0)
 dataref("scenemgr_status","sceneMgr/status","writable",0)
 dataref("plane_hdg", "sim/flightmodel/position/psi", "readonly")
+dataref("lat_ref","sim/flightmodel/position/lat_ref","readonly")
+dataref("lon_ref","sim/flightmodel/position/lon_ref","readonly")
+
 
 local RescueX_cars  =  "RescueX/cars/"
 local RescueX_peep  =  "RescueX/people/"
@@ -343,9 +346,9 @@ local out_y = 0
 local out_z = 0
 local bearing = 0
 local showScene = 0
-local updateDelay = 0
-local maxUpdateDelay = 5
 local isPatient = false
+local lat_ref_last = lat_ref
+local lon_ref_last = lon_ref
 
 set("sceneMgr/lat",LATITUDE)                   -- default is ACF position
 set("sceneMgr/lon",LONGITUDE)
@@ -361,24 +364,24 @@ local ffi = require ("ffi")
 local XPLMlib = ""
 
 if SYSTEM == "IBM" then
-  -- Windows OS (no path and file extension needed)
-  if SYSTEM_ARCHITECTURE == 64 then
-    XPLMlib = "XPLM_64"  -- 64bit
-  else
-    XPLMlib = "XPLM"     -- 32bit
-  end
+   -- Windows OS (no path and file extension needed)
+   if SYSTEM_ARCHITECTURE == 64 then
+      XPLMlib = "XPLM_64"  -- 64bit
+   else
+      XPLMlib = "XPLM"     -- 32bit
+   end
 elseif SYSTEM == "LIN" then
-  -- Linux OS (we need the path "Resources/plugins/" here for some reason)
-  if SYSTEM_ARCHITECTURE == 64 then
-    XPLMlib = "Resources/plugins/XPLM_64.so"  -- 64bit
-  else
-    XPLMlib = "Resources/plugins/XPLM.so"     -- 32bit
-  end
+   -- Linux OS (we need the path "Resources/plugins/" here for some reason)
+   if SYSTEM_ARCHITECTURE == 64 then
+      XPLMlib = "Resources/plugins/XPLM_64.so"  -- 64bit
+   else
+      XPLMlib = "Resources/plugins/XPLM.so"     -- 32bit
+   end
 elseif SYSTEM == "APL" then
-  -- Mac OS (we need the path "Resources/plugins/" here for some reason)
-  XPLMlib = "Resources/plugins/XPLM.framework/XPLM" -- 64bit and 32 bit
+   -- Mac OS (we need the path "Resources/plugins/" here for some reason)
+   XPLMlib = "Resources/plugins/XPLM.framework/XPLM" -- 64bit and 32 bit
 else
-  return -- this should not happen
+   return -- this should not happen
 end
 
 -- load the lib and store in local variable
@@ -563,481 +566,492 @@ local terrain_nature = ffi.new("int[1]")
 ------------------------------------------------------------------------------------
 
 function smLog(t,l)
-  if ( l <= logLevel ) then
-    print("[SM] "..t)
-  end
+   if ( l <= logLevel ) then
+      print("[SM] "..t)
+   end
 end
 
 local scene_lookup = {}
 
 function read_scene_lookup()
-  scene_lookup = {}
-  local infile = io.open(scene_cfg,"r")
-  if ( infile ) then
-    for line in infile:lines() do
-      if ( not line:match('^#') and line:match(':') ) then         -- skip comment lines
+   scene_lookup = {}
+   local infile = io.open(scene_cfg,"r")
+   if ( infile ) then
+      for line in infile:lines() do
+         if ( not line:match('^#') and line:match(':') ) then         -- skip comment lines
 
-        local k , v = line:match("([^:]+):([^:]+)")
-        scene_lookup[k] = v
-
-        smLog("reading scene config  k="..k.."  and v="..v,2)
-
+            local k , v = line:match("([^:]+):([^:]+)")
+            scene_lookup[k] = v
+            smLog("reading scene config  k="..k.."  and v="..v,2)
+         end
       end
-    end
-    io.close(infile)
-  else
-    smLog("not scene lookup file found",0)
-  end
+      io.close(infile)
+   else
+      smLog("not scene lookup file found",0)
+   end
 end
 
 function write_scene_lookup()
-  local infile = io.open(scene_cfg,"r")
-  if ( infile ) then
-    local outfile = io.open(scene_cfg..".tmp","w")
-    if ( outfile ) then
-	  smLog("write scene.cfg",2)
-      for line in infile:lines() do
+   local infile = io.open(scene_cfg,"r")
+   if ( infile ) then
+      local outfile = io.open(scene_cfg..".tmp","w")
+      if ( outfile ) then
+         smLog("write scene.cfg",2)
+         for line in infile:lines() do
       
-        if ( not line:match('^#') and line:match(':') ) then         -- skip comment lines
-          local k , v = line:match("([^:]+):([^:]+)")
-          local t = k..":"..scene_lookup[k]
-          smLog("upd: "..t,3)
-          outfile:write(t.."\n")
-          scene_lookup[k] = nil   -- remove updated entries from array
-        else
-          smLog("copy: "..line,3)
-          outfile:write(line.."\n")
-        end
-      end
-	  smLog("closing infile",3)
-      io.close(infile)
+            if ( not line:match('^#') and line:match(':') ) then         -- skip comment lines
+               local k , v = line:match("([^:]+):([^:]+)")
+               local t = k..":"..scene_lookup[k]
+               smLog("upd: "..t,3)
+               outfile:write(t.."\n")
+               scene_lookup[k] = nil   -- remove updated entries from array
+            else
+               smLog("copy: "..line,3)
+               outfile:write(line.."\n")
+            end
+         end
+         smLog("closing infile",3)
+         io.close(infile)
 
-      -- write new entries
-      for k,v in pairs(scene_lookup) do
-        smLog("k == "..k,3)
-	    if ( v == nil ) then
-          smLog("v == nil",3)
-        else 
-          smLog("new: "..v,3)
-          outfile:write(k..":"..v.."\n")
-		end
+         -- write new entries
+         for k,v in pairs(scene_lookup) do
+            smLog("k == "..k,3)
+            if ( v == nil ) then
+               smLog("v == nil",3)
+            else 
+               smLog("new: "..v,3)
+               outfile:write(k..":"..v.."\n")
+            end
+         end
+         smLog("closing outfile",3)
+         io.close(outfile)
+         smLog("remove old cfg",3)
+         os.remove(scene_cfg)
+         smLog("renaming tmp file",3)
+         os.rename(scene_cfg..".tmp",scene_cfg)
+         smLog("re-read scene.cfg ",3)
+         read_scene_lookup()
+         smLog("done.",3)
+      else
+         smLog("cannot open scene.cfg.tmp for writing",0)
       end
-	  smLog("closing outfile",3)
-      io.close(outfile)
-	  smLog("remove old cfg",3)
-	  os.remove(scene_cfg)
-	  smLog("renaming tmp file",3)
-      os.rename(scene_cfg..".tmp",scene_cfg)
-	  smLog("re-read scene.cfg ",3)
-      read_scene_lookup()
-	  smLog("done.",3)
-    else
-      smLog("cannot open scene.cfg.tmp for writing",0)
-    end
-  else
-    smLog("cannot open scene.cfg for reading",0)
-  end
+   else
+      smLog("cannot open scene.cfg for reading",0)
+   end
 end
 
 function load_position(k,obj)
-  for w in string.gmatch(scene_lookup[k], '([^;]+)') do
-    if ( w:match('^'..obj..'=') ) then
-      smLog("matching = "..obj,2)
+   for w in string.gmatch(scene_lookup[k], '([^;]+)') do
+      if ( w:match('^'..obj..'=') ) then
+         smLog("matching = "..obj,2)
 
-      local la,lo,hd = w:match(".*=([^,]+),([^,]+),([^,]+)")
+         local la,lo,hd = w:match(".*=([^,]+),([^,]+),([^,]+)")
 
-      smLog("using coords = "..la.." , "..lo.." , "..hd,2)
-      scenemgr_lat = tonumber(la)
-      scenemgr_lon = tonumber(lo)
-      scenemgr_hdg = tonumber(hd)
-    end
-  end
+         smLog("using coords = "..la.." , "..lo.." , "..hd,2)
+         scenemgr_lat = tonumber(la)
+         scenemgr_lon = tonumber(lo)
+         scenemgr_hdg = tonumber(hd)
+      end
+   end
 end
 
 function make_key(lat,lon)
-  local k = string.format("%s",lat)
-  local i = string.format("%s",lon)
-  -- truncate to 3 decimals without rounding
-  return(k:sub(1,k:find("%.")+3) ..","..  i:sub(1,i:find("%.")+3))
+   local k = string.format("%s",lat)
+   local i = string.format("%s",lon)
+   -- truncate to 3 decimals without rounding
+   return(k:sub(1,k:find("%.")+3) ..","..  i:sub(1,i:find("%.")+3))
 end
 
 function object_lookup(lat,lon,obj)
-  local k = make_key(lat,lon)
+   local k = make_key(lat,lon)
 
-  if ( scene_lookup[k] ) then
-    smLog("scene lookup match with "..k,2)
-    load_position(k,obj)
-    return(true)
-  else
-    smLog("NO scene lookup match with "..k,2)
-    return(false)
-  end
+   if ( scene_lookup[k] ) then
+      smLog("scene lookup match with "..k,2)
+      load_position(k,obj)
+      return(true)
+   else
+      smLog("NO scene lookup match with "..k,2)
+      return(false)
+   end
 end
 
 --------------------------------------------------------------
 
 function load_object(n,path)
-  if Object_Inst[n] == nil then
-    smLog("load object: "..n.." > "..path,1)
+   if Object_Inst[n] == nil then
+      smLog("load object: "..n.." > "..path,1)
 
-    XPLM.XPLMLookupObjects( path, 0,0,
-       function(real_path, inRefcon)
-          smLog("real_path: "..ffi.string(real_path),1)
-          XPLM.XPLMLoadObjectAsync(real_path,
-             function(inObject, inRefcon)
-                smLog("load object: executing callback",1)
-                Object_Inst[n] = XPLM.XPLMCreateInstance(inObject, datarefs_addr)
-                Object_Obj[n] = inObject
-              end,
-              inRefcon )
-       end,
-       inRefcon )
-  else
-    smLog("load object: instance " .. n .. " exists",1)
-  end
+      XPLM.XPLMLookupObjects( path, 0,0,
+         function(real_path, inRefcon)
+            smLog("real_path: "..ffi.string(real_path),1)
+            XPLM.XPLMLoadObjectAsync(real_path,
+               function(inObject, inRefcon)
+                  smLog("load object: executing callback",1)
+                  Object_Inst[n] = XPLM.XPLMCreateInstance(inObject, datarefs_addr)
+                  Object_Obj[n] = inObject
+               end,
+               inRefcon )
+         end,
+         inRefcon )
+   else
+      smLog("load object: instance " .. n .. " exists",1)
+   end
 end
 
 function draw_object(n)
-  local l_lat,l_lon,l_alt
-  local l_hdg = 0.0
+   local l_lat,l_lon,l_alt
+   local l_hdg = 0.0
 
-  l_lat = Object_LAT[n]
-  l_lon = Object_LON[n]
-  l_hdg = Object_HDG[n]
+   l_lat = Object_LAT[n]
+   l_lon = Object_LON[n]
+   l_hdg = Object_HDG[n]
 
-  local N = inScenePosition[n] -- use the "in scene position" instead total 
+   local N = inScenePosition[n] -- use the "in scene position" instead total 
 
-  l_alt = 0
-  smLog("lat="..l_lat.." lon="..l_lon.." hdg="..l_hdg,4)
+   l_alt = 0
+   smLog("lat="..l_lat.." lon="..l_lon.." hdg="..l_hdg,4)
 
-  in_x, in_y, in_z = latlon_to_local(l_lat, l_lon, l_alt)
+   in_x, in_y, in_z = latlon_to_local(l_lat, l_lon, l_alt)
 
-  -- SHIFT
-  --     POSITIVE LEFT < x > NEGATIVE RIGHT
-  --     POSITIVE FWD < z > NEGATIVE AFT
+   -- SHIFT
+   --     POSITIVE LEFT < x > NEGATIVE RIGHT
+   --     POSITIVE FWD < z > NEGATIVE AFT
 
-  -- SIT ( situation )
-  --    0 = default
-  --    1 = object laying on ground ( i.e. person on its back )
-  --    2 = object laying on right side  
-  --    3 = object elevated and shifted ( i.e. person on stretcher ) 
-  --    4 = object will not be shifted
-  --    5 = object will not be shifted but heading oriented towards the ACF
-  --    6 = as 3 plus moved away a bit
-  --    7 = as 4 plus moved away a bit
+   -- SIT ( situation )
+   --    0 = default
+   --    1 = object laying on ground ( i.e. person on its back )
+   --    2 = object laying on right side  
+   --    3 = object elevated and shifted ( i.e. person on stretcher ) 
+   --    4 = object will not be shifted
+   --    5 = object will not be shifted but heading oriented towards the ACF
+   --    6 = as 3 plus moved away a bit
+   --    7 = as 4 plus moved away a bit
 
 
-  if ( Object_SIT[n] < 3 ) then      -- situation < 3 = normal distribution
-    shift_object(in_x, in_z, N*0.5, N*0.5, l_hdg )
-    --b_lat,b_lon,b_alt = local_to_latlon(out_x,out_z,l_alt)
-    --l_hdg = get_heading(b_lat,b_lon,l_lat,l_lon)
-    --l_hdg = (l_hdg + 180) % 360
-    smLog("new heading "..l_hdg,3)
-  else
-    if ( Object_SIT[n] == 6 or Object_SIT[n] == 7 ) then 
-      in_z = in_z + 2
-      in_x = in_x + 2
-    end
-    if ( Object_SIT[n] == 3 or Object_SIT[n] == 6 ) then     -- situation 3 = adjust patient to stretcher
-      shift_object(in_x, in_z, 0.0, -0.9, l_hdg )		 
-    else
-      out_x = in_x
-      out_z = in_z
-    end
-  end
+   if ( Object_SIT[n] < 3 ) then      -- situation < 3 = normal distribution
+      shift_object(in_x, in_z, N*0.5, N*0.5, l_hdg )
+      --b_lat,b_lon,b_alt = local_to_latlon(out_x,out_z,l_alt)
+      --l_hdg = get_heading(b_lat,b_lon,l_lat,l_lon)
+      --l_hdg = (l_hdg + 180) % 360
+      smLog("new heading "..l_hdg,3)
+   else
+      if ( Object_SIT[n] == 6 or Object_SIT[n] == 7 ) then 
+         in_z = in_z + 2
+         in_x = in_x + 2
+      end
+      if ( Object_SIT[n] == 3 or Object_SIT[n] == 6 ) then     -- situation 3 = adjust patient to stretcher
+         shift_object(in_x, in_z, 0.0, -0.9, l_hdg )		 
+      else
+         out_x = in_x
+         out_z = in_z
+      end
+   end
 
-  objpos_value[0].x = out_x 
-  objpos_value[0].z = out_z 
-  objpos_value[0].heading = l_hdg
+   objpos_value[0].x = out_x 
+   objpos_value[0].z = out_z 
+   objpos_value[0].heading = l_hdg
 
-  out_y,wetness = probe_elevation (out_x, in_y, out_z)
+   out_y,wetness = probe_elevation (out_x, in_y, out_z)
 
-  float_value[0] = 0
-  float_addr = float_value
-  objpos_value[0].y = out_y
-  objpos_value[0].pitch = 0
-  objpos_value[0].roll = 0
+   float_value[0] = 0
+   float_addr = float_value
+   objpos_value[0].y = out_y
+   objpos_value[0].pitch = 0
+   objpos_value[0].roll = 0
 
-  if ( Object_SIT[n] == 1 ) then                             -- situation 1 = person laying on ground 
-    objpos_value[0].pitch = -90
-    objpos_value[0].y = out_y + 0.3
+   if ( Object_SIT[n] == 1 ) then                             -- situation 1 = person laying on ground 
+      objpos_value[0].pitch = -90
+      objpos_value[0].y = out_y + 0.3
 
-  elseif ( Object_SIT[n] == 2 ) then                         -- situation 2 = object laying on right side
-    objpos_value[0].roll = 90
-    objpos_value[0].y = out_y + 0.5
+   elseif ( Object_SIT[n] == 2 ) then                         -- situation 2 = object laying on right side
+      objpos_value[0].roll = 90
+      objpos_value[0].y = out_y + 0.5
 
-  elseif ( Object_SIT[n] == 3 or Object_SIT[n] == 6) then    -- situation 3 & 6 = patient on stretcher
-    objpos_value[0].pitch = -90
-    objpos_value[0].y = out_y + 1.1
+   elseif ( Object_SIT[n] == 3 or Object_SIT[n] == 6) then    -- situation 3 & 6 = patient on stretcher
+      objpos_value[0].pitch = -90
+      objpos_value[0].y = out_y + 1.1
 
-  elseif ( Object_SIT[n] == 5 ) then                         -- situation 5 = oriented towards the aircraft 
+   elseif ( Object_SIT[n] == 5 ) then                         -- situation 5 = oriented towards the aircraft 
 
-    --local b_lat,b_lon,b_alt = local_to_latlon(out_x,out_z,l_alt)
-    l_hdg = get_heading(l_lat,l_lon,LATITUDE,LONGITUDE)     -- get heading towards the aircraft
-    l_hdg = (l_hdg + 180) % 360
-    objpos_value[0].heading = l_hdg
-    smLog("sit 5 heading "..l_hdg,4)
+      --local b_lat,b_lon,b_alt = local_to_latlon(out_x,out_z,l_alt)
+      l_hdg = get_heading(l_lat,l_lon,LATITUDE,LONGITUDE)     -- get heading towards the aircraft
+      l_hdg = (l_hdg + 180) % 360
+      objpos_value[0].heading = l_hdg
+      smLog("sit 5 heading "..l_hdg,4)
 
-  end
+   end
 
-  --smLog("world: in_x=" .. in_x .. ", in_y=" .. in_y .. ", in_z=" .. in_z ,3)
-  smLog("draw object: latlon: l_lat=" .. l_lat .. ", l_lon=" .. l_lon .. ", l_alt=" .. l_alt .. ", l_hdg=" .. l_hdg,2)
+   --smLog("world: in_x=" .. in_x .. ", in_y=" .. in_y .. ", in_z=" .. in_z ,3)
+   smLog("draw object: latlon: l_lat=" .. l_lat .. ", l_lon=" .. l_lon .. ", l_alt=" .. l_alt .. ", l_hdg=" .. l_hdg,2)
 
-  smLog("draw object: altitude " .. objpos_value[0].y,3)
-  objpos_addr = objpos_value
-  XPLM.XPLMInstanceSetPosition(Object_Inst[n], objpos_addr, float_addr) 
-  smLog("draw object: done",3)
-  Object_Chg[n] = false 
+   smLog("draw object: altitude " .. objpos_value[0].y,3)
+   objpos_addr = objpos_value
+   XPLM.XPLMInstanceSetPosition(Object_Inst[n], objpos_addr, float_addr) 
+   smLog("draw object: done",3)
+   Object_Chg[n] = false 
 end
 
 -- unload / hide / destroy a single object based on its ID number
 function unload_object(n)
-  smLog("unload object: "..n,1)
-  if Object_Inst[n] ~= nil then   XPLM.XPLMDestroyInstance(Object_Inst[n]) end
-  if Object_Obj[n] ~= nil then   XPLM.XPLMUnloadObject(Object_Obj[n])  end
-  Object_Inst[n] = nil
-  Object_Obj[n] = nil
-  Object_Chg[n] = false
-  totalObjects = totalObjects - 1
+   smLog("unload object: "..n,1)
+   if Object_Inst[n] ~= nil then   XPLM.XPLMDestroyInstance(Object_Inst[n]) end
+   if Object_Obj[n] ~= nil then   XPLM.XPLMUnloadObject(Object_Obj[n])  end
+   Object_Inst[n] = nil
+   Object_Obj[n] = nil
+   Object_Chg[n] = false
+   totalObjects = totalObjects - 1
 end
 
 function shift_object(in_x, in_z, in_delta_x, in_delta_z, in_heading )
 
-  -- in_delta_x refers to the difference between the x coordinates (left/right) of the ref pt and the shifted position
-  -- in_delta_z refers to the difference between the z coordinates (up/down) of the ref pt and the shifted position
-  -- If the shifted position is below the ref pt, in_delta_z is negative.
-  -- If the shifted position is to the right of the ref pt, in_delta_x is positive
-  -- in_heading is the heading that the ref pt is facing
-  -- in_ref_x, in_ref_z refers to the ref point which we know the x, z coordinates and we are using that to determine the shifted pos coordinates
+   -- in_delta_x refers to the difference between the x coordinates (left/right) of the ref pt and the shifted position
+   -- in_delta_z refers to the difference between the z coordinates (up/down) of the ref pt and the shifted position
+   -- If the shifted position is below the ref pt, in_delta_z is negative.
+   -- If the shifted position is to the right of the ref pt, in_delta_x is positive
+   -- in_heading is the heading that the ref pt is facing
+   -- in_ref_x, in_ref_z refers to the ref point which we know the x, z coordinates and we are using that to determine the shifted pos coordinates
 
 
-  l_dist = math.sqrt ( (in_delta_x ^ 2) + (in_delta_z ^ 2) )
-  l_heading = math.fmod ( ( math.deg ( math.atan2 ( in_delta_x , in_delta_z  ) ) + 360 ),  360 )
-  out_x  =  in_x - math.sin ( math.rad ( in_heading - l_heading) ) * l_dist * -1
-  out_z  =  in_z -  math.cos ( math.rad ( in_heading - l_heading) ) *  l_dist
+   l_dist = math.sqrt ( (in_delta_x ^ 2) + (in_delta_z ^ 2) )
+   l_heading = math.fmod ( ( math.deg ( math.atan2 ( in_delta_x , in_delta_z  ) ) + 360 ),  360 )
+   out_x  =  in_x - math.sin ( math.rad ( in_heading - l_heading) ) * l_dist * -1
+   out_z  =  in_z -  math.cos ( math.rad ( in_heading - l_heading) ) *  l_dist
 end
 
 
 function get_heading(la1, lo1, la2, lo2)
-  -- from https://www.igismap.com/formula-to-find-bearing-or-heading-angle-between-two-points-latitude-longitude/
+   -- from https://www.igismap.com/formula-to-find-bearing-or-heading-angle-between-two-points-latitude-longitude/
 
-  local lat1 = math.rad(la1)
-  local lat2 = math.rad(la2)
+   local lat1 = math.rad(la1)
+   local lat2 = math.rad(la2)
 
-  local D = (math.rad(lo2)-math.rad(lo1))
-  local Y = math.sin(D) * math.cos(lat2)
-  local X = math.cos(lat1)*math.sin(lat2)-math.sin(lat1)*math.cos(lat2)*math.cos(D)
-  local p = math.atan2(Y,X)
-  bearing = ((p * 180 / math.pi) + 360) % 360
+   local D = (math.rad(lo2)-math.rad(lo1))
+   local Y = math.sin(D) * math.cos(lat2)
+   local X = math.cos(lat1)*math.sin(lat2)-math.sin(lat1)*math.cos(lat2)*math.cos(D)
+   local p = math.atan2(Y,X)
+   bearing = ((p * 180 / math.pi) + 360) % 360
 
-  return(bearing)
+   return(bearing)
 
 end
 
 function latlon_to_local(in_lat, in_lon, in_alt)
-  x1_value[0] = in_lat
-  y1_value[0] = in_lon
-  z1_value[0] = in_alt
+   x1_value[0] = in_lat
+   y1_value[0] = in_lon
+   z1_value[0] = in_alt
 
-  -- reuse the same variable for lat and long to receive the local x, y, z coordinates.
-  XPLM.XPLMWorldToLocal(x1_value[0],y1_value[0], z1_value[0], x1_value, y1_value, z1_value )
+   -- reuse the same variable for lat and long to receive the local x, y, z coordinates.
+   XPLM.XPLMWorldToLocal(x1_value[0],y1_value[0], z1_value[0], x1_value, y1_value, z1_value )
 
-  return  x1_value[0], y1_value[0], z1_value[0]    -- y is the elevation from mean sea level which we dont need for the time being
+   return  x1_value[0], y1_value[0], z1_value[0]    -- y is the elevation from mean sea level which we dont need for the time being
 
 end
 
 function local_to_latlon(in_x, in_y, in_z)
-  x1_value[0] = in_x
-  y1_value[0] = in_y
-  z1_value[0] = in_z
+   x1_value[0] = in_x
+   y1_value[0] = in_y
+   z1_value[0] = in_z
 
-  -- reuse the same variable for lat and long to receive the local x, y, z coordinates.
-  XPLM.XPLMLocalToWorld(x1_value[0],y1_value[0], z1_value[0], x1_value, y1_value, z1_value )
+   -- reuse the same variable for lat and long to receive the local x, y, z coordinates.
+   XPLM.XPLMLocalToWorld(x1_value[0],y1_value[0], z1_value[0], x1_value, y1_value, z1_value )
 
-  return  x1_value[0], y1_value[0], z1_value[0]    -- y is the elevation from mean sea level which we dont need for the time being
+   return  x1_value[0], y1_value[0], z1_value[0]    -- y is the elevation from mean sea level which we dont need for the time being
 end
 
 -- get ground elevation
 function probe_elevation (in_x, in_y, in_z)
-  local l_lat, l_on, l_alt = 0, 0, 0
+   local l_lat, l_on, l_alt = 0, 0, 0
 
-  x1_value[0] = in_x
-  y1_value[0] = in_y
-  z1_value[0] = in_z
+   x1_value[0] = in_x
+   y1_value[0] = in_y
+   z1_value[0] = in_z
 
-  XPLM.XPLMProbeTerrainXYZ(proberef, x1_value[0], y1_value[0], z1_value[0], probeinfo_addr)
-  probeinfo_value = probeinfo_addr --XPLMProbeInfo_t
+   XPLM.XPLMProbeTerrainXYZ(proberef, x1_value[0], y1_value[0], z1_value[0], probeinfo_addr)
+   probeinfo_value = probeinfo_addr --XPLMProbeInfo_t
 
-  --l_lat, l_lon, l_alt = local_to_latlon(probeinfo_value[0].locationX, probeinfo_value[0].locationY, probeinfo_value[0].locationZ)
-  --in_x, in_y, in_z = latlon_to_local(l_lat, l_lon, l_alt)
+   --l_lat, l_lon, l_alt = local_to_latlon(probeinfo_value[0].locationX, probeinfo_value[0].locationY, probeinfo_value[0].locationZ)
+   --in_x, in_y, in_z = latlon_to_local(l_lat, l_lon, l_alt)
 
-  --in_x = probeinfo_value[0].locationX
-  in_y = probeinfo_value[0].locationY
-  --in_z = probeinfo_value[0].locationZ
+   --in_x = probeinfo_value[0].locationX
+   in_y = probeinfo_value[0].locationY
+   --in_z = probeinfo_value[0].locationZ
 
-  wetness = probeinfo_value[0].is_wet -- is Wet is a boolean, 0 not over water, 1 over water.
-  smLog("probe elevation: terrain at height " .. in_y .." and it is wet=" .. wetness,3)
+   wetness = probeinfo_value[0].is_wet -- is Wet is a boolean, 0 not over water, 1 over water.
+   smLog("probe elevation: terrain at height " .. in_y .." and it is wet=" .. wetness,3)
 
-  return in_y,wetness
+   return in_y,wetness
 end
 
 -- define probe type
 function load_probe()
-  probeinfo_value[0].structSize = ffi.sizeof(probeinfo_value[0])
-  probeinfo_addr = probeinfo_value
-  probetype[1] = 0
-  proberef =  XPLM.XPLMCreateProbe(probetype[1])
+   probeinfo_value[0].structSize = ffi.sizeof(probeinfo_value[0])
+   probeinfo_addr = probeinfo_value
+   probetype[1] = 0
+   proberef =  XPLM.XPLMCreateProbe(probetype[1])
 end
 
 -- add object to current scene
 function add_object(lat,lon,hdg,sit,path)
-  if ( totalObjects < MAX_OBJECTS ) then
-    load_object(totalObjects,path)
-    Object_Chg[totalObjects] = true
-    Object_LAT[totalObjects] = lat
-    Object_LON[totalObjects] = lon
-    Object_HDG[totalObjects] = hdg
-    Object_SIT[totalObjects] = sit
+   if ( totalObjects < MAX_OBJECTS ) then
+      load_object(totalObjects,path)
+      Object_Chg[totalObjects] = true
+      Object_LAT[totalObjects] = lat
+      Object_LON[totalObjects] = lon
+      Object_HDG[totalObjects] = hdg
+      Object_SIT[totalObjects] = sit
 
-    Object_ATR[totalObjects] = 0
-    Object_SCN[totalObjects] = currentScene 
+      Object_ATR[totalObjects] = 0
+      Object_SCN[totalObjects] = currentScene 
 
-    inScenePosition[totalObjects] = objectsInScene[currentScene]
+      inScenePosition[totalObjects] = objectsInScene[currentScene]
 
-    smLog("add object "..totalObjects.." to scene "..currentScene.." as nbr "..objectsInScene[currentScene],2)
+      smLog("add object "..totalObjects.." to scene "..currentScene.." as nbr "..objectsInScene[currentScene],2)
 
-    Object_ATR[totalObjects] = 0
-    if ( isPatient ) then
-      Object_ATR[totalObjects] = 1
-      isPatient = false
-    end 
+      Object_ATR[totalObjects] = 0
+      if ( isPatient ) then
+         Object_ATR[totalObjects] = 1
+         isPatient = false
+      end 
 
-    totalObjects = totalObjects + 1
-    objectsInScene[currentScene] = objectsInScene[currentScene] + 1
-  else
-    smLog("Warning: maximum number of objects reached",0)
-  end
+      totalObjects = totalObjects + 1
+      objectsInScene[currentScene] = objectsInScene[currentScene] + 1
+   else
+      smLog("Warning: maximum number of objects reached",0)
+   end
 end
 
 -- provide random direction
 function random_direction()
-  return(math.random(1,360))
+   return(math.random(1,360))
 end
 
 -- provide random situation
 function random_situation()
-  return(math.random(0,2))
+   return(math.random(0,2))
+end
+
+function ref_has_changed()
+   if ( lat_ref ~= lat_ref_last or lon_ref ~= lon_ref_last ) then
+      lat_ref_last = lat_ref
+      lon_ref_last = lon_ref
+      return(true)
+   else
+      return(false)
+   end
 end
 
 -- update objects if changed
 function update_objects()
-  local n = 0
-  while ( n < totalObjects ) do  
-    --if ( (Object_Chg[n] or updateDelay >= maxUpdateDelay) and Object_Inst[n] ~= nil ) then
-    if ( (Object_Chg[n] or (Object_SIT[n] == 5 and is_near(Object_LAT[n],Object_LON[n])) ) and Object_Inst[n] ~= nil ) then
-      draw_object(n)
-    end
-    n = n + 1
-  end
-  --if ( updateDelay < maxUpdateDelay ) then
-  --  updateDelay = updateDelay + 1
-  --else
-  --  updateDelay = 0
-  --end
+   local n = 0
+   if ( ref_has_changed() ) then               -- re-draw objects on new tile only
+      while ( n < totalObjects ) do  
+         if ( Object_Inst[n] ~= nil ) then
+           draw_object(n)
+         end
+         n = n + 1
+      end
+   else
+      while ( n < totalObjects ) do  
+         if ( Object_Inst[n] ~= nil and (Object_Chg[n] or (Object_SIT[n] == 5 and is_near(Object_LAT[n],Object_LON[n])) ) ) then
+            draw_object(n)
+         end
+         n = n + 1
+      end
+   end
 end
 
 function is_near(lat, lon)
-  if (  (tonumber(string.format("%.2f",lat)) == tonumber(string.format("%.2f",LATITUDE))) and
-        (tonumber(string.format("%.2f",lon)) == tonumber(string.format("%.2f",LONGITUDE))) ) then
-     --print("is near")
-     return(true)
-  else
-     --print("is not near")
-     return(false)
-  end
+   if (  (tonumber(string.format("%.2f",lat)) == tonumber(string.format("%.2f",LATITUDE))) and
+         (tonumber(string.format("%.2f",lon)) == tonumber(string.format("%.2f",LONGITUDE))) ) then
+      --print("is near")
+      return(true)
+   else
+      --print("is not near")
+      return(false)
+   end
 end
 
 -- hide patient 
 function unload_Patient()
-  local n = 0
-  local z = totalObjects
-  scenemgr_status = "unload patient"
+   local n = 0
+   local z = totalObjects
+   scenemgr_status = "unload patient"
 
-  while ( n < z ) do
-    if ( Object_ATR[n] == 1 ) then
-      unload_object(n)
-      totalObjects = totalObjects + 1      -- correct object count to ignore "hole"
-    end
-    n = n + 1
-  end 
+   while ( n < z ) do
+      if ( Object_ATR[n] == 1 ) then
+         unload_object(n)
+         totalObjects = totalObjects + 1      -- correct object count to ignore "hole"
+      end
+      n = n + 1
+   end 
 end
 
 -- unload all objects
 function unload_All()
-  local n = 0
-  local z = totalObjects
-  scenemgr_status = "unload all"
+   local n = 0
+   local z = totalObjects
+   scenemgr_status = "unload all"
 
-  while ( n < z ) do
-    unload_object(n)
-    n = n + 1
-  end 
-  totalObjects = 0
-  currentScene = 0
+   while ( n < z ) do
+      unload_object(n)
+      n = n + 1
+   end 
+   totalObjects = 0
+   currentScene = 0
   objectsInScene = {}
 end
 
 -- unload current scene only
 function unload_current_scene()
-  local n = 0
+   local n = 0
 
-  if ( currentScene > 0 ) then
-    local z = totalObjects
-    while ( n < z ) do
-      if ( Object_SCN[n] == currentScene ) then
-        unload_object(n)
-      end
-      n = n + 1
-    end 
-    objectsInScene[currentScene] = 0
-    currentScene = currentScene - 1
-  end
+   if ( currentScene > 0 ) then
+      local z = totalObjects
+      while ( n < z ) do
+         if ( Object_SCN[n] == currentScene ) then
+            unload_object(n)
+         end
+         n = n + 1
+      end 
+      objectsInScene[currentScene] = 0
+      currentScene = currentScene - 1
+   end
 end
 
 function create_new_scene()
-  if ( currentScene < 100 ) then
-    currentScene = currentScene + 1
-    objectsInScene[currentScene] = 0
-  end
+   if ( currentScene < 100 ) then
+      currentScene = currentScene + 1
+      objectsInScene[currentScene] = 0
+   end
 end
 
 -- get table length
 function table_length(t)
-  local getN = 0
-  for n in pairs(t) do 
-    getN = getN + 1 
-  end
-  return getN
+   local getN = 0
+   for n in pairs(t) do 
+      getN = getN + 1 
+   end
+   return getN
 end
 
 -- get random element from table
 function get_random_from_table(t)
-  local n = table_length(t) 
-  return(t[math.random(1,n)])
+   local n = table_length(t) 
+   return(t[math.random(1,n)])
 end
 
 -- place a random object to scene with direction
 function place_obj_with_direction(lat,lon,scene,sit,dir)
-  for k,v in ipairs(scene) do
-    add_object(lat,lon,dir,sit,get_random_from_table(v))
-  end
+   for k,v in ipairs(scene) do
+      add_object(lat,lon,dir,sit,get_random_from_table(v))
+   end
 end
 
 -- place a random object to scene
 function place_objects(lat,lon,scene,sit)
-  for k,v in ipairs(scene) do
-    add_object(lat,lon,random_direction(),sit,get_random_from_table(v))
-  end
+   for k,v in ipairs(scene) do
+      add_object(lat,lon,random_direction(),sit,get_random_from_table(v))
+   end
 end
 
 ------------------------------------------------------------------------------------
@@ -1045,349 +1059,349 @@ end
 -- create a random scene of hiker and helper
 function add_Hiker_Scene()                --- TO BE COMPLETED 
 
-  scenemgr_status = "hiker called"
-  create_new_scene()
+   scenemgr_status = "hiker called"
+   create_new_scene()
    
-  if ( hasMissionX ) then     -- load MissionX target coordinates
-    set("sceneMgr/lat",mx_lat)
-    set("sceneMgr/lon",mx_lon)
-  end
+   if ( hasMissionX ) then     -- load MissionX target coordinates
+      set("sceneMgr/lat",mx_lat)
+      set("sceneMgr/lon",mx_lon)
+   end
 
-  place_objects(scenemgr_lat,scenemgr_lon,g_police,0)
-  place_objects(scenemgr_lat,scenemgr_lon,g_ambulance,0)
+   place_objects(scenemgr_lat,scenemgr_lon,g_police,0)
+   place_objects(scenemgr_lat,scenemgr_lon,g_ambulance,0)
 end
 
 -- create a random scene of accident and helper
 function add_Accident_Scene()
 
-  scenemgr_status = "accident called"
-  create_new_scene()
+   scenemgr_status = "accident called"
+   create_new_scene()
 
-  if ( hasMissionX ) then     -- load MissionX target coordinates
-    set("sceneMgr/lat",mx_lat)
-    set("sceneMgr/lon",mx_lon)
-  end
+   if ( hasMissionX ) then     -- load MissionX target coordinates
+      set("sceneMgr/lat",mx_lat)
+      set("sceneMgr/lon",mx_lon)
+   end
 
-  parse_mission("VU 1 PATIENT 1 RTW POLIZEI")
+   parse_mission("VU 1 PATIENT 1 RTW POLIZEI")
 end
 
 -- create a random scene for winch mission
 function add_Winch_Scene()
-  local dir1 = random_direction()
+   local dir1 = random_direction()
 
-  scenemgr_status = "winch called"
-  create_new_scene()
+   scenemgr_status = "winch called"
+   create_new_scene()
    
-  if ( hasMissionX ) then     -- load MissionX target coordinates
-    set("sceneMgr/lat",mx_lat)
-    set("sceneMgr/lon",mx_lon)
-  end
+   if ( hasMissionX ) then     -- load MissionX target coordinates
+      set("sceneMgr/lat",mx_lat)
+      set("sceneMgr/lon",mx_lon)
+   end
 
-  isPatient = true
-  add_object(scenemgr_lat,scenemgr_lon,dir1,1,get_random_from_table(PEOPLE))
-  isPatient = true
-  add_object(scenemgr_lat,scenemgr_lon,dir1,0,get_random_from_table(RTWC2)) -- kneeing guy
-  place_objects(scenemgr_lat,scenemgr_lon,g_winch,0)     -- some other winch scene objects
+   isPatient = true
+   add_object(scenemgr_lat,scenemgr_lon,dir1,1,get_random_from_table(PEOPLE))
+   isPatient = true
+   add_object(scenemgr_lat,scenemgr_lon,dir1,0,get_random_from_table(RTWC2)) -- kneeing guy
+   place_objects(scenemgr_lat,scenemgr_lon,g_winch,0)     -- some other winch scene objects
 end
 
 -- create a random scene for dropoff leg
 function add_Dropoff_Scene()
-  local dir1 = random_direction()
+   local dir1 = random_direction()
    
-  scenemgr_status = "dropoff called"
-  create_new_scene()
+   scenemgr_status = "dropoff called"
+   create_new_scene()
    
-  if ( hasMissionX ) then     -- load MissionX target coordinates
-    set("sceneMgr/lat",mx_lat)
-    set("sceneMgr/lon",mx_lon)
-  end
+   if ( hasMissionX ) then     -- load MissionX target coordinates
+      set("sceneMgr/lat",mx_lat)
+      set("sceneMgr/lon",mx_lon)
+   end
   
-  scenemgr_hdg = 0
-  if ( object_lookup(scenemgr_lat,scenemgr_lon,"dropoff") ) then    
-    isPatient = true
-    add_object(scenemgr_lat,scenemgr_lon,scenemgr_hdg,4,get_random_from_table(DOCS))
-    isPatient = true
-    add_object(scenemgr_lat,scenemgr_lon-0.00002,scenemgr_hdg,4,get_random_from_table(STRETCHER))
-  end 
+   scenemgr_hdg = 0
+   if ( object_lookup(scenemgr_lat,scenemgr_lon,"dropoff") ) then    
+      isPatient = true
+      add_object(scenemgr_lat,scenemgr_lon,scenemgr_hdg,4,get_random_from_table(DOCS))
+      isPatient = true
+      add_object(scenemgr_lat,scenemgr_lon-0.00002,scenemgr_hdg,4,get_random_from_table(STRETCHER))
+   end 
 end
 
 -- create a random scene for dropoff leg
 function add_Pickup_Scene()
-  local dir1 = random_direction()
+   local dir1 = random_direction()
    
-  scenemgr_status = "pickup called"
-  create_new_scene()
+   scenemgr_status = "pickup called"
+   create_new_scene()
 
-  if ( hasMissionX ) then     -- load MissionX target coordinates
-    set("sceneMgr/lat",mx_lat)
-    set("sceneMgr/lon",mx_lon)
-  end
+   if ( hasMissionX ) then     -- load MissionX target coordinates
+      set("sceneMgr/lat",mx_lat)
+      set("sceneMgr/lon",mx_lon)
+   end
   
-  scenemgr_hdg = 0
-  if ( object_lookup(scenemgr_lat,scenemgr_lon,"pickup") ) then     
-    isPatient = true
-    add_object(scenemgr_lat,scenemgr_lon,scenemgr_hdg,4,get_random_from_table(DOCS))
-    isPatient = true
-    add_object(scenemgr_lat,scenemgr_lon-0.00002,scenemgr_hdg,4,get_random_from_table(STRETCHER))
-    isPatient = true
-    add_object(scenemgr_lat,scenemgr_lon-0.00002,scenemgr_hdg-90,3,get_random_from_table(PEOPLE))
-  end 
+   scenemgr_hdg = 0
+   if ( object_lookup(scenemgr_lat,scenemgr_lon,"pickup") ) then     
+      isPatient = true
+      add_object(scenemgr_lat,scenemgr_lon,scenemgr_hdg,4,get_random_from_table(DOCS))
+      isPatient = true
+      add_object(scenemgr_lat,scenemgr_lon-0.00002,scenemgr_hdg,4,get_random_from_table(STRETCHER))
+      isPatient = true
+      add_object(scenemgr_lat,scenemgr_lon-0.00002,scenemgr_hdg-90,3,get_random_from_table(PEOPLE))
+   end 
 end
 
 -- create a random scene of police , fireworker and ambulance
 function add_Rescue_Scene()
 
-  scenemgr_status = "rescue called"
-  create_new_scene()
+   scenemgr_status = "rescue called"
+   create_new_scene()
 
-  if ( hasMissionX ) then     -- load MissionX target coordinates
-    set("sceneMgr/lat",mx_lat)
-    set("sceneMgr/lon",mx_lon)
-  end
+   if ( hasMissionX ) then     -- load MissionX target coordinates
+      set("sceneMgr/lat",mx_lat)
+      set("sceneMgr/lon",mx_lon)
+   end
 
-  parse_mission("1 PATIENT 1 RTW")
+   parse_mission("1 PATIENT 1 RTW")
 end
 
 -- create a scene for home base
 function add_Base_Scene()
 
-  scenemgr_status = "base called"
-  create_new_scene()
+   scenemgr_status = "base called"
+   create_new_scene()
 
-  if ( hasMissionX ) then             -- load MissionX target coordinates
-    set("sceneMgr/lat",mx_lat)
-    set("sceneMgr/lon",mx_lon)
-  end
+   if ( hasMissionX ) then             -- load MissionX target coordinates
+      set("sceneMgr/lat",mx_lat)
+      set("sceneMgr/lon",mx_lon)
+   end
    
-  scenemgr_hdg = 0
+   scenemgr_hdg = 0
    
-  if ( object_lookup(scenemgr_lat,scenemgr_lon,"marshall") ) then
-    add_object(scenemgr_lat,scenemgr_lon,scenemgr_hdg,4,get_random_from_table(BASESTAFF))
-  end
+   if ( object_lookup(scenemgr_lat,scenemgr_lon,"marshall") ) then
+      add_object(scenemgr_lat,scenemgr_lon,scenemgr_hdg,4,get_random_from_table(BASESTAFF))
+   end
 
-  --add_object(scenemgr_lat,scenemgr_lon,0,5,get_random_from_table(BASESTAFF))
-  --add_object(scenemgr_lat,scenemgr_lon,180,4,get_random_from_table(BASESTAFF))
-  -- maybe add APU and fire extinguisher
+   --add_object(scenemgr_lat,scenemgr_lon,0,5,get_random_from_table(BASESTAFF))
+   --add_object(scenemgr_lat,scenemgr_lon,180,4,get_random_from_table(BASESTAFF))
+   -- maybe add APU and fire extinguisher
 end
 
 -- create a dude for adjustment
 function show_Marshall()
 
-  scenemgr_status = "marshall called"
-  create_new_scene()
+   scenemgr_status = "marshall called"
+   create_new_scene()
 
-  local in_x, in_y, in_z = latlon_to_local(LATITUDE, LONGITUDE, 0)
-  shift_object(in_x, in_z, 0, 10, plane_hdg )  -- place marshall scene 10m ahead of us
-  local  l_lat, l_lon, l_alt = local_to_latlon(out_x, 0 , out_z)
+   local in_x, in_y, in_z = latlon_to_local(LATITUDE, LONGITUDE, 0)
+   shift_object(in_x, in_z, 0, 10, plane_hdg )  -- place marshall scene 10m ahead of us
+   local  l_lat, l_lon, l_alt = local_to_latlon(out_x, 0 , out_z)
    
-  add_object(l_lat,l_lon,0,4,get_random_from_table(BASESTAFF))
+   add_object(l_lat,l_lon,0,4,get_random_from_table(BASESTAFF))
 end
 
 function show_Doc()
 
-  scenemgr_status = "doc called"
-  create_new_scene()
+   scenemgr_status = "doc called"
+   create_new_scene()
 
-  local in_x, in_y, in_z = latlon_to_local(LATITUDE, LONGITUDE, 0)
-  shift_object(in_x, in_z, 0, 10, plane_hdg )  -- place doc scene 10m ahead of us
-  local  l_lat, l_lon, l_alt = local_to_latlon(out_x, 0 , out_z)
+   local in_x, in_y, in_z = latlon_to_local(LATITUDE, LONGITUDE, 0)
+   shift_object(in_x, in_z, 0, 10, plane_hdg )  -- place doc scene 10m ahead of us
+   local  l_lat, l_lon, l_alt = local_to_latlon(out_x, 0 , out_z)
    
-  add_object(l_lat,l_lon,0,4,get_random_from_table(DOCS))
+   add_object(l_lat,l_lon,0,4,get_random_from_table(DOCS))
 end
 
 -------------------------------------------------------------------------------------
 
 function add_patient_on_stretcher()
-  local dir1 = random_direction()   -- get random direction
-  local dir2 = dir1 - 90            -- adjust patient to it
-  local dir3 = dir1 + 90            -- adjust patient to it
+   local dir1 = random_direction()   -- get random direction
+   local dir2 = dir1 - 90            -- adjust patient to it
+   local dir3 = dir1 + 90            -- adjust patient to it
 
-  isPatient = true                  -- flag next object "as patient"
-  -- use stretcher , situation 4 and direction 1
-  place_obj_with_direction(scenemgr_lat,scenemgr_lon,g_stretcher,7,dir1)
+   isPatient = true                  -- flag next object "as patient"
+   -- use stretcher , situation 4 and direction 1
+   place_obj_with_direction(scenemgr_lat,scenemgr_lon,g_stretcher,7,dir1)
 
-  isPatient = true                  -- flag next object "as patient"
-  -- use random patient , situation 3 and direction 2
-  place_obj_with_direction(scenemgr_lat,scenemgr_lon,g_patient,6,dir2)
+   isPatient = true                  -- flag next object "as patient"
+   -- use random patient , situation 3 and direction 2
+   place_obj_with_direction(scenemgr_lat,scenemgr_lon,g_patient,6,dir2)
 
-  isPatient = true                  -- flag next object "as patient"
-  -- use standing sani , situation 4 and direction 2
-  place_obj_with_direction(scenemgr_lat,scenemgr_lon,g_sani,7,dir2)
+   isPatient = true                  -- flag next object "as patient"
+   -- use standing sani , situation 4 and direction 2
+   place_obj_with_direction(scenemgr_lat,scenemgr_lon,g_sani,7,dir2)
 end
 
 -- hide last scene
 function unload_Scene()
-  scenemgr_status = "unload scene"
-  unload_current_scene()
+   scenemgr_status = "unload scene"
+   unload_current_scene()
 end
 
 -- parse a mission message and create scene from it
 function parse_mission(txt)
 
-  create_new_scene()
+   create_new_scene()
 
-  local mult = 1
-  for token in string.gmatch(txt, "[^%s]+") do
-    if ( token:match("%D") ) then
-      while ( mult > 0 ) do
-        smLog(token..": text",2)
-        if ( token == "VU" ) then
-          place_objects(scenemgr_lat,scenemgr_lon,g_VU,0)
-          place_objects(scenemgr_lat,scenemgr_lon,g_objects,0)
-        elseif ( token == "PATIENT" ) then
-          add_patient_on_stretcher()
-        elseif ( token == "PERSONEN" or token == "people" ) then
-          place_objects(scenemgr_lat,scenemgr_lon,g_people,0)
-        elseif ( token == "POLIZEI" or token == "police" ) then
-          place_objects(scenemgr_lat,scenemgr_lon,g_police,0)
-        elseif ( token == "FW" or token == "FFW" ) then
-          place_objects(scenemgr_lat,scenemgr_lon,g_FW,0)
-        elseif ( token == "AUTO" or token == "cars" ) then
-          place_objects(scenemgr_lat,scenemgr_lon,g_car,0)
-        elseif ( token == "RTW" ) then
-          place_objects(scenemgr_lat,scenemgr_lon,g_RTW,0)
-        elseif ( token == "ADAC" ) then
-          place_objects(scenemgr_lat,scenemgr_lon,g_ADAC,0)
-        end
-        mult = mult - 1
+   local mult = 1
+   for token in string.gmatch(txt, "[^%s]+") do
+      if ( token:match("%D") ) then
+         while ( mult > 0 ) do
+            smLog(token..": text",2)
+            if ( token == "VU" ) then
+               place_objects(scenemgr_lat,scenemgr_lon,g_VU,0)
+               place_objects(scenemgr_lat,scenemgr_lon,g_objects,0)
+            elseif ( token == "PATIENT" ) then
+               add_patient_on_stretcher()
+            elseif ( token == "PERSONEN" or token == "people" ) then
+               place_objects(scenemgr_lat,scenemgr_lon,g_people,0)
+            elseif ( token == "POLIZEI" or token == "police" ) then
+               place_objects(scenemgr_lat,scenemgr_lon,g_police,0)
+            elseif ( token == "FW" or token == "FFW" ) then
+               place_objects(scenemgr_lat,scenemgr_lon,g_FW,0)
+            elseif ( token == "AUTO" or token == "cars" ) then
+               place_objects(scenemgr_lat,scenemgr_lon,g_car,0)
+            elseif ( token == "RTW" ) then
+               place_objects(scenemgr_lat,scenemgr_lon,g_RTW,0)
+            elseif ( token == "ADAC" ) then
+               place_objects(scenemgr_lat,scenemgr_lon,g_ADAC,0)
+            end
+            mult = mult - 1
+         end
+         mult = 1
+      else 
+         smLog(token..": number",2)
+         mult = tonumber(token)
       end
-      mult = 1
-    else 
-      smLog(token..": number",2)
-      mult = tonumber(token)
-    end
-  end
+   end
 end
 
 -- mappable scene control
 function toggle_Demo()
-  if ( showScene == 1 )  then
-    unload_Patient()
-    showScene = 2
-  elseif ( showScene == 2 )  then
-    unload_Scene()
-    showScene = 0
-  else
-    place_Demo()
-    showScene = 1
-  end
+   if ( showScene == 1 )  then
+      unload_Patient()
+      showScene = 2
+   elseif ( showScene == 2 )  then
+      unload_Scene()
+      showScene = 0
+   else
+      place_Demo()
+      showScene = 1
+   end
 end
 
 function load_auto_objects()
-  if ( LATITUDE > 47.872 and LATITUDE < 47.875 and  LONGITUDE > 12.630 and LONGITUDE < 12.632 ) then
+   if ( LATITUDE > 47.872 and LATITUDE < 47.875 and  LONGITUDE > 12.630 and LONGITUDE < 12.632 ) then
 
-    add_object( 47.873983772 , 12.631342556 ,270,4,"RescueX/objects/helipad_ADAC.obj")       
-    add_object( 47.874159240 , 12.631392020 ,180,4,"handyobjects/helipads/helipad_ground_square.obj")
+      add_object( 47.873983772 , 12.631342556 ,270,4,"RescueX/objects/helipad_ADAC.obj")       
+      add_object( 47.874159240 , 12.631392020 ,180,4,"handyobjects/helipads/helipad_ground_square.obj")
 
-  end
+   end
 end
 
 -- place a demo scene
 function place_Demo()
 
-  local in_x, in_y, in_z = latlon_to_local(LATITUDE, LONGITUDE, 0)
+   local in_x, in_y, in_z = latlon_to_local(LATITUDE, LONGITUDE, 0)
 
-  shift_object(in_x, in_z, 0, 100, plane_hdg )  -- place demo scene 100m ahead of us
+   shift_object(in_x, in_z, 0, 100, plane_hdg )  -- place demo scene 100m ahead of us
 
-  local  l_lat, l_lon, l_alt = local_to_latlon(out_x, 0 , out_z)
+   local  l_lat, l_lon, l_alt = local_to_latlon(out_x, 0 , out_z)
 
-  set("sceneMgr/lat",l_lat)
-  set("sceneMgr/lon",l_lon)
+   set("sceneMgr/lat",l_lat)
+   set("sceneMgr/lon",l_lon)
 
-  parse_mission("VU mit 1 PATIENT 2 RTW und 1 FW sowie ADAC bereits vor ort")
-  --parse_mission("1 PATIENT ")
+   parse_mission("VU mit 1 PATIENT 2 RTW und 1 FW sowie ADAC bereits vor ort")
+   --parse_mission("1 PATIENT ")
 end
 
 -- parse the message from the message dataref
 function parse_Message()
-  parse_mission(scenemgr_message)
+   parse_mission(scenemgr_message)
 end
 
 ----------------------------------------------------------------------------------
 
 function move_North()
-  local n = totalObjects - 1
-  if ( n >= 0 and Object_Obj[n] ~= nil ) then
-    Object_LAT[n] = Object_LAT[n] + 0.00001
-    Object_Chg[n] = true
-    draw_object(n)
-  end
+   local n = totalObjects - 1
+   if ( n >= 0 and Object_Obj[n] ~= nil ) then
+      Object_LAT[n] = Object_LAT[n] + 0.00001
+      Object_Chg[n] = true
+      draw_object(n)
+   end
 end
 
 function move_South()
-  local n = totalObjects - 1
-  if ( n >= 0 and Object_Obj[n] ~= nil ) then
-    Object_LAT[n] = Object_LAT[n] - 0.00001
-    Object_Chg[n] = true
-    draw_object(n)
-  end
+   local n = totalObjects - 1
+   if ( n >= 0 and Object_Obj[n] ~= nil ) then
+      Object_LAT[n] = Object_LAT[n] - 0.00001
+      Object_Chg[n] = true
+      draw_object(n)
+   end
 end
 
 function move_West()
-  local n = totalObjects - 1
-  if ( n >= 0 and Object_Obj[n] ~= nil) then
-    Object_LON[n] = Object_LON[n] - 0.00001
-    Object_Chg[n] = true
-    draw_object(n)
-  end
+   local n = totalObjects - 1
+   if ( n >= 0 and Object_Obj[n] ~= nil) then
+      Object_LON[n] = Object_LON[n] - 0.00001
+      Object_Chg[n] = true
+      draw_object(n)
+   end
 end
 
 function move_East()
-  local n = totalObjects - 1
-  if ( n >= 0 and Object_Obj[n] ~= nil ) then
-    Object_LON[n] = Object_LON[n] + 0.00001
-    Object_Chg[n] = true
-    draw_object(n)
-  end
+   local n = totalObjects - 1
+   if ( n >= 0 and Object_Obj[n] ~= nil ) then
+      Object_LON[n] = Object_LON[n] + 0.00001
+      Object_Chg[n] = true
+      draw_object(n)
+   end
 end
 
 function turn_Left()
-  local n = totalObjects - 1
-  if ( n >= 0 and Object_Obj[n] ~= nil ) then
-    Object_HDG[n] = (Object_HDG[n] + 360 - 10) % 360
-    Object_Chg[n] = true
-    draw_object(n)
-  end
+   local n = totalObjects - 1
+   if ( n >= 0 and Object_Obj[n] ~= nil ) then
+      Object_HDG[n] = (Object_HDG[n] + 360 - 10) % 360
+      Object_Chg[n] = true
+      draw_object(n)
+   end
 end
 
 function turn_Right()
-  local n = totalObjects - 1
-  if ( n >= 0 and Object_Obj[n] ~= nil ) then
-    Object_HDG[n] = (Object_HDG[n] + 360 + 10) % 360
-    Object_Chg[n] = true
-    draw_object(n)
-  end
+   local n = totalObjects - 1
+   if ( n >= 0 and Object_Obj[n] ~= nil ) then
+      Object_HDG[n] = (Object_HDG[n] + 360 + 10) % 360
+      Object_Chg[n] = true
+      draw_object(n)
+   end
 end
 
 function save_as(t)
-  local n = totalObjects - 1
-  if ( n >= 0 and Object_Obj[n] ~= nil ) then
+   local n = totalObjects - 1
+   if ( n >= 0 and Object_Obj[n] ~= nil ) then
 
-    local k = make_key(LATITUDE,LONGITUDE)
+      local k = make_key(LATITUDE,LONGITUDE)
 
-    smLog("save "..t.." for key " .. k .. " with "..Object_LAT[n].." / "..Object_LON[n],2)
+      smLog("save "..t.." for key " .. k .. " with "..Object_LAT[n].." / "..Object_LON[n],2)
 
-    if ( scene_lookup[k] ) then           -- key already exists
-      smLog("save before: "..scene_lookup[k],3)
+      if ( scene_lookup[k] ) then           -- key already exists
+         smLog("save before: "..scene_lookup[k],3)
 
-      local v = ""
-      for w in string.gmatch(scene_lookup[k], '([^;]+)') do
-        if ( not w:match('^'..t..'=') ) then
-          v = v..w..";"
-        end
+         local v = ""
+         for w in string.gmatch(scene_lookup[k], '([^;]+)') do
+            if ( not w:match('^'..t..'=') ) then
+               v = v..w..";"
+            end
+         end
+         v = v..t.."="..Object_LAT[n]..","..Object_LON[n]..","..Object_HDG[n]..";"
+         scene_lookup[k] = v
+
+      else                                 -- add new key for current location
+         smLog("save before: empty",3)
+         scene_lookup[k] = t.."="..Object_LAT[n]..","..Object_LON[n]..","..Object_HDG[n]..";"
       end
-      v = v..t.."="..Object_LAT[n]..","..Object_LON[n]..","..Object_HDG[n]..";"
-      scene_lookup[k] = v
+      smLog("save after: "..scene_lookup[k],3)
 
-    else                                 -- add new key for current location
-      smLog("save before: empty",3)
-      scene_lookup[k] = t.."="..Object_LAT[n]..","..Object_LON[n]..","..Object_HDG[n]..";"
-    end
-    smLog("save after: "..scene_lookup[k],3)
+      write_scene_lookup()
 
-    write_scene_lookup()
-
-  end
+   end
 end
 
 ----------------------------------------------------------------------------------
@@ -1435,6 +1449,3 @@ create_command("sceneMgr/save_Dropoff",       "save as dropoff",    'save_as("dr
 create_command("sceneMgr/save_Pickup",        "save as pickup",     'save_as("pickup")',    "",   "")
 create_command("sceneMgr/show_Marshall",      "show marshall",      "show_Marshall()",      "",   "")
 create_command("sceneMgr/show_Doc",           "show doc",           "show_Doc()",           "",   "")
-
-
-
