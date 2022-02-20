@@ -2008,7 +2008,7 @@ LIGHT_NAMED	hospital_helipad_blue	  89.8680   28.7480   -4.3120
 LIGHT_NAMED	hospital_helipad_blue	  89.8680   28.7480  -18.2880	
 LIGHT_NAMED	hospital_helipad_blue	  89.3200   28.7480  -32.6160	
 TRIS	0 2601
-ATTR_hard_deck
+ATTR_hard
 TRIS	2601 237
 
 # Built with SketchUp 13.0.4124. Exported with SketchUp2XPlane 1.56.

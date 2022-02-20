@@ -1572,7 +1572,7 @@ IDX	546
 IDX	547
 
 TRIS	0 2550
-ATTR_hard_deck
+ATTR_hard
 TRIS	2550 168
 
 # Built with SketchUp 20.1.229. Exported with SketchUp2XPlane 1.70.

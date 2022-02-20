@@ -49216,7 +49216,7 @@ LIGHT_NAMED	amb_street_light	  17.4395    2.7542  -22.4184
 LIGHT_NAMED	amb_street_light	   4.7369   12.6758  -14.6341	
 LIGHT_NAMED	amb_street_light	  20.7881    3.1278   -7.6989	
 TRIS	0 91899
-ATTR_hard_deck
+ATTR_hard
 TRIS	91899 4152
 ####_alpha
 ATTR_no_hard
