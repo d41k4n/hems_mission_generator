@@ -3,9 +3,9 @@
 --
 -- inspired by XPJavelin's 'Simple and Nice Loading Equipment'
 --
-version = "0.37"
+version = "0.41"
 
-local logLevel = 1
+local logLevel = 3
 
 local hasMissionX = false
 if ( XPLMFindDataRef("xpshared/target/lat") ~= nil )then    -- missionX plugin loaded ?
@@ -699,8 +699,7 @@ function load_object(n,path)
 end
 
 function draw_object(n)
-   local l_lat,l_lon,l_alt
-   local l_hdg = 0.0
+   local l_lat,l_lon,l_alt,l_hdg
 
    l_lat = Object_LAT[n]
    l_lon = Object_LON[n]
@@ -709,13 +708,22 @@ function draw_object(n)
    local N = inScenePosition[n] -- use the "in scene position" instead total 
 
    l_alt = 0
-   smLog("lat="..l_lat.." lon="..l_lon.." hdg="..l_hdg,4)
+   smLog("l_lat="..l_lat.." l_lon="..l_lon.." hdg="..l_hdg,4)
 
-   in_x, in_y, in_z = latlon_to_local(l_lat, l_lon, l_alt)
+   in_x, in_y, in_z = latlon_to_local(l_lat, l_lon, l_alt)        -- start with elv 0
 
-   -- SHIFT
-   --     POSITIVE LEFT < x > NEGATIVE RIGHT
-   --     POSITIVE FWD < z > NEGATIVE AFT
+   smLog("pass0: x="..in_x.." y="..in_y.." z="..in_z,4)
+ 
+   out_x,out_y,out_z,wetness = probe_elevation (in_x, in_y, in_z) -- find elv of x,z
+
+   smLog("pass1: x="..in_x.." ("..out_x..") y="..in_y.." ("..out_y..") z="..in_z.." ("..out_z..")",4)
+
+   local b_lat,b_lon,b_alt = local_to_latlon(out_x,out_y,out_z)   -- get world alt
+
+   in_x, in_y, in_z = latlon_to_local(l_lat, l_lon, b_alt)        -- redo with new alt
+
+   smLog("pass2: x="..in_x.." y="..in_y.." z="..in_z,4)
+
 
    -- SIT ( situation )
    --    0 = default
@@ -726,36 +734,43 @@ function draw_object(n)
    --    5 = object will not be shifted but heading oriented towards the ACF
    --    6 = as 3 plus moved away a bit
    --    7 = as 4 plus moved away a bit
-
+   --    8 = as 4 plus moved 10 ahead of ACF 
 
    if ( Object_SIT[n] < 3 ) then      -- situation < 3 = normal distribution
+       -- SHIFT
+       --     POSITIVE LEFT < x > NEGATIVE RIGHT
+       --     POSITIVE FWD < z > NEGATIVE AFT
+
       shift_object(in_x, in_z, N*0.5, N*0.5, l_hdg )
-      --b_lat,b_lon,b_alt = local_to_latlon(out_x,out_z,l_alt)
-      --l_hdg = get_heading(b_lat,b_lon,l_lat,l_lon)
-      --l_hdg = (l_hdg + 180) % 360
       smLog("new heading "..l_hdg,3)
    else
       if ( Object_SIT[n] == 6 or Object_SIT[n] == 7 ) then 
          in_z = in_z + 2
          in_x = in_x + 2
       end
+
       if ( Object_SIT[n] == 3 or Object_SIT[n] == 6 ) then     -- situation 3 = adjust patient to stretcher
          shift_object(in_x, in_z, 0.0, -0.9, l_hdg )		 
+
       else
          out_x = in_x
          out_z = in_z
       end
    end
 
+   local out_x,out_y,out_z,wetness = probe_elevation (out_x, in_y, out_z)  -- find final elv
+ 
    objpos_value[0].x = out_x 
+   objpos_value[0].y = out_y
    objpos_value[0].z = out_z 
-   objpos_value[0].heading = l_hdg
+   
+   smLog("pass3: out_x="..out_x.." out_y="..out_y.." out_z="..out_z,4)
 
-   out_y,wetness = probe_elevation (out_x, in_y, out_z)
+   objpos_value[0].heading = l_hdg
 
    float_value[0] = 0
    float_addr = float_value
-   objpos_value[0].y = out_y
+ 
    objpos_value[0].pitch = 0
    objpos_value[0].roll = 0
 
@@ -773,9 +788,8 @@ function draw_object(n)
 
    elseif ( Object_SIT[n] == 5 ) then                         -- situation 5 = oriented towards the aircraft 
 
-      --local b_lat,b_lon,b_alt = local_to_latlon(out_x,out_z,l_alt)
       l_hdg = get_heading(l_lat,l_lon,LATITUDE,LONGITUDE)     -- get heading towards the aircraft
-      l_hdg = (l_hdg + 180) % 360
+      l_hdg = (l_hdg + 180 + 360) % 360
       objpos_value[0].heading = l_hdg
       smLog("sit 5 heading "..l_hdg,4)
 
@@ -860,7 +874,6 @@ end
 
 -- get ground elevation
 function probe_elevation (in_x, in_y, in_z)
-   local l_lat, l_on, l_alt = 0, 0, 0
 
    x1_value[0] = in_x
    y1_value[0] = in_y
@@ -869,17 +882,14 @@ function probe_elevation (in_x, in_y, in_z)
    XPLM.XPLMProbeTerrainXYZ(proberef, x1_value[0], y1_value[0], z1_value[0], probeinfo_addr)
    probeinfo_value = probeinfo_addr --XPLMProbeInfo_t
 
-   --l_lat, l_lon, l_alt = local_to_latlon(probeinfo_value[0].locationX, probeinfo_value[0].locationY, probeinfo_value[0].locationZ)
-   --in_x, in_y, in_z = latlon_to_local(l_lat, l_lon, l_alt)
-
-   --in_x = probeinfo_value[0].locationX
+   in_x = probeinfo_value[0].locationX
    in_y = probeinfo_value[0].locationY
-   --in_z = probeinfo_value[0].locationZ
+   in_z = probeinfo_value[0].locationZ
 
    wetness = probeinfo_value[0].is_wet -- is Wet is a boolean, 0 not over water, 1 over water.
    smLog("probe elevation: terrain at height " .. in_y .." and it is wet=" .. wetness,3)
 
-   return in_y,wetness
+   return in_x,in_y,in_z,wetness
 end
 
 -- define probe type
@@ -1105,15 +1115,18 @@ function add_Winch_Scene()
 end
 
 -- create a random scene for dropoff leg
-function add_Dropoff_Scene()
+function add_Dropoff_Scene(n)
    local dir1 = random_direction()
    
    scenemgr_status = "dropoff called"
    create_new_scene()
    
-   if ( hasMissionX ) then     -- load MissionX target coordinates
+   if ( n == 0 and hasMissionX ) then     -- load MissionX target coordinates
       set("sceneMgr/lat",mx_lat)
       set("sceneMgr/lon",mx_lon)
+   else
+      scenemgr_lat = LATITUDE
+	  scenemgr_lon = LONGITUDE
    end
   
    scenemgr_hdg = 0
@@ -1126,15 +1139,18 @@ function add_Dropoff_Scene()
 end
 
 -- create a random scene for dropoff leg
-function add_Pickup_Scene()
+function add_Pickup_Scene(n)
    local dir1 = random_direction()
    
    scenemgr_status = "pickup called"
    create_new_scene()
 
-   if ( hasMissionX ) then     -- load MissionX target coordinates
+   if ( n == 0 and hasMissionX ) then     -- load MissionX target coordinates
       set("sceneMgr/lat",mx_lat)
       set("sceneMgr/lon",mx_lon)
+   else
+      scenemgr_lat = LATITUDE
+	  scenemgr_lon = LONGITUDE
    end
   
    scenemgr_hdg = 0
@@ -1163,14 +1179,17 @@ function add_Rescue_Scene()
 end
 
 -- create a scene for home base
-function add_Base_Scene()
+function add_Base_Scene(n)
 
    scenemgr_status = "base called"
    create_new_scene()
 
-   if ( hasMissionX ) then             -- load MissionX target coordinates
+   if ( n == 0 and hasMissionX ) then             -- load MissionX target coordinates
       set("sceneMgr/lat",mx_lat)
       set("sceneMgr/lon",mx_lon)
+   else
+      scenemgr_lat = LATITUDE
+	  scenemgr_lon = LONGITUDE
    end
    
    scenemgr_hdg = 0
@@ -1191,7 +1210,7 @@ function show_Marshall()
    create_new_scene()
 
    local in_x, in_y, in_z = latlon_to_local(LATITUDE, LONGITUDE, 0)
-   shift_object(in_x, in_z, 0, 10, plane_hdg )  -- place marshall scene 10m ahead of us
+   shift_object(in_x, in_z, 0, 5, plane_hdg )  -- place doc scene 5m ahead of us
    local  l_lat, l_lon, l_alt = local_to_latlon(out_x, 0 , out_z)
    
    add_object(l_lat,l_lon,0,4,get_random_from_table(BASESTAFF))
@@ -1203,7 +1222,7 @@ function show_Doc()
    create_new_scene()
 
    local in_x, in_y, in_z = latlon_to_local(LATITUDE, LONGITUDE, 0)
-   shift_object(in_x, in_z, 0, 10, plane_hdg )  -- place doc scene 10m ahead of us
+   shift_object(in_x, in_z, 0, 5, plane_hdg )  -- place doc scene 5m ahead of us
    local  l_lat, l_lon, l_alt = local_to_latlon(out_x, 0 , out_z)
    
    add_object(l_lat,l_lon,0,4,get_random_from_table(DOCS))
@@ -1433,10 +1452,11 @@ create_command("sceneMgr/parse_Message",      "parse message",      "parse_Messa
 create_command("sceneMgr/add_Winch_Scene",    "add winch scene",    "add_Winch_Scene()",    "",   "")
 create_command("sceneMgr/add_Hiker_Scene",    "add hiker scene",    "add_Hiker_Scene()",    "",   "")
 create_command("sceneMgr/add_Accident_Scene", "add accident scene", "add_Accident_Scene()", "",   "")
-create_command("sceneMgr/add_Dropoff_Scene",  "add dropoff scene",  "add_Dropoff_Scene()",  "",   "")
-create_command("sceneMgr/add_Pickup_Scene",   "add pickup scene",   "add_Pickup_Scene()",   "",   "")
+create_command("sceneMgr/add_Base_Scene",     "add base scene",     "add_Base_Scene(0)",    "",   "")
+create_command("sceneMgr/add_Dropoff_Scene",  "add dropoff scene",  "add_Dropoff_Scene(0)", "",   "")
+create_command("sceneMgr/add_Pickup_Scene",   "add pickup scene",   "add_Pickup_Scene(0)",  "",   "")
 create_command("sceneMgr/add_Rescue_Scene",   "add rescue scene",   "add_Rescue_Scene()",   "",   "")
-create_command("sceneMgr/add_Base_Scene",     "add base scene",     "add_Base_Scene()",     "",   "")
+
 
 create_command("sceneMgr/move_North",         "move object north",  "move_North()",         "",   "")
 create_command("sceneMgr/move_South",         "move object south",  "move_South()",         "",   "")
@@ -1447,5 +1467,11 @@ create_command("sceneMgr/turn_Right",         "turn object right",  "turn_Right(
 create_command("sceneMgr/save_Marshall",      "save as marshall",   'save_as("marshall")',  "",   "")
 create_command("sceneMgr/save_Dropoff",       "save as dropoff",    'save_as("dropoff")',   "",   "")
 create_command("sceneMgr/save_Pickup",        "save as pickup",     'save_as("pickup")',    "",   "")
+create_command("sceneMgr/test_Marshall",      "test marshall",      'add_Base_Scene(1)',    "",   "")
+create_command("sceneMgr/test_Dropoff",       "test dropoff",       'add_Dropoff_Scene(1)', "",   "")
+create_command("sceneMgr/test_Pickup",        "test pickup",        'add_Pickup_Scene(1)',  "",   "")
 create_command("sceneMgr/show_Marshall",      "show marshall",      "show_Marshall()",      "",   "")
 create_command("sceneMgr/show_Doc",           "show doc",           "show_Doc()",           "",   "")
+
+
+
