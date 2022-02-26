@@ -70,7 +70,7 @@ Installation involves copying files into the following folders within X-Plane's 
 ```
 ./Custom Scenery/missionx/HEMS_Mission_Generator
 ./Custom Scenery/CH_Hospitals
-./Custom Scenery/helipad_lib
+./Custom Scenery/heliport_lib
 ./Aircraft/Helicopters/EC 135 V5 EMS
 ./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1
 ./Aircraft/_slingload_objects
