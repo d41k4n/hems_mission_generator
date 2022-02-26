@@ -370,7 +370,7 @@ function genTemplate()
 end
 
 
-add_macro("gen HMG template","genTemplate()" )
+add_macro("HMG setup","genTemplate()" )
 --create_command("FlyWithLua/genHMGtemplate", "gen HMG template","genTemplate()", "", "")
 --set_button_assignment(6,"FlyWithLua/genHMGtemplate")
 

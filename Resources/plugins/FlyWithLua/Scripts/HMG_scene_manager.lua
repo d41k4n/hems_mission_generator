@@ -1551,7 +1551,7 @@ function toggle_smgui()
 end
 
 
-add_macro("scene manager GUI open/close", "smgui_show_wnd()", "smgui_hide_wnd()", "deactivate")
+add_macro("HMG scene manager GUI toggle", "smgui_show_wnd()", "smgui_hide_wnd()", "deactivate")
 create_command("FlyWithLua/sceneMgr/show_toggle", "open/close smgui", "toggle_smgui()", "", "")
 
 
