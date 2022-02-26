@@ -3,7 +3,8 @@
 --
 -- inspired by XPJavelin's 'Simple and Nice Loading Equipment'
 --
-version = "0.41"
+
+version = "0.50"
 
 local logLevel = 3
 
@@ -358,36 +359,33 @@ set("sceneMgr/hdg",0)
 
 require("bit")
 
+--
+-- load the ffi module
+--
 local ffi = require ("ffi")
 
--- find the right lib to load
 local XPLMlib = ""
 
 if SYSTEM == "IBM" then
-   -- Windows OS (no path and file extension needed)
    if SYSTEM_ARCHITECTURE == 64 then
-      XPLMlib = "XPLM_64"  -- 64bit
+      XPLMlib = "XPLM_64"
    else
-      XPLMlib = "XPLM"     -- 32bit
+      XPLMlib = "XPLM"
    end
 elseif SYSTEM == "LIN" then
-   -- Linux OS (we need the path "Resources/plugins/" here for some reason)
    if SYSTEM_ARCHITECTURE == 64 then
-      XPLMlib = "Resources/plugins/XPLM_64.so"  -- 64bit
+      XPLMlib = "Resources/plugins/XPLM_64.so"
    else
-      XPLMlib = "Resources/plugins/XPLM.so"     -- 32bit
+      XPLMlib = "Resources/plugins/XPLM.so"
    end
 elseif SYSTEM == "APL" then
-   -- Mac OS (we need the path "Resources/plugins/" here for some reason)
-   XPLMlib = "Resources/plugins/XPLM.framework/XPLM" -- 64bit and 32 bit
+   XPLMlib = "Resources/plugins/XPLM.framework/XPLM"
 else
-   return -- this should not happen
+   return
 end
 
--- load the lib and store in local variable
 local XPLM = ffi.load(XPLMlib)
 
--- create declarations of C types
 local cdefs = [[
 
   typedef struct {
@@ -425,61 +423,9 @@ local cdefs = [[
 
   typedef void (*XPLMObjectLoaded_f)(XPLMObjectRef inObject, void *inRefcon);
 
-  typedef int (*XPLMGetDatai_f)(void *inRefcon);
-  typedef void (*XPLMSetDatai_f)(void *inRefcon, int inValue);
-
-  typedef float (*XPLMGetDataf_f)(void *inRefcon);
-  typedef void (*XPLMSetDataf_f)(void *inRefcon, float inValue);
-
-  typedef double (*XPLMGetDatad_f)(void *inRefcon);
-  typedef void (*XPLMSetDatad_f)(void *inRefcon, double inValue);
-
-  typedef int (*XPLMGetDatavi_f)(void *inRefcon,
-                                  int *outValues,    /* Can be NULL */
-                                  int inOffset,
-                                  int inMax);
-  typedef void (*XPLMSetDatavi_f)(void *inRefcon,
-                                   int *inValues,
-                                   int inOffset,
-                                   int inCount);
-  typedef int (*XPLMGetDatavf_f)(void *inRefcon,
-                                  float *outValues,    /* Can be NULL */
-                                  int inOffset,
-                                  int inMax);
-  typedef void (*XPLMSetDatavf_f)(void *inRefcon,
-                                   float *inValues,
-                                   int inOffset,
-                                   int inCount);
-  typedef int (*XPLMGetDatab_f)(void *inRefcon,
-                                  void *inValue,
-                                  int inOffset,
-                                  int inLength);
   typedef void (* XPLMLibraryEnumerator_f)(
                          const char *         inFilePath,
                          void *               inRef);
-
-/*
-  XPLMDataRef XPLMRegisterDataAccessor(
-                         const char *         inDataName,
-                         int                  inDataType,
-                         int                  inIsWritable,
-                         XPLMGetDatai_f       inReadInt,
-                         XPLMSetDatai_f       inWriteInt,
-                         XPLMGetDataf_f       inReadFloat,
-                         XPLMSetDataf_f       inWriteFloat,
-                         XPLMGetDatad_f       inReadDouble,
-                         XPLMSetDatad_f       inWriteDouble,
-                         XPLMGetDatavi_f      inReadIntArray,
-                         XPLMSetDatavi_f      inWriteIntArray,
-                         XPLMGetDatavf_f      inReadFloatArray,
-                         XPLMSetDatavf_f      inWriteFloatArray,
-                         XPLMGetDatab_f       inReadData,
-                         XPLMSetDatab_f       inWriteData,
-                         void *               inReadRefcon,
-                         void *               inWriteRefcon);
-
-  void XPLMUnregisterDataAccessor(XPLMDataRef inDataRef);
-*/
 
   XPLMObjectRef XPLMLoadObject( const char *inPath);
   void XPLMLoadObjectAsync( const char * inPath, XPLMObjectLoaded_f inCallback, void *inRefcon);
@@ -492,32 +438,20 @@ local cdefs = [[
 
   void XPLMDestroyInstance(XPLMInstanceRef instance);
   void XPLMUnloadObject(XPLMObjectRef inObject);
-  void XPLMDestroyProbe(XPLMProbeRef inProbe);
 
   int  XPLMLookupObjects( const char * inPath, float inLatitude, float inLongitude, XPLMLibraryEnumerator_f enumerator,    void * ref);
 
   void XPLMWorldToLocal( double inLatitude, double inLongitude, double inAltitude, double *outX, double *outY, double *outZ);
   void XPLMLocalToWorld( double inX, double inY, double inZ, double *outLatitude, double *outLongitude, double *outAltitude);
 
-  void XPLMGetSystemPath(char * outSystemPath);
 
 ]]
 
--- add these types to the FFI:
 ffi.cdef(cdefs)
 
-
--- Variables to handle C pointers
-local char_str = ffi.new("char[256]")
-
-local datarefs_addr = ffi.new("const char**")
-local dataref_name = ffi.new("char[150]")         -- define the length of the string to store the name of the dataref. can be longer but not shorter
-
-local dataref_register7 = ffi.new("XPLMDataRef")
-local dataref_array2 = ffi.new("const char*[2]")  -- this is for the signboard, one dataref and one null dataref
-
-local proberef = ffi.new("XPLMProbeRef")           -- for the probe
-
+local datarefs_addr   = ffi.new("const char**")
+local dataref_name    = ffi.new("char[150]")
+local proberef        = ffi.new("XPLMProbeRef")
 
 local MAX_OBJECTS     = 100
 local currentScene    = 0
@@ -526,42 +460,33 @@ local objectsInScene  = {}    -- object attributes
 local totalObjects    = 0     -- number of mission objects
 local inScenePosition = {}
 
-local Object_Inst    = ffi.new("XPLMInstanceRef[100]")
-local Object_Obj     = ffi.new("XPLMObjectRef[100]")
-local Object_Chg     = {}
-local Object_LAT     = {}    -- object latitude
-local Object_LON     = {}    -- object longitude
-local Object_HDG     = {}    -- object heading
-local Object_SIT     = {}    -- object situation
-local Object_ATR     = {}    -- object attribute
-local Object_SCN     = {}    -- object scene
+local Object_Inst     = ffi.new("XPLMInstanceRef[100]")
+local Object_Obj      = ffi.new("XPLMObjectRef[100]")
+local Object_Chg      = {}
+local Object_LAT      = {}    -- object latitude
+local Object_LON      = {}    -- object longitude
+local Object_HDG      = {}    -- object heading
+local Object_SIT      = {}    -- object situation
+local Object_ATR      = {}    -- object attribute
+local Object_SCN      = {}    -- object scene
 
 -- object attributes:
 --	1=patient
 --	( more TBD )
 
--- used arbitrary to store info about the object
-local objpos_addr =  ffi.new("const XPLMDrawInfo_t*")
-local objpos_value = ffi.new("XPLMDrawInfo_t[1]")
+local objpos_addr     =  ffi.new("const XPLMDrawInfo_t*")
+local objpos_value    = ffi.new("XPLMDrawInfo_t[1]")
 
--- use arbitrary to store float value & addr of float value
-local float_addr = ffi.new("const float*")
-local float_value = ffi.new("float[1]")
+local float_addr      = ffi.new("const float*")
+local float_value     = ffi.new("float[1]")
 
--- meant for the probe
 local probeinfo_addr =  ffi.new("XPLMProbeInfo_t*")
 local probeinfo_value = ffi.new("XPLMProbeInfo_t[1]")
-
 local probetype = ffi.new("int[1]")
 
--- to store float values of the local coordinates
 local x1_value = ffi.new("double[1]")
 local y1_value = ffi.new("double[1]")
 local z1_value = ffi.new("double[1]")
-
-
--- to store in values of the local nature of the terrain (wet / land)
-local terrain_nature = ffi.new("int[1]")
 
 ------------------------------------------------------------------------------------
 
@@ -710,22 +635,22 @@ function draw_object(n)
    l_alt = 0
    smLog("l_lat="..l_lat.." l_lon="..l_lon.." hdg="..l_hdg,4)
 
-   in_x, in_y, in_z = latlon_to_local(l_lat, l_lon, l_alt)        -- start with elv 0
+   in_x, in_y, in_z = latlon_to_local(l_lat, l_lon, l_alt)        -- start with lat, lon and alt 0
 
    smLog("pass0: x="..in_x.." y="..in_y.." z="..in_z,4)
  
-   out_x,out_y,out_z,wetness = probe_elevation (in_x, in_y, in_z) -- find elv of x,z
+   out_x,out_y,out_z = probe_elevation (in_x, in_y, in_z)         -- find z of x,z
 
    smLog("pass1: x="..in_x.." ("..out_x..") y="..in_y.." ("..out_y..") z="..in_z.." ("..out_z..")",4)
 
-   local b_lat,b_lon,b_alt = local_to_latlon(out_x,out_y,out_z)   -- get world alt
+   local b_lat,b_lon,b_alt = local_to_latlon(out_x,out_y,out_z)   -- now get world alt
 
    in_x, in_y, in_z = latlon_to_local(l_lat, l_lon, b_alt)        -- redo with new alt
 
    smLog("pass2: x="..in_x.." y="..in_y.." z="..in_z,4)
 
 
-   -- SIT ( situation )
+   -- SIT ( situation ) adjustments
    --    0 = default
    --    1 = object laying on ground ( i.e. person on its back )
    --    2 = object laying on right side  
@@ -734,12 +659,8 @@ function draw_object(n)
    --    5 = object will not be shifted but heading oriented towards the ACF
    --    6 = as 3 plus moved away a bit
    --    7 = as 4 plus moved away a bit
-   --    8 = as 4 plus moved 10 ahead of ACF 
 
    if ( Object_SIT[n] < 3 ) then      -- situation < 3 = normal distribution
-       -- SHIFT
-       --     POSITIVE LEFT < x > NEGATIVE RIGHT
-       --     POSITIVE FWD < z > NEGATIVE AFT
 
       shift_object(in_x, in_z, N*0.5, N*0.5, l_hdg )
       smLog("new heading "..l_hdg,3)
@@ -758,7 +679,7 @@ function draw_object(n)
       end
    end
 
-   local out_x,out_y,out_z,wetness = probe_elevation (out_x, in_y, out_z)  -- find final elv
+   local out_x,out_y,out_z = probe_elevation (out_x, in_y, out_z)  -- find final z (elevation)
  
    objpos_value[0].x = out_x 
    objpos_value[0].y = out_y
@@ -774,6 +695,7 @@ function draw_object(n)
    objpos_value[0].pitch = 0
    objpos_value[0].roll = 0
 
+   --- some situation depending post adjustment
    if ( Object_SIT[n] == 1 ) then                             -- situation 1 = person laying on ground 
       objpos_value[0].pitch = -90
       objpos_value[0].y = out_y + 0.3
@@ -817,21 +739,13 @@ function unload_object(n)
 end
 
 function shift_object(in_x, in_z, in_delta_x, in_delta_z, in_heading )
-
-   -- in_delta_x refers to the difference between the x coordinates (left/right) of the ref pt and the shifted position
-   -- in_delta_z refers to the difference between the z coordinates (up/down) of the ref pt and the shifted position
-   -- If the shifted position is below the ref pt, in_delta_z is negative.
-   -- If the shifted position is to the right of the ref pt, in_delta_x is positive
-   -- in_heading is the heading that the ref pt is facing
-   -- in_ref_x, in_ref_z refers to the ref point which we know the x, z coordinates and we are using that to determine the shifted pos coordinates
-
-
    l_dist = math.sqrt ( (in_delta_x ^ 2) + (in_delta_z ^ 2) )
    l_heading = math.fmod ( ( math.deg ( math.atan2 ( in_delta_x , in_delta_z  ) ) + 360 ),  360 )
    out_x  =  in_x - math.sin ( math.rad ( in_heading - l_heading) ) * l_dist * -1
    out_z  =  in_z -  math.cos ( math.rad ( in_heading - l_heading) ) *  l_dist
 end
 
+----------------------------------------------------------------------
 
 function get_heading(la1, lo1, la2, lo2)
    -- from https://www.igismap.com/formula-to-find-bearing-or-heading-angle-between-two-points-latitude-longitude/
@@ -854,10 +768,9 @@ function latlon_to_local(in_lat, in_lon, in_alt)
    y1_value[0] = in_lon
    z1_value[0] = in_alt
 
-   -- reuse the same variable for lat and long to receive the local x, y, z coordinates.
    XPLM.XPLMWorldToLocal(x1_value[0],y1_value[0], z1_value[0], x1_value, y1_value, z1_value )
 
-   return  x1_value[0], y1_value[0], z1_value[0]    -- y is the elevation from mean sea level which we dont need for the time being
+   return  x1_value[0], y1_value[0], z1_value[0]
 
 end
 
@@ -866,10 +779,9 @@ function local_to_latlon(in_x, in_y, in_z)
    y1_value[0] = in_y
    z1_value[0] = in_z
 
-   -- reuse the same variable for lat and long to receive the local x, y, z coordinates.
    XPLM.XPLMLocalToWorld(x1_value[0],y1_value[0], z1_value[0], x1_value, y1_value, z1_value )
 
-   return  x1_value[0], y1_value[0], z1_value[0]    -- y is the elevation from mean sea level which we dont need for the time being
+   return  x1_value[0], y1_value[0], z1_value[0]
 end
 
 -- get ground elevation
@@ -880,16 +792,15 @@ function probe_elevation (in_x, in_y, in_z)
    z1_value[0] = in_z
 
    XPLM.XPLMProbeTerrainXYZ(proberef, x1_value[0], y1_value[0], z1_value[0], probeinfo_addr)
-   probeinfo_value = probeinfo_addr --XPLMProbeInfo_t
+   probeinfo_value = probeinfo_addr 
 
    in_x = probeinfo_value[0].locationX
    in_y = probeinfo_value[0].locationY
    in_z = probeinfo_value[0].locationZ
 
-   wetness = probeinfo_value[0].is_wet -- is Wet is a boolean, 0 not over water, 1 over water.
-   smLog("probe elevation: terrain at height " .. in_y .." and it is wet=" .. wetness,3)
+   smLog("probe elevation: terrain at height " .. in_y,3)
 
-   return in_x,in_y,in_z,wetness
+   return in_x,in_y,in_z
 end
 
 -- define probe type
@@ -927,17 +838,13 @@ function add_object(lat,lon,hdg,sit,path)
       objectsInScene[currentScene] = objectsInScene[currentScene] + 1
    else
       smLog("Warning: maximum number of objects reached",0)
+      scenemgr_status = "no more objects"
    end
 end
 
 -- provide random direction
 function random_direction()
    return(math.random(1,360))
-end
-
--- provide random situation
-function random_situation()
-   return(math.random(0,2))
 end
 
 function ref_has_changed()
@@ -1008,7 +915,7 @@ function unload_All()
    end 
    totalObjects = 0
    currentScene = 0
-  objectsInScene = {}
+   objectsInScene = {}
 end
 
 -- unload current scene only
@@ -1210,7 +1117,7 @@ function show_Marshall()
    create_new_scene()
 
    local in_x, in_y, in_z = latlon_to_local(LATITUDE, LONGITUDE, 0)
-   shift_object(in_x, in_z, 0, 5, plane_hdg )  -- place doc scene 5m ahead of us
+   shift_object(in_x, in_z, 0, 10, plane_hdg )  -- place doc scene 5m ahead of us
    local  l_lat, l_lon, l_alt = local_to_latlon(out_x, 0 , out_z)
    
    add_object(l_lat,l_lon,0,4,get_random_from_table(BASESTAFF))
@@ -1222,7 +1129,7 @@ function show_Doc()
    create_new_scene()
 
    local in_x, in_y, in_z = latlon_to_local(LATITUDE, LONGITUDE, 0)
-   shift_object(in_x, in_z, 0, 5, plane_hdg )  -- place doc scene 5m ahead of us
+   shift_object(in_x, in_z, 0, 10, plane_hdg )  -- place doc scene 5m ahead of us
    local  l_lat, l_lon, l_alt = local_to_latlon(out_x, 0 , out_z)
    
    add_object(l_lat,l_lon,0,4,get_random_from_table(DOCS))
@@ -1341,7 +1248,7 @@ end
 function move_North()
    local n = totalObjects - 1
    if ( n >= 0 and Object_Obj[n] ~= nil ) then
-      Object_LAT[n] = Object_LAT[n] + 0.00001
+      Object_LAT[n] = Object_LAT[n] + 0.000005
       Object_Chg[n] = true
       draw_object(n)
    end
@@ -1350,7 +1257,7 @@ end
 function move_South()
    local n = totalObjects - 1
    if ( n >= 0 and Object_Obj[n] ~= nil ) then
-      Object_LAT[n] = Object_LAT[n] - 0.00001
+      Object_LAT[n] = Object_LAT[n] - 0.000005
       Object_Chg[n] = true
       draw_object(n)
    end
@@ -1359,7 +1266,7 @@ end
 function move_West()
    local n = totalObjects - 1
    if ( n >= 0 and Object_Obj[n] ~= nil) then
-      Object_LON[n] = Object_LON[n] - 0.00001
+      Object_LON[n] = Object_LON[n] - 0.000005
       Object_Chg[n] = true
       draw_object(n)
    end
@@ -1368,7 +1275,7 @@ end
 function move_East()
    local n = totalObjects - 1
    if ( n >= 0 and Object_Obj[n] ~= nil ) then
-      Object_LON[n] = Object_LON[n] + 0.00001
+      Object_LON[n] = Object_LON[n] + 0.000005
       Object_Chg[n] = true
       draw_object(n)
    end
@@ -1473,5 +1380,178 @@ create_command("sceneMgr/test_Pickup",        "test pickup",        'add_Pickup_
 create_command("sceneMgr/show_Marshall",      "show marshall",      "show_Marshall()",      "",   "")
 create_command("sceneMgr/show_Doc",           "show doc",           "show_Doc()",           "",   "")
 
+
+--
+-- scene manager GUI
+--
+
+if not SUPPORTS_FLOATING_WINDOWS then
+   -- to make sure the script doesn't stop old FlyWithLua versions
+   logMsg("imgui not supported by your FlyWithLua version")
+   return
+end
+
+local show_x = 40
+local show_y = 20
+
+local move_x = 90
+local move_y = 55
+
+local save_x = 10
+local save_y = 280
+
+local test_x = 10
+local test_y = 310
+
+local clear_x = 10
+local clear_y = 345
+
+local c = 0
+
+function smgui_on_build(smgui_wnd, x, y)
+
+    imgui.SetCursorPosY(show_y)
+    imgui.SetCursorPosX(show_x)
+    if imgui.Button("show Marshall",100, 20) then
+       command_once("sceneMgr/show_Marshall")
+    end
+
+    imgui.SetCursorPosY(show_y)
+    imgui.SetCursorPosX(show_x+150)
+    if imgui.Button("show Doc", 100, 20) then
+       command_once("sceneMgr/show_Doc")
+    end
+
+    ----------------------------------
+
+    imgui.SetCursorPosY(move_y)
+    imgui.SetCursorPosX(move_x+50)
+    if imgui.Button("North", 50, 50) then
+       command_once("sceneMgr/move_North")
+    end
+
+    imgui.SetCursorPosY(move_y+50)
+    imgui.SetCursorPosX(move_x)
+    if imgui.Button("West", 50, 50) then
+       command_once("sceneMgr/move_West")
+    end
+
+    imgui.SetCursorPosY(move_y+68)
+    imgui.SetCursorPosX(move_x+61)
+    imgui.TextUnformatted("move")
+
+    imgui.SetCursorPosY(move_y+50)
+    imgui.SetCursorPosX(move_x+100)
+    if imgui.Button("East", 50, 50) then
+       command_once("sceneMgr/move_East")
+    end
+
+    imgui.SetCursorPosY(move_y+100)
+    imgui.SetCursorPosX(move_x+50)
+    if imgui.Button("South", 50, 50) then
+       command_once("sceneMgr/move_South")
+    end
+
+    imgui.SetCursorPosY(move_y+160)
+    imgui.SetCursorPosX(move_x)
+    if imgui.Button("<<", 50, 50) then
+       command_once("sceneMgr/turn_Left")
+    end
+
+    imgui.SetCursorPosY(move_y+178)
+    imgui.SetCursorPosX(move_x+55)
+    imgui.TextUnformatted("rotate")
+
+    imgui.SetCursorPosY(move_y+160)
+    imgui.SetCursorPosX(move_x+100)
+    if imgui.Button(">>", 50, 50) then
+       command_once("sceneMgr/turn_Right")
+    end
+
+    ----------------------------------
+
+    imgui.SetCursorPosY(save_y)
+    imgui.SetCursorPosX(save_x)
+    if imgui.Button("save Marshall",100, 20) then
+       command_once("sceneMgr/save_Marshall")
+    end
+
+    imgui.SetCursorPosY(save_y)
+    imgui.SetCursorPosX(save_x+105)
+    if imgui.Button("save Dropoff",100, 20) then
+       command_once("sceneMgr/save_Dropoff")
+    end
+
+    imgui.SetCursorPosY(save_y)
+    imgui.SetCursorPosX(save_x+210)
+    if imgui.Button("save Pickup",100, 20) then
+       command_once("sceneMgr/save_Pickup")
+    end
+
+    ----------------------------------
+
+    imgui.SetCursorPosY(test_y)
+    imgui.SetCursorPosX(test_x)
+    if imgui.Button("test Marshall",100, 20) then
+    end
+
+    imgui.SetCursorPosY(test_y)
+    imgui.SetCursorPosX(test_x+105)
+    if imgui.Button("test Dropoff",100, 20) then
+       command_once("sceneMgr/test_Dropoff")
+    end
+
+    imgui.SetCursorPosY(test_y)
+    imgui.SetCursorPosX(test_x+210)
+    if imgui.Button("test Pickup",100, 20) then
+       command_once("sceneMgr/test_Pickup")
+    end
+
+    ----------------------------------
+
+    imgui.SetCursorPosY(clear_y)
+    imgui.SetCursorPosX(clear_x)
+    if imgui.Button("unload ALL objects",310, 20) then
+       command_once("sceneMgr/unload_All")
+    end
+end
+
+smgui_wnd = nil
+
+function smgui_show_wnd()
+   smgui_wnd = float_wnd_create(330, 380, 1, true)
+   float_wnd_set_title(smgui_wnd, "scene manager GUI")
+   float_wnd_set_imgui_builder(smgui_wnd, "smgui_on_build")
+end
+
+function smgui_hide_wnd()
+   if smgui_wnd then
+      float_wnd_destroy(smgui_wnd)
+   end
+end
+
+smgui_show_only_once = 0
+smgui_hide_only_once = 0
+
+function toggle_smgui()
+   smgui_show_window = not smgui_show_window
+   if smgui_show_window then
+      if smgui_show_only_once == 0 then
+         smgui_show_wnd()
+         smgui_show_only_once = 1
+         smgui_hide_only_once = 0
+      end
+   else
+      if smgui_hide_only_once == 0 then
+         smgui_hide_wnd()
+         smgui_hide_only_once = 1
+         smgui_show_only_once = 0
+      end
+   end
+end
+
+
+add_macro("scene manager GUI open/close", "smgui_show_wnd()", "smgui_hide_wnd()", "deactivate")
+create_command("FlyWithLua/sceneMgr/show_toggle", "open/close smgui", "toggle_smgui()", "", "")
 
 
