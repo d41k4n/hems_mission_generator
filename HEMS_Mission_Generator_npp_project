@@ -117,6 +117,7 @@
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\setup\README" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\setup\sites.cfg" />
                         <File name="Custom Scenery\missionx\HEMS_Mission_Generator\setup\sites.in" />
+                        <File name="Custom Scenery\missionx\HEMS_Mission_Generator\setup\scene.cfg" />
                     </Folder>
                 </Folder>
             </Folder>
@@ -133,6 +134,7 @@
                     </Folder>
                     <File name="Resources\plugins\FlyWithLua\Scripts\HMG_hoist.lua" />
                     <File name="Resources\plugins\FlyWithLua\Scripts\HMG_setup.lua" />
+                    <File name="Resources\plugins\FlyWithLua\Scripts\HMG_scene_manager.lua" />
                 </Folder>
             </Folder>
         </Folder>
