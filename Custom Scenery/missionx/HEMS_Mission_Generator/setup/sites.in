@@ -31,6 +31,7 @@
 		<find_replace find="%mission_range2%" replace_with="nm_between=%RANGE2%"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=%RANGE3%"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=%RANGE4%"/>
+		<find_replace find="%location_type%" replace_with="%LOCTYPE%"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-%PLANE%.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-%PLANE%.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-%PLANE%.xml"/>

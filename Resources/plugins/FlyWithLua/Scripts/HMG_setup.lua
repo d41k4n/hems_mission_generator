@@ -55,6 +55,7 @@ function initArrays()
   xtemplate = {}
   xrange    = {}
   xlegs     = {}
+  xloctype  = {}
   collectgarbage()
 end
 
@@ -187,6 +188,7 @@ function applyReplace(name)
   local xp = xplane[name]
   local xo = xoverpass[name]
   local xl = xlegs[name]
+  local xlt = xloctype[name]
   local xr1,xr2,xr3,xr4
   
   local xi = "HMG_"..xb..".png"
@@ -238,6 +240,7 @@ function applyReplace(name)
     t = string.gsub(t,"%%RANGE3%%",xr3)
     t = string.gsub(t,"%%RANGE4%%",xr4)
     t = string.gsub(t,"%%LEGS%%",xl)
+    t = string.gsub(t,"%%LOCTYPE%%",xlt)
 
     for idx, val in pairs(contents) do
       if ( myContent[idx] == 1 ) then
@@ -272,6 +275,7 @@ function readConfig()
           xcontent[name] = ""
           xrange[name] = ""
           xlegs[name] = "3"
+          xloctype[name] = "near"
 
         elseif ( string.find(value,"title ",1) ) then
           xtitle[name] = string.sub(value,7) 
@@ -296,6 +300,9 @@ function readConfig()
 
         elseif ( string.find(value,"legs ",1) ) then
           xlegs[name] = string.sub(value,6) 
+
+        elseif ( string.find(value,"loctype ",1) ) then
+          xloctype[name] = string.sub(value,9) 
 
         end
 

@@ -1787,17 +1787,25 @@
 
 	<loc_hospitals>
 		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37691" long="8.55116" template="land" radius_mt="80" loc_desc="Helipad, Zürich Unispital / USZ"/>
+		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
+		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
 		<point lat="47.37196" long="8.55715" template="land" radius_mt="80" loc_desc="Helipad, Zürich Kinderspital"/>
 		<point lat="47.36657" long="8.49748" template="land" radius_mt="80" loc_desc="Helipad, Zürich Triemli Stadtspital"/>
 		<point lat="47.36657" long="8.49748" template="land" radius_mt="80" loc_desc="Helipad, Zürich Triemli Stadtspital"/>
-		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
+		<!--
 		<point lat="47.50749" long="8.72782" template="land" radius_mt="80" loc_desc="Helipad, Winterthur Kantonsspital"/>
 		<point lat="47.62233" long="8.20947" template="land" radius_mt="80" loc_desc="Helipad, Waldshut Klinikum Hochrhein"/>
 		<point lat="47.52183" long="8.53326" template="land" radius_mt="80" loc_desc="Helipad, Bülach Spital"/>
 		<point lat="47.45568" long="8.27856" template="land" radius_mt="80" loc_desc="Helipad, Baden Kantonsspital"/>
 		<point lat="47.54923" long="8.91122" template="land" radius_mt="80" loc_desc="Helipad, Frauenfeld Kantonsspital"/>
 		<point lat="47.04583" long="8.06527" template="land" radius_mt="80" loc_desc="Helipad, Glarus Kantonsspital"/>
-		<!--
 		<point lat="47.28525" long="8.45575" template="land" radius_mt="80" loc_desc="Helipad, Affoltern a.A. Bezirksspital, elevation: 500"/>
 		<point lat="47.26299" long="8.59028" template="land" radius_mt="80" loc_desc="Helipad, Horgen Zimmerberg Spital, elevation: 415"/>
 		<point lat="47.25102" long="8.69561" template="land" radius_mt="80" loc_desc="Helipad, Männedorf Spital, elevation: 421"/>

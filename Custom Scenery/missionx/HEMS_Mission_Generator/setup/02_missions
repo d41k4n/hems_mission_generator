@@ -49,7 +49,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -86,7 +86,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Dropoff_Scene,%fire_commands_at_leg_start%" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_hover_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -123,7 +123,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -232,7 +232,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Dropoff_Scene,%fire_commands_at_leg_start%" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -269,7 +269,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Dropoff_Scene,%fire_commands_at_leg_start%" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -306,7 +306,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -343,7 +343,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -380,7 +380,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
