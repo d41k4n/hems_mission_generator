@@ -83,7 +83,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,%fire_commands_at_leg_start%" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -120,7 +120,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Dropoff_Scene,%fire_commands_at_leg_start%" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_hover_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -157,7 +157,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -266,7 +266,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Dropoff_Scene,%fire_commands_at_leg_start%" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -303,7 +303,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true">
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="FlyWithLua/hoist/winch_disable,FlyWithLua/hoist/winch_reset,sceneMgr/add_Dropoff_Scene,%fire_commands_at_leg_start%" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range1%" override_trigger_name="trig_hover_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff_winch_op" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_hover_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -340,7 +340,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -377,7 +377,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -414,7 +414,7 @@
 		<leg template="land" name="leg_2_dropoff" disable_auto_message_b="true" >
 			<desc>Proceed to hospital: {navaid_loc_desc}.</desc>
 			<fire_commands_at_leg_start commands="sceneMgr/add_Dropoff_Scene" />
-			<expected_location location_type="near" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
+			<expected_location location_type="%location_type%" location_value="tag=loc_hospitals|%mission_range2%" override_trigger_name="trig_land_goal_2_target_1" />
 			<special_leg_directives add_tasks_from_template="leg_2_tasks_dropoff" add_triggers_from_template="leg_2_triggers_dropoff" add_messages_from_template="leg_2_msgs_dropoff" base_on_external_plugin="" />
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="5nm_alert" length_mt="9260"/>
 			<dynamic_message relative_to_trigger="trig_land_goal_2_target_1" message_name_to_call="2nm_alert" length_mt="3704"/>
@@ -999,6 +999,7 @@
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
@@ -1068,6 +1069,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-h145.xml"/>
@@ -1137,6 +1139,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
@@ -1206,6 +1209,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-h145.xml"/>
@@ -1275,6 +1279,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
@@ -1344,6 +1349,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-h145.xml"/>
@@ -1413,6 +1419,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
@@ -1482,6 +1489,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-h145.xml"/>
@@ -1551,6 +1559,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
@@ -1620,6 +1629,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-h145.xml"/>
@@ -1679,7 +1689,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%content-medevac_parking_osm%" replace_with="includes/content-medevac_parking_osm.xml"/>
 		<find_replace find="%content-medevac_pitch_osm%" replace_with="includes/content-medevac_pitch_osm.xml"/>
 		<find_replace find="%content-medevac_hospital%" replace_with="includes/content-medevac_hospital.xml"/>
-		<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/empty.xml"/>
+		<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/content-medevac_hospital_germany.xml"/>
 		<find_replace find="%min_valid_flight_legs%" replace_with="3"/>
 		<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-ec135.xml"/>
 		<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-ec135.xml"/>
@@ -1689,6 +1699,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-40"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-80"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-50"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
@@ -1748,7 +1759,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%content-medevac_parking_osm%" replace_with="includes/content-medevac_parking_osm.xml"/>
 		<find_replace find="%content-medevac_pitch_osm%" replace_with="includes/content-medevac_pitch_osm.xml"/>
 		<find_replace find="%content-medevac_hospital%" replace_with="includes/content-medevac_hospital.xml"/>
-		<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/empty.xml"/>
+		<find_replace find="%content-medevac_hospital_germany%" replace_with="includes/content-medevac_hospital_germany.xml"/>
 		<find_replace find="%min_valid_flight_legs%" replace_with="3"/>
 		<find_replace find="%datarefs_start_cold_and_dark%" replace_with="includes/datarefs_start_cold_and_dark-h145.xml"/>
 		<find_replace find="%fire_commands_at_leg_start%" replace_with="includes/fire_commands_at_leg_start-h145.xml"/>
@@ -1758,6 +1769,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-40"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-80"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-50"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-h145.xml"/>
@@ -1827,6 +1839,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="xy"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
@@ -1896,6 +1909,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="xy"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-h145.xml"/>
@@ -1965,6 +1979,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-40"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-80"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-50"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
@@ -2034,6 +2049,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-ec135.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-ec135.xml"/>
@@ -2103,6 +2119,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-40"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-80"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-50"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-h145.xml"/>
@@ -2172,6 +2189,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%mission_range2%" replace_with="nm_between=5-30"/>
 		<find_replace find="%mission_range3%" replace_with="nm_between=5-60"/>
 		<find_replace find="%mission_range4%" replace_with="nm_between=10-30"/>
+		<find_replace find="%location_type%" replace_with="near"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_operator_boarding-dataref_to_modify_when_fired-h145.xml"/>
 		<find_replace find="%leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired%" replace_with="includes/leg_1_triggers_winch_ops-trig_1_open_door-commands_to_exec_when_fired-h145.xml"/>
