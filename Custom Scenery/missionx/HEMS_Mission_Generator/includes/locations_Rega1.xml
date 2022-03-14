@@ -835,7 +835,7 @@
 		<point lat="47.44999" long="8.89569" template="land" radius_mt="80" loc_desc="Seelmatten, 8488 Turbenthal, Switzerland, Vehicle self-accident"/>
 		<point lat="47.45086" long="8.98428" template="land" radius_mt="80" loc_desc="Töbeli 2, 8372 Sirnach, Switzerland, Vehicle self-accident"/>
 		<point lat="47.45117" long="8.58190" template="land" radius_mt="80" loc_desc="Schaffhauserstrasse 126, 8302 Kloten, Switzerland, Pedestrian accident"/>
-		<point lat="47.45166" long="8.98063" template="hover" radius_mt="30" loc_desc="Busliweid 2, 8372 Sirnach, Switzerland, Vehicle self-accident"/>
+		<point lat="47.45166" long="8.98063" template="land" radius_mt="80" loc_desc="Busliweid 2, 8372 Sirnach, Switzerland, Vehicle self-accident"/>
 		<point lat="47.45188" long="8.98761" template="land" radius_mt="80" loc_desc="Widenackerstrasse 2, 8372 Sirnach, Switzerland, Person hit by vehicle"/>
 		<point lat="47.45200" long="8.93597" template="land" radius_mt="80" loc_desc="Hauptstrasse 23, 8362 Balterswil TG, Switzerland, Vehicle collision while turning off"/>
 		<point lat="47.45218" long="8.34648" template="land" radius_mt="80" loc_desc="Furttalstrasse, 5436 Würenlos, Switzerland, Head-on collision"/>
