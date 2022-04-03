@@ -38,6 +38,8 @@ Currently the following helicopter models are supported:
 - [EC 135 v5 EMS](https://rotorsim.de/download-ec-135-v5/download/5-ec-135/14-ec-135-v5-ems) by Rotorsim
 - [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) by VLC-Entwicklung
 
+Limited support is also provided for the [H145 v0.9 by XFER Design](https://forums.x-plane.org/index.php?/files/file/77466-xfer-design-h145/) model but due to the lack of built-in winch/boom animations there will be visualization artifacts.
+
 This might get extended and/or made more generic in the future.
 
 Note that only a _port-side_ mounted hoist is supported for hover missions or otherwise animations will not match.
