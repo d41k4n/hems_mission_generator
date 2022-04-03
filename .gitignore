@@ -45,6 +45,11 @@ aircraft/Helicopters/EC 135 V5 EMS/*
 !aircraft/Helicopters/EC 135 V5 EMS/HSLAircraft.ini
 !aircraft/Helicopters/EC 135 V5 EMS/VRconfigHotspots.txt
 !aircraft/Helicopters/EC 135 V5 EMS/.gitattributes
+!aircraft/Helicopters/XFER Design H145 v0.9
+aircraft/Helicopters/XFER Design H145 v0.9/*
+!aircraft/Helicopters/XFER Design H145 v0.9/HSLAircraft.ini
+!aircraft/Helicopters/XFER Design H145 v0.9/VRconfigHotspots.txt
+!aircraft/Helicopters/XFER Design H145 v0.9/.gitattributes
 *.skp
 *.skb
 earth.wed.bak.xml
