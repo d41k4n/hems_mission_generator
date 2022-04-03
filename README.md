@@ -53,8 +53,9 @@ Note that only a _port-side_ mounted hoist is supported for hover missions or ot
  - Latest [FlyWithLUA](https://forums.x-plane.org/index.php?/files/file/38445-flywithlua-ng-next-generation-edition-for-x-plane-11-win-lin-mac/) plugin
  - Latest [Helicopter Sling Load (HSL)](https://github.com/kristian80/HSL) plugin
  - At least one of the following aircraft models installed in X-Plane's home folder under `./Aircraft/Helicopters` using their default folder names i.e.:
-	 -  [EC 135 v5 EMS](https://rotorsim.de/download-ec-135-v5/download/5-ec-135/14-ec-135-v5-ems) installed under `./Aircraft/Helicopters/EC 145 V5 EMS`
-	 -  [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) installed under `./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1`
+	 - [EC 135 v5 EMS](https://rotorsim.de/download-ec-135-v5/download/5-ec-135/14-ec-135-v5-ems) installed under `./Aircraft/Helicopters/EC 145 V5 EMS`
+	 - [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) installed under `./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1`
+	 - [XFER Design H145 v0.9](https://forums.x-plane.org/index.php?/files/file/77466-xfer-design-h145/) installed under `./Aircraft/Helicopters/XFER Design H145 v0.9`
  - Scenery libraries: [RescueX](https://www.rotorsim.de/component/jdownloads/download/4-andere/9-rescuex?Itemid=3111), [3D People](https://forums.x-plane.org/index.php?/files/file/26611-3d-people-library/), [R2](http://r2.xpl.cz/), [OpenSceneryX](https://www.opensceneryx.com/), [MisterX](https://forums.x-plane.org/index.php?/files/file/28167-misterx-library-and-static-aircraft-extension/), [CDB](https://forums.x-plane.org/index.php?/files/file/27907-cdb-library/), [RuScenery](http://ruscenery.x-air.ru/), [Handy Objects](https://forums.x-plane.org/index.php?/files/file/24261-the-handy-objects-library/), [NZ Pro Scenery - Overlay](http://www.alpilotx.net/downloads/x-plane-10-new-zealand-pro/#Download)
 - Base mesh scenery covering Central Europe or at least the area of Switzerland and Southern Germany (Baden-Württemberg) as a minimum
 	 - A ZL17 orthophoto mesh based on [high-quality elevation data](https://forums.x-plane.org/index.php?/forums/topic/165525-lidar-digital-terrain-models-dtm-of-european-countries/) is highly recommended
@@ -75,6 +76,7 @@ Installation involves copying files into the following folders within X-Plane's 
 ./Custom Scenery/heliport_lib
 ./Aircraft/Helicopters/EC 135 V5 EMS
 ./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1
+./Aircraft/Helicopters/XFER Design H145 v0.9 
 ./Aircraft/_slingload_objects
 ./Resources/plugins/FlyWithLua/Scripts
 ./Resources/plugins/FlyWithLua/Modules
