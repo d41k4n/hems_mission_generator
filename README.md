@@ -46,12 +46,12 @@ Note that only a _port-side_ mounted hoist is supported for hover missions or ot
 
 ### Prerequisites
 
- - Working X-Plane installation (Windows/Mac/Linux are supported)
+ - Working X-Plane installation (Windows is fully supported, Mac/Linux will be limited to non-winch-ops missions)
  - X-Plane sound output enabled with system support for speech synthesis (check sound settings)
  - Working internet connection (for querying the live OSM database)
  - [Mission-X](https://forums.x-plane.org/index.php?/files/file/41874-mission-x/) plugin v3.0.256.4.3 or later incl. "Random Mission Pack"
  - Latest [FlyWithLUA](https://forums.x-plane.org/index.php?/files/file/38445-flywithlua-ng-next-generation-edition-for-x-plane-11-win-lin-mac/) plugin
- - Latest [Helicopter Sling Load (HSL)](https://github.com/kristian80/HSL) plugin
+ - Latest [Helicopter Sling Load (HSL)](https://github.com/kristian80/HSL) plugin (currently Windows only)
  - At least one of the following aircraft models installed in X-Plane's home folder under `./Aircraft/Helicopters` using their default folder names i.e.:
 	 - [EC 135 v5 EMS](https://rotorsim.de/download-ec-135-v5/download/5-ec-135/14-ec-135-v5-ems) installed under `./Aircraft/Helicopters/EC 145 V5 EMS`
 	 - [H145 Rescue Version v3.1](https://forums.x-plane.org/index.php?/files/file/37080-h145-rescue-version-v3/) installed under `./Aircraft/Helicopters/H145 T2 Rescue Version XP11 V3.1`
