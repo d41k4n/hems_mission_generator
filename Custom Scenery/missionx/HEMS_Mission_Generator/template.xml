@@ -49,9 +49,6 @@
 		%content-medevac_hover%
 		%content-medevac_land%
 		%content-medevac_hover_ski_osm%
-		%content-medevac_hover_ski_osm%
-		%content-medevac_hover_hiker_osm%
-		%content-medevac_hover_hiker_osm%
 		%content-medevac_hover_hiker_osm%
 		%content-medevac_road_osm%
 		%content-medevac_parking_osm%
@@ -1823,7 +1820,7 @@ Aircraft: VLC-Entwicklung H145 Rescue Version v3.1"/>
 		<find_replace find="%content-medevac_hover_test%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
-		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
+		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/content-medevac_hover_hiker_osm.xml"/>
 		<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
 		<find_replace find="%content-medevac_parking_osm%" replace_with="includes/content-medevac_parking_osm.xml"/>
@@ -1893,7 +1890,7 @@ Aircraft: Rotorsim EC135 V5"/>
 		<find_replace find="%content-medevac_hover_test%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover%" replace_with="includes/content-medevac_hover.xml"/>
 		<find_replace find="%content-medevac_land%" replace_with="includes/content-medevac_land.xml"/>
-		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/content-medevac_hover_ski_osm.xml"/>
+		<find_replace find="%content-medevac_hover_ski_osm%" replace_with="includes/empty.xml"/>
 		<find_replace find="%content-medevac_hover_hiker_osm%" replace_with="includes/content-medevac_hover_hiker_osm.xml"/>
 		<find_replace find="%content-medevac_road_osm%" replace_with="includes/content-medevac_road_osm.xml"/>
 		<find_replace find="%content-medevac_parking_osm%" replace_with="includes/content-medevac_parking_osm.xml"/>
