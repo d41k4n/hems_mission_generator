@@ -873,7 +873,7 @@
 		<dataref name="hoist_ground_contact" key="hoist/ground_contact"/>
 		<dataref name="hoist_is_up" key="hoist/is_up"/>
 		<dataref name="rope_length" key="hoist/rope_length"/>
-		<dataref name="main_rotor_speed" key="sim/flightmodel2/engines/prop_rotation_speed_rad_sec[0]"/>		
+		<dataref name="main_rotor_speed[0]" key="sim/flightmodel2/engines/prop_rotation_speed_rad_sec"/>		
 	</xpdata>
 	 
 	<embedded_scripts>
