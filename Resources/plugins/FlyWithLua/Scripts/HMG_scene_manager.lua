@@ -112,13 +112,10 @@ local CARS = {
 }
 
 local POLV = {
-	RescueX_cars .. "Polizei_FuStw_01.obj",
 	RescueX_cars .. "Polizei_FuStw_01_lit.obj",
 	RescueX_cars .. "Polizei_FuStw_01_lit_open.obj",
-	RescueX_cars .. "NEF_Passat_sb1099.obj",
 	RescueX_cars .. "NEF_Passat_sb1099_lit.obj",
 	RescueX_cars .. "NEF_Passat_sb1099_lit_open.obj",
-	RescueX_cars .. "NEF_Passat_sb1099_not_tilted.obj"
 }
 
 local POLC = {
@@ -185,11 +182,7 @@ local FWC = {
 }
 
 local RTWV = {
-	RescueX_cars .. "RTW_DRK_Bayern.obj",
-	RescueX_cars .. "RTW_DRK_Bayern_not_tilted.obj",
-	RescueX_cars .. "RTW_ASB_1.obj",
 	RescueX_cars .. "RTW_ASB_2.obj",
-	RescueX_cars .. "RTW_FEU_GUT.obj"
 }
 
 local RTWC = {
