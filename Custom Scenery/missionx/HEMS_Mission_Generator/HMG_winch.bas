@@ -56,8 +56,8 @@ def func_check_down()
 enddef
 
 def func_rotor_stopped_1()
-  'print "[Script] Rotor stopped check"; 'debug
-  main_rotor_speed = fn_get_dref_value("main_rotor_speed");
+  'print "[Script] Rotor stopped check 1"; 'debug
+  main_rotor_speed = fn_get_dref_value("main_rotor_speed[0]");
   'print "[Script] main rotor speed: ", main_rotor_speed;
   if (mxError <> "") then 
     print "Error: ", mxError;
@@ -69,8 +69,8 @@ def func_rotor_stopped_1()
 enddef
 
 def func_rotor_stopped_2()
-  'print "[Script] Rotor stopped check"; 'debug
-  main_rotor_speed = fn_get_dref_value("main_rotor_speed");
+  'print "[Script] Rotor stopped check 2"; 'debug
+  main_rotor_speed = fn_get_dref_value("main_rotor_speed[0]");
   'print "[Script] main rotor speed: ", main_rotor_speed;
   if (mxError <> "") then 
     print "Error: ", mxError;
@@ -82,8 +82,8 @@ def func_rotor_stopped_2()
 enddef
 
 def func_rotor_stopped_2_winch_op()
-  'print "[Script] Rotor stopped check"; 'debug
-  main_rotor_speed = fn_get_dref_value("main_rotor_speed");
+  'print "[Script] Rotor stopped check 2 winch_op"; 'debug
+  main_rotor_speed = fn_get_dref_value("main_rotor_speed[0]");
   'print "[Script] main rotor speed: ", main_rotor_speed;
   if (mxError <> "") then 
     print "Error: ", mxError;
