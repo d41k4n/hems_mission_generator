@@ -88,8 +88,13 @@ To be on the safe side consider making backup copies of these folders before pro
 
  1. Download the [current master branch as a zip file](https://github.com/d41k4n/hems_mission_generator/archive/refs/heads/master.zip)
  2. Unzip the contents of the zipped folder "hems_mission_generator_master" directly into X-Plane's home folder overwriting any existing files (don't unzip the folder "hems_mission_generator_master" itself!).
+ 3. Create symlinks to X-Plane's core scenery assets by executing the following scripts from within X-Plane's home folder:
+    - Windows: `HEMS_win_create_junctions.bat`
+	- Linux: `HEMS_linux_create_symlinks.sh`
 
 #### Git clone method
+
+Note: This will create a folder `.git` inside your X-Plane home which is holding the Git metadata for this repository. If that folder already exists and it wasn't created by a previous installation of this addon then you will have to revert the Zip file method for installation.
 
 This method requires an installed [Git client](https://git-scm.com/downloads) so that the `git` command is available on the command line. To verify open a command terminal and execute the following command:
 
@@ -102,6 +107,7 @@ By following the instructions below the master branch of this Github repository 
  1. Open a command terminal inside X-Plane's home folder
  3. Execute the following commands in sequence:
 
+		git config core.symlinks true 
 		git init
 		git remote add origin https://github.com/d41k4n/hems_mission_generator.git
 		git fetch
