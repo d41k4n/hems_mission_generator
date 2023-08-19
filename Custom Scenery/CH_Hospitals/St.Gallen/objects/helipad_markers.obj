@@ -2,8 +2,8 @@ I
 800
 OBJ
 
-TEXTURE		apt_lights.png
-TEXTURE_LIT	apt_lights_LIT.png
+TEXTURE		../../_Common/apt_lights.png
+TEXTURE_LIT	../../_Common/apt_lights_LIT.png
 POINT_COUNTS	1792 0 0 5304
 
 VT	   6.8687   20.6402    7.6050	-1.000  0.000 -0.000	 0.1253  0.3926
