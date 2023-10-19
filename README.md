@@ -17,7 +17,7 @@ The package basically includes the following:
  - config files (.xml, .ini, .txt)
  - script files (.bas, .lua)
  - custom overlay scenery for hospitals
- - a custom heliport scenery library ([heliport_lib](https://github.com/d41k4n/hems_mission_generator/tree/master/scenery/heliport_lib))
+ - a custom heliport scenery library ([heliport_lib](https://github.com/d41k4n/hems_mission_generator/tree/master/Custom%20Scenery/heliport_lib))
  - custom aircraft definitions (.acf)
  - various resources (e.g. images)
 
